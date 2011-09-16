@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  16 SEP 2011 17:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  16 SEP 2011 20:20
 entering extended mode
  %&-line parsing enabled.
 **railscms.tex
@@ -798,9 +798,7 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 
 Writing index file railscms.idx
 ) (./railscms.aux (./chapters/titlepage.aux) (./chapters/vorwort.aux)
-(./chapters/cms_analyse.aux)
-No file chapters/alternativer_code.aux.
-)
+(./chapters/cms_analyse.aux) (./chapters/alternativer_code.aux))
 \openout1 = `railscms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -818,7 +816,8 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 17.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
@@ -909,15 +908,19 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 6.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 23.
-)
-\tf@toc=\write5
-\openout5 = `railscms.toc'.
-
+(scrbook)            on input line 26.
  [3
 
 
-]
+])
+\tf@toc=\write5
+\openout5 = `railscms.toc'.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[4]
 \openout2 = `chapters/vorwort.aux'.
 
  (./chapters/vorwort.tex
@@ -934,323 +937,48 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 20.
 
-<images/Einleitung/serverseitigeScriptsprachen.png, id=147, 457.71pt x 250.9375
+<images/Einleitung/serverseitigeScriptsprachen.png, id=167, 457.71pt x 250.9375
 pt>
 File: images/Einleitung/serverseitigeScriptsprachen.png Graphic file (type png)
 
- <use images/Einleitung/serverseitigeScriptsprachen.png> [4
+ <use images/Einleitung/serverseitigeScriptsprachen.png> [5
 
 
  <./images/Einleitung/serverseitigeScriptsprachen.png (PNG copy)>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[5])
+[6])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[6]
+[7]
 \openout2 = `chapters/cms_analyse.aux'.
 
  (./chapters/cms_analyse.tex
 Kapitel 2.
-[7
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--50
+
+ []
+
+
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 11--50
+[] 
+ []
+
+[8
 
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[8]
-Underfull \hbox (badness 6380) in paragraph at lines 63--63
-[]|\T1/lmr/m/n/12 Locomotive CMS bie-tet ei-ne Asset-
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 97--97
-\T1/lmr/m/n/12 Grund feh-len-der Tests je-doch nur die
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 127--127
-\T1/lmr/m/n/12 sour-cen-ver-wal-tung nur ei-ner ein-fa-chen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
-[]|\T1/lmr/m/n/12 Individuelle In-halts-ele-men-te kön-nen
- []
-
-
-Underfull \hbox (badness 6461) in paragraph at lines 195--195
-\T1/lmr/m/n/12 durch die Ver-wen-dung der Re-fi-ne-ry
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 229--229
-\T1/lmr/m/n/12 nach-träg-li-ches Be-fül-len der Da-ten-bank
- []
-
-
-Underfull \hbox (badness 3323) in paragraph at lines 229--229
-\T1/lmr/m/n/12 mög-lich. Der Auf-ruf er-for-dert je-doch
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 229--229
-\T1/lmr/m/n/12 Kennt-nis-se in Ru-by on Rails und ist
- []
-
-
-Underfull \hbox (badness 2334) in paragraph at lines 229--229
-\T1/lmr/m/n/12 da-her für Nor-malan-wen-der/Re-dak-teu-re
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 251--251
-[]|\T1/lmr/m/n/12 Wie sei-ne Vor-gän-ger auch kön-nen in-
- []
-
-
-Underfull \hbox (badness 1708) in paragraph at lines 251--251
-[]|\T1/lmr/m/n/12 Wie bei Al-che-my und Re-fi-ne-ry CMS
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/lmr/m/n/12 In Al-che-my exis-tie-ren vor-de-fi-nier-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-\T1/lmr/m/n/12 Rol-len (Re-gis-triert, Au-t-hor, Re-dak-
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 268--268
-[]|\T1/lmr/m/n/12 Lokomotive CMS be-sitzt ein ein-fa-ches
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 268--268
-\T1/lmr/m/n/12 schen Ad-mi-nis-tra-to-ren, De-si-gnern und
- []
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 301--301
-\T1/lmr/m/n/12 Ver-sio-nie-rung von In-halts-ele-men-ten er-
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 379--379
-\T1/lmr/m/n/12 lich, das Re-dak-teu-re die von Au-to-ren
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 383--383
-[]|\T1/lmr/m/n/12 Ein Work-flowpro-zess kann in Brow-ser
- []
-
-
-Underfull \hbox (badness 4543) in paragraph at lines 383--383
-\T1/lmr/m/n/12 CMS nicht er-zeugt wer-den. Au-to-ren
- []
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 505--505
-[]|\T1/lmr/bx/n/12 Möglichkeit In-hal-te für an-de-ren Web-sei-ten be-reit-zu-s
-tel-len (XML,
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 541--541
-\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 541--541
-\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 545--545
-\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 545--545
-\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- []  
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 36--596
- [] 
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 59--92
+[] 
  []
 
 
@@ -1262,14 +990,320 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [10]
+Overfull \hbox (18.86186pt too wide) in paragraph at lines 100--132
+[] 
+ []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]|\T1/lmr/m/n/12 Realisierung ei-ner be-nut-zer-freund-li-chen, ein-fa-chen
+ []
+
+
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 140--173
+[] 
+ []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [12]
+Underfull \hbox (badness 6380) in paragraph at lines 209--209
+[]|\T1/lmr/m/n/12 Locomotive CMS bie-tet ei-ne Asset-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 243--243
+\T1/lmr/m/n/12 Grund feh-len-der Tests je-doch nur die
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 273--273
+\T1/lmr/m/n/12 sour-cen-ver-wal-tung nur ei-ner ein-fa-chen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
+[]|\T1/lmr/m/n/12 Individuelle In-halts-ele-men-te kön-nen
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 341--341
+\T1/lmr/m/n/12 durch die Ver-wen-dung der Re-fi-ne-ry
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 375--375
+\T1/lmr/m/n/12 nach-träg-li-ches Be-fül-len der Da-ten-bank
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 375--375
+\T1/lmr/m/n/12 mög-lich. Der Auf-ruf er-for-dert je-doch
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 375--375
+\T1/lmr/m/n/12 Kennt-nis-se in Ru-by on Rails und ist
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 375--375
+\T1/lmr/m/n/12 da-her für Nor-malan-wen-der/Re-dak-teu-re
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 397--397
+[]|\T1/lmr/m/n/12 Wie sei-ne Vor-gän-ger auch kön-nen in-
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 397--397
+[]|\T1/lmr/m/n/12 Wie bei Al-che-my und Re-fi-ne-ry CMS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+[]|\T1/lmr/m/n/12 In Al-che-my exis-tie-ren vor-de-fi-nier-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+\T1/lmr/m/n/12 Rol-len (Re-gis-triert, Au-t-hor, Re-dak-
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 414--414
+[]|\T1/lmr/m/n/12 Locomotive CMS be-sitzt ein ein-fa-ches
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 414--414
+\T1/lmr/m/n/12 schen Ad-mi-nis-tra-to-ren, De-si-gnern und
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 447--447
+\T1/lmr/m/n/12 Ver-sio-nie-rung von In-halts-ele-men-ten er-
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 525--525
+\T1/lmr/m/n/12 lich, das Re-dak-teu-re die von Au-to-ren
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 529--529
+[]|\T1/lmr/m/n/12 Ein Work-flowpro-zess kann in Brow-ser
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 529--529
+\T1/lmr/m/n/12 CMS nicht er-zeugt wer-den. Au-to-ren
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 651--651
+[]|\T1/lmr/bx/n/12 Möglichkeit In-hal-te für an-de-ren Web-sei-ten be-reit-zu-s
+tel-len (XML,
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 687--687
+\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 687--687
+\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 691--691
+\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 691--691
+\T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ []  
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+ [] 
+ []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -1321,16 +1355,32 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[25])
+[25]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [26]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[27]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[28]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[29])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[30]
 \openout2 = `chapters/alternativer_code.aux'.
 
  (./chapters/alternativer_code.tex
 Kapitel 3.
-) [27
+) [31
 
 
 
@@ -1340,13 +1390,13 @@ No file railscms.ind.
 (./railscms.aux (./chapters/titlepage.aux) (./chapters/vorwort.aux)
 (./chapters/cms_analyse.aux) (./chapters/alternativer_code.aux)) ) 
 Here is how much of TeX's memory you used:
- 9865 strings out of 493848
- 141807 string characters out of 1152823
+ 9879 strings out of 493848
+ 142010 string characters out of 1152823
  375054 words of memory out of 3000000
- 12787 multiletter control sequences out of 15000+50000
+ 12791 multiletter control sequences out of 15000+50000
  68538 words of font info for 63 fonts, out of 3000000 for 9000
  716 hyphenation exceptions out of 8191
- 45i,9n,67p,833b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,9n,67p,833b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/t
 exmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx1
 2.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
@@ -1354,9 +1404,9 @@ ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on railscms.pdf (27 pages, 305065 bytes).
+Output written on railscms.pdf (31 pages, 324218 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

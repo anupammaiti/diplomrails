@@ -1,30 +1,175 @@
 \chapter{Analyse der bestehenden Content Management Systeme}
 
 
+
+\section{Vorbetrachtungen}
+
+
 %ALCHEMY BEGIN
 \section{Vorstellung Alchemy CMS}
-Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Open Source Content Management System. Es wird unter der GPLv3 Lizenz veröffentlicht und verfügt über einen relativ hohen Funktionsumfang. Die aktuelle Version 1.6.0 ist in den Rails-Versionen 2 und 3 erhältlich1. Die von magiclabs* angebotene Demoversion ist zum Zeitpunkt der Erstellung dieser Arbeit nur als Rails 2 Variante verfügbar. Eine lokale Testinstallation konnte jedoch eine erfolgreiche Inbetriebnahme der Rails 3 Version sicherstellen.
+
+Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öfentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabsabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
+\newline
+In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} ausgewählt werden.
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|}
+\hline
+\textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{1.6.0} \\
+\hline
+\textbf{Lizenz} & \multicolumn{2}{p{10cm}|}{GPLv3} \\
+\hline
+\textbf{Projektseite} & \multicolumn{2}{p{10cm}|}{\href{http://alchemy-cms.com}{http://alchemy-cms.com}} \\
+ & \multicolumn{2}{p{10cm}|}{\href{https://github.com/magiclabs/alchemy}{https://github.com/magiclabs/alchemy}} \\
+\hline
+\textbf{Quellcode} & \multicolumn{2}{p{10cm}|}{\href{https://github.com/magiclabs/alchemy}{https://github.com/magiclabs/alchemy}} \\
+\hline
+\textbf{IRC-Channel} & \multicolumn{2}{p{10cm}|}{nicht vorhanden} \\
+\hline
+\textbf{API Dokumentation} & \multicolumn{2}{p{10cm}|}{nicht verfügbar} \\
+\hline
+\textbf{Forum} & \multicolumn{2}{p{10cm}|}{\href{http://groups.google.com/group/alchemy-cms}{http://groups.google.com/group/alchemy-cms}} \\
+\hline
+\textbf{Demoversion} & Frontend & \href{http://demo.alchemy-cms.com}{http://demo.alchemy-cms.com} \\
+\cline{2-3}
+& Backend & \href{http://demo.alchemy-cms.com/admin}{http://demo.alchemy-cms.com/admin} \\
+\cline{2-3}
+& Login & demo \\
+\cline{2-3}
+& Passwort & demo \\
+\hline
+\textbf{Verwendete Technologien} & \multicolumn{2}{p{10cm}|}{Ruby on Rails 3.0.x, HTML, jQuery und jQueryUI, TinyMCE - Javascript WYSIWYG Editor, SWFUpload} \\
+\hline
+\textbf{Projektbeschreibung} & \multicolumn{2}{p{10cm}|}{Alchemy ist ein unglaubliches Content Managment System, welches sich gut in Rails integrieren lässt. – Absolut flexibel und kraftvoll.} \\
+\hline
+\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Der Benutzer des Systems muss nur Inhalte erstellen und ändern können} \\
+& \multicolumn{2}{p{10cm}|}{Formatierung von Überschriften, Bildpositionierung und -berechnung sind Aufgaben des Entwicklers, nicht die des Redakteurs}\\
+\hline
+\end{tabular}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
 %ALCHEMY END
-
 %Browser BEGIN
+
+
+
 \section{Vorstellung Browser CMS}
+\begin{tabular}[!ht]{|l|l|l|}
+\hline
+\textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{3.3.1} \\
+\hline
+\textbf{Lizenz} & \multicolumn{2}{p{10cm}|}{GPLv3} \\
+\hline
+\textbf{Projektseite} & \multicolumn{2}{p{10cm}|}{\href{http://browsercms.org}{http://browsercms.org}} \\
+\hline
+\textbf{Quellcode} & \multicolumn{2}{p{10cm}|}{\href{https://github.com/browsermedia/browsercms
+}{https://github.com/browsermedia/browsercms}} \\
+\hline
+\textbf{IRC-Channel} & \multicolumn{2}{p{10cm}|}{nicht vorhanden} \\
+\hline
+\textbf{API Dokumentation} & \multicolumn{2}{p{10cm}|}{\href{http://rubydoc.info/gems/browsercms/
+}{http://rubydoc.info/gems/browsercms/}} \\
+\hline
+\textbf{Forum} & \multicolumn{2}{p{10cm}|}{\href{http://groups.google.com/group/browsercms}{http://groups.google.com/group/browsercms}} \\
+\hline
+\textbf{Demoversion} & Frontend & \href{http://diplomabcms.heroku.com/}{http://diplomabcms.heroku.com/} \\
+\cline{2-3}
+& Backend & \href{http://diplomabcms.heroku.com/cms}{http://diplomabcms.heroku.com/admin} \\
+\cline{2-3}
+& Login & demo \\
+\cline{2-3}
+& Passwort & demo \\
+\hline
+\textbf{Verwendete Technologien} & \multicolumn{2}{p{10cm}|}{Ruby on Rails 3.0.x, HTML, jQuery und jQueryUI, diverse jQuery Plugins ,WYSIWYG-HTML-Editor CKEditor} \\
+\hline
+\textbf{Projektbeschreibung} & \multicolumn{2}{p{10cm}|}{Menschliches Content Management mit Ruby on Rails 3 Unterstützung} \\
+\hline
+\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Redakteuren soll es ermöglicht werden, ohne HTML- und Rails-Kenntnisse eine Internetseite zu verwalten} \\
+\hline
+\end{tabular}
+
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
 %Browser END
-
-%Lokomotive BEGIN
-\section{Vorstellung Lokomotive CMS}
+\newpage
+%Locomotive BEGIN
+\section{Vorstellung Locomotive CMS}
+\begin{tabular}[!ht]{|l|l|l|}
+\hline
+\textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{keine Angabe von Entwicklungsversionen} \\
+\hline
+\textbf{Lizenz} & \multicolumn{2}{p{10cm}|}{MIT License} \\
+\hline
+\textbf{Projektseite} & \multicolumn{2}{p{10cm}|}{\href{http://www.locomotivecms.com/}{http://www.locomotivecms.com/}} \\
+\hline
+\textbf{Quellcode} & \multicolumn{2}{p{10cm}|}{\href{https://github.com/locomotivecms/engine}{https://github.com/locomotivecms/engine}} \\
+\hline
+\textbf{IRC-Channel} & \multicolumn{2}{p{10cm}|}{\#locomotivecms} \\
+\hline
+\textbf{API Dokumentation} & \multicolumn{2}{p{10cm}|}{\href{http://rubydoc.info/github/resolve/refinerycms}{http://rubydoc.info/github/resolve/refinerycms}} \\
+\hline
+\textbf{Forum} & \multicolumn{2}{p{10cm}|}{\href{http://groups.google.com/group/refinery-cms/}{http://groups.google.com/group/refinery-cms/}} \\
+\hline
+\textbf{Demoversion} & Frontend & \href{http://diplomalocomotive.heroku.com/}{http://diplomalocomotive.heroku.com/} \\
+\cline{2-3}
+& Backend & \href{http://diplomalocomotive.heroku.com/admin}{http://diplomalocomotive.heroku.com/admin} \\
+\cline{2-3}
+& Login & demo \\
+\cline{2-3}
+& Passwort & demo123 \\
+\hline
+\textbf{Verwendete Technologien} & \multicolumn{2}{p{10cm}|}{Ruby on Rails 3.0.x, HTML, jQuery und jQueryUI, diverse jQuery Plugins ,WYSIWYG-HTML-Editor Aloha und TinyMCE, MongoDB, Template Sprache Liquid} \\
+\hline
+\textbf{Projektbeschreibung} & \multicolumn{2}{p{10cm}|}{Locomotive ist ein Open Source CMS für Rails. Es ist sehr flexibel und unterstützt Heroku und Amazon S3.} \\
+\hline
+\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Verwaltung kleiner Internetseiten} \\
+& \multicolumn{2}{p{10cm}|}{Komplexe Inhaltselemente dank MongoDB selbst erstellen}\\
+\hline
+\end{tabular}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
-%Lokomotive END
+%Locomotive END
 
+\newpage
 %Refinery BEGIN
 \section{Vorstellung Refinery CMS}
+\begin{tabular}[!ht]{|l|l|l|}
+\hline
+\textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{1.0.8} \\
+\hline
+\textbf{Lizenz} & \multicolumn{2}{p{10cm}|}{MIT License} \\
+\hline
+\textbf{Projektseite} & \multicolumn{2}{p{10cm}|}{\href{http://refinerycms.com}{http://refinerycms.com}} \\
+\hline
+\textbf{Quellcode} & \multicolumn{2}{p{10cm}|}{\href{https://github.com/resolve/refinerycms}{https://github.com/resolve/refinerycms}} \\
+\hline
+\textbf{IRC-Channel} & \multicolumn{2}{p{10cm}|}{\#refinerycms} \\
+\hline
+\textbf{API Dokumentation} & \multicolumn{2}{p{10cm}|}{\href{http://rubydoc.info/github/resolve/refinerycms}{http://rubydoc.info/github/resolve/refinerycms}} \\
+\hline
+\textbf{Forum} & \multicolumn{2}{p{10cm}|}{\href{http://groups.google.com/group/refinery-cms/}{http://groups.google.com/group/refinery-cms/}} \\
+\hline
+\textbf{Demoversion} & Frontend & \href{http://demo.refinerycms.com}{http://demo.refinerycms.com} \\
+\cline{2-3}
+& Backend & \href{http://demo.refinerycms.com/refinery}{http://demo.refinerycms.com/refinery} \\
+\cline{2-3}
+& Login & demo \\
+\cline{2-3}
+& Passwort & demo \\
+\hline
+\textbf{Verwendete Technologien} & \multicolumn{2}{p{10cm}|}{Ruby on Rails 3.0.x, HTML, jQuery und jQueryUI, WYSIWYG-HTML-Editor Wymeditor, HTML 5 Multi-Upload} \\
+\hline
+\textbf{Projektbeschreibung} & \multicolumn{2}{p{10cm}|}{Erweiterbares Ruby on Rails „CMS Framework“ mit  Ruby on Rails 3 Unterstützung} \\
+\hline
+\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Realisierung einer benutzerfreundlichen, einfachen Oberfläche} \\
+& \multicolumn{2}{p{10cm}|}{Einfaches Hinzufügen von Funktionalität an Hand der in Rails bekannten Entwicklungsabläufe}\\
+& \multicolumn{2}{p{10cm}|}{Aktive Community durch Google Group und IRC, die eine schnelle Hilfe ermöglichen}\\
+\hline
+\end{tabular}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
@@ -32,7 +177,8 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
 
 \newpage
 \center
-
+\section{Analyseverfahren}
+\section{Durchführung der Analyse}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen – unabhängig von Zeit- und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können}} \\
@@ -41,7 +187,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
 \hline
@@ -58,7 +204,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können. Eine Angabe zusätzlicher Metadaten zu diesen Ressourcen ist nicht möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung. Dabei wird zwischen Bildern und anderen Dateien unterschieden. Metadaten können nicht verwaltet werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht. Eine Metadatenverwaltung ist nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können. Das Hinzufügen von beliebigen Metainformationen ist möglich.} \\
 \hline
@@ -75,7 +221,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Alle Inhalte können über den TinyMCE-Javascript WYSIWYG Editor erfasst und formatiert werden.}
    & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über den integrierten WYSIWYG-Editor Wymeditor erfasst und formatiert werden. Der Editor ist fest in das System integriert und kann nicht ausgetauscht werden. Ein Plugin, dass die Verwendung eines anderen Editors ermöglicht ist bereits in Planung.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS findet der WYSIWIG-FCKEditor Verwendung. Er kann über installierbare Module beliebig ausgetauscht werden.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
 \hline
@@ -92,9 +238,9 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Alchemy verwendet Active Record als Datenbankpersistenzschicht. Durch die Verwendung von Migrationen könen so eine Vielzahl relationaler Datenbanken unterstützt werden. Zusätzlich exisitieren einige Adapter, um auch dokumentenbasierte Datenbanken anzusteuern.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery greift ebenfalls auf Rails' Active Record zurück und unterstützt damit mehrere relationale und dokumentenorientierte Datenbanken.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS greift im Gegensatz zu seinen Konkurrenten auf die dokumentenorientierten Datenbank MongoDB zurück. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Lokomotive mit Active Record ist jedoch geplant.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS greift im Gegensatz zu seinen Konkurrenten auf die dokumentenorientierten Datenbank MongoDB zurück. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Locomotive mit Active Record ist jedoch geplant.} \\
 \hline
 \end{tabular}
 \newline
@@ -109,7 +255,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
    & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt.} \\
 \hline
@@ -126,7 +272,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Die Bibliothek von Alchemy unterstützt lediglich eine Auflistung von Resourcen. Bilder und Dateien können damit nur in Form einer Listenansicht inspiziert werden. Eine Zuordnung zu Kategorien oder eine Anlage von Ordnerstrukturen zur Erleichterung der Orientierung ist nicht möglich. Die Verwaltung großer Datenmengen scheint daher nur schwer möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Ähnlich wie bei Alchemy gleicht die Resourcenverwaltung nur einer einfachen Auflistung von Bildern und anderen Ressourcen. Eine Kategorisierung der Inhalte ist nicht möglich. Ebenfalls können keine Ordner zur sinnvollen Strukturierung der Ressourcen erstellt werden. Die Verwaltung großer Datenmengen wird dadurch schnell zu einem Geduldsakt.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Die \emph{Content Library} von BrowserCMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Die Inhaltsverwaltung kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
 \hline
@@ -143,9 +289,9 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Redakteure können ihre erstellten und editierten Inhalte im Backend durch ein Preview-Fenster sichtbar machen. Änderungen an Inhaltselementen können somit sofort nachvollzogen werden.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verfügt über keine Preview-Funktion der Inhalte. Ist ein Inhaltselement im Backend neu angelegt oder bearbeitet wurden, wird dies auf der Internetseite sofort sichtbar.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy werden Inhalte erst nach ihrer Veröffentlichung sichtbar. Bis dahin kann jedoch im Frontend durch Inline-Editing der Seite jedes Inhaltselement bearbeitet werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS bietet wie RefineryCMS keine Preview-Funktion. Änderungen und neu angelegte Inhalte werden direkt veröffentlicht.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy werden Inhalte erst nach ihrer Veröffentlichung sichtbar. Bis dahin kann jedoch im Frontend durch Inline-Editing der Seite jedes Inhaltselement bearbeitet werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet wie RefineryCMS keine Preview-Funktion. Änderungen und neu angelegte Inhalte werden direkt veröffentlicht.} \\
 \hline
 \end{tabular}
 \newline
@@ -160,7 +306,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden.}
    & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt.Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
 \hline
@@ -177,7 +323,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung kleiner Flaggensymbole kenntlich gemacht.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Brower CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
 \hline
@@ -194,7 +340,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Eine flexible Plugin-DSL erlaubt das Hinzufügen von individuellen Erweiterungen.}
    & \multicolumn{2}{p{7.5cm}|}{Individuelle Inhaltselemente können durch die Verwendung der Refinery Engine Generatoren hinzugefügt werden. Für die weitere Entwicklung stehen die in Rails üblichen Entwicklungstechniken zur Verfügung.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Ähnlich wie bei Refinery CMS können neue Module und Inhaltstypen mit Hilfe von speziellen Rails-Generatoren erzeugt werden.} & \multicolumn{2}{p{7.5cm}|}{Neue Inhaltstypen lassen sich im Backend durch ein einfaches User-Interface zusammenstellen.  Mit wenigen Klicks sind so schnell neue Elemente erstellt. Programmierkenntnisse sind nicht notwendig.} \\
 \hline
@@ -211,7 +357,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt}
    & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
 \hline
@@ -228,9 +374,9 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Alchemy verfügt über keine integrierten Import und Export-Funktionalitäten.}
    & \multicolumn{2}{p{7.5cm}|}{Es existieren auf Nutzerebene keine Möglichkeiten des Im- und Exports. Durch sogenannte Seed-Dateien ist jedoch ein nachträgliches Befüllen der Datenbank möglich. Der Aufruf erfordert jedoch Kenntnisse in Ruby on Rails und ist daher für Normalanwender/Redakteure nicht sinnvoll.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS können Inhalte nicht importiert und exportiert werden. Entsprechende Features müssten erst eigenständig implementiert werden.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann ein kompletter Internetauftritt mit seinen Inhalten und Ressourcen importiert und exportiert werden. Zum Austausch der Inhalte findet eine \emph{Zip}-Datei Verwendung, die alle benötigten Ressourcen (Bilder, Dateien, Templates usw.) sowie Inhalte der Datenbank einschließt. Ressourcen werden dabei in vordefinierten Ordnerstrukturen abgelegt. Die Datenbankeinträge aus MongoDB werden innerhalb der \emph{Zip}-Datei im Unterordner \emph{data} abgelegt. Die Einträge liegen dabei  im \emph{YAML}-Format vor.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS können Inhalte nicht importiert und exportiert werden. Entsprechende Features müssten erst eigenständig implementiert werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann ein kompletter Internetauftritt mit seinen Inhalten und Ressourcen importiert und exportiert werden. Zum Austausch der Inhalte findet eine \emph{Zip}-Datei Verwendung, die alle benötigten Ressourcen (Bilder, Dateien, Templates usw.) sowie Inhalte der Datenbank einschließt. Ressourcen werden dabei in vordefinierten Ordnerstrukturen abgelegt. Die Datenbankeinträge aus MongoDB werden innerhalb der \emph{Zip}-Datei im Unterordner \emph{data} abgelegt. Die Einträge liegen dabei  im \emph{YAML}-Format vor.} \\
 \hline
 \end{tabular}
 \newline
@@ -246,7 +392,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
 } \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselementen, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
 \hline
@@ -263,9 +409,9 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{In Alchemy existieren vordefinierte Rollen (Registriert, Author, Redakteur,Administrator). Das Anlegen weiterer Rollen zur besseren Differenzierung ist jedoch nicht möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS besitzt kein Rechte- und Rollenkonzept. Dem Anwender kann lediglich der Zugang zu bestimmten Plugins erlaubt oder entzogen werden, um so den Funktionsumfang einzuschränken.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzliche können weitere Backend-Gruppen angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzliche können weitere Backend-Gruppen angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich.} \\
 \hline
 \end{tabular}
 \newline
@@ -280,7 +426,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \multicolumn{2}{|p{7.5cm}|}{Die in Alchemy vordefinierte Rollen Registriert, Author, Redakteur und Administrator bestimmen den Funktionsumfang eines Anwenders im Backend. Angelegte Inhalte können jedoch nicht einzelnen Nutzern zugeordnet werden.}
    & \multicolumn{2}{p{7.5cm}|}{Nutzer können alle Inhalte und Bereiche einer Webseite editieren, solange sie zur Nutzung des bestimmten Plugins berechtigt wurden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{ Der Zugriff auf bestimmte Seiten (Seitenbaumzweige)  kann eingeschränkt werden. Zusätzlich bietet Browser CMS ein Erstellen von Frontend-Nutzergruppen an, um so bestimmte Seiten des CMS nur exklusiv ausgewählten Nutzern zur Verfügung zu stellen. Die Zugriffsberechtigung auf installierte Plugins kann ebenfalls für jeden Nutzer individuell festgelegt werden. Leider ist es nicht möglich, einzelne Inhaltselemente für bestimmte Nutzer unzugänglich zu machen.} & \multicolumn{2}{p{7.5cm}|}{Der Zugriff auf Seiten und Inhalte kann nicht individuell gesteuert und beeinflusst werden. Besitzt ein Anwender das Recht zum Editieren und Anlegen von Inhalten (Nutzergruppe Redakteur), können alle Inhalte im gesamten CMS bearbeitet werden.} \\
 \hline
@@ -296,7 +442,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt. Die automatische Versionierung von Inhaltselementen erlaubt jedoch ein nachträgliches, manuelles Sichten und Zusammenfügen  verschiedener Versionen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -312,7 +458,7 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
 \hline
@@ -328,9 +474,9 @@ Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Op
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden . Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden . Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
 \hline
 \end{tabular}
 \newline
@@ -345,7 +491,7 @@ Personengruppen}} \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -361,7 +507,7 @@ Personengruppen}} \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -378,7 +524,7 @@ Personengruppen}} \\
   \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die  von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
 Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Ein Workflowprozess kann in Browser CMS nicht erzeugt werden. Autoren ist es nur möglich, ihre durchgeführten Änderungen an andere Backend-Nutzer mit Veröffentlichungsrechten weiterzuleiten (Simulierung eines einfachsten Workflows).} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -394,7 +540,7 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -410,7 +556,7 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -427,10 +573,10 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \multicolumn{2}{|p{7.5cm}|}{Inhalt und Design werden in Alchemy durch die Verwendung von \emph{erb}-Templates getrennt. Das Haupt-Template der Seite wird zu Beginn der Entwicklung von einem Designer festgelegt und anschließend in der Anwendung verankert (als fixe Ressource im Rails Quellcode). So können Redakteure das Aussehen der Internetseite nicht beeinflussen.} & \multicolumn{2}{p{7.5cm}|}{Wie Alchemy verwendet Refinery CMS \emph{erb} als Template-Sprache.
 Trotz der so erreichten Trennung zwischen Inhalten und Design erschwert die fehlende Möglichkeit der Anpassung im Backend den Umgang mit dem gesamten WCMS. Dies gilt für das Haupttemplate der Seite sowie für alle Erweiterungen.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{BrowserCMS unterstützt die Verwendung verschiedener Template-Sprachen.
-In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
+In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
 \hline
 \end{tabular}
 \newline
@@ -444,9 +590,9 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Inhaltselemente und Seiten können in Alchemy kopiert und wiederverwendet werden. Die Zuordnung eines neuen Templates muss durch den Administrator erfolgen (Änderung am Rails-Quellcode).} & \multicolumn{2}{p{7.5cm}|}{Inhalte und Seiten können nicht kopiert und mehrfach verwendet werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach verwendet werden.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach verwendet werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar.} \\
 \hline
 \end{tabular}
 \newline
@@ -460,7 +606,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
 \hline
@@ -476,7 +622,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
 \hline
@@ -492,7 +638,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -508,7 +654,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
 \hline
@@ -524,7 +670,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -540,7 +686,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
 \hline
@@ -556,7 +702,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -572,7 +718,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -588,7 +734,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
