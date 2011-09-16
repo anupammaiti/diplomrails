@@ -1,0 +1,564 @@
+\chapter{Analyse der bestehenden Content Management Systeme}
+
+
+%ALCHEMY BEGIN
+\section{Vorstellung Alchemy CMS}
+Alchemy CMS ist ein von der Hamburger Internetagentur magiclabs* entwickeltes Open Source Content Management System. Es wird unter der GPLv3 Lizenz veröffentlicht und verfügt über einen relativ hohen Funktionsumfang. Die aktuelle Version 1.6.0 ist in den Rails-Versionen 2 und 3 erhältlich1. Die von magiclabs* angebotene Demoversion ist zum Zeitpunkt der Erstellung dieser Arbeit nur als Rails 2 Variante verfügbar. Eine lokale Testinstallation konnte jedoch eine erfolgreiche Inbetriebnahme der Rails 3 Version sicherstellen.
+\subsection{Funktionsprinzipien}
+\subsection{Erweiterungen}
+\subsection{Verwendete Technologien}
+%ALCHEMY END
+
+%Browser BEGIN
+\section{Vorstellung Browser CMS}
+\subsection{Funktionsprinzipien}
+\subsection{Erweiterungen}
+\subsection{Verwendete Technologien}
+%Browser END
+
+%Lokomotive BEGIN
+\section{Vorstellung Lokomotive CMS}
+\subsection{Funktionsprinzipien}
+\subsection{Erweiterungen}
+\subsection{Verwendete Technologien}
+%Lokomotive END
+
+%Refinery BEGIN
+\section{Vorstellung Refinery CMS}
+\subsection{Funktionsprinzipien}
+\subsection{Erweiterungen}
+\subsection{Verwendete Technologien}
+%Refinery END
+
+\newpage
+\center
+
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen – unabhängig von Zeit- und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia,Texten, Audio, Videos, usw.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können. Eine Angabe zusätzlicher Metadaten zu diesen Ressourcen ist nicht möglich.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung. Dabei wird zwischen Bildern und anderen Dateien unterschieden. Metadaten können nicht verwaltet werden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht. Eine Metadatenverwaltung ist nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können. Das Hinzufügen von beliebigen Metainformationen ist möglich.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen ohne spezielle Programmier / HTML-Kenntnisse erfasst und verwaltet werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Alle Inhalte können über den TinyMCE-Javascript WYSIWYG Editor erfasst und formatiert werden.}
+   & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über den integrierten WYSIWYG-Editor Wymeditor erfasst und formatiert werden. Der Editor ist fest in das System integriert und kann nicht ausgetauscht werden. Ein Plugin, dass die Verwendung eines anderen Editors ermöglicht ist bereits in Planung.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS findet der WYSIWIG-FCKEditor Verwendung. Er kann über installierbare Module beliebig ausgetauscht werden.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen in einer Datenbank gespeichert werden}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy verwendet Active Record als Datenbankpersistenzschicht. Durch die Verwendung von Migrationen könen so eine Vielzahl relationaler Datenbanken unterstützt werden. Zusätzlich exisitieren einige Adapter, um auch dokumentenbasierte Datenbanken anzusteuern.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery greift ebenfalls auf Rails' Active Record zurück und unterstützt damit mehrere relationale und dokumentenorientierte Datenbanken.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS greift im Gegensatz zu seinen Konkurrenten auf die dokumentenorientierten Datenbank MongoDB zurück. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Lokomotive mit Active Record ist jedoch geplant.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
+   & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte (Texte, Bilder, Videos etc.) sollen zentral kategorisiert, erfasst und verwaltet werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Die Bibliothek von Alchemy unterstützt lediglich eine Auflistung von Resourcen. Bilder und Dateien können damit nur in Form einer Listenansicht inspiziert werden. Eine Zuordnung zu Kategorien oder eine Anlage von Ordnerstrukturen zur Erleichterung der Orientierung ist nicht möglich. Die Verwaltung großer Datenmengen scheint daher nur schwer möglich.}
+   & \multicolumn{2}{p{7.5cm}|}{Ähnlich wie bei Alchemy gleicht die Resourcenverwaltung nur einer einfachen Auflistung von Bildern und anderen Ressourcen. Eine Kategorisierung der Inhalte ist nicht möglich. Ebenfalls können keine Ordner zur sinnvollen Strukturierung der Ressourcen erstellt werden. Die Verwaltung großer Datenmengen wird dadurch schnell zu einem Geduldsakt.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Die \emph{Content Library} von BrowserCMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Die Inhaltsverwaltung kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte können während der Erfassung über eine Preview-Funktion vorab im Design der Webseite angesehen werden}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Redakteure können ihre erstellten und editierten Inhalte im Backend durch ein Preview-Fenster sichtbar machen. Änderungen an Inhaltselementen können somit sofort nachvollzogen werden.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verfügt über keine Preview-Funktion der Inhalte. Ist ein Inhaltselement im Backend neu angelegt oder bearbeitet wurden, wird dies auf der Internetseite sofort sichtbar.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy werden Inhalte erst nach ihrer Veröffentlichung sichtbar. Bis dahin kann jedoch im Frontend durch Inline-Editing der Seite jedes Inhaltselement bearbeitet werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS bietet wie RefineryCMS keine Preview-Funktion. Änderungen und neu angelegte Inhalte werden direkt veröffentlicht.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Zuordnung von standardisierten und frei definierbaren Metadaten zu Inhalten (z.B. Autor, Schlüsselwörter, Benutzerdefinierte Felder) soll möglich sein}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden.}
+   & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt.Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen mehrsprachig erfasst und verwaltet werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung kleiner Flaggensymbole kenntlich gemacht.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Brower CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Das CMS soll über eine offene API (Programmierschnittstelle) für individuelle Erweiterung verfügen}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Eine flexible Plugin-DSL erlaubt das Hinzufügen von individuellen Erweiterungen.}
+   & \multicolumn{2}{p{7.5cm}|}{Individuelle Inhaltselemente können durch die Verwendung der Refinery Engine Generatoren hinzugefügt werden. Für die weitere Entwicklung stehen die in Rails üblichen Entwicklungstechniken zur Verfügung.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Ähnlich wie bei Refinery CMS können neue Module und Inhaltstypen mit Hilfe von speziellen Rails-Generatoren erzeugt werden.} & \multicolumn{2}{p{7.5cm}|}{Neue Inhaltstypen lassen sich im Backend durch ein einfaches User-Interface zusammenstellen.  Mit wenigen Klicks sind so schnell neue Elemente erstellt. Programmierkenntnisse sind nicht notwendig.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Für die Verwaltung und Erfassung von Inhalten sollen alle gängigen Internet-Browser (Internet Explorer, Safari und Firefox) eingesetzt werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt}
+   & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen einfach importiert / exportiert werden können - dabei kommen Formate wie z.B. XML zum Einsatz}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy verfügt über keine integrierten Import und Export-Funktionalitäten.}
+   & \multicolumn{2}{p{7.5cm}|}{Es existieren auf Nutzerebene keine Möglichkeiten des Im- und Exports. Durch sogenannte Seed-Dateien ist jedoch ein nachträgliches Befüllen der Datenbank möglich. Der Aufruf erfordert jedoch Kenntnisse in Ruby on Rails und ist daher für Normalanwender/Redakteure nicht sinnvoll.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS können Inhalte nicht importiert und exportiert werden. Entsprechende Features müssten erst eigenständig implementiert werden.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann ein kompletter Internetauftritt mit seinen Inhalten und Ressourcen importiert und exportiert werden. Zum Austausch der Inhalte findet eine \emph{Zip}-Datei Verwendung, die alle benötigten Ressourcen (Bilder, Dateien, Templates usw.) sowie Inhalte der Datenbank einschließt. Ressourcen werden dabei in vordefinierten Ordnerstrukturen abgelegt. Die Datenbankeinträge aus MongoDB werden innerhalb der \emph{Zip}-Datei im Unterordner \emph{data} abgelegt. Die Einträge liegen dabei  im \emph{YAML}-Format vor.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Integration von Inhalten anderer Webseiten, Multimedia, Applikationen, E-Commerce-Tools}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Der verwendete WYSIWYG-Editor \emph{TinyMCE} erlaubt in seiner HTML-Ansicht das Einbinden von Fremdinhalten anderer Seiten (z.B. IFrame).Zusätzlich ist die Erstellung von eigenen Inhaltselementen mit Hilfe der Alchemy Plugin DSL-API denkbar. So können auch die verschiedenen Resourcen aus der Bibliothek von Alchemy Verwendung finden. Standardmäßig verfügt Alchemy bereits über die Inhaltselemente \emph{Artikel}, \emph{Text}, \emph{Text mit Bild}, \emph{Bilder}, \emph{Bildergalerie}, \emph{Überschrift} und \emph{Intro}.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
+} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselementen, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Granulares Rechte- und Rollenkonzept für Anwender}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Alchemy existieren vordefinierte Rollen (Registriert, Author, Redakteur,Administrator). Das Anlegen weiterer Rollen zur besseren Differenzierung ist jedoch nicht möglich.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS besitzt kein Rechte- und Rollenkonzept. Dem Anwender kann lediglich der Zugang zu bestimmten Plugins erlaubt oder entzogen werden, um so den Funktionsumfang einzuschränken.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzliche können weitere Backend-Gruppen angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Lokomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Granulares Berechtigungskonzept für einzelne Inhalte, Bereiche, Webseiten}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Die in Alchemy vordefinierte Rollen Registriert, Author, Redakteur und Administrator bestimmen den Funktionsumfang eines Anwenders im Backend. Angelegte Inhalte können jedoch nicht einzelnen Nutzern zugeordnet werden.}
+   & \multicolumn{2}{p{7.5cm}|}{Nutzer können alle Inhalte und Bereiche einer Webseite editieren, solange sie zur Nutzung des bestimmten Plugins berechtigt wurden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{ Der Zugriff auf bestimmte Seiten (Seitenbaumzweige)  kann eingeschränkt werden. Zusätzlich bietet Browser CMS ein Erstellen von Frontend-Nutzergruppen an, um so bestimmte Seiten des CMS nur exklusiv ausgewählten Nutzern zur Verfügung zu stellen. Die Zugriffsberechtigung auf installierte Plugins kann ebenfalls für jeden Nutzer individuell festgelegt werden. Leider ist es nicht möglich, einzelne Inhaltselemente für bestimmte Nutzer unzugänglich zu machen.} & \multicolumn{2}{p{7.5cm}|}{Der Zugriff auf Seiten und Inhalte kann nicht individuell gesteuert und beeinflusst werden. Besitzt ein Anwender das Recht zum Editieren und Anlegen von Inhalten (Nutzergruppe Redakteur), können alle Inhalte im gesamten CMS bearbeitet werden.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Schutz vor gegenseitigem Überschreiben erfasster Inhalte durch Check in/ Check out-Mechanismen}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt. Die automatische Versionierung von Inhaltselementen erlaubt jedoch ein nachträgliches, manuelles Sichten und Zusammenfügen  verschiedener Versionen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Versionierung von Inhalten mit Möglichkeit zur Wiederherstellung vorhergehender Versionen}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Mandantenfähigkeit: Mehrfachnutzung des Systems durch verschiedene Parteien mit kompletter Trennung der Daten und Benutzer}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden . Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Linküberprüfung: Automatische Prüfung der Gültigkeit von internen und externen Links mit Möglichkeit zur Korrektur bzw. Benachrichtigung definierter
+Personengruppen}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit für \emph{nicht technische} User den Workflow zu kreieren, verwalten und zu ändern. Es soll dafür kein Scripting / Programming notwendig sein}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die  von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
+Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Ein Workflowprozess kann in Browser CMS nicht erzeugt werden. Autoren ist es nur möglich, ihre durchgeführten Änderungen an andere Backend-Nutzer mit Veröffentlichungsrechten weiterzuleiten (Simulierung eines einfachsten Workflows).} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit externe Benutzer in Workflows mit einbinden zu können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Unternehmensspezifische Bearbeitungsprozesse von Inhalten sollen über frei definierbare Workflows verwaltet werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Trennung von Inhalt und Design unter Verwendung von Templates}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Inhalt und Design werden in Alchemy durch die Verwendung von \emph{erb}-Templates getrennt. Das Haupt-Template der Seite wird zu Beginn der Entwicklung von einem Designer festgelegt und anschließend in der Anwendung verankert (als fixe Ressource im Rails Quellcode). So können Redakteure das Aussehen der Internetseite nicht beeinflussen.} & \multicolumn{2}{p{7.5cm}|}{Wie Alchemy verwendet Refinery CMS \emph{erb} als Template-Sprache.
+Trotz der so erreichten Trennung zwischen Inhalten und Design erschwert die fehlende Möglichkeit der Anpassung im Backend den Umgang mit dem gesamten WCMS. Dies gilt für das Haupttemplate der Seite sowie für alle Erweiterungen.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{BrowserCMS unterstützt die Verwendung verschiedener Template-Sprachen.
+In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Mehrfachverwendung von Inhalten an verschiedenen Stellen mit unterschiedlichem Layout}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Inhaltselemente und Seiten können in Alchemy kopiert und wiederverwendet werden. Die Zuordnung eines neuen Templates muss durch den Administrator erfolgen (Änderung am Rails-Quellcode).} & \multicolumn{2}{p{7.5cm}|}{Inhalte und Seiten können nicht kopiert und mehrfach verwendet werden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach verwendet werden.} & \multicolumn{2}{p{7.5cm}|}{In Lokomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Navigationsstrukturen werden automatisch vom CMS generiert, publiziert und verwaltet}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Barrierefreiheit bei den publizierten Seiten soll unterstützt werden}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen auf verschiedene Medien / Technologien (Cross Media Publishing, SMS /Mobile / WAP / usw.) ausgegeben werden können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit Inhalte für anderen Webseiten bereitzustellen (XML, Webservice)}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit zur Wahl zwischen dynamischer oder statischer Generierung der Seiten / Inhalte}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Lokomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Einfache Einbindung von Fremdinhalten welche durch Drittanbieter zur Verfügung gestellt werden}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Einfache Einbindung von Fremdinhalten welche durch Drittanbieter zur Verfügung gestellt werden}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
+  \hline
+  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Lokomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
+\hline
+\end{tabular}
+
