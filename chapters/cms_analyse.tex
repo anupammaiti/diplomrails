@@ -1,15 +1,16 @@
-\chapter{Analyse der bestehenden Content Management Systeme}
+\chapter{Analyse der bestehenden Web Content Management Systeme}
 
-
+In diesem Kapitel werden die
 
 \section{Vorbetrachtungen}
 Der 2006 eingeleitete Hype um das Ruby on Rails Framework hat dazu geführt, dass viele Entwickler mit der Konzeption und Umsetzung zahlreicher verschiedener Rails-Anwendungen begonnen haben. So entstanden auch im Bereich der Web Content Management Systeme zahlreiche Projekte. Ein Großteil der Vorhaben blieb jedoch in der Konzeptionsphase stecken oder die Entwicklung wurde nach wenigen Jahren eingestellt. Die Ursachen sind dabei vor allem dem Entwicklungsumfeld von Rails und dem Framework selbst geschuldet:
 
 
 \begin{description}
-\item[Schnellebigkeit]
+\item[Schnellebigkeit]\mbox{~}\\*
 Die Entwicklung des Ruby on Rails Frameworks unterliegt einem ständigen Wandel und erfordert eine ständige Anpassung des Programmierers an neue Technologien und Konzepte.
-\item[Interessenwandlung der Entwickler] Die elegante Programmierung mit Ruby und die vielfältigen Möglichkeiten des Ruby on Rails Frameworks erleichtern die Umsetzung verschiedenster Projektideen.
+\item[Interessenwandlung der Entwickler]\mbox{~}\\*
+Die elegante Programmierung mit Ruby und die vielfältigen Möglichkeiten des Ruby on Rails Frameworks erleichtern die Umsetzung verschiedenster Projektideen.
 Es ist daher schneller möglich, dass sich Entwickler nach einiger Zeit mit anderen Projekten beschäftigen und bestehende Projekte vernachlässigen\footnote{Im Anhang der Arbeit findet sich eine Übersicht zu ermittelten Rails 2 und 3 Web Content Management Systemen. Diese sind zum Teil seit einigen Jahren nicht mehr weiterentwickelt wurden.}.
 \end{description}
 
@@ -21,37 +22,50 @@ Die hier aufgeführten Projekte Alchemy CMS, Refinery CMS, Browser CMS und Locom
 Die hohe Anzahl der im Anhang der Arbeit aufgelisteten WCMS machte es erforderlich, Mindestanforderungen für die Aufnahme in die bevorstehende Analyse zu treffen. Es wurden dabei folgende Festlegungen getroffen:
 
 \begin{description}
-\item[Open Source Software]
+\item[Open Source Software]\mbox{~}\\*
 Die hier ermittelten WCM-Systeme sind vollständige Open Source Lösungen. Ihre Veröffentlichung unterliegt dabei den in der Open Source Bewegung üblichen Lizenzen der Freien Software bzw. der Open Source Initiative (OSI).
-\item[Rails 3 Kompatibilität]
+\item[Rails 3 Kompatibilität]\mbox{~}\\*
 Die Veröffentlichung von Rails 3 brachte vielen Verbesserungen hinsichtlich der Modularität von Rails-Anwendungen. Kern-Komponenten des Frameworks (z.B. die Persistenz-Schicht Active Record) können nun mit geringem Aufwand gegen andere Implementierungen ausgetauscht werden. Die so erreichte Flexibilität soll auch bei der Integration eines Rails WCM-Systems zur Verfügung stehen.	Weiterhin sichert die Verwendung der aktuellsten Framework-Version die 	Unterstützung moderner Technologien und Entwicklungen innerhalb der implementierten WCMS ab.
-\item[Aktive Entwicklung]
+\item[Aktive Entwicklung]\mbox{~}\\*
 Die stetige, aktive Entwicklung an einem Open Source Projekt ist ein Merkmal für die Akzeptanz einer Software. Sie ist zusätzlich ein Beweis für das Engagement der beteiligten Programmierer. Eine in diesem Umfeld entstehende Software bietet daher entsprechend höheres Potenzial. Die  hier ausgewählten Systeme erfüllen diese Forderung.
-\item[Unterscheidung in Front- und Backend]
+\item[Unterscheidung in Front- und Backend]\mbox{~}\\*
 WCM-Systeme unterscheiden zwischen Frontend- und Backend-Funktionalität. Das Frontend wird durch die eigentliche Internetseite repräsentiert, die mit Hilfe des Systems erzeugt wird. Im Backend können Anwender die Inhalte der Seite zentral einpflegen und verwalten.
 Die ausgewählten Implementierungen verfügen über eine solche konzeptionelle Trennung.
 \end{description}
 
 Trotz der steigenden Bekanntheit von Ruby on Rails existiert zum Zeitpunkt der Anfertigung dieser Arbeit keine Fachliteratur, die sich mit den Möglichkeiten des Web Content Managements in Rails auseinandersetzt. Vielmehr sind folgende Schwerpunktsetzungen bei den verschiedenen Autoren festzustellen:
 \begin{description}
-\item[Grundlagenbücher]
+\item[Grundlagenbücher]\mbox{~}\\*
 Sie dienen als Einführung in Rails und verdeutlichen an Hand einfacher Anwendungen die Arbeitsweise mit dem Ruby on Rails Framework.
-\item[Fortgeschrittene Techniken mit Ruby on Rails]
+\item[Fortgeschrittene Techniken mit Ruby on Rails]\mbox{~}\\*
 Rails Kern-Entwickler stellen ihre Erfahrungen mit dem Framework dar und geben Lösungsansätze für größere Unternehmensstrukturen und Projekte. Häufig vertiefte Themen sind dabei Skalierung, Performance und Refactoring.
 \end{description}
 
 Zur Ermittlung existierender Ruby on Rails Open Source WCMS-Software mussten daher alternative Informationsquellen herangezogen werden:
 \begin{description}
-\item[Anfragen im offiziellen IRC Channel von Ruby on Rails]
+\item[Anfragen im offiziellen IRC Channel von Ruby on Rails]\mbox{~}\\*
 Der Ruby on Rails IRC Channel ermöglicht einen konstruktiven Austausch von Rails-Entwicklern zu verschiedenen Bereichen des Rails-Frameworks. Mit der Hilfe mehrerer hundert Nutzer täglich können so Probleme und Anfragen sehr umfassend beantwortet werden. Der Ruby on Rails Channel ist erreichbar unter \#rubyonrails.
-\item[RubyGems.org]
+\item[RubyGems.org]\mbox{~}\\*
 Bibliotheken können die Funktionalität von Ruby enorm erhöhen. Zur Verbreitung dieser im Internet existiert u.a. der Ruby Online Community Anbieter RubyGems.org, der über 30.000 Erweiterungspakete verschiedenster Entwickler im Internet zum Download anbietet.
 Der Dienst verfügt über eine ausführliche Suchfunktion, mit der gezielt nach bestimmten Bibliotheken gesucht werden kann. Neben einer kurzen Projektbeschreibung und Informationen zum Entwickler wird jedem Projekt ein Datum der letzten Aktualisierung zugeordnet. Der Entwicklungsstand eines Pakets kann so besser eingeschätzt werden.
-\begin{figure}
+\begin{figure}[!h]
 \begin{center}
-\label{fig.backendalchemy}
+\label{fig.rubygems}
 \includegraphics[scale=0.3]{images/analyse/rubygems/railsonrubygems.png}
 \caption{Ruby Gems mit aufgelisteten Informationen zum aktuellen Rails 3.1}
+\end{center}
+\end{figure}
+\newpage
+\item[Github.com]\mbox{~}\\*
+Github.com ist ein Online-Netzwerk und Webhosting-Dienst für Programmierer. Nutzer können dort ihre individuellen Programme, umgesetzt in beliebigen Programmiersprachen, kostenlos\footnote{Die Einrichtung eines kostnpflichtigen, privaten Github-Repositories ist ebenfalls möglich.}  veröffentlichen.
+Schlüsseltechnologie des Netzwerkes ist das Versionsverwaltungssystem Git, welches Änderungen am Quellcode des Projektes festhält. Zusätzlich erlaubt es anderen Programmierern, bestehende Projekte zu kopieren und eigenständig weiterzuentwickeln. Anschließend können diese wieder zu einem Gesamtprojekt verschmolzen werden.
+Die Symbiose zwischen den Funktionalitäten von Git und den zahlreichen Interkationsmöglichkeiten der Platform erschaffen eine Entwicklungsumgebung, in der ein schneller und effektiver Austausch zwischen Programmierern und Projekten stattfinden kann.
+Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufstelle für Rails-Programmierer entwickelt und besitzt daher zur Ermittlung bestehender Web Content Management Systeme entscheidende Relevanz.
+\begin{figure}[!h]
+\begin{center}
+\label{fig.github}
+\includegraphics[scale=0.3]{images/analyse/github/github.png}
+\caption{Beispiel für ein öffentliches Projekt auf Github.com: Das ausgewählte Projekt ist Rails 3}
 \end{center}
 \end{figure}
 \end{description}
@@ -60,10 +74,10 @@ Der Dienst verfügt über eine ausführliche Suchfunktion, mit der gezielt nach 
 %ALCHEMY BEGIN
 \newpage
 \section{Vorstellung Alchemy CMS}
-Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabsabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
+Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
 \newline
 In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} ausgewählt werden.
-\begin{table}[bp]
+\begin{table}[!h]
 \caption{Steckbrief Alchemy CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
@@ -99,22 +113,47 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Umsetzung\footno
 \hline
 \end{tabular}
 \end{table}
-\begin{comment}
+
 \subsection{Funktionsprinzipien}
 Das Backend von Alchemy CMS verfügt u.a. über die Bereiche Seiten, Sprachen, Benutzer und Bibliothek:
-\begin{figure}
+\begin{figure}[!h]
 \begin{center}
-\label{fig.backendalchemy}
 \includegraphics[scale=0.3]{images/analyse/alchemy/inhalte.png}
-\caption{Backend-Ansicht von Alchemy CMS mit geöffnerter Seitenvorschau}
+\caption{Backend-Ansicht von Alchemy CMS mit geöffnerter Seitenvorschau und Elementebearbeitung}
+\label{alchemybackend}
 \end{center}
 \end{figure}
 
+\begin{description}
+\item[Home]\mbox{~}\\*
+Nach einer erfolgreichen Anmeldung im Backend bildet das Home-Modul eine Art Startseite, in der der Nutzer über die letzten Aktivitäten des Systems informiert wird (z.B. Auflistung der zuletzt editierten Inhalte).
+\item[Seiten]\mbox{~}\\*
+Im Seiten-Modul des Backends findet die Verwaltung aller im System angelegter Seiten und deren Inhalte statt. Eine abgebildete Baumstruktur ermöglicht dabei einen Überblick über die verwalteten Seiten des Systems. Im Bearbeitungsmodus bietet Alchemy CMS darüber hinaus eine Aufteilung der Ansicht in einen Vorschaubereich, der die aktuell ausgewählte Seite mit ihren tatsächlichen Inhalten anzeigt, und einem Elemente-Bereich, der die auf der Seite verfügbaren Inhalselemente angibt und editierbar macht (Abb. \ref{alchemybackend}).
+\item[Sprachen]\mbox{~}\\*
+Diese Modul ermöglicht die komfortable Verwaltung der in Alchemy CMS verfügbaren Frontend-Sprachen. Eine Alchemy Standard-Installation enthält bereits die Sprachen Deutsch und Englisch.
+\item[Benutzer]\mbox{~}\\*
+Das Benutzer-Modul ist die zentrale Anlaufstelle zur Verwaltung der am System registrierten Administratoren, Autoren und Redakteure sowie ihrer jeweiligen Befugnisse innerhalb des CMS.
+\item[Bibliothek]\mbox{~}\\*
+Bilder und andere Dateien werden in Alchemy CMS über das Bibliotheken-Modul verwaltet. Es ermöglicht die Auflistung aller im System zur Verfügung stehenden Ressourcen. Zusätzlich stehen Funktionen zum Hochladen, Editieren und Löschen von Ressourcen zur Verfügung.
+\end{description}
 \subsection{Erweiterungen}
+Alchemy kann durch die Erstellung von Plugins in seiner Funktionalität erweitert werden. An Hand einer definierten API wird ein Grundgerüst angeboten, mit deren Hilfe Erweiterungen bequem in alle Teile des Systems integriert werden können. Ein Plugin kann so entweder als neues Backend-Modul umgesetzt werden (es erscheint in Form eines neuen Menüeintrages im linken Bereich des Backends) oder neue Inhaltselemente zur Verfügung stellen, die dann innerhalb der Seitenbearbeitung als auswählbarer Inhaltstyp zur Verfügung stehen.
+\newline
+\newline
+Folgende offiziellen Erweiterungen sind ebenfalls verfügbar:
+\begin{itemize}
+\item
+alchemy-mailings\footnote{Komponenten-Download: \href{https://github.com/magiclabs/alchemy-mailings}{https://github.com/magiclabs/alchemy-mailings}}: Ermöglicht die Erstellung und Verwaltung von Newsletters im Backend des Systems.
+\item
+alchemy-standard-set\footnote{Komponenten-Download: \href{ https://github.com/magiclabs/alchemy-standard-set}{ https://github.com/magiclabs/alchemy-standard-set}}: Enthält CSS-Formatierungen für die in Alchemy verfügbaren Standard-Inhaltselemente.
+\end{itemize}
 \subsection{Verwendete Technologien}
+Schwerpunkttechnologien der Nutzeroberfläche von Alchemy CMS sind die an Hand von Rails erzeugten HTML-Views und darin eingebundene JavaScript-Dateien, die mit Hilfe des JavaScript Frameworks jQuery erstellt wurden.
+Das Seiten-Modul greift zusätzlich auf die jQuery UI Bibliothek zurück, die vorgefertigte Elemente zur Erstellung von Dialogboxen und dem Tabulator-Menü liefert.
+Der bei einigen Inhaltselementen verfügbare WYSIWJG-Javascript Editor TinyMCE ermöglicht die Formatierung einzelner Inhalte und das Einfügen von vorgefertigtem HTML.
+Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Upload-Feld oder den integrierten Adobe Flash Uploader, der somit auch das Einstellen mehrerer Medien in einem Schritt ermöglicht.
 %ALCHEMY END
 
-\end{comment}
 
 %Browser BEGIN
 
@@ -207,7 +246,8 @@ Das Backend von Alchemy CMS verfügt u.a. über die Bereiche Seiten, Sprachen, B
 \newpage
 %Refinery BEGIN
 \section{Vorstellung Refinery CMS}
-\begin{table}
+Refinery CMS - in der Kurzform oft als Refinery bezeichnet - ist ein freies Open Source Web Content Management System des neuseeländischen Entwicklerteams Resolve Digital, dessen Entwicklung 2004 durch David Jones eingeleitet wurde. Nach einer fünfjährigen, eingeschränkten Entwicklungsphase, in der nur wenige Bereiche des Systems verbessert wurden, erfolgte am 28. Mai 2009 die Veröffentlichung der ersten Open Source Software Version. In der Folgezeit wurde das CMS durch die Kernentwickler David Jones, Philip Arndt, Steven Heidel und U\'{g}is Ozols auf das aktuelle Rails 3 umgestellt und eine erste stabile Version 1.0.0 veröffentlicht (28. Mai 2011).
+\begin{table}[!h]
 \caption{Steckbrief Refinery CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
@@ -244,10 +284,48 @@ Das Backend von Alchemy CMS verfügt u.a. über die Bereiche Seiten, Sprachen, B
 \end{tabular}
 \end{table}
 \subsection{Funktionsprinzipien}
+Das Backend bildet in Refinery CMS die zentrale Anlaufstelle zur Erstellung und Verwaltung aller Inhalte, Einstellungen und Nutzer. Über ein zentrales Menü kann auf die Funktionsmodule des Systems zugegriffen werden, welche im folgenden vorgestellt werden:
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/refinery/backendrefinery.png}
+\caption{Backend-Ansicht von Refinery CMS}
+\label{refinerybackend}
+\end{center}
+\end{figure}
+
+\begin{description}
+\item[Übersichts-Modul]\mbox{~}\\*
+Nach der Anmeldung am System bildet das Übersichts-Modul (o.a. Dashboard) die Startseite des Systems. Dort können in einer einfachen Form die letzten Aktivitäten innerhalb des CMS eingesehen werden. Zusätzlich werden Schnellaufrufe zu systemspezifischen Funktionen angeboten.
+\item[Seiten-Modul]\mbox{~}\\*
+Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel, Metainformationen und Verhalten der Seiten einzeln bearbeitet werden. Die erstellten Seiten verfügen jeweils über einen oder mehrere WYSIWYG-Editor-Felder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann beliebig festgelegt werden. Die Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt.}, in die der Inhalt der Seite eingepflegt wird.
+\item[Bilder- und Dateien-Modul]\mbox{~}\\*
+In Refinery wird durch die Wahl der Menüpunkte Bilder und Dateien die Ressourcenverwaltung des Systems geöffnet. Dort können anschließend 	Mediendateien verschiedenster Formate hochgeladen, bearbeitet und durchsucht werden.
+\item[Benutzer-Modul]\mbox{~}\\*
+Das Benutzer-Modul erlaubt die Verwaltung der am System registrierten 	Anwender. U.a. können dort Nutzername, Passwort und Berechtigungen für die Verwendung anderer Module gesetzt werden.
+\item[Einstellungs-Modul]\mbox{~}\\*
+Die einzelnen Module und Erweiterungen von Refinery können durch zuvor definierte Parameter\footnote{Die offizielle Bezeichnung der Parameter lautet \emph{Refinery Settings}} in ihrem Verhalten oder Ausehen beeinflusst werden. Das Einstellungs-Modul listet die in einer CMS-Installation vorhandenen Konfigurationsoptionen auf und ermöglicht eine nachträgliche Editierung und Löschung dieser.
+\end{description}
 \subsection{Erweiterungen}
+Erweiterungen werden in Refinery als Engines bezeichnet. Sie werden durch Aktivierung innerhalb der Rails-Anwendung (im Quellcode) installiert und anschließend im Benutzer-Modul von Refinery den einzelnen Anwendern zugeordnet. Zum Zeitpunkt der Erstellung dieser Arbeit existieren u.a. folgende Erweiterungen:
+\begin{itemize}
+\item
+refinerycms-inquiries\footnote{Komponenten-Download: \href{https://github.com/resolve/refinerycms-inquiries}{https://github.com/resolve/refinerycms-inquiries}}: Darstellung von Kontaktanfragen auf der Internetseite mit zusätzlicher Verwaltungsfunktion der Anfragen im Backend von Refinery CMS
+\item
+refinerycms-news\footnote{Komponenten-Download: \href{https://github.com/resolve/refinerycms-news}{https://github.com/resolve/refinerycms-news}}: Verwaltung und Darstellung von Nachrichten im Front- und Backend-Bereich
+\item
+ refinerycms-blog\footnote{Komponenten-Download: \href{https://github.com/resolve/refinerycms-blog}{https://github.com/resolve/refinerycms-blog}}: Engine zur Erstellung kurzer Beiträge inklusive Kategorisierungs- und Kommentarfunktion
+\end{itemize}
+
 \subsection{Verwendete Technologien}
+Refinery CMS ist ein technologisch sehr einfaches System. Die Realisierung der Backend-Funktionalitäten wird durch die konsequente Verwendung von HTML 5 erreicht. Zur Generierung der Dialoge, die u.a. innerhalb des Bild- und Dateien-Moduls eingesetzt werden, greift Refinery auf die jQuery UI Bibliothek zurück. Der im Seiten-Modul integrierte WYSIWYG-Editor ist ein für die Anforderungen des CMS angepasster, XHTML konformer JavaScript WYMeditor.
+Durch die Unterstützung von HTML 5 innerhalb des Backend können Datenübertragungen von Medien an den Server in Form von Multi-Uploads realisiert werden. Die sonst übliche Nutzung von Flash entfällt und vereinfacht damit das System zusätzlich.
+Die Bereits angesprochenen Erweiterungen (Engines) sind eigenständige Rails-Anwendungen, deren Grundgerüst mit Hilfe eines Refinery-Engine-Generators erzeugt wird.
+Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlauben es, Teile des Backends bei Bedarf anzupassen, zu verändern oder komplett auszutauschen.
 %Refinery END
 
+
+
+%ANALYSE
 \newpage
 \center
 \section{Analyseverfahren}
