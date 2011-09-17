@@ -1,0 +1,110 @@
+\begin{thebibliography}{17}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Bender und Brill(2006)]{Computergrafik}
+\dinatlabel{Bender und Brill 2006} \textsc{Bender}, Michael~; \textsc{Brill},
+  Manfred:
+\newblock \emph{Computergrafik - Ein anwendungsorientiertes Lehrbuch}.
+\newblock Hanser, 2006
+
+\bibitem[Bertin(1974)]{Bertin}
+\dinatlabel{Bertin 1974} \textsc{Bertin}, Jacques:
+\newblock \emph{Die graphische Semiologie}.
+\newblock GRK, 1974
+
+\bibitem[Card u.\,a.(1999)Card, Mackinlay und Shneiderman]{Card}
+\dinatlabel{Card u.\,a. 1999} \textsc{Card}, Stuart~K.~; \textsc{Mackinlay},
+  Jock~D.~; \textsc{Shneiderman}, Ben:
+\newblock \emph{Readings in Information Visualization}.
+\newblock Morgan Kaufmann Publishers, 1999
+
+\bibitem[EMC(2011)]{EMC}
+\dinatlabel{EMC 2011} \emph{IDC Digital Universe Studie}.
+\newblock 2011. --
+\newblock URL
+  \url{http://germany.emc.com/about/news/press/2011/20110628-01.htm}. --
+\newblock Letzter Abruf 18.08.2011
+
+\bibitem[Fry(2011)]{BenFry}
+\dinatlabel{Fry 2011} \textsc{Fry}, Ben:
+\newblock \emph{Computational Design}, MIT, Dissertation, 2011
+
+\bibitem[Gabler(2011)]{Gabler}
+\dinatlabel{Gabler 2011} \emph{Gabler Wirtschaftslexikon}.
+\newblock 2011. --
+\newblock URL
+  \url{http://wirtschaftslexikon.gabler.de/Archiv/54483/daten-v5.html}. --
+\newblock Letzter Abruf 18.08.2011
+
+\bibitem[Gitta(2011)]{Gitta}
+\dinatlabel{Gitta 2011} \emph{thematische Karten}.
+\newblock 2011. --
+\newblock URL
+  \url{http://www.gitta.info/ThematicCart/de/html/Einfuehrung_learningObject1.html}.
+  --
+\newblock Letzer Abruf 18.08.2011
+
+\bibitem[Höher(2011)]{Hoeher}
+\dinatlabel{Höher 2011} \textsc{Höher}, Peter~A.:
+\newblock \emph{Grundlagen der digitalen Informationsübertragung}.
+\newblock Vieweg + Teubner, 2011
+
+\bibitem[Informationsbegriff(2011)]{wiki_info}
+\dinatlabel{Informationsbegriff 2011} \emph{Information}.
+\newblock 2011. --
+\newblock URL \url{http://de.wikipedia.org/wiki/Information}. --
+\newblock Letzer Abruf 18.08.2011
+
+\bibitem[Keim(2002)]{Keim}
+\dinatlabel{Keim 2002} \textsc{Keim}, Daniel~A.:
+\newblock Information Visualization and Visual Data Mining.
+\newblock In: \emph{IEEE Transactions on Visualization and Computer Graphics}
+\newblock 7 (2002), Nr.~1
+
+\bibitem[Mashup(2011)]{wiki_mashup}
+\dinatlabel{Mashup 2011} \emph{Mashup}.
+\newblock 2011. --
+\newblock URL \url{http://de.wikipedia.org/wiki/Mashup_(Internet)}. --
+\newblock Letzer Abruf 24.08.2011
+
+\bibitem[McCandless(2011)]{infoblog}
+\dinatlabel{McCandless 2011} \emph{Creation of the Book}.
+\newblock 2011. --
+\newblock URL \url{http://de.wikipedia.org/wiki/Mashup_(Internet)}. --
+\newblock Letzer Abruf 13.09.2011
+
+\bibitem[McCandless(2009)]{McCandless}
+\dinatlabel{McCandless 2009} \textsc{McCandless}, David:
+\newblock \emph{Information is Beautiful}.
+\newblock Collins, 2009
+
+\bibitem[Parallelprojektion(2011)]{wiki_projektion}
+\dinatlabel{Parallelprojektion 2011} \emph{Parallelprojektion}.
+\newblock 2011. --
+\newblock URL \url{http://de.wikipedia.org/wiki/Parallelprojektion}. --
+\newblock Letzer Abruf 20.08.2011
+
+\bibitem[Preim und Dachselt(2010)]{Preim}
+\dinatlabel{Preim und Dachselt 2010} \textsc{Preim}~; \textsc{Dachselt}:
+\newblock \emph{Interaktive Systeme}.
+\newblock someone, 2010
+
+\bibitem[Schumann und Müller(2000)]{Schumann}
+\dinatlabel{Schumann und Müller 2000} \textsc{Schumann}, Heidrun~;
+  \textsc{Müller}, Wolfgang:
+\newblock \emph{Visualisierung - Grundlagen und allgemeine Methoden}.
+\newblock Springer, 2000
+
+\bibitem[Schäfer(2010)]{Statistik}
+\dinatlabel{Schäfer 2010} \textsc{Schäfer}, Thomas:
+\newblock \emph{Statistik I - Deskriptive und Explorative Datenanalyse}.
+\newblock VS Verlag, 2010
+
+\end{thebibliography}
+

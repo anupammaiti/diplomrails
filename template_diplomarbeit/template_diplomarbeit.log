@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  16 SEP 2011 08:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  17 SEP 2011 08:45
 entering extended mode
  %&-line parsing enabled.
 **template_diplomarbeit.tex
@@ -199,30 +199,116 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
+)
+(./template_diplomarbeit.aux)
+\openout1 = `template_diplomarbeit.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen109
+\scratchbox=\box29
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen110
+\MPnumerator=\count106
+\everyMPtoPDFconversion=\toks21
+)
+\c@lstlisting=\count107
+ (./kapitel/titelseite.tex [1
 
 
-! LaTeX Error: File `glossary.sty' not found.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./kapitel/abstract.tex) 
+(./kapitel/danksagung.tex [1
 
-Enter file name: x
 
- ) )
-(\end occurred when \ifx on line 40 was incomplete)
-(\end occurred when \ifx on line 40 was incomplete) 
+] [2
+
+
+]
+\c@danksagung_seitenzahl=\count108
+) [3] [4
+
+
+]
+(./template_diplomarbeit.toc
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 1.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 2.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 3.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 8.
+)
+\tf@toc=\write4
+\openout4 = `template_diplomarbeit.toc'.
+
+ (./kapitel/charakteristik_spuerhund.tex [5]
+[6
+
+
+]
+Kapitel 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              You should use the features of package `tocbasic'
+(scrreprt)              instead of \float@addtolists.
+(scrreprt)              Support for \float@addtolists may be removed from
+(scrreprt)              `scrreprt' soon .
+
+) (./kapitel/zukunftsaussichten_spuerhund.tex [1] [2
+
+
+]
+Kapitel 2.
+) [3] (./kapitel/eidesstattliche_erklaerung.tex) [7]
+No file template_diplomarbeit.bbl.
+(./template_diplomarbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 3229 strings out of 493848
- 46982 string characters out of 1152823
- 128091 words of memory out of 3000000
- 6515 multiletter control sequences out of 15000+50000
- 3938 words of font info for 15 fonts, out of 3000000 for 9000
+ 3804 strings out of 493848
+ 54760 string characters out of 1152823
+ 134633 words of memory out of 3000000
+ 7047 multiletter control sequences out of 15000+50000
+ 9369 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,1n,52p,258b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-No pages of output.
+ 38i,6n,52p,258b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on template_diplomarbeit.pdf (11 pages, 75091 bytes).
 PDF statistics:
- 0 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

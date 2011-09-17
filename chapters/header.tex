@@ -25,8 +25,8 @@
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
 	headsepline,%         Linie nach Kopfzeile.
 	%footsepline,%         Linie vor Fusszeile.
-	bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
-	idxtotoc,%             Index ins Inhaltsverzeichnis einfügen.
+	%bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+	%idxtotoc,%             Index ins Inhaltsverzeichnis einfügen.
     onehalfspacing
 ]{scrbook}
 
@@ -36,6 +36,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
 
+\usepackage{tocbasic}
 %
 %  2. Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
 %     Wir verwenden 'Latin1' (ISO-8859-1) für das Dokument,
@@ -167,10 +168,21 @@
 %\usepackage{natbib}
 
 % Tabelle mit fester Breite und left, center, right Ausrichtung
-\usepackage{tabularx}
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+%\usepackage{tabularx}
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+%\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+\usepackage{stfloats}
+
+
+%
+% Import von PDF Dokumenten
+%
+\usepackage[final]{pdfpages}
+\includepdfset{pages=-,noautoscale}
+
+
 
 %
 % B. EINSTELLUNGEN

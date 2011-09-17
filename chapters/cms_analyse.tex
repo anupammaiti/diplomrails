@@ -3,17 +3,68 @@
 
 
 \section{Vorbetrachtungen}
+Der 2006 eingeleitete Hype um das Ruby on Rails Framework hat dazu geführt, dass viele Entwickler mit der Konzeption und Umsetzung zahlreicher verschiedener Rails-Anwendungen begonnen haben. So entstanden auch im Bereich der Web Content Management Systeme zahlreiche Projekte. Ein Großteil der Vorhaben blieb jedoch in der Konzeptionsphase stecken oder die Entwicklung wurde nach wenigen Jahren eingestellt. Die Ursachen sind dabei vor allem dem Entwicklungsumfeld von Rails und dem Framework selbst geschuldet:
+
+
+\begin{description}
+\item[Schnellebigkeit]
+Die Entwicklung des Ruby on Rails Frameworks unterliegt einem ständigen Wandel und erfordert eine ständige Anpassung des Programmierers an neue Technologien und Konzepte.
+\item[Interessenwandlung der Entwickler] Die elegante Programmierung mit Ruby und die vielfältigen Möglichkeiten des Ruby on Rails Frameworks erleichtern die Umsetzung verschiedenster Projektideen.
+Es ist daher schneller möglich, dass sich Entwickler nach einiger Zeit mit anderen Projekten beschäftigen und bestehende Projekte vernachlässigen\footnote{Im Anhang der Arbeit findet sich eine Übersicht zu ermittelten Rails 2 und 3 Web Content Management Systemen. Diese sind zum Teil seit einigen Jahren nicht mehr weiterentwickelt wurden.}.
+\end{description}
+
+Die Realisierung eines stabilen Web Content Management Systems auf Basis von Ruby on Rails wird durch diese Faktoren erschwert und erfordert ein entsprechend tragfähiges Konzept sowie planendes Vorgehen der Projektiniziatoren.
+
+Die hier aufgeführten Projekte Alchemy CMS, Refinery CMS, Browser CMS und Locomotive CMS repräsentieren daher die zum Zeitpunkt der Erstellung dieser Arbeit vielversprechendsten Rails-Implementierungen eines Web Content Management Systems. Trotzdem ist vorweg anzumerken, dass sich diese Systeme, im Gegensatz zu anderen etablierten Open Source Content Management Systemen wie Typo3 und Drupal, noch am Anfang ihrer Entwicklungsgeschichte befinden.
+\newline
+\newline
+Die hohe Anzahl der im Anhang der Arbeit aufgelisteten WCMS machte es erforderlich, Mindestanforderungen für die Aufnahme in die bevorstehende Analyse zu treffen. Es wurden dabei folgende Festlegungen getroffen:
+
+\begin{description}
+\item[Open Source Software]
+Die hier ermittelten WCM-Systeme sind vollständige Open Source Lösungen. Ihre Veröffentlichung unterliegt dabei den in der Open Source Bewegung üblichen Lizenzen der Freien Software bzw. der Open Source Initiative (OSI).
+\item[Rails 3 Kompatibilität]
+Die Veröffentlichung von Rails 3 brachte vielen Verbesserungen hinsichtlich der Modularität von Rails-Anwendungen. Kern-Komponenten des Frameworks (z.B. die Persistenz-Schicht Active Record) können nun mit geringem Aufwand gegen andere Implementierungen ausgetauscht werden. Die so erreichte Flexibilität soll auch bei der Integration eines Rails WCM-Systems zur Verfügung stehen.	Weiterhin sichert die Verwendung der aktuellsten Framework-Version die 	Unterstützung moderner Technologien und Entwicklungen innerhalb der implementierten WCMS ab.
+\item[Aktive Entwicklung]
+Die stetige, aktive Entwicklung an einem Open Source Projekt ist ein Merkmal für die Akzeptanz einer Software. Sie ist zusätzlich ein Beweis für das Engagement der beteiligten Programmierer. Eine in diesem Umfeld entstehende Software bietet daher entsprechend höheres Potenzial. Die  hier ausgewählten Systeme erfüllen diese Forderung.
+\item[Unterscheidung in Front- und Backend]
+WCM-Systeme unterscheiden zwischen Frontend- und Backend-Funktionalität. Das Frontend wird durch die eigentliche Internetseite repräsentiert, die mit Hilfe des Systems erzeugt wird. Im Backend können Anwender die Inhalte der Seite zentral einpflegen und verwalten.
+Die ausgewählten Implementierungen verfügen über eine solche konzeptionelle Trennung.
+\end{description}
+
+Trotz der steigenden Bekanntheit von Ruby on Rails existiert zum Zeitpunkt der Anfertigung dieser Arbeit keine Fachliteratur, die sich mit den Möglichkeiten des Web Content Managements in Rails auseinandersetzt. Vielmehr sind folgende Schwerpunktsetzungen bei den verschiedenen Autoren festzustellen:
+\begin{description}
+\item[Grundlagenbücher]
+Sie dienen als Einführung in Rails und verdeutlichen an Hand einfacher Anwendungen die Arbeitsweise mit dem Ruby on Rails Framework.
+\item[Fortgeschrittene Techniken mit Ruby on Rails]
+Rails Kern-Entwickler stellen ihre Erfahrungen mit dem Framework dar und geben Lösungsansätze für größere Unternehmensstrukturen und Projekte. Häufig vertiefte Themen sind dabei Skalierung, Performance und Refactoring.
+\end{description}
+
+Zur Ermittlung existierender Ruby on Rails Open Source WCMS-Software mussten daher alternative Informationsquellen herangezogen werden:
+\begin{description}
+\item[Anfragen im offiziellen IRC Channel von Ruby on Rails]
+Der Ruby on Rails IRC Channel ermöglicht einen konstruktiven Austausch von Rails-Entwicklern zu verschiedenen Bereichen des Rails-Frameworks. Mit der Hilfe mehrerer hundert Nutzer täglich können so Probleme und Anfragen sehr umfassend beantwortet werden. Der Ruby on Rails Channel ist erreichbar unter \#rubyonrails.
+\item[RubyGems.org]
+Bibliotheken können die Funktionalität von Ruby enorm erhöhen. Zur Verbreitung dieser im Internet existiert u.a. der Ruby Online Community Anbieter RubyGems.org, der über 30.000 Erweiterungspakete verschiedenster Entwickler im Internet zum Download anbietet.
+Der Dienst verfügt über eine ausführliche Suchfunktion, mit der gezielt nach bestimmten Bibliotheken gesucht werden kann. Neben einer kurzen Projektbeschreibung und Informationen zum Entwickler wird jedem Projekt ein Datum der letzten Aktualisierung zugeordnet. Der Entwicklungsstand eines Pakets kann so besser eingeschätzt werden.
+\begin{figure}
+\begin{center}
+\label{fig.backendalchemy}
+\includegraphics[scale=0.3]{images/analyse/rubygems/railsonrubygems.png}
+\caption{Ruby Gems mit aufgelisteten Informationen zum aktuellen Rails 3.1}
+\end{center}
+\end{figure}
+\end{description}
 
 
 %ALCHEMY BEGIN
+\newpage
 \section{Vorstellung Alchemy CMS}
-
-Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öfentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabsabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
+Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabsabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
 \newline
-In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} ausgewählt werden.
-\newline
-\newline
-\newline
+In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} ausgewählt werden.
+\begin{table}[bp]
+\caption{Steckbrief Alchemy CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
 \textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{1.6.0} \\
@@ -47,15 +98,31 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 & \multicolumn{2}{p{10cm}|}{Formatierung von Überschriften, Bildpositionierung und -berechnung sind Aufgaben des Entwicklers, nicht die des Redakteurs}\\
 \hline
 \end{tabular}
+\end{table}
+\begin{comment}
 \subsection{Funktionsprinzipien}
+Das Backend von Alchemy CMS verfügt u.a. über die Bereiche Seiten, Sprachen, Benutzer und Bibliothek:
+\begin{figure}
+\begin{center}
+\label{fig.backendalchemy}
+\includegraphics[scale=0.3]{images/analyse/alchemy/inhalte.png}
+\caption{Backend-Ansicht von Alchemy CMS mit geöffnerter Seitenvorschau}
+\end{center}
+\end{figure}
+
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
 %ALCHEMY END
+
+\end{comment}
+
 %Browser BEGIN
 
 
-
+\newpage
 \section{Vorstellung Browser CMS}
+\begin{table}
+\caption{Steckbrief Browser CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
 \textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{3.3.1} \\
@@ -89,7 +156,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 \textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Redakteuren soll es ermöglicht werden, ohne HTML- und Rails-Kenntnisse eine Internetseite zu verwalten} \\
 \hline
 \end{tabular}
-
+\end{table}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
@@ -97,6 +164,8 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 \newpage
 %Locomotive BEGIN
 \section{Vorstellung Locomotive CMS}
+\begin{table}
+\caption{Steckbrief Locomotive CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
 \textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{keine Angabe von Entwicklungsversionen} \\
@@ -129,6 +198,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 & \multicolumn{2}{p{10cm}|}{Komplexe Inhaltselemente dank MongoDB selbst erstellen}\\
 \hline
 \end{tabular}
+\end{table}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
@@ -137,6 +207,8 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 \newpage
 %Refinery BEGIN
 \section{Vorstellung Refinery CMS}
+\begin{table}
+\caption{Steckbrief Refinery CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
 \textbf{Aktuelle Version} & \multicolumn{2}{p{10cm}|}{1.0.8} \\
@@ -170,6 +242,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
 & \multicolumn{2}{p{10cm}|}{Aktive Community durch Google Group und IRC, die eine schnelle Hilfe ermöglichen}\\
 \hline
 \end{tabular}
+\end{table}
 \subsection{Funktionsprinzipien}
 \subsection{Erweiterungen}
 \subsection{Verwendete Technologien}
@@ -187,7 +260,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
 \hline
@@ -204,7 +277,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können. Eine Angabe zusätzlicher Metadaten zu diesen Ressourcen ist nicht möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung. Dabei wird zwischen Bildern und anderen Dateien unterschieden. Metadaten können nicht verwaltet werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht. Eine Metadatenverwaltung ist nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können. Das Hinzufügen von beliebigen Metainformationen ist möglich.} \\
 \hline
@@ -221,9 +294,9 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Alle Inhalte können über den TinyMCE-Javascript WYSIWYG Editor erfasst und formatiert werden.}
    & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über den integrierten WYSIWYG-Editor Wymeditor erfasst und formatiert werden. Der Editor ist fest in das System integriert und kann nicht ausgetauscht werden. Ein Plugin, dass die Verwendung eines anderen Editors ermöglicht ist bereits in Planung.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS findet der WYSIWIG-FCKEditor Verwendung. Er kann über installierbare Module beliebig ausgetauscht werden.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS findet der WYSIWIG-FCKEditor Verwendung. Er kann über installierbare Module beliebig ausgetauscht werden.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
 \hline
 \end{tabular}
 \newline
@@ -238,7 +311,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Alchemy verwendet Active Record als Datenbankpersistenzschicht. Durch die Verwendung von Migrationen könen so eine Vielzahl relationaler Datenbanken unterstützt werden. Zusätzlich exisitieren einige Adapter, um auch dokumentenbasierte Datenbanken anzusteuern.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery greift ebenfalls auf Rails' Active Record zurück und unterstützt damit mehrere relationale und dokumentenorientierte Datenbanken.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS greift im Gegensatz zu seinen Konkurrenten auf die dokumentenorientierten Datenbank MongoDB zurück. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Locomotive mit Active Record ist jedoch geplant.} \\
 \hline
@@ -255,7 +328,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
    & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt.} \\
 \hline
@@ -272,9 +345,9 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Die Bibliothek von Alchemy unterstützt lediglich eine Auflistung von Resourcen. Bilder und Dateien können damit nur in Form einer Listenansicht inspiziert werden. Eine Zuordnung zu Kategorien oder eine Anlage von Ordnerstrukturen zur Erleichterung der Orientierung ist nicht möglich. Die Verwaltung großer Datenmengen scheint daher nur schwer möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Ähnlich wie bei Alchemy gleicht die Resourcenverwaltung nur einer einfachen Auflistung von Bildern und anderen Ressourcen. Eine Kategorisierung der Inhalte ist nicht möglich. Ebenfalls können keine Ordner zur sinnvollen Strukturierung der Ressourcen erstellt werden. Die Verwaltung großer Datenmengen wird dadurch schnell zu einem Geduldsakt.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Die \emph{Content Library} von BrowserCMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Die Inhaltsverwaltung kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Die \emph{Content Library} von Browser CMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Die Inhaltsverwaltung kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
 \hline
 \end{tabular}
 \newline
@@ -289,7 +362,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Redakteure können ihre erstellten und editierten Inhalte im Backend durch ein Preview-Fenster sichtbar machen. Änderungen an Inhaltselementen können somit sofort nachvollzogen werden.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verfügt über keine Preview-Funktion der Inhalte. Ist ein Inhaltselement im Backend neu angelegt oder bearbeitet wurden, wird dies auf der Internetseite sofort sichtbar.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy werden Inhalte erst nach ihrer Veröffentlichung sichtbar. Bis dahin kann jedoch im Frontend durch Inline-Editing der Seite jedes Inhaltselement bearbeitet werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet wie RefineryCMS keine Preview-Funktion. Änderungen und neu angelegte Inhalte werden direkt veröffentlicht.} \\
 \hline
@@ -306,7 +379,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden.}
    & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt.Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
 \hline
@@ -323,9 +396,9 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung kleiner Flaggensymbole kenntlich gemacht.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In BrowserCMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Brower CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Brower CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
 \hline
 \end{tabular}
 \newline
@@ -340,7 +413,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Eine flexible Plugin-DSL erlaubt das Hinzufügen von individuellen Erweiterungen.}
    & \multicolumn{2}{p{7.5cm}|}{Individuelle Inhaltselemente können durch die Verwendung der Refinery Engine Generatoren hinzugefügt werden. Für die weitere Entwicklung stehen die in Rails üblichen Entwicklungstechniken zur Verfügung.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Ähnlich wie bei Refinery CMS können neue Module und Inhaltstypen mit Hilfe von speziellen Rails-Generatoren erzeugt werden.} & \multicolumn{2}{p{7.5cm}|}{Neue Inhaltstypen lassen sich im Backend durch ein einfaches User-Interface zusammenstellen.  Mit wenigen Klicks sind so schnell neue Elemente erstellt. Programmierkenntnisse sind nicht notwendig.} \\
 \hline
@@ -357,7 +430,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt}
    & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
 \hline
@@ -374,7 +447,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Alchemy verfügt über keine integrierten Import und Export-Funktionalitäten.}
    & \multicolumn{2}{p{7.5cm}|}{Es existieren auf Nutzerebene keine Möglichkeiten des Im- und Exports. Durch sogenannte Seed-Dateien ist jedoch ein nachträgliches Befüllen der Datenbank möglich. Der Aufruf erfordert jedoch Kenntnisse in Ruby on Rails und ist daher für Normalanwender/Redakteure nicht sinnvoll.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{In Browser CMS können Inhalte nicht importiert und exportiert werden. Entsprechende Features müssten erst eigenständig implementiert werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann ein kompletter Internetauftritt mit seinen Inhalten und Ressourcen importiert und exportiert werden. Zum Austausch der Inhalte findet eine \emph{Zip}-Datei Verwendung, die alle benötigten Ressourcen (Bilder, Dateien, Templates usw.) sowie Inhalte der Datenbank einschließt. Ressourcen werden dabei in vordefinierten Ordnerstrukturen abgelegt. Die Datenbankeinträge aus MongoDB werden innerhalb der \emph{Zip}-Datei im Unterordner \emph{data} abgelegt. Die Einträge liegen dabei  im \emph{YAML}-Format vor.} \\
 \hline
@@ -392,7 +465,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
 } \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselementen, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
 \hline
@@ -409,7 +482,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{In Alchemy existieren vordefinierte Rollen (Registriert, Author, Redakteur,Administrator). Das Anlegen weiterer Rollen zur besseren Differenzierung ist jedoch nicht möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS besitzt kein Rechte- und Rollenkonzept. Dem Anwender kann lediglich der Zugang zu bestimmten Plugins erlaubt oder entzogen werden, um so den Funktionsumfang einzuschränken.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzliche können weitere Backend-Gruppen angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich.} \\
 \hline
@@ -426,7 +499,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \multicolumn{2}{|p{7.5cm}|}{Die in Alchemy vordefinierte Rollen Registriert, Author, Redakteur und Administrator bestimmen den Funktionsumfang eines Anwenders im Backend. Angelegte Inhalte können jedoch nicht einzelnen Nutzern zugeordnet werden.}
    & \multicolumn{2}{p{7.5cm}|}{Nutzer können alle Inhalte und Bereiche einer Webseite editieren, solange sie zur Nutzung des bestimmten Plugins berechtigt wurden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{ Der Zugriff auf bestimmte Seiten (Seitenbaumzweige)  kann eingeschränkt werden. Zusätzlich bietet Browser CMS ein Erstellen von Frontend-Nutzergruppen an, um so bestimmte Seiten des CMS nur exklusiv ausgewählten Nutzern zur Verfügung zu stellen. Die Zugriffsberechtigung auf installierte Plugins kann ebenfalls für jeden Nutzer individuell festgelegt werden. Leider ist es nicht möglich, einzelne Inhaltselemente für bestimmte Nutzer unzugänglich zu machen.} & \multicolumn{2}{p{7.5cm}|}{Der Zugriff auf Seiten und Inhalte kann nicht individuell gesteuert und beeinflusst werden. Besitzt ein Anwender das Recht zum Editieren und Anlegen von Inhalten (Nutzergruppe Redakteur), können alle Inhalte im gesamten CMS bearbeitet werden.} \\
 \hline
@@ -442,7 +515,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt. Die automatische Versionierung von Inhaltselementen erlaubt jedoch ein nachträgliches, manuelles Sichten und Zusammenfügen  verschiedener Versionen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -458,7 +531,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Versionierung und Wiederherstellung von Inhalten wird nicht unterstüzt.} \\
 \hline
@@ -474,7 +547,7 @@ In der aktuellen Version 1.6.0 kann zwischen eine Rails 2 und 3 Version\footnote
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden . Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
 \hline
@@ -491,7 +564,7 @@ Personengruppen}} \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -507,7 +580,7 @@ Personengruppen}} \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -524,7 +597,7 @@ Personengruppen}} \\
   \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die  von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
 Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Ein Workflowprozess kann in Browser CMS nicht erzeugt werden. Autoren ist es nur möglich, ihre durchgeführten Änderungen an andere Backend-Nutzer mit Veröffentlichungsrechten weiterzuleiten (Simulierung eines einfachsten Workflows).} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -540,7 +613,7 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -556,7 +629,7 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
@@ -573,9 +646,9 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \multicolumn{2}{|p{7.5cm}|}{Inhalt und Design werden in Alchemy durch die Verwendung von \emph{erb}-Templates getrennt. Das Haupt-Template der Seite wird zu Beginn der Entwicklung von einem Designer festgelegt und anschließend in der Anwendung verankert (als fixe Ressource im Rails Quellcode). So können Redakteure das Aussehen der Internetseite nicht beeinflussen.} & \multicolumn{2}{p{7.5cm}|}{Wie Alchemy verwendet Refinery CMS \emph{erb} als Template-Sprache.
 Trotz der so erreichten Trennung zwischen Inhalten und Design erschwert die fehlende Möglichkeit der Anpassung im Backend den Umgang mit dem gesamten WCMS. Dies gilt für das Haupttemplate der Seite sowie für alle Erweiterungen.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{BrowserCMS unterstützt die Verwendung verschiedener Template-Sprachen.
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS unterstützt die Verwendung verschiedener Template-Sprachen.
 In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
 \hline
 \end{tabular}
@@ -590,7 +663,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Inhaltselemente und Seiten können in Alchemy kopiert und wiederverwendet werden. Die Zuordnung eines neuen Templates muss durch den Administrator erfolgen (Änderung am Rails-Quellcode).} & \multicolumn{2}{p{7.5cm}|}{Inhalte und Seiten können nicht kopiert und mehrfach verwendet werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach verwendet werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar.} \\
 \hline
@@ -606,7 +679,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
 \hline
@@ -622,7 +695,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} & \multicolumn{2}{p{7.5cm}|}{Barrierefreiheit kann bei entsprechender Umsetzung der Verwendeten Templates und CSS-Dateien erreicht werden.} \\
 \hline
@@ -638,7 +711,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -654,7 +727,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
 \hline
@@ -670,7 +743,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -686,7 +759,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} & \multicolumn{2}{p{7.5cm}|}{Über den integrierten WYSIWYG-Editor können HTML-Fragmente eingebunden werden.} \\
 \hline
@@ -702,7 +775,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -718,7 +791,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
@@ -734,7 +807,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  BrowserCMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline

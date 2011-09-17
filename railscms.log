@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  16 SEP 2011 20:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  17 SEP 2011 11:16
 entering extended mode
  %&-line parsing enabled.
-**railscms.tex
+**railscms.tex +
 (./railscms.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -56,28 +56,9 @@ Package scrbook Info: You've used obsolete option `12pt'.
 (scrbook)             used instead.
 (scrbook)             You may simply replace `12pt'
 (scrbook)             by `fontsize=12pt'.
-
-
-Class scrbook Warning: You've used obsolete option `bibtotocnumbered'.
-(scrbook)              Usage of this option indicates an old document and
-(scrbook)              changes compatibility level using
-(scrbook)              `bibliography=totocnumbered,version=first'.
-(scrbook)              If you don't want this, you should simply replace
-(scrbook)              usage of option `bibtotocnumbered' by `bibliography=toto
-cnumbered'.
-
-Class scrbook Info: Switching compatibility level to `first'.
-
-Class scrbook Warning: You've used obsolete option `idxtotoc'.
-(scrbook)              Usage of this option indicates an old document and
-(scrbook)              changes compatibility level using
-(scrbook)              `index=totoc,version=first'.
-(scrbook)              If you don't want this, you should simply replace
-(scrbook)              usage of option `idxtotoc' by `index=totoc'.
-
-Class scrbook Info: Switching compatibility level to `first'.
 Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
 ne 1272.
+
 (/usr/share/texmf-texlive/tex/latex/koma-script/scrsize12pt.clo
 File: scrsize12pt.clo 2009/07/24 v3.04a KOMA-Script font size class option (12p
 t)
@@ -731,26 +712,51 @@ Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
 \everycr=\toks29
 \minrowclearance=\skip54
 )
-(/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
-Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-\TX@col@width=\dimen125
-\TX@old@table=\dimen126
-\TX@old@col=\dimen127
-\TX@target=\dimen128
-\TX@delta=\dimen129
-\TX@cols=\count126
-\TX@ftn=\toks30
+(/usr/share/texmf-texlive/tex/latex/sttools/stfloats.sty
+Package: stfloats 1999/10/22
+\@dblbotnum=\count126
+\c@dblbotnumber=\count127
 )
-Package color Info: Redefining color red on input line 187.
-Package color Info: Redefining color green on input line 188.
+(/usr/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
+
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count128
+\calc@Bcount=\count129
+\calc@Adimen=\dimen125
+\calc@Bdimen=\dimen126
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count130
+\calc@Cskip=\skip57
+)
+(/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
+
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box32
+\AM@toc@title=\toks30
+\c@AM@survey=\count131
+\AM@templatesizebox=\box33
+)
+Package color Info: Redefining color red on input line 199.
+Package color Info: Redefining color green on input line 200.
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `sectioning' that is an alias of element
-(scrbook)           `disposition' on input line 205.
+(scrbook)           `disposition' on input line 217.
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `pagehead' that is an alias of element
-(scrbook)           `pageheadfoot' on input line 207.
-Package hyperref Info: Option `colorlinks' set `true' on input line 221.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 221.
+(scrbook)           `pageheadfoot' on input line 219.
+Package hyperref Info: Option `colorlinks' set `true' on input line 233.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 233.
 
 
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
@@ -798,7 +804,8 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 
 Writing index file railscms.idx
 ) (./railscms.aux (./chapters/titlepage.aux) (./chapters/vorwort.aux)
-(./chapters/cms_analyse.aux) (./chapters/alternativer_code.aux))
+(./chapters/cms_analyse.aux) (./chapters/alternativer_code.aux)
+(./chapters/anhang.aux))
 \openout1 = `railscms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -816,21 +823,20 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 17.
-
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen130
-\scratchbox=\box32
-\nofMPsegments=\count128
-\nofMParguments=\count129
+\scratchcounter=\count132
+\scratchdimen=\dimen127
+\scratchbox=\box34
+\nofMPsegments=\count133
+\nofMParguments=\count134
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen131
-\MPnumerator=\count131
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen128
+\MPnumerator=\count136
 \everyMPtoPDFconversion=\toks32
 )
 Package hyperref Info: Link coloring ON on input line 17.
@@ -840,7 +846,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count137
 )
 LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
@@ -849,14 +855,15 @@ LaTeX Info: Redefining \pageref on input line 17.
 \@outlinefile=\write4
 \openout4 = `railscms.out'.
 
-\AtBeginShipoutBox=\box33
-\c@lstlisting=\count133
+\AtBeginShipoutBox=\box35
+\c@lstlisting=\count138
+ ABD: EveryShipout initializing macros
 \openout2 = `chapters/titlepage.aux'.
 
- (./chapters/titlepage.tex
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
 
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+(./chapters/titlepage.tex
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 7.
@@ -893,6 +900,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 
+
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]) (./railscms.toc
@@ -908,8 +916,12 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 6.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 26.
+(scrbook)            on input line 23.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 27.
  [3
+
 
 
 ])
@@ -944,6 +956,7 @@ File: images/Einleitung/serverseitigeScriptsprachen.png Graphic file (type png)
  <use images/Einleitung/serverseitigeScriptsprachen.png> [5
 
 
+
  <./images/Einleitung/serverseitigeScriptsprachen.png (PNG copy)>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -958,27 +971,18 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
  (./chapters/cms_analyse.tex
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--50
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--50
-
- []
-
-
-Overfull \hbox (11.43683pt too wide) in paragraph at lines 11--50
-[] 
  []
 
 [8
 
 
 
+
 ]
-Overfull \hbox (11.43683pt too wide) in paragraph at lines 59--92
-[] 
+Overfull \hbox (37.4316pt too wide) in paragraph at lines 31--33
+[]\T1/lmr/m/n/12 WCM-Systeme un-ter-schei-den zwi-schen Frontend-
  []
 
 
@@ -986,26 +990,25 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [9]
+Overfull \hbox (3.06186pt too wide) in paragraph at lines 46--47
+[]\T1/lmr/m/n/12 Der Ru-by on Rails IRC
+ []
+
+
+<images/analyse/rubygems/railsonrubygems.png, id=216, 1267.73625pt x 884.30376p
+t>
+File: images/analyse/rubygems/railsonrubygems.png Graphic file (type png)
+ <use images/analyse/rubygems/railsonrubygems.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [10]
-Overfull \hbox (18.86186pt too wide) in paragraph at lines 100--132
-[] 
- []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-[]|\T1/lmr/m/n/12 Realisierung ei-ner be-nut-zer-freund-li-chen, ein-fa-chen
- []
-
-
-Overfull \hbox (11.43683pt too wide) in paragraph at lines 140--173
-[] 
+[11 <./images/analyse/rubygems/railsonrubygems.png (PNG copy)>]
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 68--101
+[][] 
  []
 
 
@@ -1013,313 +1016,333 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 6380) in paragraph at lines 209--209
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 126--159
+[][] 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \hbox (18.86186pt too wide) in paragraph at lines 169--201
+[][] 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+[]|\T1/lmr/m/n/12 Realisierung ei-ner be-nut-zer-freund-li-chen, ein-fa-chen
+ []
+
+
+Overfull \hbox (11.43683pt too wide) in paragraph at lines 212--245
+[][] 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[16]
+Underfull \hbox (badness 6380) in paragraph at lines 282--282
 []|\T1/lmr/m/n/12 Locomotive CMS bie-tet ei-ne Asset-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 243--243
+Underfull \hbox (badness 1117) in paragraph at lines 316--316
 \T1/lmr/m/n/12 Grund feh-len-der Tests je-doch nur die
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 273--273
+Underfull \hbox (badness 2495) in paragraph at lines 346--346
 \T1/lmr/m/n/12 sour-cen-ver-wal-tung nur ei-ner ein-fa-chen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
 []|\T1/lmr/m/n/12 Individuelle In-halts-ele-men-te kön-nen
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 341--341
+Underfull \hbox (badness 6461) in paragraph at lines 414--414
 \T1/lmr/m/n/12 durch die Ver-wen-dung der Re-fi-ne-ry
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 375--375
+Underfull \hbox (badness 1735) in paragraph at lines 448--448
 \T1/lmr/m/n/12 nach-träg-li-ches Be-fül-len der Da-ten-bank
  []
 
 
-Underfull \hbox (badness 3323) in paragraph at lines 375--375
+Underfull \hbox (badness 3323) in paragraph at lines 448--448
 \T1/lmr/m/n/12 mög-lich. Der Auf-ruf er-for-dert je-doch
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 375--375
+Underfull \hbox (badness 1178) in paragraph at lines 448--448
 \T1/lmr/m/n/12 Kennt-nis-se in Ru-by on Rails und ist
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 375--375
+Underfull \hbox (badness 2334) in paragraph at lines 448--448
 \T1/lmr/m/n/12 da-her für Nor-malan-wen-der/Re-dak-teu-re
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 397--397
+Underfull \hbox (badness 1142) in paragraph at lines 470--470
 []|\T1/lmr/m/n/12 Wie sei-ne Vor-gän-ger auch kön-nen in-
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 397--397
+Underfull \hbox (badness 1708) in paragraph at lines 470--470
 []|\T1/lmr/m/n/12 Wie bei Al-che-my und Re-fi-ne-ry CMS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 482--482
 []|\T1/lmr/m/n/12 In Al-che-my exis-tie-ren vor-de-fi-nier-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 482--482
 \T1/lmr/m/n/12 Rol-len (Re-gis-triert, Au-t-hor, Re-dak-
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 414--414
+Underfull \hbox (badness 1132) in paragraph at lines 487--487
 []|\T1/lmr/m/n/12 Locomotive CMS be-sitzt ein ein-fa-ches
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 414--414
+Underfull \hbox (badness 1975) in paragraph at lines 487--487
 \T1/lmr/m/n/12 schen Ad-mi-nis-tra-to-ren, De-si-gnern und
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 447--447
+Underfull \hbox (badness 1048) in paragraph at lines 520--520
 \T1/lmr/m/n/12 Ver-sio-nie-rung von In-halts-ele-men-ten er-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 525--525
+Underfull \hbox (badness 1117) in paragraph at lines 598--598
 \T1/lmr/m/n/12 lich, das Re-dak-teu-re die von Au-to-ren
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 529--529
+Underfull \hbox (badness 1354) in paragraph at lines 602--602
 []|\T1/lmr/m/n/12 Ein Work-flowpro-zess kann in Brow-ser
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 529--529
+Underfull \hbox (badness 4543) in paragraph at lines 602--602
 \T1/lmr/m/n/12 CMS nicht er-zeugt wer-den. Au-to-ren
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 651--651
+Underfull \hbox (badness 2285) in paragraph at lines 724--724
 []|\T1/lmr/bx/n/12 Möglichkeit In-hal-te für an-de-ren Web-sei-ten be-reit-zu-s
 tel-len (XML,
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 687--687
+Underfull \hbox (badness 2662) in paragraph at lines 760--760
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 687--687
+Underfull \hbox (badness 2662) in paragraph at lines 760--760
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 691--691
+Underfull \hbox (badness 2662) in paragraph at lines 764--764
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 691--691
+Underfull \hbox (badness 2662) in paragraph at lines 764--764
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  []  
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 182--742
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 255--815
  [] 
  []
 
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[13]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[14]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[15]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[16]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -1371,42 +1394,150 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[29])
+[29]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [30]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[31]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[32]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[33])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[34]
 \openout2 = `chapters/alternativer_code.aux'.
 
  (./chapters/alternativer_code.tex
 Kapitel 3.
-) [31
+) [35
+
 
 
 
 ]
+\openout2 = `chapters/anhang.aux'.
+
+ (./chapters/anhang.tex
+Kapitel 4.
+[36
+
+
+
+
+] <pdf/extdirect.pdf, id=365, page=1, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 1>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 1>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 1>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 1> [37 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf,
+ id=393, page=2, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 2>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 2>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 2> [38 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=399, page=3, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 3>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 3>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 3> [39 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=405, page=4, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 4>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 4>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 4> [40 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=411, page=5, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 5>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 5>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 5> [41 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=417, page=6, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 6>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 6>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 6> [42 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=423, page=7, 614.295pt x 794.97pt>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 7>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+ <use pdf/extdirect.pdf, page 7>
+File: pdf/extdirect.pdf Graphic file (type pdf)
+
+<use pdf/extdirect.pdf, page 7> [43 <./pdf/extdirect.pdf>])
 No file railscms.bbl.
 No file railscms.ind.
-(./railscms.aux (./chapters/titlepage.aux) (./chapters/vorwort.aux)
-(./chapters/cms_analyse.aux) (./chapters/alternativer_code.aux)) ) 
+(./railscms.lot)
+\tf@lot=\write6
+\openout6 = `railscms.lot'.
+
+ [44
+
+
+
+] (./railscms.lof)
+\tf@lof=\write7
+\openout7 = `railscms.lof'.
+
+ [45
+
+
+] (./railscms.aux
+(./chapters/titlepage.aux) (./chapters/vorwort.aux) (./chapters/cms_analyse.aux
+) (./chapters/alternativer_code.aux) (./chapters/anhang.aux)) ) 
 Here is how much of TeX's memory you used:
- 9879 strings out of 493848
- 142010 string characters out of 1152823
- 375054 words of memory out of 3000000
- 12791 multiletter control sequences out of 15000+50000
+ 10581 strings out of 493848
+ 153742 string characters out of 1152823
+ 387338 words of memory out of 3000000
+ 13433 multiletter control sequences out of 15000+50000
  68538 words of font info for 63 fonts, out of 3000000 for 9000
  716 hyphenation exceptions out of 8191
- 45i,9n,67p,833b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx1
-2.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on railscms.pdf (31 pages, 324218 bytes).
+ 45i,16n,67p,835b,510s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texm
+f/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-texlive/fonts/type1/urw
+/courier/ucrr8a.pfb>
+Output written on railscms.pdf (45 pages, 554058 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 230 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 
