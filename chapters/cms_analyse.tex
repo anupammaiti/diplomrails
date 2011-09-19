@@ -1,6 +1,5 @@
-\chapter{Analyse der bestehenden Web Content Management Systeme}
+\chapter{Funktionale Analyse der bestehenden Web Content Management Systeme}
 
-In diesem Kapitel werden die
 
 \section{Vorbetrachtungen}
 Der 2006 eingeleitete Hype um das Ruby on Rails Framework hat dazu geführt, dass viele Entwickler mit der Konzeption und Umsetzung zahlreicher verschiedener Rails-Anwendungen begonnen haben. So entstanden auch im Bereich der Web Content Management Systeme zahlreiche Projekte. Ein Großteil der Vorhaben blieb jedoch in der Konzeptionsphase stecken oder die Entwicklung wurde nach wenigen Jahren eingestellt. Die Ursachen sind dabei vor allem dem Entwicklungsumfeld von Rails und dem Framework selbst geschuldet:
@@ -16,11 +15,9 @@ Es ist daher schneller möglich, dass sich Entwickler nach einiger Zeit mit ande
 
 Die Realisierung eines stabilen Web Content Management Systems auf Basis von Ruby on Rails wird durch diese Faktoren erschwert und erfordert ein entsprechend tragfähiges Konzept sowie planendes Vorgehen der Projektiniziatoren.
 
-Die hier aufgeführten Projekte Alchemy CMS, Refinery CMS, Browser CMS und Locomotive CMS repräsentieren daher die zum Zeitpunkt der Erstellung dieser Arbeit vielversprechendsten Rails-Implementierungen eines Web Content Management Systems. Trotzdem ist vorweg anzumerken, dass sich diese Systeme, im Gegensatz zu anderen etablierten Open Source Content Management Systemen wie Typo3 und Drupal, noch am Anfang ihrer Entwicklungsgeschichte befinden.
-\newline
-\newline
-Die hohe Anzahl der im Anhang der Arbeit aufgelisteten WCMS machte es erforderlich, Mindestanforderungen für die Aufnahme in die bevorstehende Analyse zu treffen. Es wurden dabei folgende Festlegungen getroffen:
+Die hier aufgeführten Projekte Alchemy CMS, Refinery CMS, Browser CMS und Locomotive CMS repräsentieren daher die zum Zeitpunkt der Erstellung dieser Arbeit vielversprechendsten Rails-Implementierungen eines Web Content Management Systems. Trotz alldem ist vorweg anzumerken, dass sich diese Systeme, im Gegensatz zu anderen etablierten Open Source Content Management Systemen wie Typo3 und Drupal, noch am Anfang ihrer Entwicklungsgeschichte befinden.
 
+Die hohe Anzahl der im Anhang der Arbeit aufgelisteten WCMS machte es erforderlich, Mindestanforderungen für die Aufnahme in die bevorstehende Analyse festzulegen. Diese sollen hier beschrieben werden:
 \begin{description}
 \item[Open Source Software]\mbox{~}\\*
 Die hier ermittelten WCM-Systeme sind vollständige Open Source Lösungen. Ihre Veröffentlichung unterliegt dabei den in der Open Source Bewegung üblichen Lizenzen der Freien Software bzw. der Open Source Initiative (OSI).
@@ -28,10 +25,13 @@ Die hier ermittelten WCM-Systeme sind vollständige Open Source Lösungen. Ihre 
 Die Veröffentlichung von Rails 3 brachte vielen Verbesserungen hinsichtlich der Modularität von Rails-Anwendungen. Kern-Komponenten des Frameworks (z.B. die Persistenz-Schicht Active Record) können nun mit geringem Aufwand gegen andere Implementierungen ausgetauscht werden. Die so erreichte Flexibilität soll auch bei der Integration eines Rails WCM-Systems zur Verfügung stehen.	Weiterhin sichert die Verwendung der aktuellsten Framework-Version die 	Unterstützung moderner Technologien und Entwicklungen innerhalb der implementierten WCMS ab.
 \item[Aktive Entwicklung]\mbox{~}\\*
 Die stetige, aktive Entwicklung an einem Open Source Projekt ist ein Merkmal für die Akzeptanz einer Software. Sie ist zusätzlich ein Beweis für das Engagement der beteiligten Programmierer. Eine in diesem Umfeld entstehende Software bietet daher entsprechend höheres Potenzial. Die  hier ausgewählten Systeme erfüllen diese Forderung.
+\newpage
 \item[Unterscheidung in Front- und Backend]\mbox{~}\\*
 WCM-Systeme unterscheiden zwischen Frontend- und Backend-Funktionalität. Das Frontend wird durch die eigentliche Internetseite repräsentiert, die mit Hilfe des Systems erzeugt wird. Im Backend können Anwender die Inhalte der Seite zentral einpflegen und verwalten.
 Die ausgewählten Implementierungen verfügen über eine solche konzeptionelle Trennung.
 \end{description}
+
+\section{Bezugsquellen}
 
 Trotz der steigenden Bekanntheit von Ruby on Rails existiert zum Zeitpunkt der Anfertigung dieser Arbeit keine Fachliteratur, die sich mit den Möglichkeiten des Web Content Managements in Rails auseinandersetzt. Vielmehr sind folgende Schwerpunktsetzungen bei den verschiedenen Autoren festzustellen:
 \begin{description}
@@ -40,7 +40,6 @@ Sie dienen als Einführung in Rails und verdeutlichen an Hand einfacher Anwendun
 \item[Fortgeschrittene Techniken mit Ruby on Rails]\mbox{~}\\*
 Rails Kern-Entwickler stellen ihre Erfahrungen mit dem Framework dar und geben Lösungsansätze für größere Unternehmensstrukturen und Projekte. Häufig vertiefte Themen sind dabei Skalierung, Performance und Refactoring.
 \end{description}
-
 Zur Ermittlung existierender Ruby on Rails Open Source WCMS-Software mussten daher alternative Informationsquellen herangezogen werden:
 \begin{description}
 \item[Anfragen im offiziellen IRC Channel von Ruby on Rails]\mbox{~}\\*
@@ -69,7 +68,6 @@ Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufs
 \end{center}
 \end{figure}
 \end{description}
-
 
 %ALCHEMY BEGIN
 \newpage
@@ -160,7 +158,7 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 
 \newpage
 \section{Vorstellung Browser CMS}
-\begin{table}
+\begin{table}[!h]
 \caption{Steckbrief Browser CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
@@ -203,7 +201,8 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 \newpage
 %Locomotive BEGIN
 \section{Vorstellung Locomotive CMS}
-\begin{table}
+Lokomotive CMS ist ein Open Source Content Management System der Ruby on Rails Entwickler Didier Lafforgue und Jacques Crocker sowie dem Designer Sacha Greif. Es wird unter der MIT Lizenz der Open Source Initiative vertrieben und steht in den Rails-Versionen 2 und 3 als Downloadpaket zur Verfügung. Neben den Möglichkeiten der eigenständigen Installation bieten die Initiatoren des Systems auch den kostenpflichtigen Dienst Bushi.do an, der eine automatische Installation von Lokomotive CMS vornimmt und es ermöglicht, nach wenigen Minuten sofort mit der Erstellung der Seite im Browser zu beginnen\footnote{Auf der Projektseite von Lokomotive CMS wird die automatische Installation mit Hilfe von Bushi.do beschrieben: \href{http://www.locomotivecms.com/}{http://www.locomotivecms.com/}}.
+\begin{table}[!h]
 \caption{Steckbrief Locomotive CMS}
 \begin{tabular}[!ht]{|l|l|l|}
 \hline
@@ -225,7 +224,7 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 \cline{2-3}
 & Backend & \href{http://diplomalocomotive.heroku.com/admin}{http://diplomalocomotive.heroku.com/admin} \\
 \cline{2-3}
-& Login & demo \\
+& Login & demo@demo.de \\
 \cline{2-3}
 & Passwort & demo123 \\
 \hline
@@ -239,9 +238,60 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 \end{tabular}
 \end{table}
 \subsection{Funktionsprinzipien}
+Locomotive CMS unterscheidet im Backend der Anwendung in folgende 2 Funktionsbereiche:
+\begin{description}
+\item[Inhalte]\mbox{~}\\*
+Im Inhalte-Bereich des Backends werden alle im System angelegten Seiten und Inhaltselemente verwaltet und bearbeitet (Abb. \ref{locomotivebackend}). Die Darstellung jeder einzelnen Seite und der Inhaltselemente kann darüber hinaus durch Angabe eines Templates online verändert werden (mehr dazu in Abschnitt \ref{sec:TechnologienLocomotive}), was eine Umsetzung komplexer Seitenlayouts sicherstellt.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/locomotive/backendlocomotive.png}
+\caption{Backend von Locomotive CMS mit geöffnetem Seitenbaum.}
+\label{locomotivebackend}
+\end{center}
+\end{figure}
+\item[Einstellungen]\mbox{~}\\*
+Im Einstellungs-Modul befinden sich die zentralen Funktionen zur Bearbeitung der vorhandenen Backend-Nutzer sowie globaler Locomotive CMS-Einstellungen (registrierte Domains, Import-/Export von Seiten, Bearbeitung von allgemeinen Metainformationen des Systems). Zusätzlich können in einem Template-Bereich einzelne, zentrale Dateien verwaltet werden, die innerhalb des Seitenlayouts der Seite als Gestaltungselemente dienen sollen\footnote{Die für layoutspezifische Verwendung hochgeladenen Dateien werden in Locomotive CMS als Snippets bezeichnet}.
+\end{description}
 \subsection{Erweiterungen}
+\label{sec:ErweiterungenLocomotive}
+Erweiterungen werden in Locomotive CMS als Bausteine bezeichnet und repräsentieren individuell zusammengestellte Inhaltselemente. Sie können im Backend von Locomotive CMS über einen komfortablen Bearbeitungsdialog erstellt werden (Abb. \ref{locomotivecontent}). Im Gegensatz zu den hier bereits vorgestellten Systemen werden so keine Programmierkenntnisse der Anwender benötigt.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/locomotive/customcontent.png}
+\caption{Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}
+\label{locomotivecontent}
+\end{center}
+\end{figure}
+
+Die Inhaltselemente können aus folgenden grundlegenden Feldtypen zusammengebaut werden:
+\begin{itemize}
+\item
+Einfaches Textfeld
+\item
+Text
+\item
+Auswahlbox
+\item
+Checkbox
+\item
+Datum
+\item
+Datei
+\item
+has one (ermöglicht die Zuordnung genau eines anderen Inhaltselements des angegebenen Bausteintyps)
+\item
+has many (ermöglicht die Auswahl mehrerer anderer Inhaltselemente des angegebenen Bausteintyps)
+\end{itemize}
+
 \subsection{Verwendete Technologien}
+\label{sec:TechnologienLocomotive}
 %Locomotive END
+Das Backend von Locomotive CMS besteht aus in Rails gerenderten HTML-Views mit eingebundenen JavaScript-Dateien, die einzelne Funktionalitäten bereitstellen. Das HTML wird dabei zusätzlich durch die Verwendung der JavaScript-Bibliothek Sizzle\footnote{Komponenten-Download: \href{http://sizzlejs.com/}{http://sizzlejs.com/}} manipuliert, die es erlaubt durch Angabe eines CSS-Selektors bestimmte Elemente des HTML zu erfassen.
+Zur Erstellung von Templates wird die Ruby Template-Sprache Liquid eingesetzt. Sie hat ihren Ursprung in der kommerziellen Online E-Commerce-Plattform \emph{shopify}\footnote{Liquid ist das Ergebnis einer Extrahierung dieser Funktionalität aus Shopify} und beitet Möglichkeiten der Vererbung und Überschreibung vorheriger definierter Templates.
+Der im Backend eingesetzte WYSIWYG-Editor TinyMCE ermöglicht die komfortable Eingabe von Text und HTML-Elementen\footnote{Um den Editor innerhalb der einzelnen Seiten zu aktivieren, müssen im Liqiud-Template der Seite entsprechende Befehle aufgerufen werden. Nach einem erneuten speichern der Seite steht der Editor im Backend zur Verfügung und kann mit Inhalten gefüllt werden.}.
+
+
+Im Frontend der Seite findet zusätzlich der WYSIWYG-JavaScript-HTML5-Editor Aloha\footnote{Projektseite: \href{http://aloha-editor.org/}{http://aloha-editor.org/}} Verwendung. Er ermöglicht so eine Bearbeitung spezieller Inhaltselemente direkt im Frontend der Seite (Inline-Editing).
 
 \newpage
 %Refinery BEGIN
@@ -324,12 +374,42 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 %Refinery END
 
 
-
-%ANALYSE
-\newpage
-\center
-\section{Analyseverfahren}
 \section{Durchführung der Analyse}
+Um die Leistungsfähigkeit der ausgewählten Systeme einschätzen zu können, werden die vorgestellten Kriterien des vorhergehenden Abschnitts mit den ausgewählten WCMS in einem tabellarischen Vergleich gegenübergestellt. Es erfolgt dabei eine Festlegung der Erfüllung dieser Kriterien in folgende 2 Stufen:
+
+\begin{table}[!h]
+\center
+\caption{Mögliche Auswertungsstufen für die umgesetzten Funktionalitäten der WCMS}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\cellcolor{green} Erfüllt 100\% & Das hier vorgestellte WCMS erfüllt die aus dem
+Kriterium definierten Funktionalitäten. Dies kann auch durch Installation einer Zusatzkomponente erreicht werden.\\
+\hline
+\cellcolor{red} Erfüllt 0\% & Das hier vorgestellte WCMS erfüllt die aus dem
+Kriterium definierten Funktionalitäten nicht. Es existieren darüber hinaus keine Erweiterungsmöglichkeiten für das System oder die Erfüllung ist nur durch eigenständige Implementierung (Programmierung) erreichbar.\\
+\hline
+\end{tabular}
+\end{table}
+\newpage
+Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS noch Erläuterungen aufgeführt, die eine genauere Einschätzung des tatsächlichen Funktionsumfangs liefern können.
+\subsection{Erstellung}
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
+   & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen – unabhängig von Zeit- und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können}} \\
@@ -348,16 +428,32 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Offline Erfassung von Inhalten unter Verwendung eines lokal auf dem Rechner installierten Programms}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia,Texten, Audio, Videos, usw.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können. Eine Angabe zusätzlicher Metadaten zu diesen Ressourcen ist nicht möglich.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung. Dabei wird zwischen Bildern und anderen Dateien unterschieden. Metadaten können nicht verwaltet werden.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht. Eine Metadatenverwaltung ist nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können. Das Hinzufügen von beliebigen Metainformationen ist möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können.} \\
 \hline
 \end{tabular}
 \newline
@@ -374,7 +470,7 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS findet der WYSIWIG-FCKEditor Verwendung. Er kann über installierbare Module beliebig ausgetauscht werden.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS findet der WYSIWIG-FCKEditor Verwendung. Zusätzlich stehen verschiedene Module zur Verfügung, die einen Austausch des Editors gegen andere Lösungen ermöglichen.} & \multicolumn{2}{p{7.5cm}|}{Alle Inhalte können über zwei integrierte WYSIWYG-Editoren erfasst und formatiert werden. Im Backend steht der Javascript Editor TinyMCE zur Verfügung. Im Frontend findet der HTML5-WYSIWYG-Editor Aloha zur Manipulierung der Seiteninhalte Verwendung (befindet sich noch in der Entwicklung).} \\
 \hline
 \end{tabular}
 \newline
@@ -392,23 +488,6 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS greift im Gegensatz zu seinen Konkurrenten auf die dokumentenorientierten Datenbank MongoDB zurück. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Locomotive mit Active Record ist jedoch geplant.} \\
-\hline
-\end{tabular}
-\newline
-\newline
-\newline
-\begin{tabular}[!ht]{|l|l|l|l|}
-\hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können}} \\
-\hline
-  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
-   & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt. } & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten. Beim Zugriff zwei oder mehrerer Nutzer auf den gleichen Inhalt führt dazu, dass die Änderungen gültig werden, die zu letzt abgespeichert wurden. Optimistisches und pessimistisches Locking von Datensätzen und Inhalten wird nicht unterstützt.} \\
 \hline
 \end{tabular}
 \newline
@@ -459,7 +538,7 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt.Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt. Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
 \hline
 \end{tabular}
 \newline
@@ -476,7 +555,7 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Brower CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Browser CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
 \hline
 \end{tabular}
 \newline
@@ -539,18 +618,16 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Der verwendete WYSIWYG-Editor \emph{TinyMCE} erlaubt in seiner HTML-Ansicht das Einbinden von Fremdinhalten anderer Seiten (z.B. IFrame).Zusätzlich ist die Erstellung von eigenen Inhaltselementen mit Hilfe der Alchemy Plugin DSL-API denkbar. So können auch die verschiedenen Resourcen aus der Bibliothek von Alchemy Verwendung finden. Standardmäßig verfügt Alchemy bereits über die Inhaltselemente \emph{Artikel}, \emph{Text}, \emph{Text mit Bild}, \emph{Bilder}, \emph{Bildergalerie}, \emph{Überschrift} und \emph{Intro}.}
+  \multicolumn{2}{|p{7.5cm}|}{Der verwendete WYSIWYG-Editor \emph{TinyMCE} erlaubt in seiner HTML-Ansicht das Einbinden von Fremdinhalten anderer Seiten (z.B. IFrame). Zusätzlich ist die Erstellung von eigenen Inhaltselementen mit Hilfe der Alchemy Plugin DSL-API denkbar. So können auch die verschiedenen Resourcen aus der Bibliothek von Alchemy Verwendung finden. Standardmäßig verfügt Alchemy bereits über die Inhaltselemente \emph{Artikel}, \emph{Text}, \emph{Text mit Bild}, \emph{Bilder}, \emph{Bildergalerie}, \emph{Überschrift} und \emph{Intro}.}
    & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
 } \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselementen, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselemente, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
 \hline
 \end{tabular}
-\newline
-\newline
-\newline
+\subsection{Kontrolle}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Granulares Rechte- und Rollenkonzept für Anwender}} \\
@@ -627,7 +704,7 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden . Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS können mehrere Internetauftritte gleichzeitig verwaltet werden. Eine Trennung der verschiedenen Nutzer und Daten wird jedoch nicht angeboten.} \\
 \hline
 \end{tabular}
 \newline
@@ -635,8 +712,7 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Linküberprüfung: Automatische Prüfung der Gültigkeit von internen und externen Links mit Möglichkeit zur Korrektur bzw. Benachrichtigung definierter
-Personengruppen}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Linküberprüfung: Automatische Prüfung der Gültigkeit von internen und externen Links mit Möglichkeit zur Korrektur bzw. Benachrichtigung definierter Personengruppen}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -647,9 +723,9 @@ Personengruppen}} \\
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
 \end{tabular}
-\newline
-\newline
-\newline
+
+
+\subsection{Freigabe}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten}} \\
@@ -672,8 +748,8 @@ Personengruppen}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die  von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
-Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
+Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -712,9 +788,8 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.b.kurze Mittei
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
 \end{tabular}
-\newline
-\newline
-\newline
+
+\subsection{Publikation}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Trennung von Inhalt und Design unter Verwendung von Templates}} \\
@@ -727,7 +802,7 @@ Trotz der so erreichten Trennung zwischen Inhalten und Design erschwert die fehl
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Browser CMS unterstützt die Verwendung verschiedener Template-Sprachen.
-In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
+In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml} angeboten.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann für jede Seite ein Template angegeben werden. Die dabei verwendete Templatesprache ist \emph{Liquid}.} \\
 \hline
 \end{tabular}
 \newline
@@ -801,13 +876,13 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit Inhalte für anderen Webseiten bereitzustellen (XML, Webservice)}} \\
 \hline
-  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Es gibt Plugins mit optionaler Ausgabe als RSS-Feed oder XML. Eine Bereitstellung ausgewählter Inhalte ist damit möglich.} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Die Darstellung von Inhalten als RSS-Feeds ist möglich. Es muss jedoch selbst eingerichtet werden.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
 \newline
@@ -858,9 +933,7 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
-\newline
-\newline
-\newline
+\subsection{Terminierung/Archivierung}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten}} \\
@@ -880,6 +953,28 @@ In einer Standard-Installation werden so u.a. werden \emph{erb}, \emph{rjs} und 
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen archiviert werden können.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+
+
+
+
+
+
+\section{Auswertung der Ergebnisse}
+
+
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Ergebniss der Untersuchung}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
