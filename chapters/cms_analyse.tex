@@ -158,6 +158,10 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 
 \newpage
 \section{Vorstellung Browser CMS}
+Browser CMS ist ein Open Source Web Content Management System der US-amerikanischen Agentur BrowserMedia mit Sitz in Bethesda, Maryland. Im Gegensatz zum aktuellen Versionszweig 3.x des Systems wurden die Vorgängerversionen (Versionen 1.x und 2.x) mit Hilfe der Java Programmiersprache umgesetzt.
+Auf Grund geänderter Marktsituation entschied sich BrowserMedia jedoch 2009 dazu, alle weiteren Versionen des CMS auf Grundlage des Rails Frameworks\footnote{Ausführliche Informationen zum Übergang von Java auf Rails können unter folgender Quelle nachvollzogen werden: href{http://tinyurl.com/6eayba7
+}{http://tinyurl.com/6eayba7}} zu entwickeln. Zusätzlich erfolgte der Umstieg auf die GPLv3-Lizenz, die eine freie Verwendung der Software ermöglicht.
+Eine online verfügbare Testversion des Systems wird von BrowserMedia nicht angeboten. Um dennoch die Funktionalität des Systems zu demonstrieren, wurde eine Installation  von Browser CMS 3.3.1 eingerichtet\footnote{Die Upload-Funktion des CMS wurde auf Grund zu geringer Server-Ressourcen deaktiviert.}.
 \begin{table}[!h]
 \caption{Steckbrief Browser CMS}
 \begin{tabular}[!ht]{|l|l|l|}
@@ -195,8 +199,62 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 \end{tabular}
 \end{table}
 \subsection{Funktionsprinzipien}
+
+Innerhalb des Backend von Browser CMS kann der angemeldete Nutzer auf alle wichtigen Funktionsbereiche des Systems zugreifen:
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/browser/backend.png}
+\caption{Backend-Ansicht von Browser CMS}
+\label{browserbackend}
+\end{center}
+\end{figure}
+
+
+\begin{description}
+\item[Dashboard]\mbox{~}\\*
+Das Dashboard gibt eine Übersicht über die zuletzt vom Nutzer bearbeiteten Seiten sowie eine Auflistung der vom Anwender noch zu erledigenden Aufgaben.
+\item[Sitemap]\mbox{~}\\*
+Im Sitemap-Bereich des Backends werden alle im System verwalteten Seiten aufgelistet. Zusätzlich können diese dort bearbeitet und verschoben werden.
+\item[Content Library]\mbox{~}\\*
+In der Content Library von Browser CMS können alle existierenden Inhaltselemente sortiert nach Inhaltstyp (z.B. Text, File, Image) verwaltet und bearbeitet werden.
+\item[Administration]\mbox{~}\\*
+Im Administrator-Bereich des Systems werden alle Gruppen und Nutzer des Backend und der Internetseite verwaltet. Zusätzlich können die für die einzelnen Seiten und Inhaltselemente definierten Templates aufgelistet und bearbeitet werden.
+\end{description}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/browser/frontendangemeldet.png}
+\caption{Ausgewählte Seite im Bearbeitungsmodus und aktiviertem Visual Editor}
+\label{browserpageedit}
+\end{center}
+\end{figure}
+
+
+Die Erstellung und Darstellung von Inhalten in Browser CMS wird durch folgende 2 Prinzipien realisiert:
+
+\begin{description}
+\item[Content Blocks]\mbox{~}\\*
+Content Blocks sind Sammlungen von Daten mit einer definierten Anzahl an Feldern eines bestimmten Typs (z.B. Textfeld, Datumsfeld). Innerhalb der Content Library können diese verwaltet und angelegt werden.
+\item[Portlet\footnote{Der Begriff des Portlets stammt aus der Java-Welt und bezeichnet ursprünglich beliebig kombinierbare Komponenten, die an verschiedenen Positionen auf einer Internetseite bzw. einer Portal-Seite dargestellt werden können.}]\mbox{~}\\*
+Portlets verfügen über ein Template, welches beschreibt, wie ausgewählte Content Blocks dargestellt werden sollen. Innerhalb der Internetseite wird das erstellte Portlet positioniert und stellt dann die entsprechenden Inhaltselemente mit der im Portletlayout definierten Formatierung dar.
+\item[Sitemap]\mbox{~}\\*
+\end{description}
+
 \subsection{Erweiterungen}
+Die Funktionalität von Browser CMS kann durch das Hinzufügen von Content Blocks und Portlets erweitert werden.
+
+
+
+
 \subsection{Verwendete Technologien}
+
+Das komplette Backend von Browsercms wird mit Hilfe von HTML-Views aus Rails gerendert. JavaScript kommt lediglich bei der Darstellung verschiedener Feldtypen (z.B. Datumsdialog und Auswahlbox) innerhalb der Contentblöcke und beim Anlegen von Textinhalt durch die Verwendung des JavaScript-WYSIWYG-Editors FCKEditor zur Anwendung.
+
+Die Erstellung der Contentblöcke und Portlets wird durch einen in Rails umgesetzten Generatorskript ermöglicht und vereinfacht somit die Erstellung für den Entwickler.
+
+\lstinputlisting[caption=Aufruf des Generator-Skripts zur Erstellung eines neuen Inhaltselements Produkt]{code/content_block.rb}
 %Browser END
 \newpage
 %Locomotive BEGIN
@@ -262,7 +320,7 @@ Erweiterungen werden in Locomotive CMS als Bausteine bezeichnet und repräsentie
 \label{locomotivecontent}
 \end{center}
 \end{figure}
-
+\newpage
 Die Inhaltselemente können aus folgenden grundlegenden Feldtypen zusammengebaut werden:
 \begin{itemize}
 \item
@@ -375,9 +433,10 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 
 
 \section{Durchführung der Analyse}
-Um die Leistungsfähigkeit der ausgewählten Systeme einschätzen zu können, werden die vorgestellten Kriterien des vorhergehenden Abschnitts mit den ausgewählten WCMS in einem tabellarischen Vergleich gegenübergestellt. Es erfolgt dabei eine Festlegung der Erfüllung dieser Kriterien in folgende 2 Stufen:
+Um die Leistungsfähigkeit der ausgewählten Systeme einschätzen zu können, werden die vorgestellten Kriterien des vorhergehenden Abschnitts mit den ausgewählten WCMS in Tabellenform gegenübergestellt. Es erfolgt dabei eine Festlegung der Erfüllung dieser Kriterien in folgende 2 Stufen:
 
 \begin{table}[!h]
+\renewcommand{\arraystretch}{1.5}
 \center
 \caption{Mögliche Auswertungsstufen für die umgesetzten Funktionalitäten der WCMS}
 \begin{tabular}{|l|p{10cm}|}
@@ -896,9 +955,9 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
 \newline
@@ -958,9 +1017,9 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Refinery CMS erlaubt das Archivieren von kompletten Seiten. Es ist jedoch nicht möglich, bestimmte Inhalte zu Archivieren.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
 
@@ -971,18 +1030,56 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 
 \section{Auswertung der Ergebnisse}
 
+Der Erfüllungsgrad der einzelnen Kriterien hat für die untersuchten WCMS folgendes Gesamtergebnis herausgestellt:
 
-\begin{tabular}[!ht]{|l|l|l|l|}
+\begin{table}[!h]
+\renewcommand{\arraystretch}{1.5}
+%\small\addtolength{\tabcolsep}{+5pt}
+\center
+\begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Ergebniss der Untersuchung}} \\
+& & \multicolumn{4}{c|}{\textbf{Web Content Management System}} \\[2pt]
+\cline{3-6}
+\textbf{Bereich}& \textbf{Maximum} &
+\begin{sideways}
+Alchemy CMS
+\end{sideways}
+&\begin{sideways}
+Browser CMS
+\end{sideways}
+&\begin{sideways}
+Locomotive CMS
+\end{sideways}
+&\begin{sideways}
+Refinery CMS
+\end{sideways} \\
 \hline
-  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+Erstellung & 1400 & 1000 & 1000 & 1000 & 900 \\
+\hline
+Kontrolle & 600 & 0 & 200 & 0 & 0 \\
+\hline
+Freigabe & 400 & 0 & 0 & 0 & 0 \\
+\hline
+Publikation & 1000 & 500 & 600 & 400 & 500 \\
+\hline
+Terminierung/Archivierung & 200 & 0 & 0 & 0 & 0 \\
+\hline
+\hline
+Gesamtpunkte & 3600 & 1500 & 1800 & 1400 & 1400 \\
 \hline
 \end{tabular}
+\end{table}
+
+
+Die Überprüfung der funktionalen Leistungen im Sinne des Web Publishing der CMS lässt folgendes Gesamtbild zu:
+
+
+\begin{itemize}
+\item
+Die untersuchten Rails WCMS Alchemy CMS, Browser CMS, Locomotive CMS und Refinery CMS bieten umfassende Möglichkeiten zur Erstellung
+\item
+Die umgesetzten Systeme besitzen
+\item
+
+\end{itemize}
 

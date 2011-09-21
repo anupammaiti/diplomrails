@@ -8,9 +8,9 @@
 \BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Content Management Life Cycle}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Anforderungen an Content Management Systeme in der Zukunft}{section.2.1}
 \BOOKMARK [1][-]{section.2.2}{2.2 Entwicklung mit Ruby on Rails}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Dont Repeat yourself}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Don't-Repeat-Yourself}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Convention over Configuration}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Model View Controller}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Model-View-Controller}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 REST}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Rack und Middleware}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.6}{2.2.6 Datenbankgetriebene Entwicklung}{section.2.2}

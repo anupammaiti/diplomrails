@@ -19,7 +19,7 @@
 
 Die Skriptsprache PHP gehört weltweit zu den meist genutzten serverseitigen Programmiersprachen. Im August 2011 sind über 75 Prozent der dynamisch generierten Internetseiten mit dem PHP Hypertext Preprocessor erzeugt wurden\footnote{\href{http://w3techs.com/}{W3tech} erstellt täglich eine aktualisierte Auflistung über die Verwendung von serverseitigen Programmiersprachen. Es werden dabei die nach dem Alexia Ranking eine Million beliebtesten Internetseiten auf ihre Konfiguration untersucht.}.
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \begin{center}
 \label{fig.programmingusage}
 \includegraphics[scale=0.65]{images/Einleitung/serverseitigeScriptsprachen.png}
@@ -29,7 +29,7 @@ Die Skriptsprache PHP gehört weltweit zu den meist genutzten serverseitigen Pro
 
 Auch im Bereich der Web Content Management Systeme\footnote{Im folgenden wird für den Begriff Web Content Management Systeme die Abkürzung WCMS verwendet} spiegelt sich diese Dominanz wider. Betrachtet man die Angaben des Content Management Portals cmsmatrix.org\footnote{\href{http://cmsmatrix.org}{http://cmsmatrix.org} ermöglicht eine Gegenüberstellung der Funktionalitäten von Content Management Systemen unterschiedlicher Prgrammiersprachen.}, existieren neben den vor allem in Deutschland verwendeten Open Source-Lösungen Typo3, Drupal, Contao oder Joomla! über 500 weitere in PHP implementierte Web Content Management Systeme unterschiedlichster Ausprägung und Qualität.
 Ruby als Programmiersprache findet hingegen nur bei etwa 1 Prozent der erfassten Server Verwendung. Die dabei umgesetzten Projekte sind meist individuelle, browser-basierte Applikationen, die für Unternehmen und deren spezifisches Geschäftsfeld entwickelt wurden. Bekannte Vertreter sind hier u.a. die webbasierte Projektmanagement-Applikation Basecamp von 37signals\footnote{Projektseite von Basecamp:\href{http://basecamphq.com}{ http://basecamphq.com/}}, der Microblogging-Dienst Twitter\footnote{
-Großteile der Programmierung von Twitter basierten bis April 2011 auf dem Ruby on Rails Framework.} und der webbasierte Hosting-Dienst Github\footnote{Github greift neben Ruby on Rails noch  Webframeworks und Technologien zurück.
+Großteile der Programmierung von Twitter basierten bis April 2011 auf dem Ruby on Rails Framework.} und der webbasierte Hosting-Dienst Github\footnote{Github greift neben Ruby on Rails noch auf andere Webframeworks und Technologiesysteme zurück.
 } für Software-Entwicklungsprojekte.
 Diese individuellen Lösungen werden dabei meist unter Zuhilfenahme  eines Web Application Framework realisiert, das den Entwicklungsprozess unterstützt und vereinfacht.
 
@@ -52,7 +52,7 @@ Bei geringem Umfang der zusätzlichen Internetseite werden die Inhalte manuell i
 }
 
 \item{
-Komplexe Internetseiten mit vielen Inhalten werden über ein Web Content Management System eines Drittanbieters realisiert. Die Rails-Anwendung fungiert als Zwischenstation und leitet bestimmte Anfragen an das externe WCMS weiter.
+Komplexe Internetseiten mit vielen Inhalten und anspruchsvollem Layout werden über ein Web Content Management System eines Drittanbieters realisiert. Die Rails-Anwendung fungiert als Zwischenstation und leitet bestimmte Anfragen an das externe WCMS weiter.
 }
 \end{enumerate}
 
@@ -62,7 +62,8 @@ Während der erste Lösungsansatz bei wenigen Inhalten noch vertretbar ist, erfo
 Ziel der vorliegende Arbeit ist es daher, die Möglichkeiten einer komplett rails-basierten Web Content Management Verwaltung zu untersuchen, um so den Einsatz eines externen WCMS überflüssig werden zu lassen.
 \newline
 \newline
-Dafür werden unter Verwendung der vergleichenden Methode die ausgewählten Ruby on Rails Content Management Systeme Alchemy CMS, Browser CMS, Locomotive CMS und Refinery CMS einem externen Kriterienkatalog gegenübergestellt, der allgemein gültige Anforderungen an Web Content Management Systeme formuliert. An Hand der Auswertung kann abschließend eine Einsatzempfehlung für die gewählten Systeme erfolgen. Zusätzlich wird die programmiertechnische Umsetzung der Systeme analysiert und auf mögliche Probleme hingewiesen.
+Dafür werden unter Verwendung der vergleichenden Methode die ausgewählten Ruby on Rails Content Management Systeme Alchemy CMS, Browser CMS, Locomotive CMS und Refinery CMS einem externen Kriterienkatalog gegenübergestellt, der allgemein gültige Anforderungen an Web Content Management Systeme formuliert. An Hand der Auswertung kann abschließend eine Leistungsbeurteilung für die gewählten Systeme erfolgen.
+Zusätzlich wird die programmiertechnische Umsetzung der Systeme analysiert und auf mögliche Probleme hingewiesen.
 
 \section{Aufbau der Arbeit}
 Die vorliegende Diplomarbeit gliedert sich in sechs wesentliche Abschnitte:

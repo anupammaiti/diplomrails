@@ -25,7 +25,7 @@
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
 	headsepline,%         Linie nach Kopfzeile.
 	%footsepline,%         Linie vor Fusszeile.
-	%bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+	bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
 	%idxtotoc,%             Index ins Inhaltsverzeichnis einfügen.
     onehalfspacing
 ]{scrbook}
@@ -88,7 +88,8 @@
 %
 \usepackage{rotating}
 
-
+\setlength{\extrarowheight}{3pt}
+%\setlength{\tabcolsep}{5ex}
 %
 % 10. Paket für Farben an verschieden Stellen.
 %     Wir definieren zusätzliche benannte Farben.

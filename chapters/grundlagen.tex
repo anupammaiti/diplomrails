@@ -8,10 +8,10 @@
 
 \section{Entwicklung mit Ruby on Rails}
 
-2004 arbeitete der dänischen Programmierer David Heinemeier Hansson an der Umsetzung eines webbasierten Projektmanagement-Tools mit dem Namen Basecamp\footnote{Projekt-Homepage: \href{http://basecamphq.com/}{http://basecamphq.com/}}. Die bei der Realisierung des Projektes umgesetzten Teilkomponenten extrahierte er später und veröffentlicht sie 2005 als Framework unter dem Namen Ruby on Rails.
+2004 arbeitete der dänische Programmierer David Heinemeier Hansson an der Umsetzung eines webbasierten Projektmanagement-Tools mit dem Namen Basecamp\footnote{Projekt-Homepage: \href{http://basecamphq.com/}{http://basecamphq.com/}}. Die bei der Realisierung des Projektes umgesetzten Teilkomponenten extrahierte er später und veröffentlicht sie 2005 als Framework unter dem Namen Ruby on Rails.
 \newline
 \newline
-7 Jahre später beschreibt sich das  Ruby on Rails Framework selbst mit folgenden Worten:
+7 Jahre später beschreibt sich das Ruby on Rails Framework selbst mit folgenden Worten:
 \begin{quote}
 Ruby on Rails is an open-source web framework that’s
 optimized for programmer happiness and sustainable
@@ -19,19 +19,18 @@ productivity. It lets you write beautiful code by
 favoring convention over configuration.
 \end{quote}
 
-
 Die Aussage bezieht sich dabei auf viele Ansätze und Entwicklungsabläufe, die innerhalb des Frameworks umgesetzt werden.
 Im folgenden Abschnitt sollen daher die wichtigsten Prinzipien, Paradigmen und Programmierabläufe des Frameworks zusammengefasst werden, um auf dieser Grundlage eine konzeptionelle und programmiertechnische Betrachtung in Kapitel 4 zu ermöglichen.
 \newline
 \newline
 Für eine umfassende Einführung in Rails werden [Wi08] und [Rai11] empfohlen.
 
-\subsection{Dont Repeat yourself}
-Zur Optimierung der Entwicklungvorgänge innerhalb des Frameworks propagiert Rails den Grundsatz des DRY (Don't Repeat yourself). Dabei sollen Redundanzen, d.h. die wiederholte Angabe identischer Informationen jeglicher Art vermieden werden. So kann sichergestellt werden, dass sich Änderungen an einer zentralen Stelle im System (z.B. Quellcode) in der gesamten Anwendung auswirken und Duplikate nicht mehrfach angepasst werden müssen.
+\subsection{Don't-Repeat-Yourself}
+Zur Optimierung der Entwicklungvorgänge innerhalb des Frameworks propagiert Rails den Grundsatz des DRY (Don't-Repeat-Yourself). Dabei sollen Redundanzen, d.h. die wiederholte Angabe identischer Informationen jeglicher Art vermieden werden. So kann sichergestellt werden, dass sich Änderungen an einer zentralen Stelle im System (z.B. Quellcode) in der gesamten Anwendung auswirken und Duplikate nicht mehrfach angepasst werden müssen.
 \subsection{Convention over Configuration}
 Viele Web Application Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden. Das folgende Beispiel zeigt eine solche Konfigurationsdatei innerhalb des Java Application Frameworks Spring:
 
-\lstinputlisting{code/spring.xml}
+\lstinputlisting[language=XML]{code/spring.xml}
 
 Um diesen zusätzlichen und zeitraubenden Aufwand vor der eigentlichen Arbeit mit einem Framework zu vermeiden, definiert das Rails Framework zahlreiche Konventionen, die es erlauben, sofort mit der Entwicklungsarbeit zu beginnen. U.a. werden folgende Festlegungen getroffen:
 
@@ -43,14 +42,38 @@ Der Klassenname eines Domainenmodells wird im Singular erwartet, der dazu korres
 \item
 Der Primärschlüssel in einer Datanbanktabelle muss vom Typ Integer sein und den Namen ID besitzen
 \item
-Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views
+Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views\footnote{Eine Erklärung zu Model-View-Controller folgt in Abschnitt ??}
 \end{itemize}
-Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akzeptiert werden, was dazu führt, dass Rails häufig als \emph{opinionated software} bezeichnet wird.
+Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akzeptiert werden, was dazu führt, dass Rails häufig als \emph{opinionated software\footnote{Eine ausführliche Stellungnahme von Hansson zu diesem Thema gibt es unter: \href{http://www.linuxjournal.com/article/8686}{http://www.linuxjournal.com/article/8686}}} bezeichnet wird.
 
 Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht jedoch den Aufwand des Entwicklers.
 
-\subsection{Model View Controller}
-Das Ruy on Rails Framework baut wie andere Frameworks auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt das bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelte Modell-View-Controller-Paradigma zum Einsatz.
+\subsection{Model-View-Controller}
+Das Ruy on Rails Framework baut wie andere Web-Frameworks auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt das bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelte Model-View-Controller-Paradigma zum Einsatz.
+
+Die folgende Abbildung charakterisiert dabei den internen Ablauf einer Anfrage innerhalb des Client-Server-Modells.
+
+\begin{figure}[!h]
+\begin{center}
+\label{sec.mvc}
+\includegraphics[scale=0.4]{images/analyse/mvc.png}
+\caption{Abläufe innerhalb des Rails-Frameworks}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+\item
+Anfrage eines Clienten
+\item
+An Hand der im Rails-Routing definierten Einträge wird die Anfrage an den registrierten Controller weitergeleitet
+\item
+Der Controller greift über ein Model auf benötigte Daten in einem Speicher (z.B. realtionale Datenbank) zu und stellt diese dem View-Layer zur Verfügung. Es ist auch möglich, dass der Controller die Anfrage an einen anderen Controller weiterleitet (Redirects).
+\item
+Der View-Layer bereitet die an ihn übermittelten Daten in der angeforderten Darstellungsform auf. So wird z.B. eine HTML-Datei erzeugt
+\item
+Das Ergebnis der Anfrage wird an den Clienten gesendet und schließt den Kommunikationsprozess mit dem Rails-Framework ab
+
+\end{enumerate}
 
 
 
@@ -61,11 +84,11 @@ Innerhalb einer Web-Applikation erfolgt der Austausch zwischen Server und Client
 \item[GET]
 	Anforderung an den Server, eine über die Adresszeile des Browsers angegebene Ressource zurückzuliefern. Es können zusätzlich Argumente an die angeforderte URL angehängt werden.
 \item[POST]
-	Mit Hilfe dieser Methode ist es möglich,  große Datenmengen aus z.B. Formularen an einen Webserver zu verschicken. Die übergebenen Informationen werden dabei im sogenannten Body der Anfrage codiert mitverschickt und somit im Vergleich zu GET unsichtbar.
+	Mit Hilfe dieser Methode ist es möglich,  große Datenmengen aus z.B. Formularen an einen Webserver zu verschicken. Die übergebenen Informationen werden dabei im sogenannten Body der Anfrage codiert mitverschickt und somit im Vergleich zu GET nicht in der URL sichtbar\footnote{Ein Post-Request findet vor allem bei der Übermittlung von Formularen innerhalb eines Browsers Verwendung.}.
 \end{description}
 
 
-REST, ein Akronym für Representational State Transfer, erweitert die in  traditionellen Webanwendungen üblichen GET und POST um die ebenfalls im HTTP-Standard enthaltenen Methoden PUT und DELETE:
+REST, ein Akronym für \textbf{RE}epresentational \textbf{S}tate \textbf{T}ransfer, erweitert die in  traditionellen Webanwendungen üblichen GET und POST um die ebenfalls im HTTP-Standard enthaltenen Methoden PUT und DELETE:
 
 \begin{description}
 \item[PUT]
@@ -89,8 +112,8 @@ Löschen der beschriebenen Ressource
 \end{description}
 
 
-Die URL einer Anfrage repräsentiert damit nicht wie z.B. in vielen PHP-Anwendungen eine bestimmte Aktion, die beim Aufruf auf dem Server ausgeführt werden soll, sondern eine Ressource, die eindeutig zugeordnet werden kann\footnote{Die Eindeutigkeit der Ressource muss vom Entwickler sichergestellt werden.}.
-Da aktuelle Browser nur GET- und POST-Anfragen ermöglichen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden:
+Die URL einer Anfrage repräsentiert damit nicht eine bestimmte Aktion, die beim Aufruf auf dem Server ausgeführt werden soll, sondern eine Ressource, die eindeutig zugeordnet werden kann\footnote{Die Eindeutigkeit der Ressource muss vom Entwickler sichergestellt werden.}.
+Da aktuelle Browser nur GET- und POST-Anfragen ermöglichen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden. Das folgende Beispiel symbolisiert das von Rails definierte Standard-Routing einer als Restful bezeichneten Ressource{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden.}.
 
 
 \begin{table}[!h]
@@ -109,9 +132,9 @@ create & POST & Erzeugt eine neue Ressource\\
 \hline
 edit & GET & Erzeugt ein Formular zum Bearbeiten einer Ressource\\
 \hline
-update & PUT Aktualisierung einer bestehenden Ressource\\
+update & PUT & Aktualisierung einer bestehenden Ressource\\
 \hline
-destroy & DELETE Zerstörung einer Ressource\\
+destroy & DELETE & Zerstörung einer Ressource\\
 \hline
 \end{tabular}
 \end{table}
