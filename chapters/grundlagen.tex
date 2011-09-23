@@ -11,7 +11,7 @@
 2004 arbeitete der dänische Programmierer David Heinemeier Hansson an der Umsetzung eines webbasierten Projektmanagement-Tools mit dem Namen Basecamp\footnote{Projekt-Homepage: \href{http://basecamphq.com/}{http://basecamphq.com/}}. Die bei der Realisierung des Projektes umgesetzten Teilkomponenten extrahierte er später und veröffentlicht sie 2005 als Framework unter dem Namen Ruby on Rails.
 \newline
 \newline
-7 Jahre später beschreibt sich das Ruby on Rails Framework selbst mit folgenden Worten:
+6 Jahre später beschreibt sich das Ruby on Rails Framework selbst mit folgenden Worten:
 \begin{quote}
 Ruby on Rails is an open-source web framework that’s
 optimized for programmer happiness and sustainable
@@ -23,14 +23,14 @@ Die Aussage bezieht sich dabei auf viele Ansätze und Entwicklungsabläufe, die 
 Im folgenden Abschnitt sollen daher die wichtigsten Prinzipien, Paradigmen und Programmierabläufe des Frameworks zusammengefasst werden, um auf dieser Grundlage eine konzeptionelle und programmiertechnische Betrachtung in Kapitel 4 zu ermöglichen.
 \newline
 \newline
-Für eine umfassende Einführung in Rails werden [Wi08] und [Rai11] empfohlen.
+Für eine umfassende Einführung in Rails werden \cite{RubyMetaprogramming2010} und \cite{EnterpriseRails} empfohlen.
 
 \subsection{Don't-Repeat-Yourself}
 Zur Optimierung der Entwicklungvorgänge innerhalb des Frameworks propagiert Rails den Grundsatz des DRY (Don't-Repeat-Yourself). Dabei sollen Redundanzen, d.h. die wiederholte Angabe identischer Informationen jeglicher Art vermieden werden. So kann sichergestellt werden, dass sich Änderungen an einer zentralen Stelle im System (z.B. Quellcode) in der gesamten Anwendung auswirken und Duplikate nicht mehrfach angepasst werden müssen.
 \subsection{Convention over Configuration}
-Viele Web Application Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden. Das folgende Beispiel zeigt eine solche Konfigurationsdatei innerhalb des Java Application Frameworks Spring:
+Viele Web Application Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden\footnote{Rails bezeichnet diese Art der Frameworks mit ihrem Konfigurations-Overhead oft als \emph{enterprisy}. Dies bedeutet jedoch nicht, das Rails für Anwendungsumsetzungen im Enterprise-Bereich ungeeignet ist. Matt Aimonetti stellt dies im Artikel \cite{enterprisy} heraus.}. Abbildung \ref{spring} zeigt beispielhaft solch eine Konfigurationsdatei innerhalb des Java Application Frameworks Spring:
 
-\lstinputlisting[language=XML]{code/spring.xml}
+\lstinputlisting[label=spring,language=XML, caption=Konfigurationsdatei im Java Spring Framework]{code/spring.xml}
 
 Um diesen zusätzlichen und zeitraubenden Aufwand vor der eigentlichen Arbeit mit einem Framework zu vermeiden, definiert das Rails Framework zahlreiche Konventionen, die es erlauben, sofort mit der Entwicklungsarbeit zu beginnen. U.a. werden folgende Festlegungen getroffen:
 
@@ -42,16 +42,16 @@ Der Klassenname eines Domainenmodells wird im Singular erwartet, der dazu korres
 \item
 Der Primärschlüssel in einer Datanbanktabelle muss vom Typ Integer sein und den Namen ID besitzen
 \item
-Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views\footnote{Eine Erklärung zu Model-View-Controller folgt in Abschnitt ??}
+Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views\footnote{Eine Erklärung zu Model-View-Controller folgt in Abschnitt \ref{sec.mvc}}
 \end{itemize}
-Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akzeptiert werden, was dazu führt, dass Rails häufig als \emph{opinionated software\footnote{Eine ausführliche Stellungnahme von Hansson zu diesem Thema gibt es unter: \href{http://www.linuxjournal.com/article/8686}{http://www.linuxjournal.com/article/8686}}} bezeichnet wird.
+Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akzeptiert werden, was dazu führt, dass Rails häufig als \emph{opinionated software\footnote{Eine ausführliche Stellungnahme von David Heinemeier Hansson zu diesem Thema gibt es unter: \href{http://www.linuxjournal.com/article/8686}{http://www.linuxjournal.com/article/8686}}} bezeichnet wird.
 
 Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht jedoch den Aufwand des Entwicklers.
 
 \subsection{Model-View-Controller}
+\label{sec.mvc}
 Das Ruy on Rails Framework baut wie andere Web-Frameworks auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt das bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelte Model-View-Controller-Paradigma zum Einsatz.
-
-Die folgende Abbildung charakterisiert dabei den internen Ablauf einer Anfrage innerhalb des Client-Server-Modells.
+Die folgende Abbildung charakterisiert dabei den rails-internen Ablauf einer Anfrage innerhalb des Client-Server-Modells:
 
 \begin{figure}[!h]
 \begin{center}
@@ -65,14 +65,15 @@ Die folgende Abbildung charakterisiert dabei den internen Ablauf einer Anfrage i
 \item
 Anfrage eines Clienten
 \item
-An Hand der im Rails-Routing definierten Einträge wird die Anfrage an den registrierten Controller weitergeleitet
+An Hand der im Rails-Routing definierten Einträge wird die Anfrage eines Clienten an den registrierten Controller weitergeleitet
 \item
 Der Controller greift über ein Model auf benötigte Daten in einem Speicher (z.B. realtionale Datenbank) zu und stellt diese dem View-Layer zur Verfügung. Es ist auch möglich, dass der Controller die Anfrage an einen anderen Controller weiterleitet (Redirects).
 \item
-Der View-Layer bereitet die an ihn übermittelten Daten in der angeforderten Darstellungsform auf. So wird z.B. eine HTML-Datei erzeugt
+Das Model ist in Rails
 \item
-Das Ergebnis der Anfrage wird an den Clienten gesendet und schließt den Kommunikationsprozess mit dem Rails-Framework ab
-
+Der View-Layer bereitet die durch den Controller zur Verfügung gestellten Daten an in der angeforderten Darstellungsform auf. So wird z.B. eine HTML- oder XML-Datei erzeugt.
+\item
+Das Ergebnis der Anfrage (die Ausgabe des View) wird vom Framework an den Server und von dort an den Clienten gesendet. Der Kommunikationsprozess mit dem Rails-Framework ist damit abgeschlossen.
 \end{enumerate}
 
 
@@ -89,17 +90,7 @@ Innerhalb einer Web-Applikation erfolgt der Austausch zwischen Server und Client
 
 
 REST, ein Akronym für \textbf{RE}epresentational \textbf{S}tate \textbf{T}ransfer, erweitert die in  traditionellen Webanwendungen üblichen GET und POST um die ebenfalls im HTTP-Standard enthaltenen Methoden PUT und DELETE:
-
-\begin{description}
-\item[PUT]
-	Die Verwendung der PUT-Methode zeigt die Neuanlage der in einer	Anfrage spezifizierten Ressource an
-\item[DELETE]
-	Die Verwendung dieser Methode signalisiert dem Server, die angegebene Ressource auf dem Server zu löschen.
-\end{description}
-
-
-Rails unterstützt REST seit der Einführung der Version 1.2 und ermöglicht es so, an Hand einer URL und den verwendeten HTTP-Methoden die richtige Aktion auf dem Server auszuführen:
-
+\begin{comment}
 \begin{description}
 \item[GET]
 Abfrage einer Ressource unter der angegebenen URL mit  anschließender Darstellung
@@ -110,35 +101,61 @@ Erstellung einer neuen Ressourcen an Hand der in der Anfrage übermittelten Date
 \item[DELETE]
 Löschen der beschriebenen Ressource
 \end{description}
+\end{comment}
 
-
-Die URL einer Anfrage repräsentiert damit nicht eine bestimmte Aktion, die beim Aufruf auf dem Server ausgeführt werden soll, sondern eine Ressource, die eindeutig zugeordnet werden kann\footnote{Die Eindeutigkeit der Ressource muss vom Entwickler sichergestellt werden.}.
-Da aktuelle Browser nur GET- und POST-Anfragen ermöglichen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden. Das folgende Beispiel symbolisiert das von Rails definierte Standard-Routing einer als Restful bezeichneten Ressource{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden.}.
-
+\begin{description}
+\item[PUT]
+	Die Verwendung der PUT-Methode zeigt die Neuanlage der in einer	Anfrage spezifizierten Ressource an
+\item[DELETE]
+	Die Verwendung dieser Methode signalisiert dem Server, die angegebene Ressource auf dem Server zu löschen.
+\end{description}
+Rails unterstützt REST seit der Einführung der Version 1.2 und ermöglicht es so, an Hand einer URL und den verwendeten HTTP-Methoden die richtige Aktion auf dem Server auszuführen. Die URL einer Anfrage repräsentiert damit nicht eine bestimmte Aktion, die beim Aufruf auf dem Server ausgeführt werden soll, sondern eine Ressource\footnote{Der Begriff Ressource bezeichnet in diesem Zusammenhang eine bestimmte Sache.}, die eindeutig zugeordnet werden kann\footnote{Die Eindeutigkeit der Ressource muss vom Entwickler sichergestellt werden.}.
+Da aktuelle Browser nur GET- und POST-Anfragen zuverlässig unterstützen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden\footnote{Das Rails Framework fügt  innerhalb von Formularen automatisch einen versteckten Parameter \emph{\_method} in die Anfrage, die den Namen der gewünschten HTTP-Metode (DELETE oder PUT) enthält. Im Framework wird dieser Parameter ausgelesen und ein entsprechendes Routing zur geforderten Controller-Action eingeleitet}. Das folgende Beispiel stellt das von Rails definierte Standard-Routing einer als \emph{restful} angelegten Ressource Projekt dar\footnote{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden, die eine Ansammlung von Best-Practices darstellen (vgl. \cite{restful}).}.
 
 \begin{table}[!h]
+\caption{Standard-Routing für eine Ressource Projekt innerhalb des Rails-Frameworks}
 \center
-\begin{tabular}[!ht]{|l|l|p{6cm}|}
+\begin{tabular}[!ht]{|p{2cm}|p{3cm}|p{3cm}|p{6cm}|}
 \hline
-Aktion & HTTP-Methode & Wirkung\\
+HTTP-Methode & Anfragepfad & Ausgelöste Aktion im Controller & Wirkung\\
 \hline
-index & GET & Anzeige einer Collection von Ressourcen\\
+GET	& /projects & index & Anzeige aller vorhandenen Projekte\\
 \hline
-show & GET & Anzeie einer einzelnen Ressource\\
+GET	& /projects/new	& new &	Anzeige eines HTML-Formulars zum erstellen eines neuen Projektes\\
 \hline
-new & GET & Erzeugt ein Formular zum Anlegen einer neuen Ressource\\
+POST & /projects & create & Erstellt ein neues Projekt mit den übermittelten Daten\\
 \hline
-create & POST & Erzeugt eine neue Ressource\\
+GET & /projects/:id &	show &	Anzeige eines Projektes mit der zugeordneten ID\\
 \hline
-edit & GET & Erzeugt ein Formular zum Bearbeiten einer Ressource\\
+GET	& /projects/:id/edit & edit & Anzeige eines HTML-Formulars zum Bearbeiten eines bestehenden Projektes\\
 \hline
-update & PUT & Aktualisierung einer bestehenden Ressource\\
+PUT	& /projects/:id &	update & Aktualisierung eines bestimmten Projektes mit den übermittelten Daten\\
 \hline
-destroy & DELETE & Zerstörung einer Ressource\\
+DELETE & /projects/:id &	destroy &	Löschung des Projektes mit der angegebenen ID\\
 \hline
 \end{tabular}
 \end{table}
-Eine ausführliche Beschreibung von REST und dessen Realisierung liefert [Wir08].
+
+\begin{table}[!h]
+\caption{Vergleich zwischen Rest-konformen und klassischen Rails-URL's}
+\label{tab.restnonrest}
+\center
+\begin{tabular}[!ht]{|l|l|l|}
+\hline
+Aktion & normale URL & 	REST URL in Rails \\
+\hline
+show &	/projects/show/12 &	/projects/12 \\
+\hline
+delete & /projects/destroy/123 & /projects/123 \\
+\hline
+update & /projects/update/123 &	/projects/123 \\
+\hline
+create & /projects/create & /projects \\
+\hline
+\end{tabular}
+\end{table}
+
+Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource und Aktion innerhalb einer in Rails definierten REST-Ressource Projekt. Eine ausführliche Beschreibung von REST und dessen Realisierung liefert \cite{Wirdemann08}.
 
 \subsection{Rack und Middleware}
 \subsection{Datenbankgetriebene Entwicklung}
@@ -151,7 +168,6 @@ Eine ausführliche Beschreibung von REST und dessen Realisierung liefert [Wir08]
 Die hohe Zahl am Markt befindlicher Web Content Management Systeme führt zu einem erschwerten Auswahlverfahren. Neben vielen kostenpflichtigen, professionellen WCMS-Lösungen stehen durch die Open Source Bewegung zusätzlich zahlreiche kostenlose Softwareprodukte zur Verfügung, die sich in ihrer Leistungsfähigkeit stark unterscheiden.
 So kommt es häufig vor, das klein angelegte Open Source Projekte ihre Software stolz als Web Content Management System bezeichnen, obwohl nur sehr wenige Funktionalitäten implementiert sind.
 Um dieser Praktik entgegenzuwirken haben Vertreter der Content Management Branche eine Feature Matrix (Abb. \ref{featurematrix}) herausgegeben, die aktuelle Anforderungen an ein Content Management System spezifizieren soll. Die dabei entstandene Übersicht zeigt dabei eine Unterscheidung in 3 Prioritätsstufen:
-
 \begin{description}
 \item[Must-Have]\mbox{~}\\*
 Diese Funktionalität muss in einem Content Management System verhanden sein.

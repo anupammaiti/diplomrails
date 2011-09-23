@@ -1,14 +1,102 @@
 \chapter{Konzeptionelle Problemanalyse}
 
-In diesem Teil der Arbeit werden die ausgewählten Systeme auf konzeptionelle und programmiertechnische Probleme untersucht. Die folgende Betrachtung wird dabei in folgende Teilbereiche untergliedert:
+In diesem Abschnitt der Arbeit werden die ausgewählten Systeme auf konzeptionelle und programmiertechnische Probleme untersucht. Die folgende Betrachtung wird dabei in folgende Teilbereiche aufgeteilt:
 
 \begin{enumerate}
 \item Nutzeroberfläche
-\item Datenmodellierung
-\item Inhaltserstellung
-Die Inhaltserstellung von Refinery
-
+\item Erweiterungen
 \end{enumerate}
+
+
+\section{Erweiterungen}
+
+Innerhalb des Rails Frameworks ist die Verwendung von Generatoren ein häufiges Mittel zur schnellen Entwicklung von funktionsfähigem Code (siehe Kapitel ?). Die Mehrheit der hier vorgestellten Systeme\footnote{Locomotive CMS benötigt durch die Möglichkeit der Erstellung individueller Inhaltselemente im Backend keine installierbaren Erweiterungsmodule} bedient sich zur Realisierung neuer Inhaltslemente ebenfalls eines Generatorskripts, der ein für das jeweilige CMS funktionsbereites Grundgerüst erzeugt. Exemplarisch soll hier das Ergebnis eines Generatoraufrufes in Refinery CMS aufgezeigt werden (Abb. \ref{sec.refineryoutput} ). Das erstellte Inhaltselement Projekt verfügt dabei über die Felder Titel und Beschreibung und wurde durch folgenden Befehlsaufruf realisiert:
+
+
+\lstinputlisting[numbers=none]{code/generator_refinery.rb}
+
+
+
+\begin{lstlisting}[label=sec.refineryoutput,caption=Erzeugte Dateien des Refinery Engine Generators]
+create  vendor/engines/projects/app/controllers/admin/projects_controller.rb
+create  vendor/engines/projects/app/controllers/projects_controller.rb
+create  vendor/engines/projects/app/models/project.rb
+create  vendor/engines/projects/app/views/admin/projects/_actions.html.erb
+create  vendor/engines/projects/app/views/admin/projects/_form.html.erb
+create  vendor/engines/projects/app/views/admin/projects/_projects.html.erb
+create  vendor/engines/projects/app/views/admin/projects/_records.html.erb
+create  vendor/engines/projects/app/views/admin/projects/_project.html.erb
+create  vendor/engines/projects/app/views/admin/projects/_sortable_list.html.erb
+create  vendor/engines/projects/app/views/admin/projects/edit.html.erb
+create  vendor/engines/projects/app/views/admin/projects/index.html.erb
+create  vendor/engines/projects/app/views/admin/projects/new.html.erb
+create  vendor/engines/projects/app/views/projects/index.html.erb
+create  vendor/engines/projects/app/views/projects/show.html.erb
+create  vendor/engines/projects/config/locales/en.yml
+create  vendor/engines/projects/config/locales/fr.yml
+create  vendor/engines/projects/config/locales/lolcat.yml
+create  vendor/engines/projects/config/locales/nb.yml
+create  vendor/engines/projects/config/locales/nl.yml
+create  vendor/engines/projects/config/routes.rb
+create  vendor/engines/projects/db/migrate/create_projects.rb
+create  vendor/engines/projects/db/seeds/projects.rb
+create  vendor/engines/projects/features/manage_projects.feature
+create  vendor/engines/projects/features/step_definitions/project_steps.rb
+create  vendor/engines/projects/features/support/paths.rb
+create  vendor/engines/projects/lib/generators/refinerycms_projects_generator.rb
+create  vendor/engines/projects/lib/refinerycms-projects.rb
+create  vendor/engines/projects/lib/tasks/projects.rake
+create  vendor/engines/projects/readme.md
+create  vendor/engines/projects/refinerycms-projects.gemspec
+create  vendor/engines/projects/spec/models/project_spec.rb
+\end{lstlisting}
+
+
+Die dabei erstellten Dateien lassen sich in folgende Funktionsbereiche zusammenfassen:
+
+\begin{description}
+\item[Zeile 1-2]
+Der Generator erzeugt zwei Rails-Controller zur Steuerung der Logik im Frontend und Backend des Content Managment Systems.
+\item[Zeile 4-14]
+Automatische Generierung von HTML-Views zur Darstellung aller im Frontend und Backend benötigten Komponenten. U.a. werden ein HTML-Formular zum Anlegen neuer Projekte im Backend (Zeile 5 \emph{\_form.html.erb}) und eine Auflistung von zur Verfügung stehenden Aktionen im Backend erstellt (Zeile 4 \emph{\_actions.html.erb})
+\item[Zeile 3 und 21]
+Erstellung des in Rails benötigten Models Project (Zeile 3 \emph{project.rb}) und der zur Speicherung in der Datenbank benötigten Migration (Zeile 21 \emph{create\_projects.rb})
+\item[Zeile 20]
+Erstellung einer Routing-Datei, welche die für das Frontend und Backend benötigten URL's bzw. Routen in der Rails-Anwendung registriert.
+\item[Zeile 15-19]
+Erstellung der für die Unterstützung von Mehrsprachigkeit notwendigen Konfigurationsdateien
+\item[Zeile 23-31]
+Erzeugung der benötigten Dateien zur Unterstützung der Entwicklung von Tests sowie der Registrierung der Engine innerhalb der Rails-Anwendung (Zeile 27)
+\end{description}
+
+
+
+Bei Bedarf an weiteren Inhaltselementen ergibt sich schnell die Erkenntnis, das die Realisierung der Inhaltselemente mit Hilfe eines Generators sehr viel redundanten Rails-Code erzeugt. Damit verstößt diese Art der Erweiterungsentwicklung gegen den in Rails propagierten Ansatz des DRY (Don't repeat yourself).
+
+Die damit einhergehenden Probleme sollen im folgenden kurz zusammengefasst werden:
+
+
+\begin{enumerate}
+\item
+Jedes Inhaltselement besitzt seine eigene Darstellungsrepräsentierung in Form von HTML-Views. Änderungen am Backend-Design des WCMS erfordern so eine Anpassung sämlicher verwendeter Erweiterungen. Die Erweiterung und das eigentliche WCMS werden so sehr stark von einander abhängig.
+\item
+Jedes Inhaltselement wird in einer eigenständigen Datenbanktabelle gespeichert. Ein Inhaltselement Projekt
+benötigt so z.B. die Datenbanktabelle Projekt mit den Tabellenfeldern Name und Beschreibung. Bei häufiger Verwendung zusätzlicher Inhaltselemente entsteht somit schnell eine beachtliche Anzahl an zusätzlichen Tabellen\footnote{Die Zahl der Datenbanktabellen kann in Rails mit Hilfe von Single Table Inheritance (STI) minimiert werden.}.
+\item
+Die für die Inhaltselemente benötigten Datenbankschemas müssen in Form von in Rails üblichen Migrationen verwaltet werden. Dies erfordert einen entsprechenden Mehraufwand bei der Pflege der Erweiterungen.
+\item
+Inhaltselemente müssen für ihre Erreichbarkeit im Frontend und Backend des WCMS im Routing der Rails-Anwendung registriert werden. Bei der Nutzung vieler Erweiterungen entstehen so zahlreiche zusätzliche Routingeinträge.
+\item
+Durch die Installation/Verwendung \emph{aufgeblähter} Erweiterungen wird die Gesamtgröße der Rails-Anwendung unnötig vergrößert.
+\item
+Durch das Laden zusätzlicher Rails-Controller und Models benötigt die Rails-Anwendung zusätzlichen Arbeitsspeicher und weist einen verlängerten Boot-Prozess auf.
+\end{enumerate}
+
+
+Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelnen Erweiterungs-Controller innerhalb von Refinery CMS ersichtlich. Dort wird mit Hilfe der im Controller verfügbaren Klassenmethode \emph{crudify} das gesamte Grundgerüst des Controllers dynamisch erzeugt\footnote{Die Methode \emph{crudify} erzeugt mit Hilfe von Ruby-Metaprogrammierung die gesamte Logik des Controllers. Alle Aktionen, die der Controller verwaltet, werden so erst zur Laufzeit der Rails-Anwendung generiert.}. Die Methode kann dabei verschiedene Parameter aufnehmen, an Hand deren die Ausgabe gesteuert werden kann. Der Controller kann damit als eine leere Klassen-Hülle angesehen werden, die redundant im System verwendet wird.
+
+
+\lstinputlisting[language=Ruby, caption=Projects-Controller mit verwendeter crudify-Methode und optionalen Parametern]{code/crudify_controller.rb}
 
 
 \section{Nutzeroberfläche}

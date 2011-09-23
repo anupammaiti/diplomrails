@@ -1,0 +1,42 @@
+\begin{thebibliography}{5}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Aimonetti()]{enterprisy}
+\dinatlabel{Aimonetti } \textsc{Aimonetti}, Matt:
+\newblock \emph{Rails and the Enterprise}. --
+\newblock URL
+  \url{http://weblog.rubyonrails.org/2010/3/24/rails-and-the-enterprise}
+
+\bibitem[Günther()]{restful}
+\dinatlabel{Günther } \textsc{Günther}, Tobias:
+\newblock \emph{Theorie einer neuen Web-Architektur in Ruby On Rails: REST in
+  Rails}. --
+\newblock URL
+  \url{http://t3n.de/magazin/rest-rails-teil-1-theorie-neuen-web-architektur-r%
+uby-219794/}
+
+\bibitem[Perrotta(2010)]{RubyMetaprogramming2010}
+\dinatlabel{Perrotta 2010} \textsc{Perrotta}, Paolo:
+\newblock \emph{Metaprogramming Ruby}.
+\newblock Pragmatic Programmers, 2010. --
+\newblock ISBN 1-934356-47-6
+
+\bibitem[Schmidt(2008)]{EnterpriseRails}
+\dinatlabel{Schmidt 2008} \textsc{Schmidt}, Maik:
+\newblock \emph{Enterprise Recipes with Ruby and Rails}.
+\newblock Pragmatic Programmers, 2008. --
+\newblock ISBN 1-934356-23-9
+
+\bibitem[Wirdemann(2008)]{Wirdemann08}
+\dinatlabel{Wirdemann 2008} \textsc{Wirdemann}, Ralph:
+\newblock \emph{Rapid Web Development mit Ruby on Rails}.
+\newblock Carl Hanser Verlag GmbH \& CO. KG, 2008. --
+\newblock ISBN 3-446414-98-3
+
+\end{thebibliography}

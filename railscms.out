@@ -49,7 +49,8 @@
 \BOOKMARK [2][-]{subsection.3.7.5}{3.7.5 Terminierung/Archivierung}{section.3.7}
 \BOOKMARK [1][-]{section.3.8}{3.8 Auswertung der Ergebnisse}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{4 Konzeptionelle Problemanalyse}{}
-\BOOKMARK [1][-]{section.4.1}{4.1 Nutzeroberfl\344che}{chapter.4}
+\BOOKMARK [1][-]{section.4.1}{4.1 Erweiterungen}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{4.2 Nutzeroberfl\344che}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{5 L\366sungsvorschl\344ge}{}
 \BOOKMARK [1][-]{section.5.1}{5.1 Implementierung eines Ruby on Rails Content Repository}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Idee und Konzept}{section.5.1}
@@ -66,3 +67,4 @@
 \BOOKMARK [1][-]{section.7.1}{7.1 Liste bestehender Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}{chapter.7}
 \BOOKMARK [1][-]{section.7.2}{7.2 Ext-Direct Spezifikation f\374r Ext Js 3.0}{chapter.7}
 \BOOKMARK [1][-]{section.7.3}{7.3 Java Content Repository Spezifikation}{chapter.7}
+\BOOKMARK [0][-]{chapter.8}{8 Literaturverzeichnis}{}
