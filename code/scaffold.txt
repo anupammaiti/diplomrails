@@ -1,0 +1,19 @@
+create db/migrate/20110926185944_create_projects.rb
+create app/models/project.rb
+create test/unit/project_test.rb
+create test/fixtures/projects.yml
+route  resources :projects
+create app/controllers/projects_controller.rb
+create app/views/projects
+create app/views/projects/index.html.erb
+create app/views/projects/edit.html.erb
+create app/views/projects/show.html.erb
+create app/views/projects/new.html.erb
+create app/views/projects/_form.html.erb
+create test/functional/projects_controller_test.rb
+create app/helpers/projects_helper.rb
+create test/unit/helpers/projects_helper_test.rb
+create app/assets/javascripts/projects.js.coffee
+create app/assets/stylesheets/projects.css.scss
+create app/assets/stylesheets/scaffolds.css.scss
+

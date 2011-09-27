@@ -12,44 +12,46 @@ The style file: dinat.bst
 A level-1 auxiliary file: chapters/selbst.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/references.bib
-You've used 5 entries,
+Warning--I didn't find a database entry for ""
+You've used 6 entries,
             3552 wiz_defined-function locations,
-            831 strings with 6800 characters,
-and the built_in function-call counts, 2450 in all, are:
-= -- 263
-> -- 35
-< -- 39
-+ -- 49
-- -- 15
-* -- 199
-:= -- 428
-add.period$ -- 3
-call.type$ -- 5
-change.case$ -- 20
-chr.to.int$ -- 5
-cite$ -- 5
-duplicate$ -- 74
-empty$ -- 231
-format.name$ -- 30
-if$ -- 510
+            837 strings with 6886 characters,
+and the built_in function-call counts, 3034 in all, are:
+= -- 327
+> -- 42
+< -- 52
++ -- 64
+- -- 19
+* -- 244
+:= -- 523
+add.period$ -- 4
+call.type$ -- 6
+change.case$ -- 24
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 90
+empty$ -- 287
+format.name$ -- 36
+if$ -- 634
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 38
-num.names$ -- 20
-pop$ -- 40
+missing$ -- 8
+newline$ -- 44
+num.names$ -- 24
+pop$ -- 48
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 24
 quote$ -- 0
-skip$ -- 93
+skip$ -- 119
 stack$ -- 0
-substring$ -- 180
-swap$ -- 10
-text.length$ -- 5
+substring$ -- 236
+swap$ -- 12
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 46
 warning$ -- 0
-while$ -- 30
+while$ -- 36
 width$ -- 0
-write$ -- 55
+write$ -- 65
+(There was 1 warning)

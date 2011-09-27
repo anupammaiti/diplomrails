@@ -9,7 +9,7 @@ In diesem Abschnitt der Arbeit werden die ausgewählten Systeme auf konzeptionel
 
 
 \section{Erweiterungen}
-
+\label{dryverstoss}
 Innerhalb des Rails Frameworks ist die Verwendung von Generatoren ein häufiges Mittel zur schnellen Entwicklung von funktionsfähigem Code (siehe Kapitel ?). Die Mehrheit der hier vorgestellten Systeme\footnote{Locomotive CMS benötigt durch die Möglichkeit der Erstellung individueller Inhaltselemente im Backend keine installierbaren Erweiterungsmodule} bedient sich zur Realisierung neuer Inhaltslemente ebenfalls eines Generatorskripts, der ein für das jeweilige CMS funktionsbereites Grundgerüst erzeugt. Exemplarisch soll hier das Ergebnis eines Generatoraufrufes in Refinery CMS aufgezeigt werden (Abb. \ref{sec.refineryoutput} ). Das erstellte Inhaltselement Projekt verfügt dabei über die Felder Titel und Beschreibung und wurde durch folgenden Befehlsaufruf realisiert:
 
 
@@ -98,6 +98,7 @@ Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelne
 
 \lstinputlisting[language=Ruby, caption=Projects-Controller mit verwendeter crudify-Methode und optionalen Parametern]{code/crudify_controller.rb}
 
+Die Verwendung der
 
 \section{Nutzeroberfläche}
 

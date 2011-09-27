@@ -3,7 +3,7 @@
 \BOOKMARK [1][-]{section.1.2}{1.2 Motivation und Zielsetzung}{chapter.1}
 \BOOKMARK [1][-]{section.1.3}{1.3 Aufbau der Arbeit}{chapter.1}
 \BOOKMARK [0][-]{chapter.2}{2 Grundlagen}{}
-\BOOKMARK [1][-]{section.2.1}{2.1 Content Management Systeme}{chapter.2}
+\BOOKMARK [1][-]{section.2.1}{2.1 Web Content Management Systeme und Webpublishing}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Web Content Management Systeme}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Content Management Life Cycle}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Anforderungen an Content Management Systeme in der Zukunft}{section.2.1}
@@ -13,15 +13,13 @@
 \BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Model-View-Controller}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 REST}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Rack und Middleware}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.6}{2.2.6 Datenbankgetriebene Entwicklung}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.7}{2.2.7 Generatoren}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.6}{2.2.6 Generatoren}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{2.3 Externer Kriterienkatalog}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Zielgruppe}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Erstellung}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Kontrolle}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Freigabe}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Publikation}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Terminierung und Archivierung}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Erstellung}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Kontrolle}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Freigabe}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Publikation}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Terminierung und Archivierung}{section.2.3}
 \BOOKMARK [0][-]{chapter.3}{3 Funktionale Analyse der bestehenden Web Content Management Systeme}{}
 \BOOKMARK [1][-]{section.3.1}{3.1 Vorbetrachtungen}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{3.2 Bezugsquellen}{chapter.3}
@@ -41,7 +39,7 @@
 \BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 Funktionsprinzipien}{section.3.6}
 \BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 Erweiterungen}{section.3.6}
 \BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 Verwendete Technologien}{section.3.6}
-\BOOKMARK [1][-]{section.3.7}{3.7 Durchf\374hrung der Analyse}{chapter.3}
+\BOOKMARK [1][-]{section.3.7}{3.7 Durchf\374hrung der funktionalen Analyse}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.7.1}{3.7.1 Erstellung}{section.3.7}
 \BOOKMARK [2][-]{subsection.3.7.2}{3.7.2 Kontrolle}{section.3.7}
 \BOOKMARK [2][-]{subsection.3.7.3}{3.7.3 Freigabe}{section.3.7}
@@ -54,7 +52,7 @@
 \BOOKMARK [0][-]{chapter.5}{5 L\366sungsvorschl\344ge}{}
 \BOOKMARK [1][-]{section.5.1}{5.1 Implementierung eines Ruby on Rails Content Repository}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Idee und Konzept}{section.5.1}
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Das Java Content Repository}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 JCR-Das Java Content Repository}{section.5.1}
 \BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Umsetzungsvarianten innerhalb von Ruby on Rails}{section.5.1}
 \BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Vorteile f\374r die gew\344hlten Ruby on Rails WCMS}{section.5.1}
 \BOOKMARK [1][-]{section.5.2}{5.2 \334bertragung des Typo3 5.0 Phoenix User-Interfaces in Rails 3.1}{chapter.5}

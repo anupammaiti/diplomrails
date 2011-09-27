@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -20,6 +20,12 @@
 \newblock URL
   \url{http://t3n.de/magazin/rest-rails-teil-1-theorie-neuen-web-architektur-r%
 uby-219794/}
+
+\bibitem[Hussein~Morsy(2010)]{Rails2}
+\dinatlabel{Hussein~Morsy 2010} \textsc{Hussein~Morsy}, Tanja~O.:
+\newblock \emph{Ruby on Rails 2}.
+\newblock Galileo Computing, 2010. --
+\newblock ISBN 978-3-89842-779-1
 
 \bibitem[Perrotta(2010)]{RubyMetaprogramming2010}
 \dinatlabel{Perrotta 2010} \textsc{Perrotta}, Paolo:

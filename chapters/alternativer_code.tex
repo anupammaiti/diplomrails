@@ -1,14 +1,13 @@
 \chapter{Lösungsvorschläge}
-In diesem Kapitel werden die
+In diesem Kapitel werden Lösungsvorschläge zur Beseitigung der in Kapitel 4 beschriebenen Probleme formuliert.
 \section{Implementierung eines Ruby on Rails Content Repository}
 
-Die hier betrachteten WCMS haben bei der Speicherung ihrer Daten teilweise sehr einfache Modelle inenrhalb einer
-Einen Möglichen Lösungsansatz bietet dabei die Umsetzung eines Content Repository. Im folgenden sollen die Konzepte dieser Lösung vorgestellt und die Vorteile für die bestehenden Ruby on Rails Content Management Systeme formuliert werden.
+Die in den analysierten WCMS umgesetzten Implementierungen der Erweiterungsentwicklung verstoßen zum Teil gegen das in Rails gebotene Prinzip des DRY (vgl. Kapitel \ref{dryverstoss}). Eine konzeptionelle Änderung innerhalb dieses Systembereiches hätte somit Auswirkungen auf die gesamte Infrastruktur der Inhaltsspeicherung. Dennoch soll hier der mögliche Lösungsansatz eines Content Repository konzeptionell vorgestellt werden.
 
 
 \subsection{Idee und Konzept}
 
-Heutige Anwendungen (u.a. auch Web Content Management Systeme) benötigen neben der klassischen Speicherung von Daten zahlreiche zusätzliche Daten Management-Funktionalitäten. Ein Content Repository erweitert bestehende Datenbanken u.a um folgende zusätzlichen Funktionalitäten:
+Heutige Webanwendungen (u.a. auch Web Content Management Systeme) benötigen neben der klassischen Speicherung von Daten zahlreiche zusätzliche Daten-Management-Funktionalitäten. Ein Content Repository soll dieser Entwicklung Rechnung tragen und erweitert daher das Leistungsspektrum bestehender Datenbankprodukte u.a um folgende zusätzlichen Funktionalitäten:
 
 \begin{itemize}
 \item
@@ -27,13 +26,42 @@ Versionierung
 Volltextsuche
 \end{itemize}
 
+Der Zugriff auf das Content Repository wird dabei durch eine zusätzliche API genau definiert und ermöglicht so einen einheitlichen Zugriff auf die Inhalte einer Anwendung. Andere Entwickler können so auf das Content Repository und seine Zusatzfunktionen kontrolliert zugreifen, ohne etwas über die Infrastruktur (Implementierung) des Content Repository zu wissen.
+
 Im Bereich der Java Enterprise Content Management Systeme werden Content Repositories bereits erfolgreich eingesetzt. Namhafte Beispiele sind dabei das kommerzielle ECMS CQ5 und CRX\footnote{Nach der Übernahme von Day Inc. durch Adobe im Sommer 2010 wird das angebotene Content Management System CRX als Adobe Projekt weitervertrieben.} von Adobe und das u.a. als Open Source verfügbare Alfresco ECMS\footnote{Informationen zu Alfresco und dem Content Repository: \href{http://www.alfresco.com/products/platform/}{http://www.alfresco.com/products/platform/}}.
-Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Assocation mit ihrer Umsetzung innerhalb des neuen Web Content Management Systems Typo3 5.0.
+Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Association mit einer Implementierung innerhalb des neuen Web Content Management Systems Typo3 5.0\footnote{Das TYPO3CR ist als eigenständiges Paket im FLOW3-Framework verfügbar und ein zentraler Bestandteil von Typo3 5.0}.
 
 
-\subsection{Das Java Content Repository}
+\subsection{JCR-Das Java Content Repository}
 
-Unter der Leitung von David Nuescheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und einer API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JCR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jack Rabbit\footnote{Homepage: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
+Unter der Leitung von David Nuescheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jack Rabbit\footnote{Homepage: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
+
+Zur Speicherung der Inhalte definiert das Java Content Repository ein einfaches hierarchisches Modell, das zwischen folgenden Objekten, Typen und Strukturen unterscheidet:
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/repository/repository_diagramm.png}
+\caption{JCR-Datenmodell}
+\label{jcrdatenmodell}
+\end{center}
+\end{figure} 
+
+
+
+\begin{description}
+\item[Workspace]\mbox{~}\\*
+Ein JCR-Repository besteht aus einem oder mehreren Workspaces (Arbeitsbereichen), die jeweils mehrere Items in einer Baumstruktur beliebiger Tiefe verwalten können. Jeder Workspace lässt sich durch einen Namen eindeutig identifizieren (W\textsubscript{0}, W\textsubscript{1}, W\textsubscript{2}) und enthält mindestens ein Item (root node).
+\item[Item]\mbox{~}\\*
+Ein Item kann entweder ein Node (Knoten) oder ein Property (Eigenschaft) sein.
+\item[Node]\mbox{~}\\*
+Knoten (Nodes) eines Workspaces bilden die Struktur der zu speichernden Daten ab.
+Ein Knoten kann daher keine oder weitere andere Kinderknoten (child notes) enthalten.
+\item[Property]\mbox{~}\\*
+Eine Property kann keine anderen Items beinhalten, aber dafür den Inhalt in Form von sogenannten Values abspeichern. Dabei kann ein Property-Node kein oder mehrere Values beinhalten.
+\end{description}
+
+
 
 
 \subsection{Umsetzungsvarianten innerhalb von Ruby on Rails}
@@ -44,20 +72,23 @@ Durch die Verfügbarkeit eines Ruby-Interpreter in Java (jruby) ergeben sich fü
 \item
 Verwendung der Open Source Java Implementierung Jack Rabbit und Spezifkation einer API zur Nutzung dieser innerhalb von Rails.
 \item
-Erstellung einer eigenständigen, komplett auf Ruby basierenden Referenzimplementierung und API nach dem Vorbild des Java Content Repository
+Erstellung einer eigenständigen, komplett auf Ruby und dem Rails Framework basierenden Referenzimplementierung und API nach dem Vorbild des Java Content Repository
 \end{itemize}
 
 
 
 \subsection{Vorteile für die gewählten Ruby on Rails WCMS}
 
-Die Umsetzung eines Content Repository in Ruby kann für Web Content Management Systeme folgende Vorzüge bringen:
+Die Umsetzung eines Content Repository in Ruby kann für die bestehenden Web Content Management Systeme folgende Vorzüge bringen:
 
 \begin{itemize}
-\item Vereinfachung des Zugriffs auf Inhalte innerhalb verschiedener Systeme
-\item Durch die im JCR Standard festgelegten Import- und Exportfunktionen kann ein Austausch der Inhalte zwischen einzelnen Web Content Management Systemen ermöglicht werden. Der momentane Mangel an standardisierten Exportfunktionen in den Systemen kann so ebenfalls beseitigt werden.
+\item Beseitigung des DRY-Verstosses bei den untersuchten Rails-WCMS, da die Inhalte in dem durch das Content Repository zur Verfügung gestellten hierarchischen Datenmodell gespeichert werden können.
 \item
-
+Wegfall der bisher notwendigen Datenbankmigrationen und zusätzlichen Datenbanktabellen, da das Content Repository die gesamte Infrastruktur bereitstellt und die Speicherung der Daten übernimmt.
+\item Vereinfachung des Zugriffs auf Inhalte innerhalb verschiedener Systeme durch Verwendung einer definierten API
+\item Fehlende Webpublishing-Funktionalitäten der existierenden Rails WCMS können durch eine Implementierung eines Content Repository als Infrastruktur allgemein zur Verfügung gestellt werden (z.B. Versionierung, Suchfunktionen).
+\item Durch die im JCR-Standard festgelegten Import- und Exportfunktionen kann ein Austausch der Inhalte zwischen verschiedenen Web Content Management Systemen ermöglicht werden.
+\item Ein Content Repository kann als Erweiterung auch von anderen Rails-Anwendungen verwendet werden, die mit verschiedenartig strukturierten Inhalten umgehen müssen.
 \end{itemize}
 
 
