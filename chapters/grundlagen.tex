@@ -1,11 +1,5 @@
 \chapter{Grundlagen}
 
-\section{Web Content Management Systeme und Webpublishing}
-\subsection{Web Content Management Systeme}
-\subsection{Content Management Life Cycle}
-\subsection{Anforderungen an Content Management Systeme in der Zukunft}
-
-
 \section{Entwicklung mit Ruby on Rails}
 
 2004 arbeitete der dänische Programmierer David Heinemeier Hansson an der Umsetzung eines webbasierten Projektmanagement-Tools mit dem Namen Basecamp\footnote{Projekt-Homepage: \href{http://basecamphq.com/}{http://basecamphq.com/}}. Die bei der Realisierung des Projektes umgesetzten Teilkomponenten extrahierte er später und veröffentlicht sie 2005 als Framework unter dem Namen Ruby on Rails.
@@ -42,22 +36,22 @@ Der Klassenname eines Domainenmodells wird im Singular erwartet, der dazu korres
 \item
 Der Primärschlüssel in einer Datanbanktabelle muss vom Typ Integer sein und den Namen ID besitzen
 \item
-Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views\footnote{Eine Erklärung zu Model-View-Controller folgt in Abschnitt \ref{sec.mvc}}
+Rails erwartet eine definierte Ordnerstrukur für Controller, Domainmodell und Views\footnote{Eine Erklärung zu Model-View-Controller folgt in Abschnitt \ref{sec:mvc}}
 \end{itemize}
 Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akzeptiert werden, was dazu führt, dass Rails häufig als \emph{opinionated software\footnote{Eine ausführliche Stellungnahme von David Heinemeier Hansson zu diesem Thema gibt es unter: \href{http://www.linuxjournal.com/article/8686}{http://www.linuxjournal.com/article/8686}}} bezeichnet wird.
 
 Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht jedoch den Aufwand des Entwicklers.
 
 \subsection{Model-View-Controller}
-\label{sec.mvc}
-Das Ruy on Rails Framework baut wie andere Web-Frameworks auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt das bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelte Model-View-Controller-Paradigma zum Einsatz.
-Die folgende Abbildung charakterisiert dabei den rails-internen Ablauf einer Anfrage innerhalb des Client-Server-Modells:
+\label{sec:mvc}
+Für Software-Designer ist es  eine gebräuchliche Technik, komplexe Software-Systeme durch Schichtenbildung in einzelne Bstandteile zu zerlegen \citep[Kapitel 1]{FowlerPatterns}. Das Ruby on Rails Framework baut ebenfalls auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt eine für das Rails-Framework spezifische Implementierung des bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelten Model-View-Controller-Paradigmas zum Einsatz\footnote{In der Fachliteratur wird das MVC-Paradigma häufig auf die Schichtenarchitektur einer Anwendung übertragen (vgl. \cite[S. 544 ff.]{objekt}). Tatsächlich betrifft MVC in seiner  ursprünglichen Form nur die Präsentationsschicht einer Webanwendung.}.
+Abbildung \ref{fig:mvcimage} charakterisiert den Ablauf einer Anfrage (Request) an eine Rails-Anwendung innerhalb des Client-Server-Modells:
 
 \begin{figure}[!h]
 \begin{center}
-\label{sec.mvc}
 \includegraphics[scale=0.4]{images/analyse/mvc.png}
 \caption{Abläufe innerhalb des Rails-Frameworks}
+\label{fig:mvcimage}
 \end{center}
 \end{figure}
 
@@ -67,9 +61,9 @@ Anfrage eines Clienten
 \item
 An Hand der im Rails-Routing definierten Einträge wird die Anfrage eines Clienten an den registrierten Controller weitergeleitet
 \item
-Der Controller greift über ein Model auf benötigte Daten in einem Speicher (z.B. realtionale Datenbank) zu und stellt diese dem View-Layer zur Verfügung. Es ist auch möglich, dass der Controller die Anfrage an einen anderen Controller weiterleitet (Redirects).
+Der Controller steuert den Ablauf innerhalb der Anwendung. Dabei greift er über ein Model auf benötigte Daten in einem Speicher (z.B. realtionale Datenbank) zu und stellt diese dem View-Layer zur Verfügung. Es ist auch möglich, dass der Controller die Anfrage an einen anderen Controller weiterleitet (Redirects).
 \item
-Das Model bezeichnet in Rails Klassen, die einen Zugriff auf relationale Datenbanken oder andere Datenspeicher ermöglichen vgl. \cite{Rails2}.
+Das Model bezeichnet in Rails Klassen, die einen Zugriff auf relationale Datenbanken oder andere Datenspeicher ermöglichen \citep[vgl.][]{Rails2}
 \item
 Der View-Layer bereitet die durch den Controller zur Verfügung gestellten Daten in der angeforderten Darstellungsform auf und gibt das Ergebnis der Anfrage aus. So wird je nach spezifiziertem Format z.B. eine HTML- oder XML-Datei erzeugt.
 \item
@@ -83,9 +77,9 @@ Innerhalb einer Web-Applikation erfolgt der Austausch zwischen Server und Client
 
 \begin{description}
 \item[GET]
-	Anforderung an den Server, eine über die Adresszeile des Browsers angegebene Ressource zurückzuliefern. Es können zusätzlich Argumente an die angeforderte URL angehängt werden.
+Anforderung an den Server, eine über die Adresszeile des Browsers angegebene Ressource zurückzuliefern. Es können zusätzlich Argumente an die angeforderte URL angehängt werden.
 \item[POST]
-	Mit Hilfe dieser Methode ist es möglich,  große Datenmengen aus z.B. Formularen an einen Webserver zu verschicken. Die übergebenen Informationen werden dabei im sogenannten Body der Anfrage codiert mitverschickt und somit im Vergleich zu GET nicht in der URL sichtbar\footnote{Ein Post-Request findet vor allem bei der Übermittlung von Formularen innerhalb eines Browsers Verwendung.}.
+Mit Hilfe dieser Methode ist es möglich,  große Datenmengen aus z.B. Formularen an einen Webserver zu verschicken. Die übergebenen Informationen werden dabei im sogenannten Body der Anfrage codiert mitverschickt und somit im Vergleich zu GET nicht in der URL sichtbar\footnote{Ein Post-Request findet vor allem bei der Übermittlung von Formularen innerhalb eines Browsers Verwendung.}.
 \end{description}
 
 
@@ -136,7 +130,7 @@ DELETE & /projects/:id &	destroy &	Löschung des Projektes mit der angegebenen I
 \end{tabular}
 \end{table}
 
-\begin{table}[!h]
+\begin{table}[!ht]
 \caption{Vergleich zwischen Rest-konformen und klassischen Rails-URL's}
 \label{tab.restnonrest}
 \center
@@ -155,17 +149,64 @@ create & /projects/create & /projects \\
 \end{tabular}
 \end{table}
 
-Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource und Aktion innerhalb einer in Rails definierten REST-Ressource Projekt. Eine ausführliche Beschreibung von REST und dessen Realisierung liefert \cite{Wirdemann08}.
+Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource und Aktion innerhalb einer in Rails definierten REST-Ressource Projekt. Eine ausführliche Beschreibung von REST und dessen Realisierung liefert \cite{rest}.
 
+\newpage
 \subsection{Rack und Middleware}
-Rack ist ein minimales, modulares und anpassbares Interface zur Entwicklung von Webanwendungen in Ruby (vgl. ). Es vereinfacht
+Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfang zur Verfügung. 
+Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.6]{images/rack/rack.pdf}
+\caption{Rack als Vermittler (Middleware) zwischen Server und Ruby-Webframeworks}
+\label{rack}
+\end{center}
+\end{figure}
 
 
-Rack Middlewares sind eine Möglichkeit in Rails und anderen rubybasierten Frameworks, die Anfrage und Antwort eines Webservers zu filtern.
+Damit Server und Frameworks untereinander kommunizieren können, muss eine Rack-Anwendung bestimmte Methoden und Formate einhalten, die an Hand des folgenden Bespiels erläutert werden sollen:
 
 \lstinputlisting[label=rack,language=Ruby, caption=Beispiel für eine einfache Rack-Anwendung]{code/rack.rb}
 
-Rack provides a minimal, modular and adaptable interface for developing web applications in Ruby. By wrapping HTTP requests and responses in the simplest way possible, it unifies and distills the API for web servers, web frameworks, and software in between (the so-called middleware) into a single method call.
+\begin{description}
+\item[Zeile 6-8]\mbox{~}\\*
+Bei Initialisierung der Rack-Anwendung wird der an die Anwendung übergebene Name verfügbar gemacht.
+\item[Zeile 15]\mbox{~}\\*
+Start des Mongrel Webservers und der Rack-Anwendung \emph{MyRackApp}. Optional sind Port
+\end{description}
+
+
+\begin{description}
+\item[Status]\mbox{~}\\*
+Angabe des HTTP-Statuscode, 200 bedeutet in diesem Beispiel eine erfolgreiche Ausführung der Anfrage am Server
+\item[Header]\mbox{~}\\*
+Angabe von im HTTP-Protokoll definierten Header-Dateien,  im Beispiel wird ein einfaches Textdokument zurückgeliefert
+\item[Response]\mbox{~}\\*
+Die Antwort des Frameworks, im Beispiel wird ein String \emph{Hello World} an den Server übergeben und von diesem ausgeliefert.
+\end{description}
+
+
+
+Durch die Nutzung von Rack ergeben sich im Bereich der Ruby Webframeworks folgende Vorteile:
+
+\begin{itemize}
+\item
+Keine Codeduplizierung durch wiederholte Entwicklung von Server-Adaptern innerhalb der verschiedenen Ruby Webframeworks
+\item
+Ein Framework, das Rack unterstützt, kann sofort von allen anderen rack-unterstützenden Webservern verwendet werden
+\item
+Ein rack-unterstützter Server kann sofort mit allen rack-basierten Webframeworks eingesetzt werden.
+\item
+Vereinfachung der Webframework-Entwicklung
+\item
+Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (CGI, FastCGI, SCGI, WEBrick, Mongrel, Litespeed u.a.)
+\end{itemize}
+
+
+Da Rack zwischen Webserver und Webframework als Vermittler fungiert, können Antworten und Anfragen zwischen diesen beiden Parteien manipuliert werden. Entsprechend registrierte Anwendungen, sogenannte Rack Middlewares, können daher als Filter für bestimmte Anfragen verwendet werden.
+Zum Demonstrierung soll hier eine Rack Middleware aus dem offiziellen Rack Contrib Repository\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} vorgestellt werden, die
+
 \subsection{Generatoren}
 Das Ruby on Rails Framework unterstützt mit Hilfe sogenannter Generatorskripte die automatische Erzeugung von funktionsfähigem Quellcode. Der folgende Scaffold-Generator\footnote{Scaffold kann in diesem Zusammenhang als Grundgerüst verstanden werden.} erstellt z.B. nach dessen Initialisierung ein komplett funktionsbereites Codegerüst für die in Rails benötigten MVC-Komponenten einer Ressource Projekt.
 
@@ -173,10 +214,15 @@ Das Ruby on Rails Framework unterstützt mit Hilfe sogenannter Generatorskripte 
 rails g scaffold project name:string description:text
 \end{lstinputlisting}
 
-\lstinputlisting[label=rack,language=Ruby, caption=Scaffold-Generator-Aufruf und diemit dem ergebnis]{code/scaffold.txt}
+\lstinputlisting[label=scaffold,language=Ruby, caption=Auflistung der erstellten Dateien des Scaffold-Generators]{code/scaffold.txt}
 
 
 %ANALYSE'####################################################################################'
+
+\section{Content Management Systeme und Webpublishing}
+Der Bereich der Content Management Systeme
+
+
 \newpage
 
 \section{Externer Kriterienkatalog}

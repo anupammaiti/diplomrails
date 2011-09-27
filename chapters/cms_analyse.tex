@@ -73,9 +73,7 @@ Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufs
 %ALCHEMY BEGIN
 \newpage
 \section{Vorstellung Alchemy CMS}
-Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin.
-\newline
-In der aktuellen Version 1.6.0 kann zwischen einer Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} ausgewählt werden.
+Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin. Die aktuelle Version 1.6.0 steht als Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} zur Verfügung.
 \begin{table}[!h]
 \caption{Steckbrief Alchemy CMS}
 \begin{tabular}[!ht]{|l|l|l|}
@@ -109,6 +107,8 @@ In der aktuellen Version 1.6.0 kann zwischen einer Rails 2 und 3 Umsetzung\footn
 \hline
 \textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Der Benutzer des Systems muss nur Inhalte erstellen und ändern können} \\
 & \multicolumn{2}{p{10cm}|}{Formatierung von Überschriften, Bildpositionierung und -berechnung sind Aufgaben des Entwicklers, nicht die des Redakteurs}\\
+\hline
+\textbf{Zielgruppe} & \multicolumn{2}{p{10cm}|}{Privatnutzer, Kleinstunternehmen} \\
 \hline
 \end{tabular}
 \end{table}
@@ -205,8 +205,10 @@ Eine online verfügbare Testversion des Systems wird von BrowserMedia nicht ange
 \textbf{Verwendete Technologien} & \multicolumn{2}{p{10cm}|}{Ruby on Rails 3.0.x, HTML, jQuery und jQueryUI, diverse jQuery Plugins ,WYSIWYG-HTML-Editor CKEditor} \\
 \hline
 \textbf{Projektbeschreibung} & \multicolumn{2}{p{10cm}|}{Menschliches Content Management mit Ruby on Rails 3 Unterstützung} \\
+%\hline
+%\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Redakteuren soll es ermöglicht werden, ohne HTML- und Rails-Kenntnisse eine Internetseite zu verwalten} \\
 \hline
-\textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Redakteuren soll es ermöglicht werden, ohne HTML- und Rails-Kenntnisse eine Internetseite zu verwalten} \\
+\textbf{Zielgruppe} & \multicolumn{2}{p{10cm}|}{Privatnutzer, Kleine und mittelständige Unternehmen mit einer hohen Anzahl von Redakteuren} \\
 \hline
 \end{tabular}
 \end{table}
@@ -228,9 +230,9 @@ Innerhalb des Backend von Browser CMS kann der angemeldete Nutzer auf alle wicht
 \item[Dashboard]\mbox{~}\\*
 Das Dashboard gibt eine Übersicht über die zuletzt vom Nutzer bearbeiteten Seiten sowie eine Auflistung der vom Anwender noch zu erledigenden Aufgaben.
 \item[Sitemap]\mbox{~}\\*
-Neben der Darstellung einer Baumstruktur von allen im System existierenden Seiten können im Sitemap-Bereich zusätzlich alle Informationen zur Seite editiert werden. So ist es möglich u.a. den Titel, das verwendete Template und verschiedene Meta-Informationen zu verändern.
+Das Sitemap-Menü ermöglicht die Darstellung aller im System existierenden Seiten in einer Baumstruktur sowie die Bearbeitung aller Informationen zu einer einzelnen Seite. U.a. kann der Titel, das verwendete Template und verschiedene Meta-Informationen verändert werden.
 \item[Content Library]\mbox{~}\\*
-In der Content Library von Browser CMS können alle existierenden Inhaltselemente sortiert nach Inhaltstyp (z.B. Text, File, Image) verwaltet und bearbeitet werden.
+In der Content Library von Browser CMS können alle existierenden Inhaltselemente sortiert nach Inhaltstyp (z.B. Text, File, Image) aufgelistet und bearbeitet werden.
 \item[Administration]\mbox{~}\\*
 Im Administrator-Bereich des Systems werden alle Gruppen und Nutzer des Backend und der Internetseite verwaltet. Zusätzlich können die für die einzelnen Seiten und Inhaltselemente definierten Templates aufgelistet und bearbeitet werden.
 \end{description}
@@ -242,10 +244,7 @@ Im Administrator-Bereich des Systems werden alle Gruppen und Nutzer des Backend 
 \label{browserpageedit}
 \end{center}
 \end{figure}
-
-
 Die Erstellung und Darstellung von Inhalten in Browser CMS wird durch folgende 2 Prinzipien realisiert:
-
 \begin{description}
 \item[Content Blocks]\mbox{~}\\*
 Content Blocks sind Sammlungen von Daten mit einer definierten Anzahl an Feldern eines bestimmten Typs (z.B. Textfeld, Datumsfeld). Innerhalb der Content Library können diese verwaltet und angelegt werden.
@@ -316,6 +315,8 @@ Lokomotive CMS ist ein Open Source Content Management System der Ruby on Rails E
 \hline
 \textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Verwaltung kleiner Internetseiten} \\
 & \multicolumn{2}{p{10cm}|}{Komplexe Inhaltselemente dank MongoDB selbst erstellen}\\
+\hline
+\textbf{Zielgruppe} & \multicolumn{2}{p{10cm}|}{Privatnutzer, Kleinstunternehmen} \\
 \hline
 \end{tabular}
 \end{table}
@@ -412,6 +413,8 @@ Refinery CMS - in der Kurzform oft als Refinery bezeichnet - ist ein freies Open
 \textbf{Philosophie} & \multicolumn{2}{p{10cm}|}{Realisierung einer benutzerfreundlichen, einfachen Oberfläche} \\
 & \multicolumn{2}{p{10cm}|}{Einfaches Hinzufügen von Funktionalität an Hand der in Rails bekannten Entwicklungsabläufe}\\
 & \multicolumn{2}{p{10cm}|}{Aktive Community durch Google Group und IRC, die eine schnelle Hilfe ermöglichen}\\
+\hline
+\textbf{Zielgruppe} & \multicolumn{2}{p{10cm}|}{Privatnutzer, Kleinstunternehmen} \\
 \hline
 \end{tabular}
 \end{table}
@@ -639,7 +642,7 @@ Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS 
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Browser CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, existieren ebenfalls nicht.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konnte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Browser CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, konnten nicht ermittelt werden.} \\
 \hline
 \end{tabular}
 \newline
@@ -812,22 +815,6 @@ Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS 
 \subsection{Freigabe}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten}} \\
-\hline
-  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
-\hline
-\end{tabular}
-\newline
-\newline
-\newline
-\begin{tabular}[!ht]{|l|l|l|l|}
-\hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit für \emph{nicht technische} User den Workflow zu kreieren, verwalten und zu ändern. Es soll dafür kein Scripting / Programming notwendig sein}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
@@ -838,6 +825,19 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitte
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{Ein Workflowprozess kann in Browser CMS nicht erzeugt werden. Autoren ist es nur möglich, ihre durchgeführten Änderungen an andere Backend-Nutzer mit Veröffentlichungsrechten weiterzuleiten (Simulierung eines einfachsten Workflows).} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+\hline
+\end{tabular}
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstüzt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
 \end{tabular}
 \newline
@@ -1052,7 +1052,7 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 
 
 
-
+\newpage
 \section{Auswertung der Ergebnisse}
 
 Der Erfüllungsgrad der einzelnen Kriterien hat für die untersuchten WCMS folgendes Gesamtergebnis herausgestellt:
