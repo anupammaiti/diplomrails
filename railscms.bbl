@@ -7,11 +7,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Aim]{enterprisy}
+\bibitem[Aim10]{enterprisy}
 \textsc{Aimonetti}, Matt:
 \newblock \emph{Rails and the Enterprise}.
 \newblock
-  \url{http://weblog.rubyonrails.org/2010/3/24/rails-and-the-enterprise}
+  \url{http://weblog.rubyonrails.org/2010/3/24/rails-and-the-enterprise}.
+\newblock \,Version:\,2010
 
 \bibitem[BL06]{objekt}
 \textsc{Bernhard~Lahres}, Gregor~R.:
@@ -26,13 +27,14 @@
 \newblock mitp, 2003. --
 \newblock ISBN 978--3--8266--1378--4
 
-\bibitem[Gü]{restful}
+\bibitem[Gü07]{restful}
 \textsc{Günther}, Tobias:
 \newblock \emph{Theorie einer neuen Web-Architektur in Ruby On Rails: REST in
   Rails}.
 \newblock
   \url{http://t3n.de/magazin/rest-rails-teil-1-theorie-neuen-web-architektur-r%
-uby-219794/}
+uby-219794/}.
+\newblock \,Version:\,2007
 
 \bibitem[HM10]{Rails2}
 \textsc{Hussein~Morsy}, Tanja~O.:
@@ -40,17 +42,25 @@ uby-219794/}
 \newblock Galileo Computing, 2010. --
 \newblock ISBN 978--3--89842--779--1
 
+\bibitem[Neu07]{rack}
+\textsc{Neukirchen}, Christian:
+\newblock \emph{Introducing Rack}.
+\newblock
+  \url{http://chneukirchen.org/talks/euruko-2007/neukirchen07introducingrack.p%
+df}.
+\newblock \,Version:\,2007
+
 \bibitem[Per10]{RubyMetaprogramming2010}
 \textsc{Perrotta}, Paolo:
 \newblock \emph{Metaprogramming Ruby}.
 \newblock Pragmatic Programmers, 2010. --
 \newblock ISBN 1--934356--47--6
 
-\bibitem[RW07]{rest}
-\textsc{Ralf~Wirdemann}, Thomas~B.:
-\newblock \emph{RESTful Rails Development}.
-\newblock \url{http://www.b-simple.de/download/restful_rails_en.pdf}.
-\newblock \,Version:\,2007
+\bibitem[Rai11]{railsguiderack}
+\textsc{Rails}:
+\newblock \emph{Rails on Rack}.
+\newblock \url{http://guides.rubyonrails.org/rails_on_rack.html}.
+\newblock \,Version:\,2011
 
 \bibitem[Sch08]{EnterpriseRails}
 \textsc{Schmidt}, Maik:

@@ -15,10 +15,10 @@ Es ist daher schneller möglich, dass sich Entwickler nach einiger Zeit mit ande
 
 Die Realisierung eines stabilen Web Content Management Systems auf Basis von Ruby on Rails wird durch diese Faktoren erschwert und erfordert ein entsprechend tragfähiges Konzept sowie planendes Vorgehen der Projektiniziatoren.
 
-Die hier aufgeführten Projekte Alchemy CMS, Refinery CMS, Browser CMS und Locomotive CMS repräsentieren daher die zum Zeitpunkt der Erstellung dieser Arbeit vielversprechendsten Rails-Implementierungen eines Web Content Management Systems. Trotz alldem ist vorweg anzumerken, dass sich diese Systeme, im Gegensatz zu anderen etablierten Open Source Content Management Systemen wie Typo3 und Drupal, noch am Anfang ihrer Entwicklungsgeschichte befinden.
+Die hier aufgeführten Projekte Alchemy CMS, Browser CMS, Locomotive CMS und Refinery CMS repräsentieren daher die zum Zeitpunkt der Erstellung dieser Arbeit vielversprechendsten Rails-Implementierungen eines Web Content Management Systems. Trotz alldem ist anzumerken, dass sich diese Systeme, im Gegensatz zu anderen etablierten Web Content Management Systemen wie Typo3 und Drupal, noch am Anfang ihrer Entwicklungsgeschichte befinden.
 \newline
 \newline
-Um die Zahl der zu untersuchenden WCMS einzuschränken, wurden folgende Midnestanforderungen für existierende Rails-Anwendungen festgelegt:
+Um die Zahl der zu untersuchenden WCMS einzuschränken, wurden folgende Mindestanforderungen für existierende Rails-Anwendungen festgelegt:
 \begin{description}
 \item[Open Source Software]\mbox{~}\\*
 Die hier ermittelten WCM-Systeme sind vollständige Open Source Lösungen. Ihre Veröffentlichung unterliegt dabei den in der Open Source Bewegung üblichen Lizenzen der Freien Software bzw. der Open Source Initiative (OSI).
@@ -28,7 +28,7 @@ Die Veröffentlichung von Rails 3 brachte vielen Verbesserungen hinsichtlich der
 Die stetige, aktive Entwicklung an einem Open Source Projekt ist ein Merkmal für die Akzeptanz einer Software. Sie ist zusätzlich ein Beweis für das Engagement der beteiligten Programmierer. Eine in diesem Umfeld entstehende Software bietet daher entsprechend höheres Potenzial. Die  hier ausgewählten Systeme erfüllen diese Forderung.
 \newpage
 \item[Unterscheidung in Front- und Backend]\mbox{~}\\*
-WCM-Systeme unterscheiden zwischen Frontend- und Backend-Funktionalität. Das Frontend wird durch die eigentliche Internetseite repräsentiert, die mit Hilfe des Systems erzeugt wird. Im Backend können Anwender die Inhalte der Seite zentral einpflegen und verwalten.
+WCM-Systeme unterscheiden zwischen Frontend- und Backend-Funktionalität. Das Frontend wird durch die eigentliche Internetseite repräsentiert, die mit Hilfe des Systems erzeugt wird. Im Backend können Anwender Inhalte zentral einpflegen und verwalten.
 Die ausgewählten Implementierungen verfügen über eine solche konzeptionelle Trennung.
 \end{description}
 
@@ -58,7 +58,7 @@ Der Dienst verfügt über eine ausführliche Suchfunktion, mit der gezielt nach 
 \newpage
 \item[Github.com]\mbox{~}\\*
 Github.com ist ein Online-Netzwerk und Webhosting-Dienst für Programmierer. Nutzer können dort ihre individuellen Programme, umgesetzt in beliebigen Programmiersprachen, kostenlos\footnote{Die Einrichtung eines kostnpflichtigen, privaten Github-Repositories ist ebenfalls möglich.}  veröffentlichen.
-Schlüsseltechnologie des Netzwerkes ist das Versionsverwaltungssystem Git, welches Änderungen am Quellcode des Projektes festhält. Zusätzlich erlaubt es anderen Programmierern, bestehende Projekte zu kopieren und eigenständig weiterzuentwickeln. Anschließend können diese wieder zu einem Gesamtprojekt verschmolzen werden.
+Schlüsseltechnologie des Netzwerkes ist das Versionsverwaltungssystem Git\footnote{PRojektseite: \href{http://git-scm.com/}{http://git-scm.com/}}, welches Änderungen am Quellcode des Projektes festhält. Zusätzlich erlaubt es anderen Programmierern, bestehende Projekte zu kopieren und eigenständig weiterzuentwickeln. Anschließend können diese wieder zu einem Gesamtprojekt verschmolzen werden.
 Die Symbiose zwischen den Funktionalitäten von Git und den zahlreichen Interkationsmöglichkeiten der Platform erschaffen eine Entwicklungsumgebung, in der ein schneller und effektiver Austausch zwischen Programmierern und Projekten stattfinden kann.
 Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufstelle für Rails-Programmierer entwickelt und besitzt daher zur Ermittlung bestehender Web Content Management Systeme entscheidende Relevanz.
 \begin{figure}[!h]
@@ -71,9 +71,9 @@ Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufs
 \end{description}
 
 %ALCHEMY BEGIN
-\newpage
+\pagebreak
 \section{Vorstellung Alchemy CMS}
-Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabs*} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin. Die aktuelle Version 1.6.0 steht als Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} zur Verfügung.
+Unter der Leitung der Hamburger Firma \emph{macabi} wurde 2007 die proprietäre CMS Software \emph{WashAPP} veröffentlicht. Nach der Insolvenz der Entwickler wurde das System zu nächst weiterverkauft (dabei erfolgte die Umbennung in \emph{Webmate}), bevor es 2010 letztendlich als Open Source Software Alchemy CMS an die Öffentlichkeit übergeben wurde. Die Weiterentwicklung übernimmt seitdem die Hamburger Internetagentur \emph{magiclabs*}\footnote{Homepage: \href{http://magiclabs.de/home}{http://magiclabs.de/home}} um die Entwickler Thomas von Deyen, Robin Böning und Carsten Fregin. Die aktuelle Version 1.6.0 steht als Rails 2 und 3 Umsetzung\footnote{Der Rails 3-Entwicklungszweig von Alchemy befindet sich noch im Beta-Stadium.} zur Verfügung.
 \begin{table}[!h]
 \caption{Steckbrief Alchemy CMS}
 \begin{tabular}[!ht]{|l|l|l|}
@@ -214,7 +214,7 @@ Eine online verfügbare Testversion des Systems wird von BrowserMedia nicht ange
 \end{table}
 \subsection{Funktionsprinzipien}
 
-Innerhalb des Backend von Browser CMS kann der angemeldete Nutzer auf alle wichtigen Funktionsbereiche des Systems zugreifen:
+Innerhalb des Backend (Abb. \ref{browserbackend}) von Browser CMS kann der angemeldete Nutzer auf alle wichtigen Funktionsbereiche des Systems zugreifen:
 
 
 \begin{figure}[!h]
@@ -249,7 +249,7 @@ Die Erstellung und Darstellung von Inhalten in Browser CMS wird durch folgende 2
 \item[Content Blocks]\mbox{~}\\*
 Content Blocks sind Sammlungen von Daten mit einer definierten Anzahl an Feldern eines bestimmten Typs (z.B. Textfeld, Datumsfeld). Innerhalb der Content Library können diese verwaltet und angelegt werden.
 \item[Portlet\footnote{Der Begriff des Portlets stammt aus der Java-Welt und bezeichnet ursprünglich beliebig kombinierbare Komponenten, die an verschiedenen Positionen auf einer Internetseite bzw. einer Portal-Seite dargestellt werden können.}]\mbox{~}\\*
-Portlets sind spezielle Content Blocks, die festlegen, wie ein beliebiger Datensatz von anderen Content Blocks (z.B. Text, News) dargestellt werden sollen. Dazu verfügt jedes Portlet über ein im Backend editierbares Template, dass die zuvor ausgewählten Datensätze in dem gewünschten Layout präsentiert (Abb. \ref{browsertagportlet}).
+Portlets sind spezielle Content Blocks, die festlegen, wie bereits existierende Content Blocks (z.B. Text, News) dargestellt werden sollen. Dazu verfügt jedes Portlet über ein im Backend editierbares Template, dass die zuvor ausgewählten Datensätze in dem gewünschten Layout präsentiert (Abb. \ref{browsertagportlet}).
 
 \begin{figure}[!h]
 \begin{center}
@@ -275,7 +275,18 @@ Die Funktionalität von Browser CMS kann durch das Hinzufügen von sogenannten M
 
 \subsection{Verwendete Technologien}
 
-Das komplette Backend von Browsercms wird mit Hilfe von HTML-Views von Rails gerendert. JavaScript kommt lediglich bei der Darstellung verschiedener Feldtypen (z.B. Datumsdialog und Auswahlbox) innerhalb der Contentblöcke und beim Anlegen von Textinhalt durch die Verwendung des JavaScript-WYSIWYG-Editors FCKEditor zur Anwendung. Die Erstellung der Contentblöcke und Portlets wird durch einen in Rails umgesetzten Generatorskript ermöglicht und vereinfacht somit die Erstellung für den Entwickler.
+Das komplette Backend von Browsercms wird mit Hilfe von in Rails gerenderten HTML-Views erzeugt. JavaScript kommt lediglich bei der Darstellung verschiedener Feldtypen (z.B. Datumsdialog und Auswahlbox) innerhalb der Contentblöcke und beim Anlegen von Textinhalt durch die Verwendung des JavaScript-WYSIWYG-Editors FCKEditor (Abb. \ref{browsereditor}) zur Anwendung. Dieser ermöglicht die komfortable Formatierung eingestellter Texte sowie die Einbindung von vorformatierten HTML-Inhalten.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/browser/editor.png}
+\caption{Erstellung eines neuen Content Blocks Text mit Hilfe des FCKEditor}
+\label{browsereditor}
+\end{center}
+\end{figure}
+
+Die Erstellung der Contentblöcke (Content Blocks) und Portlets wird durch einen in Rails umgesetzten Generatorskript ermöglicht und vereinfacht somit die Erstellung für den Entwickler. Er erzeugt ein komplettes
+
 
 \lstinputlisting[caption=Aufruf des Generator-Skripts zur Erstellung eines neuen Inhaltselements Produkt]{code/content_block.rb}
 %Browser END
@@ -374,7 +385,7 @@ Zur Erstellung von Templates wird die Ruby Template-Sprache Liquid eingesetzt. S
 Der im Backend eingesetzte WYSIWYG-Editor TinyMCE ermöglicht die komfortable Eingabe von Text und HTML-Elementen\footnote{Um den Editor innerhalb der einzelnen Seiten zu aktivieren, müssen im Liqiud-Template der Seite entsprechende Befehle aufgerufen werden. Nach einem erneuten speichern der Seite steht der Editor im Backend zur Verfügung und kann mit Inhalten gefüllt werden.}.
 
 
-Im Frontend der Seite findet zusätzlich der WYSIWYG-JavaScript-HTML5-Editor Aloha\footnote{Projektseite: \href{http://aloha-editor.org/}{http://aloha-editor.org/}} Verwendung. Er ermöglicht so eine Bearbeitung spezieller Inhaltselemente direkt im Frontend der Seite (Inline-Editing).
+Im Frontend der Seite findet zusätzlich der WYSIWYG-JavaScript-HTML5-Editor Aloha\footnote{Projektseite: \href{http://aloha-editor.org/}{http://aloha-editor.org/}} Verwendung. Er ermöglicht so eine Bearbeitung spezieller Inhaltselemente direkt im Frontend der Seite (Inline-Editing\footnote{Die Entwicklung dieses Features befindet sich noch im Betastatdium und kann noch nicht zuverlässig verwendet werden.}).
 
 \newpage
 %Refinery BEGIN
@@ -432,7 +443,15 @@ Das Backend bildet in Refinery CMS die zentrale Anlaufstelle zur Erstellung und 
 \item[Übersichts-Modul]\mbox{~}\\*
 Nach der Anmeldung am System bildet das Übersichts-Modul (o.a. Dashboard) die Startseite des Systems. Dort können in einer einfachen Form die letzten Aktivitäten innerhalb des CMS eingesehen werden. Zusätzlich werden Schnellaufrufe zu systemspezifischen Funktionen angeboten.
 \item[Seiten-Modul]\mbox{~}\\*
-Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel, Metainformationen und Verhalten der Seiten einzeln bearbeitet werden. Die erstellten Seiten verfügen jeweils über einen oder mehrere WYSIWYG-Editor-Felder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann beliebig festgelegt werden. Die Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt.}, in die der Inhalt der Seite eingepflegt wird.
+Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel und Metainformationen bearbeitet werden. Die erstellten Seiten verfügen jeweils über einen oder mehrere WYSIWYG-Editor-Textfelder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann beliebig festgelegt werden. Die Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt.}, in die der Inhalt der Seite eingepflegt werden kann (Abb. \ref{contentsections}).
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/analyse/refinery/contentsections.png}
+\caption{Seitenbearbeitung in Refinery CMS mit geöffneten Content Sections Body und Site Body}
+\label{contentsections}
+\end{center}
+\end{figure}
 \item[Bilder- und Dateien-Modul]\mbox{~}\\*
 In Refinery wird durch die Wahl der Menüpunkte Bilder und Dateien die Ressourcenverwaltung des Systems geöffnet. Dort können anschließend 	Mediendateien verschiedenster Formate hochgeladen, bearbeitet und durchsucht werden.
 \item[Benutzer-Modul]\mbox{~}\\*
@@ -460,7 +479,8 @@ Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlau
 
 
 \section{Durchführung der funktionalen Analyse}
-Um die Leistungsfähigkeit der ausgewählten Systeme einschätzen zu können, werden die vorgestellten Kriterien des vorhergehenden Abschnitts mit den ausgewählten WCMS in Tabellenform gegenübergestellt. Es erfolgt dabei eine Festlegung der Erfüllung dieser Kriterien in folgende 2 Stufen:
+\label{sec:durchanalyse}
+Um die Leistungsfähigkeit der ausgewählten Systeme im Bereich des Webpublishing einschätzen zu können, werden die vorgestellten Kriterien des vorhergehenden Abschnitts mit den ausgewählten WCMS in Tabellenform gegenübergestellt. Es erfolgt dabei eine Festlegung der Erfüllung dieser Kriterien in folgende 2 Stufen:
 
 \begin{table}[!h]
 \renewcommand{\arraystretch}{1.5}
@@ -476,8 +496,6 @@ Kriterium definierten Funktionalitäten nicht. Es existieren darüber hinaus kei
 \hline
 \end{tabular}
 \end{table}
-\newpage
-
 Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS noch Erläuterungen aufgeführt, die eine genauere Einschätzung des tatsächlichen Funktionsumfangs liefern können.
 \subsection{Erstellung}
 \begin{tabular}[!ht]{|l|l|l|l|}
@@ -638,7 +656,7 @@ Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS 
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
   \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung kleiner Flaggensymbole kenntlich gemacht.} \\
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung von Flaggensymbolen kenntlich gemacht.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -654,8 +672,8 @@ Zusätzlich werden bei bestehenden Einschränkungen und Problemen zu jedem WCMS 
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Eine flexible Plugin-DSL erlaubt das Hinzufügen von individuellen Erweiterungen.}
-   & \multicolumn{2}{p{7.5cm}|}{Individuelle Inhaltselemente können durch die Verwendung der Refinery Engine Generatoren hinzugefügt werden. Für die weitere Entwicklung stehen die in Rails üblichen Entwicklungstechniken zur Verfügung.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Eine flexible Plugin-DSL (Domain Specific Language) erlaubt das Hinzufügen von individuellen Erweiterungen.}
+   & \multicolumn{2}{p{7.5cm}|}{Individuelle Inhaltselemente können durch die Verwendung der Refinery Engine Generatoren hinzugefügt werden. Die weitere Entwicklung Anpassung des Codegerüst folgt dann mit den inenrhalb des Rails Framework üblichen Entwicklungstechniken und -abläufen.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -1096,15 +1114,136 @@ Gesamtpunkte & 3600 & 1500 & 1800 & 1400 & 1400 \\
 \end{table}
 
 
-Die Überprüfung der funktionalen Leistungen im Sinne des Web Publishing der CMS lässt folgendes Gesamtbild zu:
+Die untersuchten Systeme zeigen bei der Erfüllung der für Webpublishing relevanten Kriterien sehr unterschiedliche Resultate. Im Bereich der Inhaltserstellung vefügen die Systeme über solide Funktionalitäten. Die Webpublishingbereiche Freigabe, Kontrolle und Terminierung/Archivierung decken dagegen bei allen untersuchten Systemen funktionale Deffizite auf. In der Gesamtbetrachtung liefert Browser CMS das beste Gesamtergebnis. Vor allem durch die umfassendere Nutzer- und Rechteverwaltung kann sich das System von Alchemy CMS und Locomotive CMS absetzen, die funktional gesehen im Mittelfeld angesiedelt sind. Refinery CMS besitzt auf Grund der fehlenden Inhalts- und Rechteverwaltung die geringsten Funktionalitäten aller Systeme.
+\newline
+Für einen besseren Gesamtüberblick werden die Ergebnisse der durchgeführten Analyse (Kaiptel \ref{sec:durchanalyse}) für jedes System noch einmal in einer Übersicht zusammengefasst.
 
 
+\subsubsection{Alchemy CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
 \begin{itemize}
-\item
-Die untersuchten Rails WCMS Alchemy CMS, Browser CMS, Locomotive CMS und Refinery CMS bieten umfassende Möglichkeiten zur Erstellung
-\item
-Die umgesetzten Systeme besitzen
-\item
-
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von Seiten und verschiedenen Inhaltselementen in verschiedenen Sprachen
+	\item Template-Erstellung und -verwaltung findet im Quellcode der Rails-Anwendung statt
+	\item Umsetzung komplexer Seitenlayouts möglich
 \end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item eingeschränkte Rechteverwaltung mit festgelegten Gruppen für Front- und Backend (Registriert, Author, Redakteur, Administrator)
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
+	\item keine umfassende Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung von Templates
+	\item umfassende Seiten- und Inhaltsverwaltung mit Möglichkeiten zum Kopieren und Verschieben der Inhalte (Zwischenablagefunktion)
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Seiten und Inhalte können nicht archiviert oder zeitraumgebunden veröffentlicht werden
+\end{itemize}
+\end{description}
+
+\newpage
+\subsubsection{Browser CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
+	\item Template-Erstellung und -verwaltung im Backend der Anwendung
+	\item Umsetzung komplexer Seitenlayouts möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item Rechteverwaltung mit vordefinierten Gruppen für Front- und Backend sowie Möglichkeiten zum Erstellen eigener Gruppen
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
+	\item keine umfassende Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung verschiedener Template-Sprachen
+	\item Wiederverwendung von Inhaltenselementen
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung von erstellten Seiten
+	\item keine zeitraumgebundene Veröffentlichung von Seiten und Inhalten möglich
+\end{itemize}
+\end{description}
+
+
+\newpage
+\subsubsection{Locomotive CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
+	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
+	\item Umsetzung komplexe Layouts mit verschiedenen Seiten- und Inhaltselementen möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item eingeschränkte Rechteverwaltung mit vordefinierten Gruppen für das Backend
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Abbildung von Freigabeprozessen für Internetseiten und Inhalte möglich
+	\item keine Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung der Template-Sprache Liquid
+	\item Wiederverwendung von Inhaltenselementen
+	\item eingeschränkte Möglichkeiten zum Verschieben
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
+\end{itemize}
+\end{description}
+
+\subsubsection{Refinery CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Erstellung und Verwaltung von mehrsprachigen Seiten und Inhaltsböcken
+	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
+	\item Umsetzung komplexe Layouts mit Hilfe von Rails Views möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Rechteverwaltung für Seiten, Inhalte und Nutzer
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Unterstützung von Freigabeprozessen
+	\item Erstellte Seiten können in den Bearbeitungsmodus gesetzt werden  und sind dadurch nicht mehr erreichbar
+	\item keine Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung der in Rails üblichen ERB-Views
+	\item keine Wiederverwendung von Inhaltenselementen möglich
+	\item keine Möglichkeiten zum Verschieben und Kopieren von Inhalten
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
+\end{itemize}
+\end{description}
+
 

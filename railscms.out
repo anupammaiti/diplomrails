@@ -10,7 +10,7 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 REST}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.5}{2.1.5 Rack und Middleware}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Generatoren}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{2.2 Content Management Systeme und Webpublishing}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{2.2 Web Content Management und Webpublishing}{chapter.2}
 \BOOKMARK [1][-]{section.2.3}{2.3 Externer Kriterienkatalog}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Erstellung}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Kontrolle}{section.2.3}
@@ -60,7 +60,7 @@
 \BOOKMARK [1][-]{section.6.2}{6.2 Ausblick}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{7 Anhang}{}
 \BOOKMARK [1][-]{section.7.1}{7.1 Liste bestehender Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}{chapter.7}
-\BOOKMARK [1][-]{section.7.2}{7.2 Einf\374hrung in die Programmiersprache Ruby}{chapter.7}
+\BOOKMARK [1][-]{section.7.2}{7.2 Crudify-Methode von Refinery CMS 1.0.8}{chapter.7}
 \BOOKMARK [1][-]{section.7.3}{7.3 Ext-Direct Spezifikation f\374r Ext Js 3.0}{chapter.7}
 \BOOKMARK [1][-]{section.7.4}{7.4 Java Content Repository Spezifikation}{chapter.7}
 \BOOKMARK [0][-]{chapter.8}{8 Literaturverzeichnis}{}

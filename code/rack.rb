@@ -12,6 +12,5 @@ class MyRackApp
   end
 end
 
-
 Rack::Handler::WEBrick.run MyRackApp.new("Rack"),:Port => 3001
 

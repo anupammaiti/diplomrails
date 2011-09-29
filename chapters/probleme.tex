@@ -1,19 +1,19 @@
 \chapter{Konzeptionelle Problemanalyse}
-
-In diesem Abschnitt der Arbeit werden die ausgewählten Systeme auf konzeptionelle und programmiertechnische Probleme untersucht. Die folgende Betrachtung wird dabei in folgende Teilbereiche aufgeteilt:
+\label{chap:probleme}
+In diesem Abschnitt der Arbeit werden die ausgewählten Systeme auf konzeptionelle und programmiertechnische Probleme untersucht. Die Betrachtung wird dabei in folgende Teilbereiche aufgeteilt:
 
 \begin{enumerate}
-\item Nutzeroberfläche
 \item Erweiterungen
+\item Nutzeroberfläche
 \end{enumerate}
 
 
 \section{Erweiterungen}
 \label{dryverstoss}
-Innerhalb des Rails Frameworks ist die Verwendung von Generatoren ein häufiges Mittel zur schnellen Entwicklung von funktionsfähigem Code (siehe Kapitel ?). Die Mehrheit der hier vorgestellten Systeme\footnote{Locomotive CMS benötigt durch die Möglichkeit der Erstellung individueller Inhaltselemente im Backend keine installierbaren Erweiterungsmodule} bedient sich zur Realisierung neuer Inhaltslemente ebenfalls eines Generatorskripts, der ein für das jeweilige CMS funktionsbereites Grundgerüst erzeugt. Exemplarisch soll hier das Ergebnis eines Generatoraufrufes in Refinery CMS aufgezeigt werden (Abb. \ref{sec.refineryoutput} ). Das erstellte Inhaltselement Projekt verfügt dabei über die Felder Titel und Beschreibung und wurde durch folgenden Befehlsaufruf realisiert:
+Innerhalb des Rails Frameworks ist die Verwendung von Generatoren ein häufiges Mittel zur schnellen Entwicklung von funktionsfähigem Code (siehe Kapitel \ref{sec:railsgeneratoren} ). Die Mehrheit der hier vorgestellten Systeme\footnote{Locomotive CMS benötigt durch die Möglichkeit der Erstellung individueller Inhaltselemente im Backend keine installierbaren Erweiterungsmodule} bedient sich zur Realisierung neuer Inhaltslemente ebenfalls eines Generatorskripts, der ein für das jeweilige CMS funktionsbereites Grundgerüst erzeugt. Exemplarisch soll hier das Ergebnis eines Generatoraufrufes in Refinery CMS aufgezeigt werden (Abb. \ref{sec.refineryoutput} ). Das erstellte Inhaltselement Projekt verfügt dabei über die Felder Titel und Beschreibung und wurde durch den in Abb. \ref{refinerygenerator} dargestellten Befehlsaufruf realisiert.
 
 
-\lstinputlisting[numbers=none]{code/generator_refinery.rb}
+\lstinputlisting[numbers=none, caption=Aufruf des Refinery Engine Generators, label=refinerygenerator]{code/generator_refinery.rb}
 
 
 
@@ -64,7 +64,7 @@ Erstellung des in Rails benötigten Models Project (Zeile 3 \emph{project.rb}) u
 \item[Zeile 20]
 Erstellung einer Routing-Datei, welche die für das Frontend und Backend benötigten URL's bzw. Routen in der Rails-Anwendung registriert.
 \item[Zeile 15-19]
-Erstellung der für die Unterstützung von Mehrsprachigkeit notwendigen Konfigurationsdateien
+Erstellung der für die Unterstützung von Mehrsprachigkeit notwendigen Konfigurationsdateien im YAML-
 \item[Zeile 23-31]
 Erzeugung der benötigten Dateien zur Unterstützung der Entwicklung von Tests sowie der Registrierung der Engine innerhalb der Rails-Anwendung (Zeile 27)
 \end{description}
@@ -73,7 +73,7 @@ Erzeugung der benötigten Dateien zur Unterstützung der Entwicklung von Tests s
 
 Bei Bedarf an weiteren Inhaltselementen ergibt sich schnell die Erkenntnis, das die Realisierung der Inhaltselemente mit Hilfe eines Generators sehr viel redundanten Rails-Code erzeugt. Damit verstößt diese Art der Erweiterungsentwicklung gegen den in Rails propagierten Ansatz des DRY (Don't repeat yourself).
 
-Die damit einhergehenden Probleme sollen im folgenden kurz zusammengefasst werden:
+Die auf Grund dieser Konzeption einhergehenden Probleme sollen im folgenden kurz zusammengefasst werden:
 
 
 \begin{enumerate}
@@ -98,10 +98,9 @@ Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelne
 
 \lstinputlisting[language=Ruby, caption=Projects-Controller mit verwendeter crudify-Methode und optionalen Parametern]{code/crudify_controller.rb}
 
-Die Verwendung der
 
 \section{Nutzeroberfläche}
 
 
-Die in den vorgestellten Content Management Systemen umgesetzten Nutzeroberflächen sind zum Großteil durch die Kombination individueller HTML, CSS und JavaScript-Dateien zusammengestellt.
+Die in den vorgestellten Content Management Systemen umgesetzten Nutzeroberflächen sind zum Großteil durch die Kombination individueller HTML, CSS und JavaScript-Dateien zusammengestellt. Diese werden dabei 
 

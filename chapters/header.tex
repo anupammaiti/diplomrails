@@ -179,6 +179,13 @@
 \usepackage{stfloats}
 
 
+
+%
+% footnotes in table
+%
+%\usepackage{threeparttable}
+
+
 %
 % Import von PDF Dokumenten
 %
@@ -198,7 +205,7 @@
 %     benannte Farben.
 %
 \definecolor{LinkColor}{rgb}{0,0,0}
-\definecolor{ListingBackground}{rgb}{0.85,0.85,0.85}
+\definecolor{ListingBackground}{rgb}{1,1,1}
 \definecolor{red}{rgb}{1,0,0}
 \definecolor{green}{rgb}{0,0.4,0}
 
@@ -238,22 +245,42 @@
 %
 %  6. Einstellungen für das 'listings' Paket.
 %
-\lstloadlanguages{TeX} % TeX sprache laden, notwendig wegen option 'savemem'
+\lstloadlanguages{ruby} % TeX sprache laden, notwendig wegen option 'savemem'
 \lstset{%
- 	language=[LaTeX]TeX,     % Sprache des Quellcodes ist TeX
+ 	language={ruby},     % Sprache des Quellcodes ist TeX
 	numbers=left,            % Zelennummern links
 	stepnumber=1,            % Jede Zeile nummerieren.
-	numbersep=5pt,           % 5pt Abstand zum Quellcode
+	numbersep=10pt,           % 5pt Abstand zum Quellcode
 	numberstyle=\tiny,       % Zeichengrösse 'tiny' für die Nummern.
 	breaklines=true,         % Zeilen umbrechen wenn notwendig.
 	breakautoindent=true,    % Nach dem Zeilenumbruch Zeile einrücken.
+	captionpos=t,
 	postbreak=\space,        % Bei Leerzeichen umbrechen.
-	tabsize=2,               % Tabulatorgrösse 2
+	tabsize=1,               % Tabulatorgrösse 2
 	basicstyle=\scriptsize, % Nichtproportionale Schrift, klein für den Quellcode
 	showspaces=false,        % Leerzeichen nicht anzeigen.
 	showstringspaces=false,  % Leerzeichen auch in Strings ('') nicht anzeigen.
 	extendedchars=true,      % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
-	backgroundcolor=\color{ListingBackground}} % Hintergrundfarbe des Quellcodes setzen.
+	backgroundcolor=\color{ListingBackground},%backgroundcolor=\color{ListingBackground}, % Hintergrundfarbe des Quellcodes setzen.
+	keywordstyle={\color{red}},
+    	commentstyle={\color{blue}},
+	morekeywords={puts, def, begin, end, class, module}
+}
+
+
+%\usepackage{fancyvrb}
+%\DefineVerbatimEnvironment{pygments}{Verbatim}{
+%	numbers=left,
+%	%frame=single,
+%	numbersep=1pt,
+%	commandchars=\\\{\}
+%}
+
+%\usepackage{caption}
+%\newenvironment{codeenv}{
+%\begin{minipage}{\textwidth}
+%\captionsetup{type=lstlisting}
+%}{\end{minipage}}
 
 %
 % C. NEUE MAKROS UND UMGEBUNGEN

@@ -1,0 +1,312 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{# Base methods for CRUD actions}
+\PY{c+c1}{# Simply override any methods in your action controller you want to be customised}
+\PY{c+c1}{# Don't forget to add:}
+\PY{c+c1}{#   resources :plural\PYZus{}model\PYZus{}name\PYZus{}here}
+\PY{c+c1}{# or for scoped:}
+\PY{c+c1}{#   scope(:as => 'module\PYZus{}module', :module => 'module\PYZus{}name') do}
+\PY{c+c1}{#      resources :plural\PYZus{}model\PYZus{}name\PYZus{}here}
+\PY{c+c1}{#    end}
+\PY{c+c1}{# to your routes.rb file.}
+\PY{c+c1}{# Full documentation about CRUD and resources go here:}
+\PY{c+c1}{# -> http://api.rubyonrails.org/classes/ActionDispatch/Routing/Mapper/Resources.html#method-i-resources}
+\PY{c+c1}{# Example (add to your controller):}
+\PY{c+c1}{# crudify :foo, :title\PYZus{}attribute => 'name' for CRUD on Foo model}
+\PY{c+c1}{# crudify :'foo/bar', :title\PYZus{}attribute => 'name' for CRUD on Foo::Bar model}
+\PY{c+c1}{# Note: @singular\PYZus{}name will result in @foo for :foo and @bar for :'foo/bar'}
+
+\PY{k}{module} \PY{n+nn}{Refinery}
+  \PY{k}{module} \PY{n+nn}{Crud}
+
+    \PY{k}{def} \PY{n+nc}{self}\PY{o}{.}\PY{n+nf}{default\PYZus{}options}\PY{p}{(}\PY{n}{model\PYZus{}name}\PY{p}{)}
+      \PY{n}{singular\PYZus{}name} \PY{o}{=} \PY{n}{model\PYZus{}name}\PY{o}{.}\PY{n}{to\PYZus{}s}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{'/'}\PY{p}{)}\PY{o}{.}\PY{n}{last}
+      \PY{n}{class\PYZus{}name} \PY{o}{=} \PY{l+s+s2}{"}\PY{l+s+s2}{::}\PY{l+s+si}{#\PYZob{}}\PY{n}{model\PYZus{}name}\PY{o}{.}\PY{n}{to\PYZus{}s}\PY{o}{.}\PY{n}{camelize}\PY{o}{.}\PY{n}{gsub}\PY{p}{(}\PY{l+s+s1}{'/'}\PY{p}{,} \PY{l+s+s1}{'::'}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{"}\PY{o}{.}\PY{n}{gsub}\PY{p}{(}\PY{l+s+s1}{'::::'}\PY{p}{,} \PY{l+s+s1}{'::'}\PY{p}{)}
+      \PY{n}{plural\PYZus{}name} \PY{o}{=} \PY{n}{singular\PYZus{}name}\PY{o}{.}\PY{n}{to\PYZus{}s}\PY{o}{.}\PY{n}{gsub}\PY{p}{(}\PY{l+s+s1}{'/'}\PY{p}{,} \PY{l+s+s1}{'\PYZus{}'}\PY{p}{)}\PY{o}{.}\PY{n}{pluralize}
+      \PY{n}{this\PYZus{}class} \PY{o}{=} \PY{n}{class\PYZus{}name}\PY{o}{.}\PY{n}{constantize}\PY{o}{.}\PY{n}{base\PYZus{}class}
+
+      \PY{p}{\PYZob{}}
+        \PY{l+s+ss}{:conditions} \PY{o}{=}\PY{o}{>} \PY{l+s+s1}{''}\PY{p}{,}
+        \PY{l+s+ss}{:include} \PY{o}{=}\PY{o}{>} \PY{o}{[}\PY{o}{]}\PY{p}{,}
+        \PY{l+s+ss}{:order} \PY{o}{=}\PY{o}{>} \PY{p}{(}\PY{l+s+s1}{'position ASC'} \PY{k}{if} \PY{n}{this\PYZus{}class}\PY{o}{.}\PY{n}{table\PYZus{}exists?} \PY{o+ow}{and} \PY{n}{this\PYZus{}class}\PY{o}{.}\PY{n}{column\PYZus{}names}\PY{o}{.}\PY{n}{include?}\PY{p}{(}\PY{l+s+s1}{'position'}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+        \PY{l+s+ss}{:paging} \PY{o}{=}\PY{o}{>} \PY{k+kp}{true}\PY{p}{,}
+        \PY{l+s+ss}{:per\PYZus{}page} \PY{o}{=}\PY{o}{>} \PY{k+kp}{false}\PY{p}{,}
+        \PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url} \PY{o}{=}\PY{o}{>} \PY{l+s+s2}{"}\PY{l+s+s2}{main\PYZus{}app.refinery\PYZus{}admin\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZus{}path}\PY{l+s+s2}{"}\PY{p}{,}
+        \PY{l+s+ss}{:searchable} \PY{o}{=}\PY{o}{>} \PY{k+kp}{true}\PY{p}{,}
+        \PY{l+s+ss}{:search\PYZus{}conditions} \PY{o}{=}\PY{o}{>} \PY{l+s+s1}{''}\PY{p}{,}
+        \PY{l+s+ss}{:sortable} \PY{o}{=}\PY{o}{>} \PY{k+kp}{true}\PY{p}{,}
+        \PY{l+s+ss}{:title\PYZus{}attribute} \PY{o}{=}\PY{o}{>} \PY{l+s+s2}{"}\PY{l+s+s2}{title}\PY{l+s+s2}{"}\PY{p}{,}
+        \PY{l+s+ss}{:xhr\PYZus{}paging} \PY{o}{=}\PY{o}{>} \PY{k+kp}{false}\PY{p}{,}
+        \PY{l+s+ss}{:class\PYZus{}name} \PY{o}{=}\PY{o}{>} \PY{n}{class\PYZus{}name}\PY{p}{,}
+        \PY{l+s+ss}{:singular\PYZus{}name} \PY{o}{=}\PY{o}{>} \PY{n}{singular\PYZus{}name}\PY{p}{,}
+        \PY{l+s+ss}{:plural\PYZus{}name} \PY{o}{=}\PY{o}{>} \PY{n}{plural\PYZus{}name}
+      \PY{p}{\PYZcb{}}
+    \PY{k}{end}
+
+    \PY{k}{def} \PY{n+nc}{self}\PY{o}{.}\PY{n+nf}{append\PYZus{}features}\PY{p}{(}\PY{n}{base}\PY{p}{)}
+      \PY{k}{super}
+      \PY{n}{base}\PY{o}{.}\PY{n}{extend}\PY{p}{(}\PY{n+no}{ClassMethods}\PY{p}{)}
+    \PY{k}{end}
+
+    \PY{k}{module} \PY{n+nn}{ClassMethods}
+
+      \PY{k}{def} \PY{n+nf}{crudify}\PY{p}{(}\PY{n}{model\PYZus{}name}\PY{p}{,} \PY{n}{options} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+        \PY{n}{options} \PY{o}{=} \PY{o}{::}\PY{n+no}{Refinery}\PY{o}{::}\PY{n+no}{Crud}\PY{o}{.}\PY{n}{default\PYZus{}options}\PY{p}{(}\PY{n}{model\PYZus{}name}\PY{p}{)}\PY{o}{.}\PY{n}{merge}\PY{p}{(}\PY{n}{options}\PY{p}{)}
+        \PY{n}{class\PYZus{}name} \PY{o}{=} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:class\PYZus{}name}\PY{o}{]}
+        \PY{n}{singular\PYZus{}name} \PY{o}{=} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:singular\PYZus{}name}\PY{o}{]}
+        \PY{n}{plural\PYZus{}name} \PY{o}{=} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:plural\PYZus{}name}\PY{o}{]}
+
+        \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{          def self.crudify\PYZus{}options}
+\PY{l+s+sx}{            }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          prepend\PYZus{}before\PYZus{}filter :find\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                                :only => [:update, :destroy, :edit, :show]}
+
+\PY{l+s+sx}{          def new}
+\PY{l+s+sx}{            @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.new}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          def create}
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ if the position field exists, set this object as last object, given the conditions of this class.}
+\PY{l+s+sx}{            if }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.column\PYZus{}names.include?}\PY{l+s+sx}{(}\PY{l+s+sx}{"position"}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              params[:}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{].merge!}\PY{l+s+sx}{(}\PY{l+s+sx}{\PYZob{}}
+\PY{l+s+sx}{                :position => }\PY{l+s+sx}{(}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.maximum}\PY{l+s+sx}{(}\PY{l+s+sx}{:position, :conditions => }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:conditions}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}\PY{l+s+sx}{||-1}\PY{l+s+sx}{)}\PY{l+s+sx}{ + 1}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              \PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{            end}
+
+\PY{l+s+sx}{            if }\PY{l+s+sx}{(}\PY{l+s+sx}{@}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.create}\PY{l+s+sx}{(}\PY{l+s+sx}{params[:}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{]}\PY{l+s+sx}{)}\PY{l+s+sx}{)}\PY{l+s+sx}{.valid?}
+\PY{l+s+sx}{              }\PY{l+s+sx}{(}\PY{l+s+sx}{request.xhr? ? flash.now : flash}\PY{l+s+sx}{)}\PY{l+s+sx}{.notice = t}\PY{l+s+sx}{(}
+\PY{l+s+sx}{                'refinery.crudify.created',}
+\PY{l+s+sx}{                :what => "'}\PY{l+s+se}{\PYZbs{}#}\PY{l+s+sx}{\PYZob{}@}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:title\PYZus{}attribute}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZcb{}'"}
+\PY{l+s+sx}{              }\PY{l+s+sx}{)}
+
+\PY{l+s+sx}{              unless from\PYZus{}dialog?}
+\PY{l+s+sx}{                unless params[:continue\PYZus{}editing] =~ /true|on|1/}
+\PY{l+s+sx}{                  redirect\PYZus{}back\PYZus{}or\PYZus{}default}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                else}
+\PY{l+s+sx}{                  unless request.xhr?}
+\PY{l+s+sx}{                    redirect\PYZus{}to :back}
+\PY{l+s+sx}{                  else}
+\PY{l+s+sx}{                    render :partial => "/refinery/message"}
+\PY{l+s+sx}{                  end}
+\PY{l+s+sx}{                end}
+\PY{l+s+sx}{              else}
+\PY{l+s+sx}{                render :text => "<script>parent.window.location = '}\PY{l+s+se}{\PYZbs{}#}\PY{l+s+sx}{\PYZob{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZcb{}';</script>"}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            else}
+\PY{l+s+sx}{              unless request.xhr?}
+\PY{l+s+sx}{                render :action => 'new'}
+\PY{l+s+sx}{              else}
+\PY{l+s+sx}{                render :partial => "/refinery/admin/error\PYZus{}messages",}
+\PY{l+s+sx}{                       :locals => \PYZob{}}
+\PY{l+s+sx}{                         :object => @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                         :include\PYZus{}object\PYZus{}name => true}
+\PY{l+s+sx}{                       \PYZcb{}}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            end}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          def edit}
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ object gets found by find\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ function}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          def update}
+\PY{l+s+sx}{            if @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.update\PYZus{}attributes}\PY{l+s+sx}{(}\PY{l+s+sx}{params[:}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{]}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              }\PY{l+s+sx}{(}\PY{l+s+sx}{request.xhr? ? flash.now : flash}\PY{l+s+sx}{)}\PY{l+s+sx}{.notice = t}\PY{l+s+sx}{(}
+\PY{l+s+sx}{                'refinery.crudify.updated',}
+\PY{l+s+sx}{                :what => "'}\PY{l+s+se}{\PYZbs{}#}\PY{l+s+sx}{\PYZob{}@}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:title\PYZus{}attribute}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZcb{}'"}
+\PY{l+s+sx}{              }\PY{l+s+sx}{)}
+
+\PY{l+s+sx}{              unless from\PYZus{}dialog?}
+\PY{l+s+sx}{                unless params[:continue\PYZus{}editing] =~ /true|on|1/}
+\PY{l+s+sx}{                  redirect\PYZus{}back\PYZus{}or\PYZus{}default}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                else}
+\PY{l+s+sx}{                  unless request.xhr?}
+\PY{l+s+sx}{                    redirect\PYZus{}to :back}
+\PY{l+s+sx}{                  else}
+\PY{l+s+sx}{                    render :partial => "/refinery/message"}
+\PY{l+s+sx}{                  end}
+\PY{l+s+sx}{                end}
+\PY{l+s+sx}{              else}
+\PY{l+s+sx}{                render :text => "<script>parent.window.location = '}\PY{l+s+se}{\PYZbs{}#}\PY{l+s+sx}{\PYZob{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZcb{}';</script>"}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            else}
+\PY{l+s+sx}{              unless request.xhr?}
+\PY{l+s+sx}{                render :action => 'edit'}
+\PY{l+s+sx}{              else}
+\PY{l+s+sx}{                render :partial => "/refinery/admin/error\PYZus{}messages",}
+\PY{l+s+sx}{                       :locals => \PYZob{}}
+\PY{l+s+sx}{                         :object => @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                         :include\PYZus{}object\PYZus{}name => true}
+\PY{l+s+sx}{                       \PYZcb{}}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            end}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          def destroy}
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ object gets found by find\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ function}
+\PY{l+s+sx}{            title = @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:title\PYZus{}attribute}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            if @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.destroy}
+\PY{l+s+sx}{              flash.notice = t}\PY{l+s+sx}{(}\PY{l+s+sx}{'destroyed', :scope => 'refinery.crudify', :what => "'}\PY{l+s+se}{\PYZbs{}#}\PY{l+s+sx}{\PYZob{}title\PYZcb{}'"}\PY{l+s+sx}{)}
+\PY{l+s+sx}{            end}
+
+\PY{l+s+sx}{            redirect\PYZus{}to }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:redirect\PYZus{}to\PYZus{}url}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ Finds one single result based on the id params.}
+\PY{l+s+sx}{          def find\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            @}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.find}\PY{l+s+sx}{(}\PY{l+s+sx}{params[:id],}
+\PY{l+s+sx}{                                                   :include => }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:include}\PY{o}{]}\PY{o}{.}\PY{n}{map}\PY{p}{(}\PY{o}{&}\PY{l+s+ss}{:to\PYZus{}sym}\PY{p}{)}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ Find the collection of @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ based on the conditions specified into crudify}
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ It will be ordered based on the conditions specified into crudify}
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ And eager loading is applied as specified into crudify.}
+\PY{l+s+sx}{          def find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{(}\PY{l+s+sx}{conditions = }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:conditions}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{            @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.where}\PY{l+s+sx}{(}\PY{l+s+sx}{conditions}\PY{l+s+sx}{)}\PY{l+s+sx}{.includes}\PY{l+s+sx}{(}
+\PY{l+s+sx}{                                }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:include}\PY{o}{]}\PY{o}{.}\PY{n}{map}\PY{p}{(}\PY{o}{&}\PY{l+s+ss}{:to\PYZus{}sym}\PY{p}{)}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{                              }\PY{l+s+sx}{)}\PY{l+s+sx}{.order}\PY{l+s+sx}{(}\PY{l+s+sx}{"}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:order}\PY{o}{]}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{"}\PY{l+s+sx}{)}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ Paginate a set of @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ that may/may not already exist.}
+\PY{l+s+sx}{          def paginate\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ If we have already found a set then we don't need to again}
+\PY{l+s+sx}{            find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ if @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.nil?}
+
+\PY{l+s+sx}{            per\PYZus{}page = if }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:per\PYZus{}page}\PY{o}{]}\PY{o}{.}\PY{n}{present?}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{              }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:per\PYZus{}page}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            elsif }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.methods.map}\PY{l+s+sx}{(}\PY{l+s+sx}{&:to\PYZus{}sym}\PY{l+s+sx}{)}\PY{l+s+sx}{.include?}\PY{l+s+sx}{(}\PY{l+s+sx}{:per\PYZus{}page}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.per\PYZus{}page}
+\PY{l+s+sx}{            end}
+
+\PY{l+s+sx}{            @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.paginate}\PY{l+s+sx}{(}\PY{l+s+sx}{:page => params[:page], :per\PYZus{}page => per\PYZus{}page}\PY{l+s+sx}{)}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ Returns a weighted set of results based on the query specified by the user.}
+\PY{l+s+sx}{          def search\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ First find normal results.}
+\PY{l+s+sx}{            find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:search\PYZus{}conditions}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ Now get weighted results by running the query against the results already found.}
+\PY{l+s+sx}{            @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = @}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.with\PYZus{}query}\PY{l+s+sx}{(}\PY{l+s+sx}{params[:search]}\PY{l+s+sx}{)}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ Ensure all methods are protected so that they should only be called}
+\PY{l+s+sx}{          }\PY{l+s+sx}{#}\PY{l+s+sx}{ from within the current controller.}
+\PY{l+s+sx}{          protected :find\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                    :find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                    :paginate\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{,}
+\PY{l+s+sx}{                    :search\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{        }\PY{l+s+sx}{)}
+
+        \PY{c+c1}{# Methods that are only included when this controller is searchable.}
+        \PY{k}{if} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:searchable}\PY{o}{]}
+          \PY{k}{if} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:paging}\PY{o}{]}
+            \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{              def index}
+\PY{l+s+sx}{                search\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ if searching?}
+\PY{l+s+sx}{                paginate\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+
+\PY{l+s+sx}{                render :partial => '}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{' if }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:xhr\PYZus{}paging}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ && request.xhr?}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            }\PY{l+s+sx}{)}
+          \PY{k}{else}
+            \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{              def index}
+\PY{l+s+sx}{                unless searching?}
+\PY{l+s+sx}{                  find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{                else}
+\PY{l+s+sx}{                  search\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{                end}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            }\PY{l+s+sx}{)}
+          \PY{k}{end}
+
+        \PY{k}{else}
+          \PY{k}{if} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:paging}\PY{o}{]}
+            \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{              def index}
+\PY{l+s+sx}{                paginate\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+
+\PY{l+s+sx}{                render :partial => '}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{' if }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:xhr\PYZus{}paging}\PY{o}{]}\PY{o}{.}\PY{n}{inspect}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ && request.xhr?}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            }\PY{l+s+sx}{)}
+          \PY{k}{else}
+            \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{              def index}
+\PY{l+s+sx}{                find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            }\PY{l+s+sx}{)}
+          \PY{k}{end}
+
+        \PY{k}{end}
+
+        \PY{k}{if} \PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:sortable}\PY{o}{]}
+          \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{            def reorder}
+\PY{l+s+sx}{              find\PYZus{}all\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{plural\PYZus{}name}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{            end}
+
+\PY{l+s+sx}{            }\PY{l+s+sx}{#}\PY{l+s+sx}{ Based upon http://github.com/matenia/jQuery-Awesome-Nested-Set-Drag-and-Drop}
+\PY{l+s+sx}{            def update\PYZus{}positions}
+\PY{l+s+sx}{              previous = nil}
+\PY{l+s+sx}{              params[:ul].each do |\PYZus{}, list|}
+\PY{l+s+sx}{                list.each do |index, hash|}
+\PY{l+s+sx}{                  moved\PYZus{}item\PYZus{}id = hash['id'].split}\PY{l+s+sx}{(}\PY{l+s+sx}{/}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZbs{}\PYZbs{}}\PY{l+s+sx}{\PYZus{}?/}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                  @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.find\PYZus{}by\PYZus{}id}\PY{l+s+sx}{(}\PY{l+s+sx}{moved\PYZus{}item\PYZus{}id}\PY{l+s+sx}{)}
+
+\PY{l+s+sx}{                  if @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.respond\PYZus{}to?}\PY{l+s+sx}{(}\PY{l+s+sx}{:move\PYZus{}to\PYZus{}root}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                    if previous.present?}
+\PY{l+s+sx}{                      @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.move\PYZus{}to\PYZus{}right\PYZus{}of}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.find\PYZus{}by\PYZus{}id}\PY{l+s+sx}{(}\PY{l+s+sx}{previous}\PY{l+s+sx}{)}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                    else}
+\PY{l+s+sx}{                      @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.move\PYZus{}to\PYZus{}root}
+\PY{l+s+sx}{                    end}
+\PY{l+s+sx}{                  else}
+\PY{l+s+sx}{                    @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.update\PYZus{}attribute}\PY{l+s+sx}{(}\PY{l+s+sx}{:position, index}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                  end}
+
+\PY{l+s+sx}{                  if hash['children'].present?}
+\PY{l+s+sx}{                    update\PYZus{}child\PYZus{}positions}\PY{l+s+sx}{(}\PY{l+s+sx}{hash, @current\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                  end}
+
+\PY{l+s+sx}{                  previous = moved\PYZus{}item\PYZus{}id}
+\PY{l+s+sx}{                end}
+\PY{l+s+sx}{              end}
+
+\PY{l+s+sx}{              }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.rebuild! if }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.respond\PYZus{}to?}\PY{l+s+sx}{(}\PY{l+s+sx}{:rebuild!}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              render :nothing => true}
+\PY{l+s+sx}{            end}
+
+\PY{l+s+sx}{            def update\PYZus{}child\PYZus{}positions}\PY{l+s+sx}{(}\PY{l+s+sx}{node, }\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{              node['children']['0'].each do |\PYZus{}, child|}
+\PY{l+s+sx}{                child\PYZus{}id = child['id'].split}\PY{l+s+sx}{(}\PY{l+s+sx}{/}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{\PYZbs{}}\PY{l+s+sx}{\PYZus{}?/}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                child\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{ = }\PY{l+s+si}{#\PYZob{}}\PY{n}{class\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.where}\PY{l+s+sx}{(}\PY{l+s+sx}{:id => child\PYZus{}id}\PY{l+s+sx}{)}\PY{l+s+sx}{.first}
+\PY{l+s+sx}{                child\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{.move\PYZus{}to\PYZus{}child\PYZus{}of}\PY{l+s+sx}{(}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+
+\PY{l+s+sx}{                if child['children'].present?}
+\PY{l+s+sx}{                  update\PYZus{}child\PYZus{}positions}\PY{l+s+sx}{(}\PY{l+s+sx}{child, child\PYZus{}}\PY{l+s+si}{#\PYZob{}}\PY{n}{singular\PYZus{}name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+sx}{)}
+\PY{l+s+sx}{                end}
+\PY{l+s+sx}{              end}
+\PY{l+s+sx}{            end}
+\PY{l+s+sx}{          }\PY{l+s+sx}{)}
+        \PY{k}{end}
+
+        \PY{n+nb}{module\PYZus{}eval} \PY{l+s+sx}{%(}
+\PY{l+s+sx}{          def self.sortable?}
+\PY{l+s+sx}{            }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:sortable}\PY{o}{]}\PY{o}{.}\PY{n}{to\PYZus{}s}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{          end}
+
+\PY{l+s+sx}{          def self.searchable?}
+\PY{l+s+sx}{            }\PY{l+s+si}{#\PYZob{}}\PY{n}{options}\PY{o}{[}\PY{l+s+ss}{:searchable}\PY{o}{]}\PY{o}{.}\PY{n}{to\PYZus{}s}\PY{l+s+si}{\PYZcb{}}
+\PY{l+s+sx}{          end}
+\PY{l+s+sx}{        }\PY{l+s+sx}{)}
+
+
+      \PY{k}{end}
+
+    \PY{k}{end}
+
+  \PY{k}{end}
+\PY{k}{end}
+\end{Verbatim}

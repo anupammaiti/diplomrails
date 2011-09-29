@@ -24,7 +24,7 @@ Zur Optimierung der Entwicklungvorgänge innerhalb des Frameworks propagiert Rai
 \subsection{Convention over Configuration}
 Viele Web Application Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden\footnote{Rails bezeichnet diese Art der Frameworks mit ihrem Konfigurations-Overhead oft als \emph{enterprisy}. Dies bedeutet jedoch nicht, das Rails für Anwendungsumsetzungen im Enterprise-Bereich ungeeignet ist. Matt Aimonetti stellt dies im Artikel \cite{enterprisy} heraus.}. Abbildung \ref{spring} zeigt beispielhaft solch eine Konfigurationsdatei innerhalb des Java Application Frameworks Spring:
 
-\lstinputlisting[label=spring,language=XML, caption=Konfigurationsdatei im Java Spring Framework]{code/spring.xml}
+\lstinputlisting[label=spring,language=xml, caption=Konfigurationsdatei im Java Spring Framework]{code/spring.xml}
 
 Um diesen zusätzlichen und zeitraubenden Aufwand vor der eigentlichen Arbeit mit einem Framework zu vermeiden, definiert das Rails Framework zahlreiche Konventionen, die es erlauben, sofort mit der Entwicklungsarbeit zu beginnen. U.a. werden folgende Festlegungen getroffen:
 
@@ -149,44 +149,53 @@ create & /projects/create & /projects \\
 \end{tabular}
 \end{table}
 
-Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource und Aktion innerhalb einer in Rails definierten REST-Ressource Projekt. Eine ausführliche Beschreibung von REST und dessen Realisierung liefert \cite{rest}.
+Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource und Aktion innerhalb einer in Rails definierten REST-Ressource Projekt. Eine ausführliche Beschreibung von REST und dessen Realisierung liefert \cite{restful}.
 
 \newpage
 \subsection{Rack und Middleware}
 Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfang zur Verfügung. 
-Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
-
+Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack\footnote{Projektseite: \href{http://rack.rubyforge.org/}{http://rack.rubyforge.org/}}, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.6]{images/rack/rack.pdf}
 \caption{Rack als Vermittler (Middleware) zwischen Server und Ruby-Webframeworks}
-\label{rack}
+\label{rackschema}
 \end{center}
 \end{figure}
 
 
-Damit Server und Frameworks untereinander kommunizieren können, muss eine Rack-Anwendung bestimmte Methoden und Formate einhalten, die an Hand des folgenden Bespiels erläutert werden sollen:
+Damit Server und Frameworks untereinander kommunizieren können, muss eine Rack-Anwendung bestimmte Methoden implementieren und ein bestimmtes Rückgabeformat einhalten. An Hand des Beispiels in \ref{rack} sollen diese formalen Kriterien beschrieben werden:
 
 \lstinputlisting[label=rack,language=Ruby, caption=Beispiel für eine einfache Rack-Anwendung]{code/rack.rb}
 
 \begin{description}
 \item[Zeile 6-8]\mbox{~}\\*
-Bei Initialisierung der Rack-Anwendung wird der an die Anwendung übergebene Name verfügbar gemacht.
-\item[Zeile 15]\mbox{~}\\*
-Start des Mongrel Webservers und der Rack-Anwendung \emph{MyRackApp}. Optional sind Port
-\end{description}
-
-
+Initialisierung der Rack-Anwendung MyRackApp unter Angabe eines zuvor übergebenen Namen (\emph{Rack}).
+\item[Zeile 10-12]\mbox{~}\\*
+Implementierung der für eine Rack-Anwendung notwendigen Methode \emph{call}. Diese wird vom Webserver beim Start einer Anfrage aufgerufen und muss als Antwort (Rückgabewert) einen Ruby-Hash mit den folgenden Informationen zurückliefern:
 \begin{description}
 \item[Status]\mbox{~}\\*
-Angabe des HTTP-Statuscode, 200 bedeutet in diesem Beispiel eine erfolgreiche Ausführung der Anfrage am Server
+Angabe des HTTP-Statuscode, \emph{200} bedeutet in diesem Beispiel eine erfolgreiche Ausführung der Anfrage am Server\footnote{Die HTTP-Statuscodes sind im HTTP-Protokoll definiert und können u.a. unter folgender Quelle eingesehen werden: \href{http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html}{http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html}}
 \item[Header]\mbox{~}\\*
-Angabe von im HTTP-Protokoll definierten Header-Dateien,  im Beispiel wird ein einfaches Textdokument zurückgeliefert
+Angabe von im HTTP-Protokoll definierten Header-Informationen,  im Beispiel wird ein einfaches Textdokument (\emph{text/plain}) zurückgeliefert
 \item[Response]\mbox{~}\\*
-Die Antwort des Frameworks, im Beispiel wird ein String \emph{Hello World} an den Server übergeben und von diesem ausgeliefert.
+Die Antwort der Rack-Anwendung, im Beispiel wird ein String \emph{Hello Rack!} an den Server übergeben und von diesem ausgeliefert.
 \end{description}
 
+Beim Aufruf der Methode \emph{call} übergibt der Server eine Variable \emph{env}, die alle wichtigen Informationen über die Serverumgebung und Anfrageparameter enthält.
+\item[Zeile 15]\mbox{~}\\*
+Start des Mongrel Webservers und Initialisierung der Rack-Anwendung \emph{MyRackApp}.
+\end{description}
 
+Bei einem Aufruf der Adresse \emph{localhost:3001} in einem Browser wird vom gestarteten Mongrel-Server der Rückgabewert der Methode \emph{call} ausgegeben (Abb. \ref{rackoutput}). 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.6]{images/rack/outputrack.png}
+\caption{Ausgabe der Rack-Anwendung MyRackApp im Browser}
+\label{rackoutput}
+\end{center}
+\end{figure}
 
 Durch die Nutzung von Rack ergeben sich im Bereich der Ruby Webframeworks folgende Vorteile:
 
@@ -196,7 +205,7 @@ Keine Codeduplizierung durch wiederholte Entwicklung von Server-Adaptern innerha
 \item
 Ein Framework, das Rack unterstützt, kann sofort von allen anderen rack-unterstützenden Webservern verwendet werden
 \item
-Ein rack-unterstützter Server kann sofort mit allen rack-basierten Webframeworks eingesetzt werden.
+Ein rack-unterstützender Server kann sofort mit allen rack-basierten Webframeworks eingesetzt werden.
 \item
 Vereinfachung der Webframework-Entwicklung
 \item
@@ -204,23 +213,30 @@ Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (CGI, Fas
 \end{itemize}
 
 
-Da Rack zwischen Webserver und Webframework als Vermittler fungiert, können Antworten und Anfragen zwischen diesen beiden Parteien manipuliert werden. Entsprechend registrierte Anwendungen, sogenannte Rack Middlewares, können daher als Filter für bestimmte Anfragen verwendet werden.
-Zum Demonstrierung soll hier eine Rack Middleware aus dem offiziellen Rack Contrib Repository\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} vorgestellt werden, die
+Darüber hinaus ist es  möglich, einzelne Rack-Anwendungen hintereinander zu schalten und so ein Filtersystem für ankommende Anfragen und ausgehende Antworten vor dem eigentlichen Webframework zu realisieren (Abb. \ref{rackschema}).
+Diese Anwendungen werden Rack-Middlewares genannt und können in einer Rails-Anwendung in der Startkonfiguration des Frameworks eingebunden werden (Abb. \ref{middlewarestack}). So kann das Ein - und Ausgabeverhalten des Railsframeworks gezielt verändert werden, da die einzelnen Rack-Anwendungen entscheiden, ob der nächste Filter (die nächste registrierte Rack-Middleware) oder eine vorzeitige Anwort an den Server geschickt werden soll.
+Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von Rack selbst als Rack-Anwendung eingebunden.
+Eine detaillierte Beschreibung von Rack und der Einrichtung eines komplexen Filtersystems\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} in einer Rails-Anwendung liefern \cite{rack} und \cite{railsguiderack}.
+
+\lstinputlisting[label=middlewarestack,language=Ruby, caption=Registrierung verschiedener Middlewares in einer Rails 3 Anwendung]{code/middleware.rb}
 
 \subsection{Generatoren}
-Das Ruby on Rails Framework unterstützt mit Hilfe sogenannter Generatorskripte die automatische Erzeugung von funktionsfähigem Quellcode. Der folgende Scaffold-Generator\footnote{Scaffold kann in diesem Zusammenhang als Grundgerüst verstanden werden.} erstellt z.B. nach dessen Initialisierung ein komplett funktionsbereites Codegerüst für die in Rails benötigten MVC-Komponenten einer Ressource Projekt.
+\label{sec:railsgeneratoren}
+Das Ruby on Rails Framework unterstützt mit Hilfe sogenannter Generatorskripte die automatische Erzeugung von funktionsfähigem Quellcode. Der folgende Scaffold-Generator\footnote{Scaffold kann in diesem Zusammenhang mit dem Wort Grundgerüst übersetzt werden.} erstellt z.B. nach dessen Initialisierung ein komplett funktionsbereites Codegerüst für die in Rails benötigten MVC-Komponenten einer Ressource \emph{Projekt}.
 
-\begin{lstinputlisting}
+\begin{lstlisting}[caption=Aufruf des Generators zur Erstellung einer MVC-Ressource Projekt]
 rails g scaffold project name:string description:text
-\end{lstinputlisting}
+\end{lstlisting}
 
 \lstinputlisting[label=scaffold,language=Ruby, caption=Auflistung der erstellten Dateien des Scaffold-Generators]{code/scaffold.txt}
 
 
-%ANALYSE'####################################################################################'
+\section{Web Content Management und Webpublishing}
+\label{sec:webpublishing}
+Der in der einschlägigen Literatur bereits mehrfach thematisierte Anstieg von Content\footnote{Der Begriff des Content bezeichnet ...} innerhalb der einzelnen Unternehmen erfordert ein entsprechend zielgerichtetes Management. Die Verwaltung von Content auf internetbasierten Web-Sites und Portalen hat dabei zur Herausbildung des Web Content Managements geführt.
 
-\section{Content Management Systeme und Webpublishing}
-Der Bereich der Content Management Systeme
+
+TODO Übertragung in Latex
 
 
 \newpage
@@ -249,7 +265,7 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 
 
 Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann.
-Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann. Diese orientieren sich dabei an den Prozessen des Content Managements und des Webpublishing [Vgl. Rit101].
+Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann. Dieser orientiert sich dabei an den Prozessen des Content Managements und den bereits zuvor in Kapitel \ref{sec:webpublishing} beschriebenen Grundgedanken des Webpublishing.
 \newline
 \newline
 Die von Ritter formulierten Kriterien werden in den Kapiteln 5.3.1 bis 5.3.5 nochmals aufgeführt und bilden die Grundlage für die Bewertung der Leistungsfähigkeit der ausgewählten Ruby on Rails Content Management Systeme.
