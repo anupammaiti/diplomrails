@@ -42,7 +42,7 @@ Für den produktiven Einsatz des Frameworks müssen diese daher erlernt und akze
 
 Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht jedoch den Aufwand des Entwicklers.
 
-\subsection{Model-View-Controller}
+\subsection{Model-View-Controller (MVC)}
 \label{sec:mvc}
 Für Software-Designer ist es  eine gebräuchliche Technik, komplexe Software-Systeme durch Schichtenbildung in einzelne Bstandteile zu zerlegen \citep[Kapitel 1]{FowlerPatterns}. Das Ruby on Rails Framework baut ebenfalls auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt eine für das Rails-Framework spezifische Implementierung des bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelten Model-View-Controller-Paradigmas zum Einsatz\footnote{In der Fachliteratur wird das MVC-Paradigma häufig auf die Schichtenarchitektur einer Anwendung übertragen (vgl. \cite[S. 544 ff.]{objekt}). Tatsächlich betrifft MVC in seiner  ursprünglichen Form nur die Präsentationsschicht einer Webanwendung.}.
 Abbildung \ref{fig:mvcimage} charakterisiert den Ablauf einer Anfrage (Request) an eine Rails-Anwendung innerhalb des Client-Server-Modells:
@@ -153,7 +153,7 @@ Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource 
 
 \newpage
 \subsection{Rack und Middleware}
-Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfang zur Verfügung. 
+Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfängen zur Verfügung. 
 Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack\footnote{Projektseite: \href{http://rack.rubyforge.org/}{http://rack.rubyforge.org/}}, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
 \begin{figure}[!h]
 \begin{center}
@@ -182,7 +182,7 @@ Angabe von im HTTP-Protokoll definierten Header-Informationen,  im Beispiel wird
 Die Antwort der Rack-Anwendung, im Beispiel wird ein String \emph{Hello Rack!} an den Server übergeben und von diesem ausgeliefert.
 \end{description}
 
-Beim Aufruf der Methode \emph{call} übergibt der Server eine Variable \emph{env}, die alle wichtigen Informationen über die Serverumgebung und Anfrageparameter enthält.
+Beim Aufruf der Methode \emph{call} (Zeile 15) übergibt der Server eine Variable \emph{env}, die alle wichtigen Informationen über die Serverumgebung und Anfrageparameter enthält.
 \item[Zeile 15]\mbox{~}\\*
 Start des Mongrel Webservers und Initialisierung der Rack-Anwendung \emph{MyRackApp}.
 \end{description}
