@@ -10,7 +10,7 @@
 Ruby on Rails is an open-source web framework that’s
 optimized for programmer happiness and sustainable
 productivity. It lets you write beautiful code by
-favoring convention over configuration.
+favoring convention over configuration.\cite{RailsStatement}
 \end{quote}
 
 Die Aussage bezieht sich dabei auf viele Ansätze und Entwicklungsabläufe, die innerhalb des Frameworks umgesetzt werden.
@@ -19,10 +19,10 @@ Im folgenden Abschnitt sollen daher die wichtigsten Prinzipien, Paradigmen und P
 \newline
 Für eine umfassende Einführung in Rails werden \cite{RubyMetaprogramming2010} und \cite{EnterpriseRails} empfohlen.
 
-\subsection{Don't-Repeat-Yourself}
+\subsection{Don't-Repeat-Yourself (DRY)}
 Zur Optimierung der Entwicklungvorgänge innerhalb des Frameworks propagiert Rails den Grundsatz des DRY (Don't-Repeat-Yourself). Dabei sollen Redundanzen, d.h. die wiederholte Angabe identischer Informationen jeglicher Art vermieden werden. So kann sichergestellt werden, dass sich Änderungen an einer zentralen Stelle im System (z.B. Quellcode) in der gesamten Anwendung auswirken und Duplikate nicht mehrfach angepasst werden müssen.
 \subsection{Convention over Configuration}
-Viele Web Application Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden\footnote{Rails bezeichnet diese Art der Frameworks mit ihrem Konfigurations-Overhead oft als \emph{enterprisy}. Dies bedeutet jedoch nicht, das Rails für Anwendungsumsetzungen im Enterprise-Bereich ungeeignet ist. Matt Aimonetti stellt dies im Artikel \cite{enterprisy} heraus.}. Abbildung \ref{spring} zeigt beispielhaft solch eine Konfigurationsdatei innerhalb des Java Application Frameworks Spring:
+Viele Web Frameworks müssen vor ihrer Nutzung erst mit Hilfe zahlreicher Konfigurationsdateien und endloser Parametereinstellungen zu einem lauffähigen Gesamtsystem zusammengebaut werden\footnote{Rails bezeichnet diese Art der Frameworks mit ihrem Konfigurations-Overhead oft als \emph{enterprisy}. Dies bedeutet jedoch nicht, das Rails für Anwendungsumsetzungen im Enterprise-Bereich ungeeignet ist. Matt Aimonetti stellt dies im Artikel \cite{enterprisy} heraus.}. Abbildung \ref{spring} zeigt beispielhaft solch eine Konfigurationsdatei innerhalb des Java Application Frameworks Spring\footnote{Projektseite: \href{http://www.springsource.org/}{http://www.springsource.org/}}:
 
 \lstinputlisting[label=spring,language=xml, caption=Konfigurationsdatei im Java Spring Framework]{code/spring.xml}
 
@@ -44,7 +44,7 @@ Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht j
 
 \subsection{Model-View-Controller (MVC)}
 \label{sec:mvc}
-Für Software-Designer ist es  eine gebräuchliche Technik, komplexe Software-Systeme durch Schichtenbildung in einzelne Bstandteile zu zerlegen \citep[Kapitel 1]{FowlerPatterns}. Das Ruby on Rails Framework baut ebenfalls auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt eine für das Rails-Framework spezifische Implementierung des bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelten Model-View-Controller-Paradigmas zum Einsatz\footnote{In der Fachliteratur wird das MVC-Paradigma häufig auf die Schichtenarchitektur einer Anwendung übertragen (vgl. \cite[S. 544 ff.]{objekt}). Tatsächlich betrifft MVC in seiner  ursprünglichen Form nur die Präsentationsschicht einer Webanwendung.}.
+Für Software-Designer ist es  eine gebräuchliche Technik, komplexe Software-Systeme durch Schichtenbildung in einzelne Bstandteile zu zerlegen \citep[Kapitel 1]{FowlerPatterns}. Das Ruby on Rails Framework baut ebenfalls auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt eine für das Rails-Framework spezifische Implementierung des bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelten Model-View-Controller-Paradigmas zum Einsatz\footnote{In der Fachliteratur wird das MVC-Paradigma häufig auf die Schichtenarchitektur einer Anwendung übertragen \cite[S. 544 ff.]{objekt}. Tatsächlich betrifft MVC in seiner  ursprünglichen Form nur die Präsentationsschicht einer Webanwendung.}.
 Abbildung \ref{fig:mvcimage} charakterisiert den Ablauf einer Anfrage (Request) an eine Rails-Anwendung innerhalb des Client-Server-Modells:
 
 \begin{figure}[!h]
@@ -63,7 +63,8 @@ An Hand der im Rails-Routing definierten Einträge wird die Anfrage eines Client
 \item
 Der Controller steuert den Ablauf innerhalb der Anwendung. Dabei greift er über ein Model auf benötigte Daten in einem Speicher (z.B. realtionale Datenbank) zu und stellt diese dem View-Layer zur Verfügung. Es ist auch möglich, dass der Controller die Anfrage an einen anderen Controller weiterleitet (Redirects).
 \item
-Das Model bezeichnet in Rails Klassen, die einen Zugriff auf relationale Datenbanken oder andere Datenspeicher ermöglichen \citep[vgl.][]{Rails2}
+Das Model bezeichnet in Rails Klassen, die einen Zugriff auf relationale Datenbanken oder andere Datenspeicher ermöglichen \citep{Rails2}
+%\citep[vgl.][]{Rails2}
 \item
 Der View-Layer bereitet die durch den Controller zur Verfügung gestellten Daten in der angeforderten Darstellungsform auf und gibt das Ergebnis der Anfrage aus. So wird je nach spezifiziertem Format z.B. eine HTML- oder XML-Datei erzeugt.
 \item
@@ -103,8 +104,7 @@ Löschen der beschriebenen Ressource
 \item[DELETE]
 	Die Verwendung dieser Methode signalisiert dem Server, die angegebene Ressource auf dem Server zu löschen.
 \end{description}
-Rails unterstützt REST seit der Einführung der Version 1.2 und ermöglicht es so, an Hand einer URL und den verwendeten HTTP-Methoden die richtige Aktion auf dem Server auszuführen. Die URL einer Anfrage repräsentiert damit nicht eine bestimmte Aktion, die beim Aufruf auf dem Server ausgeführt werden soll, sondern eine Ressource\footnote{Der Begriff Ressource bezeichnet in diesem Zusammenhang eine bestimmte Sache.}, die eindeutig zugeordnet werden kann\footnote{Die Eindeutigkeit der Ressource muss vom Entwickler sichergestellt werden.}.
-Da aktuelle Browser nur GET- und POST-Anfragen zuverlässig unterstützen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden\footnote{Das Rails Framework fügt  innerhalb von Formularen automatisch einen versteckten Parameter \emph{\_method} in die Anfrage, die den Namen der gewünschten HTTP-Metode (DELETE oder PUT) enthält. Im Framework wird dieser Parameter ausgelesen und ein entsprechendes Routing zur geforderten Controller-Action eingeleitet}. Das folgende Beispiel stellt das von Rails definierte Standard-Routing einer als \emph{restful} angelegten Ressource Projekt dar\footnote{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden, die eine Ansammlung von Best-Practices darstellen (vgl. \cite{restful}).}.
+Da aktuelle Browser nur GET- und POST-Anfragen zuverlässig unterstützen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden\footnote{Das Rails Framework fügt  innerhalb von Formularen automatisch einen versteckten Parameter \emph{\_method} in die Anfrage, die den Namen der gewünschten HTTP-Metode (DELETE oder PUT) enthält. Im Framework wird dieser Parameter ausgelesen und ein entsprechendes Routing zur geforderten Controller-Action eingeleitet}. Das folgende Beispiel stellt das von Rails definierte Standard-Routing einer als \emph{restful} angelegten Ressource Projekt dar\footnote{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden, die eine Ansammlung von Best-Practices darstellen \cite{restful}.}.
 
 \begin{table}[!h]
 \caption{Standard-Routing für eine Ressource Projekt innerhalb des Rails-Frameworks}
@@ -153,7 +153,7 @@ Tabelle \ref{tab.restnonrest} zeigt noch einmal die Trennung zwischen Ressource 
 
 \newpage
 \subsection{Rack und Middleware}
-Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfängen zur Verfügung. 
+Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframework. Mit den Projekten Sinatra\footnote{Projektseite: \href{http://www.sinatrarb.com/}{http://www.sinatrarb.com/}}, Merb\footnote{Projektseite: \href{http://www.merbivore.com/}{http://www.merbivore.com/}}, Camping\footnote{Projektseite: \href{http://camping.rubyforge.org/}{http://camping.rubyforge.org/}} und Ramaze\footnote{Projektseite: \href{http://ramaze.net/}{http://ramaze.net/}} stehen weitere Alternativen mit unterschiedlichen Ansätzen und Funktionsumfängen zur Verfügung.
 Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack\footnote{Projektseite: \href{http://rack.rubyforge.org/}{http://rack.rubyforge.org/}}, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
 \begin{figure}[!h]
 \begin{center}
@@ -187,9 +187,9 @@ Beim Aufruf der Methode \emph{call} (Zeile 15) übergibt der Server eine Variabl
 Start des Mongrel Webservers und Initialisierung der Rack-Anwendung \emph{MyRackApp}.
 \end{description}
 
-Bei einem Aufruf der Adresse \emph{localhost:3001} in einem Browser wird vom gestarteten Mongrel-Server der Rückgabewert der Methode \emph{call} ausgegeben (Abb. \ref{rackoutput}). 
+Bei einem Aufruf der Adresse \emph{localhost:3001} in einem Browser wird vom gestarteten Mongrel-Server der Rückgabewert der Methode \emph{call} ausgegeben (Abb. \ref{rackoutput}).
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=0.6]{images/rack/outputrack.png}
 \caption{Ausgabe der Rack-Anwendung MyRackApp im Browser}
@@ -213,12 +213,19 @@ Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (CGI, Fas
 \end{itemize}
 
 
-Darüber hinaus ist es  möglich, einzelne Rack-Anwendungen hintereinander zu schalten und so ein Filtersystem für ankommende Anfragen und ausgehende Antworten vor dem eigentlichen Webframework zu realisieren (Abb. \ref{rackschema}).
-Diese Anwendungen werden Rack-Middlewares genannt und können in einer Rails-Anwendung in der Startkonfiguration des Frameworks eingebunden werden (Abb. \ref{middlewarestack}). So kann das Ein - und Ausgabeverhalten des Railsframeworks gezielt verändert werden, da die einzelnen Rack-Anwendungen entscheiden, ob der nächste Filter (die nächste registrierte Rack-Middleware) oder eine vorzeitige Anwort an den Server geschickt werden soll.
-Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von Rack selbst als Rack-Anwendung eingebunden.
-Eine detaillierte Beschreibung von Rack und der Einrichtung eines komplexen Filtersystems\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} in einer Rails-Anwendung liefern \cite{rack} und \cite{railsguiderack}.
+Darüber hinaus ist es  möglich, einzelne Rack-Anwendungen hintereinander zu schalten und so ein Filtersystem für ankommende Anfragen und ausgehende Antworten vor dem eigentlichen Webframework zu realisieren.
+Diese Anwendungen werden Rack-Middlewares genannt und können in einer Rails-Anwendung in der Startkonfiguration des Frameworks eingebunden werden (Abb. \ref{middlewarestack}). So kann das Ein- und Ausgabeverhalten des Railsframeworks gezielt verändert werden, da die einzelnen Rack-Anwendungen entscheiden, ob der nächste Filter (die nächste registrierte Rack-Middleware) oder eine vorzeitige Anwort an den Server geschickt werden soll.
 
 \lstinputlisting[label=middlewarestack,language=Ruby, caption=Registrierung verschiedener Middlewares in einer Rails 3 Anwendung]{code/middleware.rb}
+Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von Rack selbst als Rack-Anwendung eingebunden (Abb. \ref{rackmiddlewares}).
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=0.3]{images/rack/middlewares.png}
+\caption{Möglichkeiten der unterschiedlichen Rückgabewerte durch Rack Middlewares und Rails}
+\label{rackmiddlewares}
+\end{center}
+\end{figure}
+Eine detaillierte Beschreibung von Rack und der Einrichtung eines komplexen Filtersystems\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} in einer Rails-Anwendung liefern \cite{rack} und \cite{railsguiderack}.
 
 \subsection{Generatoren}
 \label{sec:railsgeneratoren}
@@ -230,13 +237,14 @@ rails g scaffold project name:string description:text
 
 \lstinputlisting[label=scaffold,language=Ruby, caption=Auflistung der erstellten Dateien des Scaffold-Generators]{code/scaffold.txt}
 
-
 \section{Web Content Management und Webpublishing}
 \label{sec:webpublishing}
-Der in der einschlägigen Literatur bereits mehrfach thematisierte Anstieg von Content\footnote{Der Begriff des Content bezeichnet ...} innerhalb der einzelnen Unternehmen erfordert ein entsprechend zielgerichtetes Management. Die Verwaltung von Content auf internetbasierten Web-Sites und Portalen hat dabei zur Herausbildung des Web Content Managements geführt.
+Der in der einschlägigen Literatur bereits mehrfach thematisierte Anstieg von Content\footnote{Der Begriff des Content kann mit dem deutschen Wort Inhalt übersetzt werden und bezeichnet im Allgemeinen Informationen ...} erfordert innerhalb der einzelnen Unternehmen ein entsprechend zielgerichtetes Management. Berechtenbreiter definiert den Begriff des Content Management mit folgenden Worten:
+\begin{quote}
+Content Management beschreibt die Planung, Verwaltung, Steuerung und Koordination aller Aktivitäten, die auf den Content und dessen Präsentation in Unternehmen abstellen \cite{Berchtenbreiter}.
+\end{quote}
 
-
-TODO Übertragung in Latex
+Im Bereich der internet-basierten Web-Sites und Portale hat dies zur Herausbildung des Web Content Managements geführt \citep[][Seite 3]{ecm}. Die dort verwendeten Lösungen
 
 
 \newpage
@@ -263,14 +271,14 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 \end{center}
 \end{figure}
 
-
 Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann.
 Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann. Dieser orientiert sich dabei an den Prozessen des Content Managements und den bereits zuvor in Kapitel \ref{sec:webpublishing} beschriebenen Grundgedanken des Webpublishing.
 \newline
 \newline
-Die von Ritter formulierten Kriterien werden in den Kapiteln 5.3.1 bis 5.3.5 nochmals aufgeführt und bilden die Grundlage für die Bewertung der Leistungsfähigkeit der ausgewählten Ruby on Rails Content Management Systeme.
+Die von Ritter formulierten Kriterien werden in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} nochmals aufgeführt und bilden die Grundlage für die Bewertung der Leistungsfähigkeit der ausgewählten Ruby on Rails Content Management Systeme.
 
 \subsection{Erstellung}
+\label{sec:erstellung}
 \begin{itemize}
 \item
 Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können
@@ -370,7 +378,7 @@ Barrierefreiheit bei den publizierten Seiten soll unterstützt werden
 %############## end publikation
 
 \subsection{Terminierung und Archivierung}
-
+\label{sec:archi}
 \begin{itemize}
 \item
 Inhalte sollen archiviert werden können

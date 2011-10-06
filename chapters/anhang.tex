@@ -50,6 +50,7 @@ Geego CMS & \href{http://gitorious.org/geego-cms\#more}{http://gitorious.org/gee
 % Begin Rails 3
 \begin{table}
 \center
+\addtocounter{footnote}{1}
 \begin{tabular}[]{|p{3cm}|p{8cm}|p{4cm}|}
 \hline
 \multicolumn{3}{|p{15cm}|}{\textbf{Open Source Web Content Management Systeme mit Rails 3.x Unterstützung}}\\
@@ -70,11 +71,10 @@ typo (Blogging) & \href{http://fdv.github.com/typo/}{http://fdv.github.com/typo/
 \hline
 Surtout CMS & \href{http://surtoutcms.com/}{http://surtoutcms.com/} & noch nicht veröffentlicht \\
 \hline
-Nesta CMS\footnotemark[1] & \href{https://github.com/gma/nesta}{https://github.com/gma/nesta} & ja  \\
+Nesta CMS & \href{https://github.com/gma/nesta}{https://github.com/gma/nesta} & ja  \\
 \hline
 % End Rails 3
 \end{tabular}
-\footnotetext[1]{Nesta basiert auf dem Ruby Webframework Sinatra und kann in Rails 3 als Rack-Middleware integriert werden.}
 \end{table}
 
 % begin closed source
@@ -102,8 +102,120 @@ Blocks & \href{http://www.blocksglobal.com/}{http://www.blocksglobal.com/} & Ja 
 \lstinputlisting[label=crudify, nolol=true, title=Implementierung der Crudify-Methode in Refinery CMS 1.0.8,language=Ruby]{code/crudify_method.rb}
 
 \section{Ext-Direct Spezifikation für Ext Js 3.0}
-
+\label{extspec}
 \includepdf{pdf/extdirect.pdf}
+
+\section{Nutzung von Extr in einer Rails 3.1-Anwendung}
+
+
+Im folgenden Abschnitt wird die Installation und Nutzung des erstellten Plugins Extr in einer neu erstellten Rails 3-Anwendung demonstriert. Das erstellte Paket ist noch in der Entwicklungsphase und konnte nicht vollständig auf seine Sicherheit überprüft werden\footnote{Sicherheitsbedenken in den Bereichen CSRF und XSS wurden bei der Vorstellung des Paktes aufgezeigt.}. Der Quellcode der Anwendung kann unter folgender Adresse heruntergeladen werden:
+
+Extr: \href{https://github.com/skeller1/extr}{https://github.com/skeller1/extr}
+
+Für die folgenden Beschreibungen wird eine funktionsbereite Rails 3.1-Installation vorausgesetzt.
+
+\begin{enumerate}
+\item
+Erstellung einer neuen Rails 3-Anwendung \emph{directtest}
+\begin{lstlisting}[frame=single, numbers=none]
+rails new directtest
+\end{lstlisting}
+\item
+Aktivierung des Plugins/Gems in der Gemfile der erstellten Rails-Anwendung
+
+\begin{lstlisting}[frame=single, numbers=none]
+
+# ...
+gem "extr", :git => "git://github.com/skeller1/extr.git"
+# ...
+
+\end{lstlisting}
+
+\item
+Aktivierung des Plugins/Gems in der Gemfile der Rails-Anwendung
+
+\begin{lstlisting}[frame=single, title= \emph{Gemfile}, numbers=none]
+
+# ...
+gem "extr", :git => "git://github.com/skeller1/extr.git"
+# ...
+
+\end{lstlisting}
+
+\item
+Erstellung einer Rails 3 Standard-Ressource Projekt und Erzeugung der notwendigen Datenbanktabelle.
+
+\begin{lstlisting}[frame=single, numbers=none]
+rails g scaffold project name:string description:text
+rake db:migrate
+\end{lstlisting}
+
+\item
+Einbinden der notwendigen Ext-Direct-Bibliotheken mit Hilfe der vom Plugin zur Verfügung gestellten Helfermethoden (View Helpers). Der Namensraum des Ext-Direct-Provider ist \emph{Rails}.
+
+\begin{lstlisting}[language=xml,frame=single,title=\emph{app/views/layouts/application.html.erb}, numbers=none]
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extr</title>
+  <%= stylesheet_link_tag "extr/application" %>
+  <%= javascript_include_tag "extr/application" %>
+  <%= csrf_meta_tags %>
+  <%= ext_base_tag %>
+  <%= ext %>
+  <%= ext_direct_provider "Rails" %>
+</head>
+<body>
+    <%= yield %>
+</body>
+</html>
+\end{lstlisting}
+
+\item
+Registrierung der Ext-Direct-fähigen Controller-Methoden (Actions) im Projekte-Controller (projects controller). Die erstellten Methoden sind nur als Beispiel zu verstehen und können entsprechend angepasst werden.
+
+\begin{lstlisting}[language=ruby,frame=single,title=\emph{app/controllers/projects\_controller.rb}, numbers=none]
+class ProjectsController < ApplicationController
+
+  # activate extr for this controller
+  include Extr::DirectController
+
+
+  #disable Rails 3 authenticity_token for demonstration, not recom. in production
+  skip_before_filter :verify_authenticity_token
+
+
+  #register 2 ext direct controller action with different, optional controller name (MyDirectController)
+  direct "MyDirectController",
+    :getChildProject => 1,
+    :someOtherMethod => 2
+
+
+  def getChildProject
+    # render a random project name as json response
+    render :json => {:name => "Project#{Random.rand(11)}"}.to_json
+  end
+
+\end{lstlisting}
+
+\item
+Im Index-HTML-View der Projekt-Ressource (http://localhost:3000/projects) kann nun durch einen Javascript-Aufruf eine Anfrage an die registrierten Ext-Direct-Controller-Methoden gesendet werden. Abbildung \ref{extrreqeust} zeigt das Ergebnis eines mit Hilfe des Mozilla Firefox Plugins Firebug temporär ausgeführten JavaScript-Codes.
+Als Javascript-Callback wird der Name des Projektes zurückgegeben (\emph{Project9}).
+\begin{lstlisting}[language=ruby,frame=single,title=\emph{Javascript zum Aufruf des Projekt-Controllers in der Rails-Anwendung}]
+Rails.MyDirectController.getChildProject("param",function(r,e){
+ alert(r.name);
+});
+
+\end{lstlisting}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.3]{images/anhang/extrbrowserrequest.png}
+\caption{Mit Hilfe von Firebug formulierte Javascript-Ext-Direct-Anfrage mit ausgegebener Antwort der Rails-Anwendung}
+\label{extrreqeust}
+\end{center}
+\end{figure}
+\end{enumerate}
 
 \section{Java Content Repository Spezifikation}
 %\includepdf{pdf/jcr-spec.pdf}

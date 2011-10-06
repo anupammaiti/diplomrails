@@ -52,7 +52,7 @@ create  vendor/engines/projects/spec/models/project_spec.rb
 \end{lstlisting}
 
 
-Die dabei erstellten Dateien lassen sich in folgende Funktionsbereiche zusammenfassen:
+Die erzeugten Dateien lassen sich in folgende Funktionsbereiche zusammenfassen:
 
 \begin{description}
 \item[Zeile 1-2]
@@ -85,16 +85,17 @@ benötigt so z.B. die Datenbanktabelle Projekt mit den Tabellenfeldern Name und 
 \item
 Die für die Inhaltselemente benötigten Datenbankschemas müssen in Form von in Rails üblichen Migrationen verwaltet werden. Dies erfordert einen entsprechenden Mehraufwand bei der Pflege der Erweiterungen.
 \item
+Ein Import und Export von Inhaltselementen in das WCMS ist nur möglich, wenn die notwendigen Datenbanktabellen zuvor erzeugt wurden.
+\item
 Inhaltselemente müssen für ihre Erreichbarkeit im Frontend und Backend des WCMS im Routing der Rails-Anwendung registriert werden. Bei der Nutzung vieler Erweiterungen entstehen so zahlreiche zusätzliche Routingeinträge.
 \item
-Durch die Installation/Verwendung \emph{aufgeblähter} Erweiterungen wird die Gesamtgröße der Rails-Anwendung unnötig vergrößert.
+Durch die Installation/Verwendung der umfassenden Erweiterungen wird die Gesamtgröße der Rails-Anwendung unnötig vergrößert.
 \item
 Durch das Laden zusätzlicher Rails-Controller und Models benötigt die Rails-Anwendung zusätzlichen Arbeitsspeicher und weist einen verlängerten Boot-Prozess auf.
 \end{enumerate}
 
 
-Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelnen Erweiterungs-Controller innerhalb von Refinery CMS ersichtlich. Dort wird mit Hilfe der im Controller verfügbaren Klassenmethode \emph{crudify} das gesamte Grundgerüst des Controllers dynamisch erzeugt\footnote{Die Methode \emph{crudify} erzeugt mit Hilfe von Ruby-Metaprogrammierung die gesamte Logik des Controllers. Alle Aktionen, die der Controller verwaltet, werden so erst zur Laufzeit der Rails-Anwendung generiert.}. Die Methode kann dabei verschiedene Parameter aufnehmen, an Hand deren die Ausgabe gesteuert werden kann. Der Controller kann damit als eine leere Klassen-Hülle angesehen werden, die redundant im System verwendet wird.
-
+Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelnen Erweiterungs-Controller innerhalb von Refinery CMS ersichtlich. Dort wird mit Hilfe der im Controller verfügbaren Klassenmethode \emph{crudify} das gesamte Grundgerüst des Controllers dynamisch erzeugt\footnote{Die Methode \emph{crudify} erstellt mit Hilfe von Ruby-Metaprogrammierung die gesamte Logik des Controllers. Alle Aktionen, die der Controller verwaltet, werden so erst zur Laufzeit der Rails-Anwendung generiert.}. Die Methode kann dabei verschiedene Parameter aufnehmen, an Hand deren die Ausgabe gesteuert werden kann. Alle neu erzeugten Inhaltselemente sind in ihrer Grundstruktur als Rest-basierte Ressourcen anzusehen, die mit Hilfe eines angepassten Generators in das jeweilige Backend des WCMS eingebunden werden.
 
 \lstinputlisting[language=Ruby, caption=Projects-Controller mit verwendeter crudify-Methode und optionalen Parametern]{code/crudify_controller.rb}
 
@@ -102,5 +103,5 @@ Der Verstoss gegen das Dry-Prinzip wird vor allem bei der Umsetzung der einzelne
 \section{Nutzeroberfläche}
 
 
-Die in den vorgestellten Content Management Systemen umgesetzten Nutzeroberflächen sind zum Großteil durch die Kombination individueller HTML, CSS und JavaScript-Dateien zusammengestellt. Diese werden dabei 
+Die in den vorgestellten Content Management Systemen umgesetzten Nutzeroberflächen sind zum Großteil durch die Kombination individueller HTML, CSS und JavaScript-Dateien zusammengestellt. Diese werden dabei
 

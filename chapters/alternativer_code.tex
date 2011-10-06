@@ -2,7 +2,7 @@
 In diesem Kapitel werden Lösungsvorschläge zur Beseitigung der in Kapitel 4 beschriebenen Probleme formuliert.
 \section{Implementierung eines Ruby on Rails Content Repository}
 
-Die in den analysierten WCMS umgesetzten Implementierungen der Erweiterungsentwicklung verstoßen zum Teil gegen das in Rails gebotene Prinzip des DRY (vgl. Kapitel \ref{dryverstoss}). Eine konzeptionelle Änderung innerhalb dieses Systembereiches hätte somit Auswirkungen auf die gesamte Infrastruktur der Inhaltsspeicherung. Dennoch soll hier der mögliche Lösungsansatz eines Content Repository konzeptionell vorgestellt werden.
+Die in den analysierten WCMS umgesetzten Implementierungen der Erweiterungsentwicklung verstoßen zum Teil gegen das in Rails gebotene Prinzip des DRY (vgl. Kapitel \ref{dryverstoss}). Eine konzeptionelle Änderung innerhalb dieses Systembereiches hätte somit Auswirkungen auf die gesamte WCMS-Infrastruktur der Inhaltsspeicherung. Dennoch soll hier der mögliche Lösungsansatz eines Content Repository konzeptionell vorgestellt werden.
 
 
 \subsection{Idee und Konzept}
@@ -26,15 +26,15 @@ Versionierung
 Volltextsuche
 \end{itemize}
 
-Der Zugriff auf das Content Repository wird dabei durch eine zusätzliche API genau definiert und ermöglicht so einen einheitlichen Zugriff auf die Inhalte einer Anwendung. Andere Entwickler können so auf das Content Repository und seine Zusatzfunktionen kontrolliert zugreifen, ohne etwas über die Infrastruktur (Implementierung) des Content Repository zu wissen.
+Der Zugriff auf das Content Repository wird dabei durch eine API genau definiert und garantiert somit die Nutzung der zusäzlichen Funktionalitäten. Andere Entwickler können auf das Content Repository und seine Zusatzfunktionen kontrolliert zugreifen, ohne etwas über die Infrastruktur des Content Repository und seine Implementierungsdetails zu wissen.
 
-Im Bereich der Java Enterprise Content Management Systeme werden Content Repositories bereits erfolgreich eingesetzt. Namhafte Beispiele sind dabei das kommerzielle ECMS CQ5 und CRX\footnote{Nach der Übernahme von Day Inc. durch Adobe im Sommer 2010 wird das angebotene Content Management System CRX als Adobe Projekt weitervertrieben.} von Adobe und das u.a. als Open Source verfügbare Alfresco ECMS\footnote{Informationen zu Alfresco und dem Content Repository: \href{http://www.alfresco.com/products/platform/}{http://www.alfresco.com/products/platform/}}.
-Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Association mit einer Implementierung innerhalb des neuen Web Content Management Systems Typo3 5.0\footnote{Das TYPO3CR ist als eigenständiges Paket im FLOW3-Framework verfügbar und ein zentraler Bestandteil von Typo3 5.0}.
+Im Bereich der Java Enterprise Content Management Systeme werden Content Repositories bereits erfolgreich eingesetzt. Namhafte Beispiele sind dabei das kommerzielle ECMS CQ5 und CRX\footnote{Nach der Übernahme von Day Inc. durch Adobe im Sommer 2010 wird das angebotene Content Management System CRX als Adobe Projekt weitervertrieben.} von Adobe und das u.a. als Open Source Software verfügbare Alfresco ECMS\footnote{Informationen zu Alfresco und dem Content Repository: \href{http://www.alfresco.com/products/platform/}{http://www.alfresco.com/products/platform/}}.
+Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Association mit einer Implementierung innerhalb des neuen Web Content Management Systems Typo3 5.0\footnote{Das TYPO3CR ist als eigenständiges Paket im PHP-FLOW3-Framework verfügbar und ein zentraler Bestandteil von Typo3 5.0}.
 
 
 \subsection{JCR-Das Java Content Repository}
 
-Unter der Leitung von David Nuescheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jack Rabbit\footnote{Homepage: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
+Unter der Leitung von David Nüscheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jack Rabbit\footnote{Projektseite: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
 
 Zur Speicherung der Inhalte definiert das Java Content Repository ein einfaches hierarchisches Datemmodell, das folgende Objektstruktur aufweist:
 
@@ -45,7 +45,7 @@ Zur Speicherung der Inhalte definiert das Java Content Repository ein einfaches 
 \caption{JCR-Datenmodell}
 \label{jcrdatenmodell}
 \end{center}
-\end{figure} 
+\end{figure}
 
 
 
@@ -70,7 +70,7 @@ Durch die Verfügbarkeit eines Ruby-Interpreter in Java (jruby) ergeben sich fü
 
 \begin{itemize}
 \item
-Verwendung der Open Source Java Implementierung Jack Rabbit und Spezifkation einer API zur Nutzung dieser innerhalb von Rails.
+Verwendung der Open Source Java Implementierung Jack Rabbit und Spezifkation einer API zur Nutzung dieser innerhalb von Rails. Für die weitere Arbeit mit Rails ergibt sich daher die Abhänngigkeit zu jruby und den unterstützten Erweiterungen und Funktionalitäten. Erste Implementierungsversuche und Demonstrationsanwendungen wurden bereits erstellt\footnote{Auf Github.com wurde eine Rails 2 - Anwendung mit Verwendung der . Die Rails-Anwendung ist unter folgender Internetseite erreichbar: \href{https://github.com/wpc/jcr-rails-demo}{https://github.com/wpc/jcr-rails-demo}}.
 \item
 Erstellung einer eigenständigen, komplett auf Ruby und dem Rails Framework basierenden Referenzimplementierung und API nach dem Vorbild des Java Content Repository
 \end{itemize}
@@ -123,8 +123,7 @@ Das in der Demoversion umgesetzte Nutzer-Interface repräsentiert nur einen Teil
 \item
 Login-Seite zur Anmeldung im Backend von Typo3 5.0
 \item
-Content-Modul im Backend mit integrierter Vorschau der aktuell ausgewählten Seite und beschränkten Möglichkeiten der
-Inhaltsbearbeitung mit Hilfe des für Typo3 5.0 geplanten Aloha-Editors
+Content-Modul im Backend mit integrierter Vorschau der aktuell ausgewählten Seite und beschränkten Möglichkeiten der Inhaltsbearbeitung mit Hilfe des für Typo3 5.0 geplanten Aloha-Editors
 \item
 Management-Modul zur Verwaltung der im System angelegten Seiten in Form einer Baumstruktur
 \item
@@ -132,6 +131,59 @@ Dashboard des angemeldeten Nutzers mit Auflistung der editierten Inhalte
 \end{itemize}
 
 
-\subsection{Ext Js mit Ext Direct}
-Mit Hilfe des Ext Js Frameworks können einzelne Komponenten zu einer großen Oberfläche zusammengebaut werden. Die Befüllung der Oberfläche mit Daten vom Server erfolgt dabei asynchron in Form sogenannter Ajax-Anfragen (Ajax Requests).
+\subsection{Ext JS und Ext Direct}
+
+Das Typo3-User-Interface setzt bei der Kommunikation zwischen den einzelnen Interface-Komponenten und dem Server auf die Nutzung von Ext Direct. Ext Direct beschreibt dabei einen in Ext JS definierten Sprachstandard, mit dessen Hilfe serverseitige Funktion clientseitig per Javascript aufgerufen (gesteuert) werden können.
+Für ein besseres Verständnis wird in Abbildung \ref{extinvoke} eine im jQuery Framework formulierte Ajax-Anfrage und der entsprechende Ext Direct Ausdruck gegenübergestellt.
+
+\begin{lstlisting}[label=extinvoke, caption=Ajax-Anfrage an einen Server im jQuery-Framework]
+
+// jQuery Ajax Request
+$.ajax({
+  url: '/ajax?ajaxID=MyController_myMethod&amp;parameter1=someValue',
+   success: function( data ) {
+    alert(data);
+    }
+  }
+});
+
+// Ext Direct Aufruf
+Namespace.MyController.myMethod("some_Value", function(data, e) {
+  	alert(data);
+});
+
+\end{lstlisting}
+
+Beide Javascript-Beispiele resultieren in einer asynchronen Ajax-Anfrage, die die entsprechende Methode serverseitig aufruft. Für Ext Direct ergeben sich jedoch folgende zusätzliche Vorteile:
+
+\begin{enumerate}
+\item
+Keine wiederholte Angabe einer URL zum Aufruf der serverseitigen Funktionen.
+\item
+Vereinfachung des Javascript-Quellcodes, da im Vergleich zu herkömmlichen asynchronen Anfragen weniger Quellcode (Javascript) geschrieben werden muss
+\item
+Vereinfachung der cleintseitigen Javascript-Programmierung, da der Aufruf von client- und serverseitigen Methoden namentlich übereinstimmt.
+\end{enumerate}
+
+Eine umfassende Beschreibung von Ext Direct ist dem Anhang der Arbeit beigefügt (Anhang \ref{extspec}). Dort werden alle Konzepte und notwendigen Komponenten für eine serverseitige Unterstützung von Ext Direct erläutert.
+
+
+Um Ext Direct auch innerhalb einer Rails-Anwendung nutzbar zu machen, wurde im Rahmen dieser Diplomarbeit die Rails 3.1 kompatible Erweiterung \emph{extr} entwickelt\footnote{Für Ruby und das Rails-Framework existieren bereits Implementierungen, die jedoch nicht vollständig zu Rails 3 und 3.1 kompatibel sind. Aus diesem Grund wurde die Umsetzung einer eigenen Erweiterung ins Auge gefasst.}.
+Der für Ext Direct notwendige Router (Anhang \ref{extspec}) wurde mit Hilfe einer Rack Middleware realisiert, die alle Ext JS-Anfragen an die entsprechenden Servermethoden (Controller-Methoden) weiterleitet. Schematisch ergibt sich somit folgender Anfrageablauf innerhalb der Rails-Anwendung:
+
+\begin{figure}[!ht]
+\begin{center}
+\label{fig.directrouter}
+\includegraphics[scale=0.3]{images/rack/extdirect.png}
+\caption{Schema des Ext Direct Routing mit \emph{extr}}
+\end{center}
+\end{figure}
+
+Die Installation und Nutzung der Erweiterung \emph{extr} wird im Anhang dieser Arbeit demonstriert. Auf Grund des frühen Entwicklungsstatus unterstützt die Erweiterung serverseitig noch nicht alle der geforderten Ext-Direct-Funktionalitäten. Im folgenden sollen bestehende Beschränkungen und Probleme erläutert werden:
+\begin{itemize}
+\item
+Ext Direct-Anfragen mit Parametern aus Formularen und Datei-Uploads werden von der Rails Middleware noch nicht vollständig an die entsprechende Zielmethode (controller action) weitergeleitet.
+\item
+kein Schutz vor CSRF/XSRF-Angriffen\footnote{\href{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}}
+\end{itemize}
 
