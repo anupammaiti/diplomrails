@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  6 OCT 2011 11:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  6 OCT 2011 21:43
 entering extended mode
  %&-line parsing enabled.
 **railscms.tex
@@ -1092,12 +1092,6 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [13 <./images/analyse/mvc.png (PNG copy)>]
-Underfull \hbox (badness 2103) in paragraph at lines 110--110
-[] [][]\T1/lmr/m/n/12 Standard-Routing für ei-ne Res-sour-ce Pro-jekt in-ner-ha
-lb des Rails-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 114--114
 []|\T1/lmr/m/n/12 HTTP-
  []
@@ -1121,13 +1115,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 [15] <images/rack/rack.pdf, id=526, 569.12625pt x 284.06125pt>
 File: images/rack/rack.pdf Graphic file (type pdf)
 
-<use images/rack/rack.pdf>
-Underfull \hbox (badness 2564) in paragraph at lines 161--161
-[] [][]\T1/lmr/m/n/12 Rack als Ver-mitt-ler (Midd-le-wa-re) zwi-schen Ser-ver u
-nd Ruby-
- []
-
-(./code/rack.rb
+<use images/rack/rack.pdf> (./code/rack.rb
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -1137,20 +1125,14 @@ Overfull \hbox (5.52234pt too wide) in paragraph at lines 186--188
 Anwendung \T1/lmr/m/it/12 My-RackApp\T1/lmr/m/n/12 . 
  []
 
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[17] <images/rack/outputrack.png, id=569, 662.475pt x 313.17pt>
+<images/rack/outputrack.png, id=553, 662.475pt x 313.17pt>
 File: images/rack/outputrack.png Graphic file (type png)
 
 <use images/rack/outputrack.png>
-Overfull \hbox (33.71251pt too wide) in paragraph at lines 206--208
-[]\T1/lmr/m/n/12 Ein Fra-me-work, das Rack un-ter-stützt, kann so-fort von al-l
-en an-de-ren rack-unterstützenden
- []
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
+[17]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -1159,16 +1141,16 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 File: images/rack/middlewares.png Graphic file (type png)
 
 <use images/rack/middlewares.png>
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[19 <./images/rack/middlewares.png>]
-Overfull \hbox (17.7021pt too wide) in paragraph at lines 232--233
+Overfull \hbox (17.7021pt too wide) in paragraph at lines 230--231
 \T1/lmr/m/n/12 au-to-ma-ti-sche Er-zeu-gung von funk-ti-ons-fä-hi-gem Quell-co-
 de. Der fol-gen-de Scaffold-Generator[][][][][]
  []
 
-(./code/scaffold.txt)
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[19 <./images/rack/middlewares.png>] (./code/scaffold.txt)
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -1180,7 +1162,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 File: images/analyse/wcmfeaturematrix.png Graphic file (type png)
 
 <use images/analyse/wcmfeaturematrix.png>
-Underfull \hbox (badness 10000) in paragraph at lines 274--279
+Underfull \hbox (badness 10000) in paragraph at lines 272--277
 
  []
 
@@ -1189,7 +1171,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [22 <./images/analyse/wcmfeaturematrix.png (PNG copy)>]
-Overfull \hbox (19.4684pt too wide) in paragraph at lines 306--308
+Overfull \hbox (19.4684pt too wide) in paragraph at lines 304--306
 []\T1/lmr/m/n/12 Integration von In-hal-ten an-de-rer Web-sei-ten, Mul-ti-me-di
 a, Ap-pli-ka-tio-nen, E-Commerce-
  []
@@ -1225,7 +1207,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [27]
-<images/analyse/rubygems/railsonrubygems.png, id=673, 1267.73625pt x 884.30376p
+<images/analyse/rubygems/railsonrubygems.png, id=675, 1267.73625pt x 884.30376p
 t>
 File: images/analyse/rubygems/railsonrubygems.png Graphic file (type png)
  <use images/analyse/rubygems/railsonrubygems.png>
@@ -1237,7 +1219,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [29 <./images/analyse/rubygems/railsonrubygems.png (PNG copy)>]
-<images/analyse/github/github.png, id=686, 1266.7325pt x 879.285pt>
+<images/analyse/github/github.png, id=688, 1266.7325pt x 879.285pt>
 File: images/analyse/github/github.png Graphic file (type png)
 
 <use images/analyse/github/github.png>
@@ -1253,7 +1235,7 @@ Overfull \hbox (11.43683pt too wide) in paragraph at lines 78--113
 [][] 
  []
 
-<images/analyse/alchemy/inhalte.png, id=704, 1281.78876pt x 861.2175pt>
+<images/analyse/alchemy/inhalte.png, id=706, 1281.78876pt x 861.2175pt>
 File: images/analyse/alchemy/inhalte.png Graphic file (type png)
 
 <use images/analyse/alchemy/inhalte.png>
@@ -1278,7 +1260,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--142
  []
 
 
-<images/analyse/alchemy/dialoginhaltselement.png, id=729, 510.90875pt x 401.5pt
+<images/analyse/alchemy/dialoginhaltselement.png, id=731, 510.90875pt x 401.5pt
 >
 File: images/analyse/alchemy/dialoginhaltselement.png Graphic file (type png)
  <use images/analyse/alchemy/dialoginhaltselement.png>
@@ -1304,7 +1286,7 @@ Overfull \hbox (17.70381pt too wide) in paragraph at lines 172--214
 tem der US-amerikanischen
  []
 
-<images/analyse/browser/backend.png, id=751, 1280.785pt x 812.03375pt>
+<images/analyse/browser/backend.png, id=753, 1280.785pt x 812.03375pt>
 File: images/analyse/browser/backend.png Graphic file (type png)
 
 <use images/analyse/browser/backend.png>
@@ -1316,7 +1298,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [37 <./images/analyse/browser/backend.png (PNG copy)>]
-<images/analyse/browser/frontendangemeldet.png, id=765, 1269.74374pt x 849.1725
+<images/analyse/browser/frontendangemeldet.png, id=767, 1269.74374pt x 849.1725
 pt>
 File: images/analyse/browser/frontendangemeldet.png Graphic file (type png)
  <use images/analyse/browser/frontendangemeldet.png>
@@ -1324,7 +1306,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [38 <./images/analyse/browser/frontendangemeldet.png (PNG copy)>]
-<images/analyse/browser/tagportlet.png, id=774, 1141.26375pt x 640.3925pt>
+<images/analyse/browser/tagportlet.png, id=776, 1141.26375pt x 640.3925pt>
 File: images/analyse/browser/tagportlet.png Graphic file (type png)
 
 <use images/analyse/browser/tagportlet.png>
@@ -1349,7 +1331,7 @@ Overfull \hbox (7.02338pt too wide) in paragraph at lines 277--278
 -WYSIWYG-Editors FCKE-
  []
 
-<images/analyse/browser/editor.png, id=795, 1267.73625pt x 905.3825pt>
+<images/analyse/browser/editor.png, id=797, 1267.73625pt x 905.3825pt>
 File: images/analyse/browser/editor.png Graphic file (type png)
 
 <use images/analyse/browser/editor.png>
@@ -1366,7 +1348,7 @@ Overfull \hbox (18.86186pt too wide) in paragraph at lines 296--330
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<images/analyse/locomotive/backendlocomotive.png, id=813, 1261.71375pt x 835.12
+<images/analyse/locomotive/backendlocomotive.png, id=815, 1261.71375pt x 835.12
 pt>
 File: images/analyse/locomotive/backendlocomotive.png Graphic file (type png)
  <use images/analyse/locomotive/backendlocomotive.png>
@@ -1378,7 +1360,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [41]
-<images/analyse/locomotive/customcontent.png, id=824, 1253.68375pt x 857.2025pt
+<images/analyse/locomotive/customcontent.png, id=826, 1253.68375pt x 857.2025pt
 >
 File: images/analyse/locomotive/customcontent.png Graphic file (type png)
  <use images/analyse/locomotive/customcontent.png>
@@ -1404,7 +1386,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [44 <./images/analyse/locomotive/customcontent.png (PNG copy)>]
-<images/analyse/locomotive/liquid.png, id=846, 1042.89626pt x 818.05624pt>
+<images/analyse/locomotive/liquid.png, id=848, 1042.89626pt x 818.05624pt>
 File: images/analyse/locomotive/liquid.png Graphic file (type png)
 
 <use images/analyse/locomotive/liquid.png>
@@ -1425,7 +1407,7 @@ Overfull \hbox (11.43683pt too wide) in paragraph at lines 400--435
 [][] 
  []
 
-<images/analyse/refinery/backendrefinery.png, id=869, 1284.8pt x 856.19875pt>
+<images/analyse/refinery/backendrefinery.png, id=871, 1284.8pt x 856.19875pt>
 File: images/analyse/refinery/backendrefinery.png Graphic file (type png)
 
 <use images/analyse/refinery/backendrefinery.png>
@@ -1437,7 +1419,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [48 <./images/analyse/refinery/backendrefinery.png (PNG copy)>]
-<images/analyse/refinery/contentsections.png, id=882, 1284.8pt x 911.405pt>
+<images/analyse/refinery/contentsections.png, id=884, 1284.8pt x 911.405pt>
 File: images/analyse/refinery/contentsections.png Graphic file (type png)
 
 <use images/analyse/refinery/contentsections.png>
@@ -2304,7 +2286,7 @@ Overfull \hbox (4.06483pt too wide) in paragraph at lines 31--31
 y: [][]http://www.alfresco.com/products/platform/[][]| 
  []
 
-<images/repository/repository_diagramm.png, id=1102, 1080.035pt x 736.7525pt>
+<images/repository/repository_diagramm.png, id=1104, 1080.035pt x 736.7525pt>
 File: images/repository/repository_diagramm.png Graphic file (type png)
 
 <use images/repository/repository_diagramm.png>
@@ -2320,23 +2302,35 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [81 <./images/repository/repository_diagramm.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+[][][]\T1/lmr/m/n/10 Eine Rails2-Demo-Anwendung ist un-ter fol-gen-der In-ter-n
+etsei-te er-reich-bar:
+ []
 
 
-[82]
+Underfull \hbox (badness 1048) in paragraph at lines 73--73
+[][]\T1/lmr/m/n/10 https://github.com/wpc/jcr-rails-demo[][]. Sie zeigt da-bei 
+le-dig-lich das kon-zep-tio-nel-le Grund-ge-
+ []
+
+
 Overfull \hbox (5.08014pt too wide) in paragraph at lines 90--91
 []\T1/lmr/m/n/12 Ein Con-tent Re-po-si-to-ry kann als Er-wei-te-rung auch von a
 n-de-ren Rails-Anwendungen
  []
 
-<images/typo3/frontend.png, id=1134, 1284.8pt x 822.07124pt>
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[82] <images/typo3/frontend.png, id=1139, 1284.8pt x 822.07124pt>
 File: images/typo3/frontend.png Graphic file (type png)
 
 <use images/typo3/frontend.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[83] <images/typo3/backend.png, id=1143, 1284.8pt x 829.0975pt>
+[83] <images/typo3/backend.png, id=1148, 1284.8pt x 829.0975pt>
 File: images/typo3/backend.png Graphic file (type png)
 
 <use images/typo3/backend.png>
@@ -2354,7 +2348,7 @@ hen den ein-zel-nen Interface-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[85] <images/rack/extdirect.png, id=1177, 766.36313pt x 478.78876pt>
+[85] <images/rack/extdirect.png, id=1182, 766.36313pt x 478.78876pt>
 File: images/rack/extdirect.png Graphic file (type png)
 
 <use images/rack/extdirect.png>
@@ -2385,32 +2379,42 @@ Underfull \hbox (badness 3547) in paragraph at lines 11--12
  []
 
 
-Overfull \hbox (16.26035pt too wide) in paragraph at lines 6--46
+Overfull \hbox (16.26035pt too wide) in paragraph at lines 6--52
  [] 
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 58--59
+Underfull \hbox (badness 3547) in paragraph at lines 64--65
 []|\T1/lmr/bx/n/12 Aktive Wei-ter-ent-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
 []|\T1/lmr/m/n/12 Locomotive
  []
 
 
-Overfull \hbox (16.26035pt too wide) in paragraph at lines 54--78
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\T1/lmr/m/n/12 Comfortable
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|[][]\T1/lmr/m/n/12 https://github.com/twg/comfortable-
+ []
+
+
+Overfull \hbox (16.26035pt too wide) in paragraph at lines 60--89
  [] 
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 87--88
+Underfull \hbox (badness 3547) in paragraph at lines 98--99
 []|\T1/lmr/bx/n/12 Aktive Wei-ter-ent-
  []
 
 
-Overfull \hbox (16.26035pt too wide) in paragraph at lines 83--93
+Overfull \hbox (16.26035pt too wide) in paragraph at lines 94--104
  [] 
  []
 
@@ -2450,7 +2454,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[97] <pdf/extdirect.pdf, id=1576, page=1, 614.295pt x 794.97pt>
+[97] <pdf/extdirect.pdf, id=1587, page=1, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 1>
@@ -2461,7 +2465,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 <use pdf/extdirect.pdf, page 1>
 File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 1> [98 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf,
- id=1603, page=2, 614.295pt x 794.97pt>
+ id=1614, page=2, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 2>
@@ -2470,7 +2474,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 2> [99 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1609, page=3, 614.295pt x 794.97pt>
+<pdf/extdirect.pdf, id=1620, page=3, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 3>
@@ -2479,7 +2483,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 3> [100 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1615, page=4, 614.295pt x 794.97pt>
+<pdf/extdirect.pdf, id=1626, page=4, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 4>
@@ -2488,7 +2492,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 4> [101 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1621, page=5, 614.295pt x 794.97pt>
+<pdf/extdirect.pdf, id=1632, page=5, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 5>
@@ -2497,7 +2501,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 5> [102 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1627, page=6, 614.295pt x 794.97pt>
+<pdf/extdirect.pdf, id=1638, page=6, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 6>
@@ -2506,7 +2510,7 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 6> [103 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1634, page=7, 614.295pt x 794.97pt>
+<pdf/extdirect.pdf, id=1645, page=7, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 7>
@@ -2519,7 +2523,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [105]
-Overfull \hbox (4.96564pt too wide) in paragraph at lines 202--204
+Overfull \hbox (4.96564pt too wide) in paragraph at lines 213--215
 []\T1/lmr/m/n/12 Im Index-HTML-View der Projekt-Ressource (http://localhost:300
 0/projects) kann
  []
@@ -2528,7 +2532,7 @@ Overfull \hbox (4.96564pt too wide) in paragraph at lines 202--204
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[106] <images/anhang/extrbrowserrequest.png, id=1712, 1284.8pt x 880.28876pt>
+[106] <images/anhang/extrbrowserrequest.png, id=1723, 1284.8pt x 880.28876pt>
 File: images/anhang/extrbrowserrequest.png Graphic file (type png)
 
 <use images/anhang/extrbrowserrequest.png>)
@@ -2544,19 +2548,19 @@ File: t1ul9.fd 2003/03/02 font definitions for LuxiMono T1/ul9
 LaTeX Font Info:    Font shape `T1/ul9/m/n' will be
 (Font)              scaled to size 10.20007pt on input line 14.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 []\T1/lmr/m/sc/12 Günther\T1/lmr/m/n/12 , To-bi-as:  \T1/lmr/m/it/12 Theo-rie e
 i-ner neu-en Web-Architektur in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/lmr/m/it/12 Ru-by On Rails: REST in Rails\T1/lmr/m/n/12 .  [][]$\T1/ul9/m/n
 /12 http : / / t3n . de / magazin /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \T1/ul9/m/n/12 rest-[]rails-[]teil-[]1-[]theorie-[]neuen-[]web-[]architektur-[]
 ruby-[]219794/$[][]\T1/lmr/m/n/12 .
  []
@@ -2570,25 +2574,13 @@ No file railscms.ind.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[109] (./railscms.lot
-Overfull \hbox (4.91753pt too wide) in paragraph at lines 4--4
- [][] [][][]\T1/lmr/m/n/12 Standard-Routing für ei-ne Res-sour-ce Pro-jekt in-n
-er-halb des Rails-Frameworks[][] [][]  
- []
-
-)
+[109] (./railscms.lot)
 \tf@lot=\write6
 \openout6 = `railscms.lot'.
 
  [110
 
-] (./railscms.lof
-Overfull \hbox (2.6582pt too wide) in paragraph at lines 6--6
- [][] [][][]\T1/lmr/m/n/12 Rack als Ver-mitt-ler (Midd-le-wa-re) zwi-schen Ser-
-ver und Ruby-Webframeworks[][] [][]  
- []
-
-[111
+] (./railscms.lof [111
 
 ])
 \tf@lof=\write7
@@ -2628,10 +2620,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12864 strings out of 493848
- 189328 string characters out of 1152823
+ 12869 strings out of 493848
+ 189409 string characters out of 1152823
  580525 words of memory out of 3000000
- 14865 multiletter control sequences out of 15000+50000
+ 14868 multiletter control sequences out of 15000+50000
  83470 words of font info for 69 fonts, out of 3000000 for 9000
  716 hyphenation exceptions out of 8191
  45i,16n,55p,1001b,2016s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2648,9 +2640,9 @@ sr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/shar
 e/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/share/texmf/font
 s/type1/bh/luxi/ul9r8a.pfb>
-Output written on railscms.pdf (114 pages, 3622260 bytes).
+Output written on railscms.pdf (114 pages, 3624739 bytes).
 PDF statistics:
- 2039 PDF objects out of 2073 (max. 8388607)
- 829 named destinations out of 1000 (max. 500000)
+ 2050 PDF objects out of 2073 (max. 8388607)
+ 831 named destinations out of 1000 (max. 500000)
  702 words of extra memory for PDF output out of 10000 (max. 10000000)
 

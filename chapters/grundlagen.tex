@@ -107,7 +107,7 @@ Löschen der beschriebenen Ressource
 Da aktuelle Browser nur GET- und POST-Anfragen zuverlässig unterstützen, müssen entsprechende Anfragen zum Löschen und Verändern einer Ressource mit Hilfe von zusätzlichen Attributen in der Anfrage simuliert werden\footnote{Das Rails Framework fügt  innerhalb von Formularen automatisch einen versteckten Parameter \emph{\_method} in die Anfrage, die den Namen der gewünschten HTTP-Metode (DELETE oder PUT) enthält. Im Framework wird dieser Parameter ausgelesen und ein entsprechendes Routing zur geforderten Controller-Action eingeleitet}. Das folgende Beispiel stellt das von Rails definierte Standard-Routing einer als \emph{restful} angelegten Ressource Projekt dar\footnote{REST wird nicht über einen entsprechend formulierten Standard definiert. Vielmehr kann es als Programmierparadigma innerhalb von Web-Anwendungen verstanden werden, die eine Ansammlung von Best-Practices darstellen \cite{restful}.}.
 
 \begin{table}[!h]
-\caption{Standard-Routing für eine Ressource Projekt innerhalb des Rails-Frameworks}
+\caption{Rails Routing der Rest-Ressource Projekt}
 \center
 \begin{tabular}[!ht]{|p{2cm}|p{3cm}|p{3cm}|p{6cm}|}
 \hline
@@ -158,7 +158,7 @@ Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.6]{images/rack/rack.pdf}
-\caption{Rack als Vermittler (Middleware) zwischen Server und Ruby-Webframeworks}
+\caption{Rack als Vermittler zwischen Server und Ruby-Webframeworks}
 \label{rackschema}
 \end{center}
 \end{figure}
@@ -201,13 +201,11 @@ Durch die Nutzung von Rack ergeben sich im Bereich der Ruby Webframeworks folgen
 
 \begin{itemize}
 \item
+Vereinfachung der Webframework-Entwicklung: Ein Framework, das Rack unterstützt, kann sofort von allen anderen rack-unterstützenden Webservern verwendet werden.
+\item
+Vereinfachung der Serverentwicklung: Ein rack-unterstützender Server kann sofort mit allen rack-basierten Webframeworks eingesetzt werden.
+\item
 Keine Codeduplizierung durch wiederholte Entwicklung von Server-Adaptern innerhalb der verschiedenen Ruby Webframeworks
-\item
-Ein Framework, das Rack unterstützt, kann sofort von allen anderen rack-unterstützenden Webservern verwendet werden
-\item
-Ein rack-unterstützender Server kann sofort mit allen rack-basierten Webframeworks eingesetzt werden.
-\item
-Vereinfachung der Webframework-Entwicklung
 \item
 Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (CGI, FastCGI, SCGI, WEBrick, Mongrel, Litespeed u.a.)
 \end{itemize}
@@ -272,7 +270,7 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 \end{figure}
 
 Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann.
-Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann. Dieser orientiert sich dabei an den Prozessen des Content Managements und den bereits zuvor in Kapitel \ref{sec:webpublishing} beschriebenen Grundgedanken des Webpublishing.
+Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann. Dieser orientiert sich dabei an den Prozessen des Content Managements und den bereits zuvor in Kapitel \ref{sec:webpublishing} beschriebenen Grundgedanken des Webpublishing.
 \newline
 \newline
 Die von Ritter formulierten Kriterien werden in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} nochmals aufgeführt und bilden die Grundlage für die Bewertung der Leistungsfähigkeit der ausgewählten Ruby on Rails Content Management Systeme.

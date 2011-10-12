@@ -1,7 +1,7 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Standard-Routing f\IeC {\"u}r eine Ressource Projekt innerhalb des Rails-Frameworks}}{15}{table.2.1}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Rails Routing der Rest-Ressource Projekt}}{15}{table.2.1}
 \contentsline {table}{\numberline {2.2}{\ignorespaces Vergleich zwischen Rest-konformen und klassischen Rails-URL's}}{15}{table.2.2}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Steckbrief Alchemy CMS}}{32}{table.3.1}

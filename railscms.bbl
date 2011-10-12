@@ -18,20 +18,18 @@
 \textsc{Berchtenbreiter}, Ralph:
 \newblock \emph{Grundlagen von Content-Management-Systemen und Ansätze ihrer
   Bedeutung für das CRM}.
-\newblock Galileo Computing, 2004
+\newblock 2004
 
 \bibitem[BL06]{objekt}
 \textsc{Bernhard~Lahres}, Gregor~R.:
 \newblock \emph{Praxisbuch Objektorientierung – Professionelle
   Entwurfsverfahren}.
-\newblock Galileo Computing, 2006. --
-\newblock ISBN 978--3--89842--624--6
+\newblock Galileo Computing, 2006
 
 \bibitem[Fow03]{FowlerPatterns}
 \textsc{Fowler}, Martin:
 \newblock \emph{Patterns für Enterprise Application-Architekturen}.
-\newblock mitp, 2003. --
-\newblock ISBN 978--3--8266--1378--4
+\newblock mitp, 2003
 
 \bibitem[Gü07]{restful}
 \textsc{Günther}, Tobias:
@@ -45,8 +43,7 @@ uby-219794/}.
 \bibitem[HM10]{Rails2}
 \textsc{Hussein~Morsy}, Tanja~O.:
 \newblock \emph{Ruby on Rails 2}.
-\newblock Galileo Computing, 2010. --
-\newblock ISBN 978--3--89842--779--1
+\newblock Galileo Computing, 2010
 
 \bibitem[Neu07]{rack}
 \textsc{Neukirchen}, Christian:
@@ -59,8 +56,7 @@ df}.
 \bibitem[Per10]{RubyMetaprogramming2010}
 \textsc{Perrotta}, Paolo:
 \newblock \emph{Metaprogramming Ruby}.
-\newblock Pragmatic Programmers, 2010. --
-\newblock ISBN 1--934356--47--6
+\newblock Pragmatic Programmers, 2010
 
 \bibitem[Rai11a]{RailsStatement}
 \textsc{Rails}:
@@ -78,13 +74,16 @@ df}.
 \bibitem[Rig09]{ecm}
 \textsc{Riggert}, Wolfgang:
 \newblock \emph{ECM - Enterprise Content Management}.
-\newblock Viehweg+Teubner, 2009. --
-\newblock ISBN 978--3--8348--0841--7
+\newblock Viehweg+Teubner, 2009
+
+\bibitem[Rit10]{RitterSwot}
+\textsc{Ritter}, Andreas:
+\newblock \emph{SWOT-Analyse zu Content-Management-Systemen}.
+\newblock Grin Verlag, 2010
 
 \bibitem[Sch08]{EnterpriseRails}
 \textsc{Schmidt}, Maik:
 \newblock \emph{Enterprise Recipes with Ruby and Rails}.
-\newblock Pragmatic Programmers, 2008. --
-\newblock ISBN 1--934356--23--9
+\newblock Pragmatic Programmers, 2008
 
 \end{thebibliography}

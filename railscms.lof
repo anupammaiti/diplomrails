@@ -3,7 +3,7 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Nutzung verschiedener Programmiersprachen auf Servern}}{6}{figure.1.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Abl\IeC {\"a}ufe innerhalb des Rails-Frameworks}}{13}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Rack als Vermittler (Middleware) zwischen Server und Ruby-Webframeworks}}{16}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rack als Vermittler zwischen Server und Ruby-Webframeworks}}{16}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ausgabe der Rack-Anwendung MyRackApp im Browser}}{18}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\"o}glichkeiten der unterschiedlichen R\IeC {\"u}ckgabewerte durch Rack Middlewares und Rails}}{19}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Feature-Matrix f\IeC {\"u}r Content Management Systeme}}{22}{figure.2.5}

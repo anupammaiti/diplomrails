@@ -34,7 +34,7 @@ Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eine
 
 \subsection{JCR-Das Java Content Repository}
 
-Unter der Leitung von David Nüscheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jack Rabbit\footnote{Projektseite: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
+Unter der Leitung von David Nüscheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jackrabbit\footnote{Projektseite: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
 
 Zur Speicherung der Inhalte definiert das Java Content Repository ein einfaches hierarchisches Datemmodell, das folgende Objektstruktur aufweist:
 
@@ -58,7 +58,7 @@ Ein Item kann entweder ein Node (Knoten) oder ein Property (Eigenschaft) sein.
 Knoten (Nodes) eines Workspaces bilden die Struktur der zu speichernden Daten ab.
 Ein Knoten kann daher keine oder weitere andere Kinderknoten (child notes) enthalten.
 \item[Property]\mbox{~}\\*
-Eine Property kann keine anderen Items beinhalten, aber dafür den Inhalt in Form von sogenannten Values abspeichern. Dabei kann ein Property-Node kein oder mehrere Values beinhalten.
+Eine Property kann keine anderen Items beinhalten, aber dafür den Inhalt in Form von sogenannten Values abspeichern. Dabei kann ein Property-Node keine oder mehrere Values beinhalten.
 \end{description}
 
 
@@ -66,11 +66,11 @@ Eine Property kann keine anderen Items beinhalten, aber dafür den Inhalt in For
 
 \subsection{Umsetzungsvarianten innerhalb von Ruby on Rails}
 
-Durch die Verfügbarkeit eines Ruby-Interpreter in Java (jruby) ergeben sich für die Umsetzung in Ruby on Rails folgende 2 Möglichkeiten:
+Durch die Verfügbarkeit eines Ruby-Interpreter in der Programmiersprache Java (jruby\footnote{Projektseite: \href{http://jruby.org/}{http://jruby.org/}}) ergeben sich für die Umsetzung in Ruby on Rails folgende 2 Möglichkeiten:
 
 \begin{itemize}
 \item
-Verwendung der Open Source Java Implementierung Jack Rabbit und Spezifkation einer API zur Nutzung dieser innerhalb von Rails. Für die weitere Arbeit mit Rails ergibt sich daher die Abhänngigkeit zu jruby und den unterstützten Erweiterungen und Funktionalitäten. Erste Implementierungsversuche und Demonstrationsanwendungen wurden bereits erstellt\footnote{Auf Github.com wurde eine Rails 2 - Anwendung mit Verwendung der . Die Rails-Anwendung ist unter folgender Internetseite erreichbar: \href{https://github.com/wpc/jcr-rails-demo}{https://github.com/wpc/jcr-rails-demo}}.
+Verwendung der Open Source Java Implementierung Jackrabbit und Spezifikation einer API zur Nutzung dieser innerhalb von Rails. Erste Implementierungsversuche und Demonstrationsanwendungen wurden bereits erstellt\footnote{Eine Rails2-Demo-Anwendung ist unter folgender Internetseite erreichbar: \href{https://github.com/wpc/jcr-rails-demo}{https://github.com/wpc/jcr-rails-demo}. Sie zeigt dabei lediglich das konzeptionelle Grundgerüst zur Umsetzung des Content Repository auf.}.
 \item
 Erstellung einer eigenständigen, komplett auf Ruby und dem Rails Framework basierenden Referenzimplementierung und API nach dem Vorbild des Java Content Repository
 \end{itemize}
@@ -133,7 +133,7 @@ Dashboard des angemeldeten Nutzers mit Auflistung der editierten Inhalte
 
 \subsection{Ext JS und Ext Direct}
 
-Das Typo3-User-Interface setzt bei der Kommunikation zwischen den einzelnen Interface-Komponenten und dem Server auf die Nutzung von Ext Direct. Ext Direct beschreibt dabei einen in Ext JS definierten Sprachstandard, mit dessen Hilfe serverseitige Funktion clientseitig per Javascript aufgerufen (gesteuert) werden können.
+Das Typo3-User-Interface setzt bei der Kommunikation zwischen den einzelnen Interface-Komponenten und dem Server auf die Nutzung von Ext Direct. Ext Direct beschreibt dabei einen in Ext JS definierten Sprachstandard, mit dessen Hilfe serverseitige Funktionen clientseitig per Javascript aufgerufen werden können.
 Für ein besseres Verständnis wird in Abbildung \ref{extinvoke} eine im jQuery Framework formulierte Ajax-Anfrage und der entsprechende Ext Direct Ausdruck gegenübergestellt.
 
 \begin{lstlisting}[label=extinvoke, caption=Ajax-Anfrage an einen Server im jQuery-Framework]
@@ -160,7 +160,7 @@ Beide Javascript-Beispiele resultieren in einer asynchronen Ajax-Anfrage, die di
 \item
 Keine wiederholte Angabe einer URL zum Aufruf der serverseitigen Funktionen.
 \item
-Vereinfachung des Javascript-Quellcodes, da im Vergleich zu herkömmlichen asynchronen Anfragen weniger Quellcode (Javascript) geschrieben werden muss
+Vereinfachung des Javascript-Quellcodes, da im Vergleich zu herkömmlichen asynchronen Anfragen weniger Quellcode (Javascript) geschrieben werden muss.
 \item
 Vereinfachung der cleintseitigen Javascript-Programmierung, da der Aufruf von client- und serverseitigen Methoden namentlich übereinstimmt.
 \end{enumerate}
@@ -169,7 +169,7 @@ Eine umfassende Beschreibung von Ext Direct ist dem Anhang der Arbeit beigefügt
 
 
 Um Ext Direct auch innerhalb einer Rails-Anwendung nutzbar zu machen, wurde im Rahmen dieser Diplomarbeit die Rails 3.1 kompatible Erweiterung \emph{extr} entwickelt\footnote{Für Ruby und das Rails-Framework existieren bereits Implementierungen, die jedoch nicht vollständig zu Rails 3 und 3.1 kompatibel sind. Aus diesem Grund wurde die Umsetzung einer eigenen Erweiterung ins Auge gefasst.}.
-Der für Ext Direct notwendige Router (Anhang \ref{extspec}) wurde mit Hilfe einer Rack Middleware realisiert, die alle Ext JS-Anfragen an die entsprechenden Servermethoden (Controller-Methoden) weiterleitet. Schematisch ergibt sich somit folgender Anfrageablauf innerhalb der Rails-Anwendung:
+Der für Ext Direct notwendige Router (Anhang \ref{extspec}) wurde dabei mit Hilfe einer Rack Middleware realisiert, die alle Ext JS-Anfragen an die entsprechenden Serverseitigen Methoden (Controller-Methoden) weiterleitet. Schematisch ergibt sich somit folgender Anfrageablauf innerhalb der Rails-Anwendung:
 
 \begin{figure}[!ht]
 \begin{center}
@@ -182,7 +182,7 @@ Der für Ext Direct notwendige Router (Anhang \ref{extspec}) wurde mit Hilfe ein
 Die Installation und Nutzung der Erweiterung \emph{extr} wird im Anhang dieser Arbeit demonstriert. Auf Grund des frühen Entwicklungsstatus unterstützt die Erweiterung serverseitig noch nicht alle der geforderten Ext-Direct-Funktionalitäten. Im folgenden sollen bestehende Beschränkungen und Probleme erläutert werden:
 \begin{itemize}
 \item
-Ext Direct-Anfragen mit Parametern aus Formularen und Datei-Uploads werden von der Rails Middleware noch nicht vollständig an die entsprechende Zielmethode (controller action) weitergeleitet.
+Ext Direct-Anfragen mit Parametern aus Formularen und Datei-Uploads (Form Posts) werden von der Rails Middleware noch nicht vollständig an die entsprechende Zielmethode (controller action) weitergeleitet.
 \item
 kein Schutz vor CSRF/XSRF-Angriffen\footnote{\href{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}}
 \end{itemize}
