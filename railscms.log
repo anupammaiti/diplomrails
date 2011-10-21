@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  21 OCT 2011 19:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  21 OCT 2011 20:40
 entering extended mode
  %&-line parsing enabled.
 **railscms.tex
@@ -2036,13 +2036,13 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [61]
-Underfull \hbox (badness 10000) in paragraph at lines 739--739
-[]|\T1/lmr/m/n/12 In Al-che-my exis-tie-ren vor-de-fi-nier-te
+Underfull \hbox (badness 3623) in paragraph at lines 739--739
+\T1/lmr/m/n/12 zer-rol-len (Re-gis-triert, Au-t-hor, Re-dak-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 739--739
-\T1/lmr/m/n/12 Rol-len (Re-gis-triert, Au-t-hor, Re-dak-
+Underfull \hbox (badness 1024) in paragraph at lines 744--744
+\T1/lmr/m/n/12 CMS Ad-mi-nis-tra-tor und Con-tent Edi-
  []
 
 
@@ -2056,92 +2056,77 @@ Underfull \hbox (badness 1975) in paragraph at lines 744--744
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 777--777
+Underfull \hbox (badness 1048) in paragraph at lines 795--795
 \T1/lmr/m/n/12 Ver-sio-nie-rung von In-halts-ele-men-ten er-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 809--809
+Underfull \hbox (badness 1137) in paragraph at lines 811--811
 \T1/lmr/m/n/12 den. Ei-ne Tren-nung der ver-schie-de-nen
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--830
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--830
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--830
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--830
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
+Underfull \hbox (badness 10000) in paragraph at lines 733--830
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 733--828
-
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--828
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 733--830
 [] 
  []
 
@@ -2158,224 +2143,264 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [64]
+Underfull \hbox (badness 1189) in paragraph at lines 839--839
+[]|\T1/lmr/m/n/12 Alchemy bil-det einen ein-fa-chen Work-
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 871--871
+[]|\T1/lmr/m/n/12 Diese Funk-tio-na-li-tät wird nicht un-ter-
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 871--871
+[]|\T1/lmr/m/n/12 Diese Funk-tio-na-li-tät wird nicht un-ter-
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 875--875
+[]|\T1/lmr/m/n/12 Diese Funk-tio-na-li-tät wird nicht un-ter-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 875--875
+\T1/lmr/m/n/12 nes Nut-zers im Ba-ckend von Brow-ser
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 875--875
+[]|\T1/lmr/m/n/12 Diese Funk-tio-na-li-tät wird nicht un-ter-
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 833--897
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 833--897
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 833--897
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 833--897
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--897
+
+ []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [65]
-Underfull \hbox (badness 1117) in paragraph at lines 838--838
-\T1/lmr/m/n/12 lich, das Re-dak-teu-re die von Au-to-ren
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 842--842
-[]|\T1/lmr/m/n/12 Ein Work-flowpro-zess kann in Brow-ser
- []
-
-
-Underfull \hbox (badness 4543) in paragraph at lines 842--842
-\T1/lmr/m/n/12 CMS nicht er-zeugt wer-den. Au-to-ren
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 831--890
-[]
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 831--890
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--890
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--890
-
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 831--890
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--890
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--890
-
- []
-
-
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 831--890
-[] 
- []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [66]
-Underfull \hbox (badness 2285) in paragraph at lines 976--976
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[67]
+Underfull \hbox (badness 2285) in paragraph at lines 982--982
 []|\T1/lmr/bx/n/12 Möglichkeit In-hal-te für an-de-ren Web-sei-ten be-reit-zu-s
 tel-len (XML,
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 1012--1012
+Underfull \hbox (badness 2662) in paragraph at lines 1018--1018
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 1012--1012
+Underfull \hbox (badness 2662) in paragraph at lines 1018--1018
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 1016--1016
+Underfull \hbox (badness 2662) in paragraph at lines 1022--1022
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 1016--1016
+Underfull \hbox (badness 2662) in paragraph at lines 1022--1022
 \T1/lmr/m/n/12 kön-nen HTML-Fragmente ein-ge-bun-den
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--1035
+Underfull \hbox (badness 10000) in paragraph at lines 898--1041
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 892--1035
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 898--1041
 [] 
  []
 
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[67]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -2388,22 +2413,22 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [70]
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 1036--1065
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 1042--1071
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1065
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1071
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1065
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1071
 
  []
 
 
-Overfull \hbox (3.86035pt too wide) in paragraph at lines 1036--1065
+Overfull \hbox (3.86035pt too wide) in paragraph at lines 1042--1071
 [] 
  []
 
@@ -2412,37 +2437,11 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [71]
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
-
- []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [72]
-Overfull \hbox (9.0016pt too wide) in paragraph at lines 1123--1124
-[]\T1/lmr/m/n/12 Template-Erstellung und -verwaltung fin-det im Quell-co-de der
- Rails-Anwendung
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1136--1137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
 
  []
 
@@ -2451,27 +2450,28 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [73]
-Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+Overfull \hbox (9.0016pt too wide) in paragraph at lines 1129--1130
+[]\T1/lmr/m/n/12 Template-Erstellung und -verwaltung fin-det im Quell-co-de der
+ Rails-Anwendung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1158
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1172--1173
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
 
  []
 
@@ -2480,22 +2480,46 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1158
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1178--1179
+
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[75]
 Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
 
  []
 
@@ -2505,7 +2529,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 
  []
 
@@ -2513,13 +2542,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1227
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
 
  []
 
@@ -2533,16 +2557,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1238--1239
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
+
+ []
+
 )
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[76]
+[77]
 \openout2 = `chapters/probleme.aux'.
 
  (./chapters/probleme.tex
 Kapitel 4.
-(./code/generator_refinery.rb) [77
+(./code/generator_refinery.rb) [78
 
 
 
@@ -2550,11 +2579,11 @@ Kapitel 4.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[78]
+[79]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[79]
+[80]
 Overfull \hbox (3.31532pt too wide) in paragraph at lines 94--95
 \T1/lmr/m/n/12 Anwendung zu-sätz-li-chen Ar-beitsspei-cher und weist einen ver-
 län-ger-ten Boot-Prozess
@@ -2564,12 +2593,12 @@ län-ger-ten Boot-Prozess
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[80]
+[81]
 \openout2 = `chapters/alternativer_code.aux'.
 
  (./chapters/alternativer_code.tex
 Kapitel 5.
-[81
+[82
 
 
 
@@ -2583,15 +2612,15 @@ y: [][]http://www.alfresco.com/products/platform/[][]|
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[82]
-<images/repository/repository_diagramm.png, id=1216, 1080.035pt x 736.7525pt>
+[83]
+<images/repository/repository_diagramm.png, id=1220, 1080.035pt x 736.7525pt>
 File: images/repository/repository_diagramm.png Graphic file (type png)
 
 <use images/repository/repository_diagramm.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[83 <./images/repository/repository_diagramm.png>]
+[84 <./images/repository/repository_diagramm.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 73--73
 [][][]\T1/lmr/m/n/10 Eine Rails2-Demo-Anwendung ist un-ter fol-gen-der In-ter-n
 etsei-te er-reich-bar:
@@ -2607,7 +2636,7 @@ le-dig-lich das kon-zep-tio-nel-le Grund-ge-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[84]
+[85]
 Overfull \hbox (5.08014pt too wide) in paragraph at lines 90--91
 []\T1/lmr/m/n/12 Ein Con-tent Re-po-si-to-ry kann als Er-wei-te-rung auch von a
 n-de-ren Rails-Anwendungen
@@ -2617,11 +2646,11 @@ n-de-ren Rails-Anwendungen
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[85] <images/typo3/frontend.png, id=1250, 1284.8pt x 822.07124pt>
+[86] <images/typo3/frontend.png, id=1254, 1284.8pt x 822.07124pt>
 File: images/typo3/frontend.png Graphic file (type png)
 
 <use images/typo3/frontend.png>
-<images/typo3/backend.png, id=1251, 1284.8pt x 829.0975pt>
+<images/typo3/backend.png, id=1255, 1284.8pt x 829.0975pt>
 File: images/typo3/backend.png Graphic file (type png)
 
 <use images/typo3/backend.png>
@@ -2632,7 +2661,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[86 <./images/typo3/frontend.png (PNG copy)>]
+[87 <./images/typo3/frontend.png (PNG copy)>]
 Overfull \hbox (0.7315pt too wide) in paragraph at lines 136--138
 \T1/lmr/m/n/12 Das Typo3-User-Interface setzt bei der Kom-mu-ni-ka-ti-on zwi-sc
 hen den ein-zel-nen Interface-
@@ -2642,23 +2671,23 @@ hen den ein-zel-nen Interface-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[87 <./images/typo3/backend.png (PNG copy)>]
+[88 <./images/typo3/backend.png (PNG copy)>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[88] <images/rack/extdirect.png, id=1294, 766.36313pt x 478.78876pt>
+[89] <images/rack/extdirect.png, id=1298, 766.36313pt x 478.78876pt>
 File: images/rack/extdirect.png Graphic file (type png)
 
 <use images/rack/extdirect.png>)
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[89 <./images/rack/extdirect.png (PNG copy)>]
+[90 <./images/rack/extdirect.png (PNG copy)>]
 \openout2 = `chapters/fazit.aux'.
 
  (./chapters/fazit.tex
 Kapitel 6.
-[90
+[91
 
 
 
@@ -2666,7 +2695,7 @@ Kapitel 6.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[91]
+[92]
 \openout2 = `chapters/anhang.aux'.
 
  (./chapters/anhang.tex
@@ -2706,15 +2735,11 @@ Overfull \hbox (16.26035pt too wide) in paragraph at lines 55--83
  [] 
  []
 
-[92
+[93
 
 
 
 ] (./code/crudify_method.rb
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[93]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -2734,15 +2759,19 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[98])
+[98]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[99]
+[99])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[100] <pdf/extdirect.pdf, id=1690, page=1, 614.295pt x 794.97pt>
+[100]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[101] <pdf/extdirect.pdf, id=1694, page=1, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 1>
@@ -2752,8 +2781,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 1>
 File: pdf/extdirect.pdf Graphic file (type pdf)
- <use pdf/extdirect.pdf, page 1> [101 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf
-, id=1717, page=2, 614.295pt x 794.97pt>
+ <use pdf/extdirect.pdf, page 1> [102 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf
+, id=1721, page=2, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 2>
@@ -2761,8 +2790,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 2>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 2> [102 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1723, page=3, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 2> [103 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1728, page=3, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 3>
@@ -2770,8 +2799,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 3>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 3> [103 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1730, page=4, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 3> [104 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1734, page=4, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 4>
@@ -2779,8 +2808,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 4>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 4> [104 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1736, page=5, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 4> [105 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1740, page=5, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 5>
@@ -2788,8 +2817,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 5>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 5> [105 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1742, page=6, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 5> [106 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1746, page=6, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 6>
@@ -2797,8 +2826,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 6>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 6> [106 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1748, page=7, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 6> [107 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1752, page=7, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 7>
@@ -2806,17 +2835,17 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 7>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 7> [107 <./pdf/extdirect.pdf>]
+<use pdf/extdirect.pdf, page 7> [108 <./pdf/extdirect.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[108]
+[109]
 Overfull \hbox (4.96564pt too wide) in paragraph at lines 187--189
 []\T1/lmr/m/n/12 Im Index-HTML-View der Projekt-Ressource (http://localhost:300
 0/projects) kann
  []
 
-<images/anhang/extrbrowserrequest.png, id=1786, 1079.03125pt x 490.83376pt>
+<images/anhang/extrbrowserrequest.png, id=1791, 1079.03125pt x 490.83376pt>
 File: images/anhang/extrbrowserrequest.png Graphic file (type png)
 
 <use images/anhang/extrbrowserrequest.png>
@@ -2827,14 +2856,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[109]
+[110]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[110 <./images/anhang/extrbrowserrequest.png>] (./railscms.bbl
+[111 <./images/anhang/extrbrowserrequest.png>] (./railscms.bbl
 Kapitel 8.
 LaTeX Font Info:    Try loading font information for T1+ul9 on input line 14.
 (/usr/local/share/texmf/tex/latex/luxi/t1ul9.fd
@@ -2885,7 +2914,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--66
 ematrix . html$[][]\T1/lmr/m/n/12 .
  []
 
-[111
+[112
 
 
 ]
@@ -2900,13 +2929,13 @@ No file railscms.ind.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[112] (./railscms.lot)
+[113] (./railscms.lot)
 \tf@lot=\write8
 \openout8 = `railscms.lot'.
 
- [113
+ [114
 
-] (./railscms.lof [114
+] (./railscms.lof [115
 
 ])
 \tf@lof=\write9
@@ -2925,18 +2954,18 @@ Class scrbook Warning: Usage of deprecated \float@listhead!
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[115] (./railscms.lol)
+[116] (./railscms.lol)
 \tf@lol=\write10
 \openout10 = `railscms.lol'.
 
 
 No file railscms.nls.
-[116
+[117
 
 ]
 \openout2 = `chapters/selbst.aux'.
 
- (./chapters/selbst.tex) [117
+ (./chapters/selbst.tex) [118
 
 ] (./railscms.aux (./chapters/titlepage.aux)
 (./chapters/vorwort.aux) (./chapters/grundlagen.aux)
@@ -2951,13 +2980,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19318 strings out of 493848
- 308419 string characters out of 1152823
+ 19319 strings out of 493848
+ 308427 string characters out of 1152823
  672700 words of memory out of 3000000
  21135 multiletter control sequences out of 15000+50000
  97228 words of font info for 70 fonts, out of 3000000 for 9000
  716 hyphenation exceptions out of 8191
- 54i,16n,55p,1108b,2026s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,16n,55p,1239b,2026s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.33} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -2974,9 +3003,9 @@ b></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type
 ic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/courier/ucrr8a.pfb></usr/local/share/texmf/fonts/type1/bh/luxi/ul9r8a.pfb>
-Output written on railscms.pdf (117 pages, 2754645 bytes).
+Output written on railscms.pdf (118 pages, 2756496 bytes).
 PDF statistics:
- 2157 PDF objects out of 2487 (max. 8388607)
- 834 named destinations out of 1000 (max. 500000)
+ 2162 PDF objects out of 2487 (max. 8388607)
+ 835 named destinations out of 1000 (max. 500000)
  711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

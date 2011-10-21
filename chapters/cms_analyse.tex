@@ -167,7 +167,7 @@ Ein Hochladen von Ressourcen erfolgt in Alchemy über ein herkömmliches HTML Up
 \newpage
 \section{Browser CMS}
 Browser CMS ist ein Open Source Web Content Management System der US-amerikanischen Agentur BrowserMedia mit Sitz in Bethesda, Maryland. Im Gegensatz zum aktuellen Versionszweig 3.x des Systems wurden die Vorgängerversionen (Versionen 1.x und 2.x) mit Hilfe der Java Programmiersprache umgesetzt.
-Auf Grund geänderter Marktsituation entschied sich BrowserMedia jedoch 2009 dazu, alle weiteren Versionen des CMS auf Grundlage des Rails Frameworks\footnote{Ausführliche Informationen zum Übergang von Java auf Rails können unter folgender Quelle nachvollzogen werden: \href{http://tinyurl.com/6eayba7
+Auf Grund geänderter Marktsituation entschied sich BrowserMedia jedoch 2009 dazu, alle weiteren Versionen des WCMS auf Grundlage des Rails Frameworks\footnote{Ausführliche Informationen zum Übergang von Java auf Rails können unter folgender Quelle nachvollzogen werden: \href{http://tinyurl.com/6eayba7
 }{http://tinyurl.com/6eayba7}} zu entwickeln. Zusätzlich erfolgte der Umstieg auf die GPLv3-Lizenz, die eine freie Verwendung der Software ermöglicht.
 Eine Online-Testversion des Systems wird von BrowserMedia nicht angeboten. Um dennoch die Funktionalität des Systems zu demonstrieren, wurde eine Testinstallation von Browser CMS 3.3.1 eingerichtet\footnote{Die Upload-Funktion der Testversion wurde auf Grund zu geringer Server-Ressourcen deaktiviert.}.
 \begin{table}[!h]
@@ -435,7 +435,7 @@ Das Backend bildet in Refinery CMS die zentrale Anlaufstelle zur Erstellung und 
 
 \begin{description}
 \item[Übersichts-Modul]\mbox{~}\\*
-Nach der Anmeldung am System bildet das Übersichts-Modul (o.a. Dashboard) die Startseite des Systems. Dort können in einer einfachen Form die letzten Aktivitäten innerhalb des CMS eingesehen werden. Zusätzlich werden Schnellaufrufe zu systemspezifischen Funktionen angeboten.
+Nach der Anmeldung am System bildet das Übersichts-Modul (o.a. Dashboard) die Startseite des Systems. Dort können in einer einfachen Form die letzten Aktivitäten innerhalb des WCMS eingesehen werden. Zusätzlich werden Schnellaufrufe zu systemspezifischen Funktionen angeboten.
 \item[Seiten-Modul]\mbox{~}\\*
 Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel und Metainformationen bearbeitet werden. Darüber hinaus verfügt jede Seite über einen oder mehrere WYSIWYG-Editor-Textfelder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann beliebig festgelegt werden. Die Darstellung  und Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt festgelegt.}, in die der Inhalt der Seite eingepflegt werden kann (Abb. \ref{contentsections}).
 
@@ -465,7 +465,7 @@ refinerycms-news\footnote{Komponenten-Download: \href{https://github.com/resolve
 \end{itemize}
 
 \subsection{Verwendete Technologien}
-Refinery CMS ist ein technologisch sehr einfaches System. Die Realisierung der Backend-Funktionalitäten wird durch die konsequente Verwendung von HTML 5 erreicht. Zur Generierung der Dialoge, die u.a. innerhalb des Bild- und Dateien-Moduls eingesetzt werden, greift Refinery auf die jQuery UI Bibliothek zurück. Der im Seiten-Modul integrierte WYSIWYG-Editor ist ein für die Anforderungen des CMS angepasster, XHTML konformer JavaScript WYMeditor.
+Refinery CMS ist ein technologisch sehr einfaches System. Die Realisierung der Backend-Funktionalitäten wird durch die konsequente Verwendung von HTML 5 erreicht. Zur Generierung der Dialoge, die u.a. innerhalb des Bild- und Dateien-Moduls eingesetzt werden, greift Refinery auf die jQuery UI Bibliothek zurück. Der im Seiten-Modul integrierte WYSIWYG-Editor ist ein für die Anforderungen des WCMS angepasster, XHTML konformer JavaScript WYMeditor.
 Durch die Unterstützung von HTML 5 innerhalb des Backend können Datenübertragungen von Medien an den Server in Form von Multi-Uploads realisiert werden. Die sonst übliche Nutzung von Flash entfällt und vereinfacht damit das System zusätzlich.
 Die bereits angesprochenen Erweiterungen (Engines) sind eigenständige Rails-Anwendungen, deren Grundgerüst mit Hilfe eines Refinery-Engine-Generators erzeugt wird.
 Die geringen technologischen Abhängigkeiten und Anforderungen des Systems erlauben es, Teile des Backends bei Bedarf anzupassen, zu verändern oder komplett auszutauschen.
@@ -732,18 +732,19 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \subsection{Kontrolle}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Granulares Rechte- und Rollenkonzept für Anwender}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS verfügt über ein granulares Rechte- und Rollenkonzept für Anwender, Inhalte, Module (Plugins) und Webseiten.}} \\
 \hline
-  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  Alchemy 1.6.0 & \cellcolor{yellow}Erfüllt: 50\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Alchemy existieren vordefinierte Rollen (Registriert, Author, Redakteur,Administrator). Das Anlegen weiterer Rollen zur besseren Differenzierung ist jedoch nicht möglich.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS besitzt kein Rechte- und Rollenkonzept. Dem Anwender kann lediglich der Zugang zu bestimmten Plugins erlaubt oder entzogen werden, um so den Funktionsumfang einzuschränken.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Alchemy existieren vordefinierte Nutzerrollen (Registriert, Author, Redakteur,Administrator). Das Anlegen weiterer Rollen zur besseren Differenzierung ist jedoch nicht möglich. Die vordefinierten Rollen bestimmen den Funktionsumfang eines Anwenders im Backend. Angelegte Inhalte können einzelnen Nutzern nicht zugeordnet werden.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS besitzt kein Rechte- und Rollenkonzept. Dem Anwender kann lediglich der Zugang zu bestimmten Plugins erlaubt oder entzogen werden, um so den Funktionsumfang einzuschränken. Nutzer können alle Inhalte und Bereiche einer Webseite editieren, solange sie zur Nutzung des bestimmten Module (Engines) berechtigt wurden.} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{yellow}Erfüllt: 50\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzlich können weitere Backend-Gruppen angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS wird in einer Standardinstallation zwischen den Rollen Gast, CMS Administrator und Content Editor unterschieden. Zusätzlich können weitere Backend-Gruppen angelegt werden. Der Zugriff auf bestimmte Seiten (Seitenbaumzweige) kann auf bestimmte Nutzergruppen eingeschränkt werden. Zusätzlich bietet Browser CMS die Erstellung zusätzlicher Frontend-Nutzergruppen an, um so einen exklusiven Zugriff auf bestimmte Seiten des WCMS zur Verfügung zu stellen. Die Zugriffsberechtigung auf installierte Plugins kann ebenfalls für jeden Nutzer individuell festgelegt werden. Leider ist es nicht möglich, einzelne Inhaltselemente für bestimmte Nutzer unzugänglich zu machen.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS besitzt ein einfaches Rechte- und Rollenkonzept. Es wird zwischen Administratoren, Designern und Autoren unterschieden. Das Anlegen weiterer Gruppen ist nicht möglich. Der Zugriff auf Seiten und Inhalte kann nicht individuell gesteuert und beeinflusst werden. Besitzt ein Anwender das Recht zum Editieren und Anlegen von Inhalten (Nutzergruppe Redakteur), können alle Inhalte im gesamten WCMS bearbeitet werden.} \\
 \hline
 \end{tabular}
+\begin{comment}
 \newline
 \newline
 \newline
@@ -761,28 +762,13 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
   \multicolumn{2}{|p{7.5cm}|}{ Der Zugriff auf bestimmte Seiten (Seitenbaumzweige)  kann eingeschränkt werden. Zusätzlich bietet Browser CMS ein Erstellen von Frontend-Nutzergruppen an, um so bestimmte Seiten des CMS nur exklusiv ausgewählten Nutzern zur Verfügung zu stellen. Die Zugriffsberechtigung auf installierte Plugins kann ebenfalls für jeden Nutzer individuell festgelegt werden. Leider ist es nicht möglich, einzelne Inhaltselemente für bestimmte Nutzer unzugänglich zu machen.} & \multicolumn{2}{p{7.5cm}|}{Der Zugriff auf Seiten und Inhalte kann nicht individuell gesteuert und beeinflusst werden. Besitzt ein Anwender das Recht zum Editieren und Anlegen von Inhalten (Nutzergruppe Redakteur), können alle Inhalte im gesamten CMS bearbeitet werden.} \\
 \hline
 \end{tabular}
+\end{comment}
 \newline
 \newline
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Schutz vor gegenseitigem Überschreiben erfasster Inhalte durch Check in/ Check out-Mechanismen}} \\
-\hline
-  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt. Die automatische Versionierung von Inhaltselementen erlaubt jedoch ein nachträgliches, manuelles Sichten und Zusammenfügen  verschiedener Versionen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
-\hline
-\end{tabular}
-\newline
-\newline
-\newline
-\begin{tabular}[!ht]{|l|l|l|l|}
-\hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Versionierung von Inhalten mit Möglichkeit zur Wiederherstellung vorhergehender Versionen}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ermöglicht die Versionierung von Inhalten. Zusätzlich können vorhergehende Zustände/Versionen mit Hilfe einer Wiederherstellungsfunktion rekonstruiert werden.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -798,7 +784,23 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Mandantenfähigkeit: Mehrfachnutzung des Systems durch verschiedene Parteien mit kompletter Trennung der Daten und Benutzer}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS bietet einen Schutz vor gegenseitigem Überschreiben erfasster Inhalte durch z.B. Check in/ Check out- Mechanismen.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt. Die automatische Versionierung von Inhaltselementen erlaubt jedoch ein nachträgliches, manuelles Sichten und Zusammenfügen  verschiedener Versionen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ist mandantenfähig, d.h. eine Mehrfachnutzung des Systems durch verschiedene Parteien mit kompletter Trennung der Daten und Benutzer ist möglich.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -814,7 +816,7 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Linküberprüfung: Automatische Prüfung der Gültigkeit von internen und externen Links mit Möglichkeit zur Korrektur bzw. Benachrichtigung definierter Personengruppen}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS bietet eine Linküberprüfung, die eine korrekte Darstellung von internen und externen Links auf der Internetseite sicherstellt.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -830,21 +832,23 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \subsection{Freigabe}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit für \emph{nicht technische} User den Workflow zu kreieren, verwalten und zu ändern. Es soll dafür kein Scripting / Programming notwendig sein}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS bildet einen mehrstufigen Workflowprozess für die Freischaltung von Inhalten ab.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer können in Alchemy keinen Workflowprozess kreieren. Es ist jedoch möglich, das Redakteure die von Autoren durchgeführten Änderungen kontrollieren und anschließend veröffentlichen.
-Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitteilung an den Redakteur). Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Ein Workflowprozess kann in Browser CMS nicht erzeugt werden. Autoren ist es nur möglich, ihre durchgeführten Änderungen an andere Backend-Nutzer mit Veröffentlichungsrechten weiterzuleiten (Simulierung eines einfachsten Workflows).} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy bildet einen einfachen Workflowprozess bei der Freischaltung von Inhalt ab. dabei wird Redakteuren erlaubt, die von Autoren durchgeführten Änderungen zu kontrollieren und anschließend zu veröffentlichen. Ein Austausch zwischen beiden Nutzergruppen (wie im Modell des Content Life Cycles vorgesehen) ist nicht möglich. Redakteure müssen so Änderungen der Seiteninhalte selbst erkennen.} & \multicolumn{2}{p{7.5cm}|}{In Refinery CMS sind alle erstellten Inhalte sofort auf der Internetseite sichtbar. Lediglich die Sichtbarkeit der erstellten Internetseite kann beeinflusst werden. Die Implementierung des Freigabeprozesses innerhalb des Content Life Cycle wird somit nicht unterstützt.} \\
+\hline
+Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+%  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Ein komplexer Workflowprozess kann in Browser CMS nicht abgebildet oder erstellt werden. Browser CMS verfügt wie Alchemy CMS über einen einfachen Workflowprozess. Autoren und Redakteure können jedoch dabei Nachrichten an die zuständigen Kontroll- bzw. Erstellungsinstanzen (Redakteure und Autoren) senden. Eine Kommunikation der Parteien ist somit gewährleistet.} & \multicolumn{2}{p{7.5cm}|}{Wie in Refinery CMS werden Inhalte nach ihrer Erstellung sofort sichtbar. Seiten können so bei ihrer Erstellung im Backend von Locomotive deaktiviert werden.} \\
 \hline
 \end{tabular}
+\newline
+\newline
+\newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Mit Hilfe des WCMS können \emph{nicht technische} User den Workflowprozesse kreieren, verwalten und ändern. Es sollen dafür keine Programmierkenntnisse notwendig sein.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -860,15 +864,15 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitte
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit externe Benutzer in Workflows mit einbinden zu können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS bietet die Möglichkeit, externe Mitarbeiter in Workflowprozesse einzubinden.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Diese Funktionalität wird nicht unterstützt. Ein externer Mitarbeiter muss erst als Backend-Nutzer im WCMS angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Diese Funktionalität wird nicht unterstützt.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Diese Funktionalität wird nicht unterstützt. Ein externer Mitarbeiter muss erst als Backend-Nutzer im WCMS angelegt werden. Es existieren jedoch bereits einige experimentelle Erweiterungen, die Nutzer aus externen Datenbanken in das WCMS integrieren (ohne vorherige Erstellung eines Nutzers im Backend von Browser CMS).} & \multicolumn{2}{p{7.5cm}|}{Diese Funktionalität wird nicht unterstützt.} \\
 \hline
 \end{tabular}
 \newline
@@ -876,7 +880,7 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitte
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Unternehmensspezifische Bearbeitungsprozesse von Inhalten sollen über frei definierbare Workflows verwaltet werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Unternehmensspezifische Bearbeitungsprozesse von Inhalten sollen über frei definierbare Workflows verwaltet werden können.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -887,11 +891,13 @@ Ein Austausch zwischen beiden Nutzergruppen ist nicht möglich (z.B. kurze Mitte
   \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstüzt} \\
 \hline
 \end{tabular}
-
+\newline
+\newline
+\newline
 \subsection{Publikation}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Trennung von Inhalt und Design unter Verwendung von Templates}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS trennt Inhalt und Design durch die Verwendung von Templates.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
