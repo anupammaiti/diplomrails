@@ -239,16 +239,16 @@ rails g scaffold project name:string description:text
 
 \lstinputlisting[label=scaffold,language=Ruby, caption=Auflistung der erstellten Dateien des Scaffold-Generators]{code/scaffold.txt}
 
-\section{Web Content Management und Web-Publishing}
+\section{Web Content Management, Content Life Cycle und Web-Publishing}
 \label{sec:webpublishing}
 Der in der einschlägigen Literatur bereits mehrfach thematisierte Anstieg von Content\footnote{
 \glqq Unter dem Begriff des \flqq Contents\frqq~ werden alle Inhalte verstanden, die in einem CMS verwaltet werden und die im engeren Sinne für die Erstellung von Dokumenten und Publikationen verwendet werden. Darunter fallen alle textuellen und (audio-)visuellen Informationen [..] \citep[S. 297]{TechnischeDok}
-} erfordert innerhalb der einzelnen Unternehmen ein immer umfangreicheres und zielgerichteteres Management. Das so entstandene Schlagwort Content Management wird dabei u.a. von Berechtenbreiter mit folgenden Worten umschrieben:
+} erfordert innerhalb der einzelnen Unternehmen ein immer umfangreicheres und zielgerichteteres Management. Der so entstandene Begriff des Content Management wird dabei u.a. von Berechtenbreiter mit folgenden Worten umschrieben:
 \begin{quote}
 Content Management beschreibt die Planung, Verwaltung, Steuerung und Koordination aller Aktivitäten, die auf den Content und dessen Präsentation in Unternehmen abstellen \cite{Berchtenbreiter}.
 \end{quote}
 
-Im Bereich der internet-basierten Web-Sites und Portale hat dies zur Herausbildung des Web Content Managements geführt \citep[][S. 3]{ecm}. Die dort verwendeten Softwarelösungen (WCMS) streben dabei die Implementierung des Content Life Cycle (Inhaltslebenszyklus) ab, der als stark vereinfachtes Prozessmodell alle wichtige Phasen\footnote{Die Content-Nutzung durch den Endanwender (Internetseitennutzer) findet innerhalb des Content Life Cycle keine Beachtung.}, die ein beliebiger Inhalt (Informationsträger) während seiner Existenz durchläuft, abbildet. Im folgenden sollen diese Teilprozesse erläutert werden:
+Im Bereich der internet-basierten Web-Sites und Internet-Portale hat dies zur Herausbildung des Web Content Managements geführt \citep[][S. 3]{ecm}. Die dort verwendeten Softwarelösungen (WCMS) streben dabei die Implementierung des Content Life Cycle (Inhaltslebenszyklus) ab, der als stark vereinfachtes Prozessmodell alle wichtige Phasen\footnote{Die Content-Nutzung durch den Endanwender (Internetseitennutzer) findet innerhalb des Content Life Cycle keine Beachtung.}, die ein beliebiger Inhalt (Informationsträger) während seiner Existenz durchläuft, abbildet \citep[S.303]{TechnischeDok}. Im folgenden sollen diese Teilprozesse erläutert werden:
 
 \begin{figure}[!ht]
 \begin{center}
@@ -261,18 +261,18 @@ Im Bereich der internet-basierten Web-Sites und Portale hat dies zur Herausbildu
 
 \begin{description}
 \item[Erstellung]\mbox{~}\\*
-Autoren oder Benutzer erzeugen die Inhalte einer Internetseite an Hand der vorliegenden digitalen, (audio-)visuellen Medien.
-\item[Kontrolle]\mbox{~}\\*
-
-\item[Freigabe]\mbox{~}\\*
-
+Autoren oder Benutzer erzeugen die Inhalte einer Internetseite an Hand der vorliegenden digitalen, (audio-)visuellen Medien oder anderer Informationsträger.
+\item[Freigabe und Kontrolle]\mbox{~}\\*
+Die Kontrolle von Content schließt sich dem Teilprozess der Content-Erstellung an und stellt durch verschiedene Redakteure und Arbeitsabläufe (Workflows) die Qualität der Inhalte, die auf der Internetseite veröffentlicht werden sollen, sicher. Die Komplexität der Kontrollinstanzen kann dabei unterschiedlich ausgeprägt sein und muss den tatsächlichen Gegebenheiten angepasst werden. Erfüllt der Content die inhaltlichen und gestalterischen Anforderungen nicht, muss dieser von den Autoren erneut überarbeitet werden.
 \item[Publikation]\mbox{~}\\*
-
+Nach erfolgter Freigabe des Content erfolgt im Teilprozess Publikation die Veröffentlichung auf der Internetseite. Damit werden die bis dato ausschließlich internen Informationen externen Nutzern zugänglich gemacht. Die eingesetzten WCMS unterscheiden dabei häufig zwischen eine Inter-, Intra- oder Extranetveröffentlichung, welche die Erreichbarkeit der Inhalte auf bestimmte  Zielgruppen einschränkt.
+\item[Terminierung und Archivierung]\mbox{~}\\*
+Nach Verwendung des Content auf der Internetseite werden bestimmte Inhalte mit steigendem Alter uninteressant oder überflüssig (abhängig von der Art des Inhalts). Durch Aufnahme in ein internes oder öffentliches Archiv können diese für eine spätere Nutzung bzw. Wiederverwendung aufbewahrt werden.
 \end{description}
 
-
-
-\newpage
+Am Ende des Content Life Cycles kann somit die beabsichtigte Veröffentlichung der Internetinhalte realisiert werden. Somit trägt dass Modell des Content Life Cycle gleichzeitig zur Erfüllung des Web-Publishing-Begriffs bei, der
+Der im folgenden Abschnitt vorgestellte Kriterienkatalog (zur funktionalen Analyse der WCMS) wird dabei in die Teilprozesse
+ des Content Life Cycle aufgeteilt.\newpage
 
 \section{Kriterienkatalog}
 Die hohe Zahl am Markt befindlicher Web Content Management Systeme führt zu einem erschwerten Auswahlverfahren. Neben kommerziellen WCMS-Lösungen stehen durch die Open Source Bewegung zusätzlich zahlreiche kostenlose Softwareprodukte zur Verfügung, die sich in ihrer Leistungsfähigkeit stark unterscheiden.
@@ -296,40 +296,35 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 \end{center}
 \end{figure}
 
-Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} einen Kriterienkatalog erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Dabei formuliert er für die im Content Life Cycle ()
-Die von Ritter formulierten Kriterien werden in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} wird ein Kriterienkatalog vorgestellt, der auf
+Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} Bereichskriterien erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Auf Grundlage dieser Bereichskriterien und der vorgestellten WCMS-Featurematrix wird in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} ein Kriterienkatalog vorgestellt, der allgemeine Funktionalitätsanforderungen unterteilt nach den einzelnen Teilprozessen des Content Life Cycle (Erstellung, Kontrolle, Freigabe, Publikation, Archivierung) formuliert.
 
 \subsection{Erstellung}
 \label{sec:erstellung}
 \begin{itemize}
 \item
-Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können
+In einem WCMS sollen mehrere Redakteure Inhalte gleichzeitig erstellen, ändern, löschen und verwalten können.
 \item
-Inhalte sollen – unabhängig von Zeit und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können
+In einem WCMS sollen Inhalte – unabhängig von Zeit und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können.
 \item
-Für die Verwaltung und Erfassung von Inhalten sollen alle gängigen Internet-Browser (Internet Explorer, Safari und Firefox) eingesetzt werden können
+In einem WCMS soll eine Offline-Erfassung von Inhalten unter Verwendung eines lokal auf dem Rechner installierten Programms möglich sein.
 \item
-Offline Erfassung von Inhalten unter Verwendung eines lokal auf dem Rechner installierten Programms
+Das WCMS verfügt über eine integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia, Texten, Audio, Videos, usw. Die Inhalte werden dabei in einer Datenbank gespeichert.
 \item
-Inhalte sollen ohne spezielle Programmier / HTML-Kenntnisse erfasst und verwaltet werden können
+Inhalte sollen in einem WCMS ohne spezielle Programmier- und HTML-Kenntnisse erfasst und verwaltet werden können.
 \item
-Integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia, Texte, Audio, Videos, usw.
+Die Nutzung des WCMS erfolgt über einen Internet-Browser. Dabei können alle gängigen Internet-Browser (Internet Explorer, Safari und Firefox) eingesetzt werden.
 \item
-Inhalte (Texte, Bilder, Videos etc.) sollen zentral kategorisiert, erfasst und verwaltet werden können
+Ein WCMS soll Inhalte mehrsprachig erfassen und verwalten können.
 \item
-Inhalte sollen in einer Datenbank gespeichert werden
+Inhalte können in einem WCMS während der Erfassung über eine Preview-Funktion vorab im Design der Webseite betrachtet werden.
 \item
-Inhalte sollen mehrsprachig erfasst und verwaltet werden können
+Das WCMS ermöglicht eine Zuordnung von standardisierten und frei definierbaren Metadaten zu beliebigen Inhalten (z.B. Autor, Schlüsselwörter, benutzerdefinierte Felder).
 \item
-Inhalte können während der Erfassung über eine Preview-Funktion vorab im Design der Webseite angesehen werden
+Das CMS soll über eine offene API (Programmierschnittstelle) für individuelle Erweiterungen verfügen.
 \item
-Zuordnung von standardisierten und frei definierbaren Metadaten zu Inhalten (z.B. Autor, Schlüsselwörter, benutzerdefinierte Felder) soll möglich sein
+Das WCMS ermöglicht die Integration von Inhalten anderer Webseiten, Applikationen oder E-Commerce- Tools.
 \item
-Integration von Inhalten anderer Webseiten, Multimedia, Applikationen, E-Commerce- Tools
-\item
-Das CMS soll über eine offene API (Programmierschnittstelle) für individuelle Erweiterung verfügen
-\item
-Inhalte sollen einfach importiert / exportiert werden können - dabei kommen Formate wie z.B. XML zum Einsatz
+In einem WCMS sollen Inhalte einfach importiert und exportiert werden können. Beim Austausch kommen Formate wie z.B. XML zum Einsatz.
 \end{itemize}
 
 
@@ -341,17 +336,15 @@ Inhalte sollen einfach importiert / exportiert werden können - dabei kommen For
 
 \begin{itemize}
 \item
-Granulares Rechte- und Rollenkonzept für Anwender
+Das WCMS verfügt über ein granulares Rechte- und Rollenkonzept für Anwender, Inhalte, Bereiche und Webseiten.
 \item
-Granulares Berechtigungskonzept für einzelne Inhalte, Bereiche, Webseiten
+Das WCMS bietet einen Schutz vor gegenseitigem Überschreiben erfasster Inhalte durch z.B. Check in/ Check out- Mechanismen.
 \item
-Schutz vor gegenseitigem Überschreiben erfasster Inhalte durch Check in/ Check out- Mechanismen
+Das WCMS ermöglicht die Versionierung von Inhalten. Zusätzlich können vorhergehende Zustände/Versionen mit Hilfe einer Wiederherstellungsfunktion rekonstruiert werden.
 \item
-Versionierung von Inhalten mit Möglichkeit zur Wiederherstellung vorhergehender Versionen
+Das WCMS bietet eine Linküberprüfung, die eine korrekte Darstellung von internen und externen Links auf der Internetseite sicherstellt.
 \item
-Linküberprüfung: Automatische Prüfung der Gültigkeit von internen und externen Links, mit Möglichkeit zur Korrektur bzw. Benachrichtigung an eine definierte Personengruppe
-\item
-Mandantenfähigkeit: Mehrfachnutzung des Systems durch verschiedene Parteien mit kompletter Trennung der Daten und Benutzer
+Das WCMS ist mandantenfähigkeit, d.h. eine Mehrfachnutzung des Systems durch verschiedene Parteien mit kompletter Trennung der Daten und Benutzer ist möglich.
 \end{itemize}
 
 %######## end kontrolle
@@ -360,13 +353,13 @@ Mandantenfähigkeit: Mehrfachnutzung des Systems durch verschiedene Parteien mit
 
 \begin{itemize}
 \item
-Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten
+Das WCMS erlaubt die Definition von Workflows inkl. mehrstufiger Freigabeprozesse für die Freischaltung von Inhalten.
 \item
-Unternehmensspezifische Bearbeitungsprozesse von Inhalten, sollen über frei definierbare Workflows verwaltet werden können
+Unternehmensspezifische Bearbeitungsprozesse von Inhalten, sollen über frei definierbare Workflows verwaltet werden können.
 \item
-Möglichkeit für \emph{nicht technische} User den Workflow zu kreieren, verwalten und ändern. Es soll dafür kein Scripting / Programming notwendig sein
+Mit Hilfe des WCMS können \emph{nicht technische} User den Workflowprozesse kreieren, verwalten und ändern. Es soll dafür keine Programmierkenntnisse notwendig sein.
 \item
-Möglichkeit externe Benutzer in Workflows mit einbinden zu können
+Das WCMS bietet die Möglichkeit, externe Benutzer in Workflows einzubinden.
 \end{itemize}
 
 %##### end freigabe
@@ -376,25 +369,21 @@ Möglichkeit externe Benutzer in Workflows mit einbinden zu können
 
 \begin{itemize}
 \item
-Trennung von Inhalt und Design unter Verwendung von Templates
+Das WCMS trennt Inhalt und Design durch die Verwendung von Templates.
 \item
-Mehrfachverwendung von Inhalten an verschiedenen Stellen mit unterschiedlichem Layout
+Das WCMS erlaubt die Mehrfachverwendung von Inhalten an verschiedenen Stellen (auf unterschiedlichen Seiten).
 \item
-Möglichkeit zur Wahl zwischen dynamischer oder statischer Generierung der Seiten / Inhalte
+Das WCMS ermöglicht die Wahl zwischen dynamischer oder statischer Generierung der Seiten bzw. Inhalte (Caching).
 \item
-Möglichkeit Inhalte für anderen Webseiten bereitzustellen (XML, Webservice)
+Das WCMS bietet Möglichkeiten, Inhalte für anderen Webseiten bereitzustellen (z.B. XML, Webservice).
 \item
-Navigationsstrukturen werden automatisch vom CMS generiert, publiziert und verwaltet
+Navigationsstrukturen werden vom WCMS automatisch generiert, publiziert und verwaltet.
 \item
-Automatisches Anbieten von Druckversionen und Weiterempfehlen einer Webseite
+Das WCMS bietet eine automatische Erstellung von Druckversionen und Weiterempfehlung einer Webseite.
 \item
-Inhalte sollen auf verschiedene Medien / Technologien (Cross Media Publishing, SMS / Mobile / WAP / usw.) ausgegeben werden können
+Inhalte sollen vom WCMS auf verschiedene Medien / Technologien (Cross Media Publishing, SMS / Mobile / WAP / usw.) ausgegeben werden können.
 \item
-Einfache Einbindung von Fremdinhalten welche durch Drittanbieter zur Verfügung gestellt werden
-\item
-Schnittstellenunterstützung in Form von APIs sollen zur Verfügung stehen
-\item
-Barrierefreiheit bei den publizierten Seiten soll unterstützt werden
+Das WCMS ermöglicht ein barrierefreies Publizierten der erstellten Seiten.
 \end{itemize}
 
 %############## end publikation
@@ -403,9 +392,11 @@ Barrierefreiheit bei den publizierten Seiten soll unterstützt werden
 \label{sec:archi}
 \begin{itemize}
 \item
-Inhalte sollen archiviert werden können
+Im WCMS können Inhalte und Seiten archiviert werden.
 \item
-Freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten
+Das WCMS erlaubt die freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten.
+\item
+Das WCMS ermöglicht eine Durchsuchung der archivierten Inhalte und Seiten nach wählbaren Parametern (z.B. Monat oder Jahr).
 \end{itemize}
 
 %############## end terminierung

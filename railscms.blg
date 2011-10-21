@@ -12,17 +12,19 @@ The style file: alphadin.bst
 A level-1 auxiliary file: chapters/selbst.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/references.bib
+Warning--I'm ignoring RailsStatement's extra "note" field
+--line 269 of file bib/references.bib
 You've used 18 entries,
             4793 wiz_defined-function locations,
-            982 strings with 8457 characters,
-and the built_in function-call counts, 7238 in all, are:
-= -- 667
+            983 strings with 8476 characters,
+and the built_in function-call counts, 7343 in all, are:
+= -- 702
 > -- 144
 < -- 152
 + -- 153
 - -- 39
-* -- 358
-:= -- 1240
+* -- 365
+:= -- 1261
 add.period$ -- 25
 call.type$ -- 18
 change.case$ -- 72
@@ -31,17 +33,17 @@ cite$ -- 18
 duplicate$ -- 283
 empty$ -- 647
 format.name$ -- 105
-if$ -- 1514
+if$ -- 1549
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 86
-newline$ -- 109
+newline$ -- 116
 num.names$ -- 54
-pop$ -- 126
+pop$ -- 119
 preamble$ -- 1
 purify$ -- 108
 quote$ -- 0
-skip$ -- 433
+skip$ -- 426
 stack$ -- 0
 substring$ -- 338
 swap$ -- 36
@@ -52,4 +54,5 @@ type$ -- 144
 warning$ -- 0
 while$ -- 54
 width$ -- 21
-write$ -- 223
+write$ -- 237
+(There was 1 warning)

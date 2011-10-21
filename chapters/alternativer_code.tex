@@ -7,26 +7,26 @@ Die in den analysierten WCMS umgesetzten Implementierungen der Erweiterungsentwi
 
 \subsection{Idee und Konzept}
 
-Heutige Webanwendungen (u.a. auch Web Content Management Systeme) benötigen neben der klassischen Speicherung von Daten zahlreiche zusätzliche Daten-Management-Funktionalitäten. Ein Content Repository soll dieser Entwicklung Rechnung tragen und erweitert daher das Leistungsspektrum bestehender Datenbankprodukte u.a um folgende zusätzlichen Funktionalitäten:
+Heutige Webanwendungen (u.a. auch Web Content Management Systeme) benötigen neben der klassischen Speicherung von Daten zahlreiche zusätzliche Daten-Management-Funktionalitäten. Ein Content Repository (CR) soll dieser Entwicklung Rechnung tragen und definiert daher ein abstraktes Datenmodell zur Datenspeicherung und zusätzliche Servicefunktionalitäten, die häufig von content-orientierten Anwendungen verwendet werden. Ein Content Repository stellt somit u.a. folgendes Leistungsspektrum bereit:
 
 \begin{itemize}
 \item
-Speicherung strukturierter und unstrukturierter Daten (z.B. Binär- und Textformate oder Metadaten)
+Speicherung strukturierter und unstrukturierter Daten (z.B. Binär- und Textformate oder Metadaten),
 \item
-Zugangskontrolle
+Möglichkeiten der Zugangskontrolle
 \item
-Sperrung (Locking)
+Möglichkeiten der Sperrung (Locking)
 \item
-Transaktionen
+Durchführung von Transaktionen
 \item
-Versionierung
+Versionierungsmechanismen
 \item
-Überwachung der Daten
+Überwachung von Daten
 \item
 Volltextsuche
 \end{itemize}
 
-Der Zugriff auf das Content Repository wird dabei durch eine API genau definiert und garantiert somit die Nutzung der zusäzlichen Funktionalitäten. Andere Entwickler können auf das Content Repository und seine Zusatzfunktionen kontrolliert zugreifen, ohne etwas über die Infrastruktur des Content Repository und seine Implementierungsdetails zu wissen.
+Der Zugriff auf das Content Repository wird dabei durch eine API genau definiert und garantiert somit einen definierten Zugriff auf die zusäzlichen Funktionalitäten. Andere Entwickler können auf das Content Repository und seine Zusatzfunktionen kontrolliert zugreifen, ohne etwas über die Infrastruktur und seine Implementierungsdetails zu wissen. Intern greift das Content Repository auf andere Technologien und Infrastrukturen zurück, um die geforderten Funktionalitäten abzubilden\footnote{Das im folgenden beschriebene Java Content Repository Jackrabbit verwendet in seiner Standardkonfiguration z.B. WebDAV zur Speicherung von Daten sowie Apache Lucene zur Realsierung der Suchindexierung.}.
 
 Im Bereich der Java Enterprise Content Management Systeme werden Content Repositories bereits erfolgreich eingesetzt. Namhafte Beispiele sind dabei das kommerzielle ECMS CQ5 und CRX\footnote{Nach der Übernahme von Day Inc. durch Adobe im Sommer 2010 wird das angebotene Content Management System CRX als Adobe Projekt weitervertrieben.} von Adobe und das u.a. als Open Source Software verfügbare Alfresco ECMS\footnote{Informationen zu Alfresco und dem Content Repository: \href{http://www.alfresco.com/products/platform/}{http://www.alfresco.com/products/platform/}}.
 Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Association mit einer Implementierung innerhalb des neuen Web Content Management Systems Typo3 5.0\footnote{Das TYPO3CR ist als eigenständiges Paket im PHP-FLOW3-Framework verfügbar und ein zentraler Bestandteil von Typo3 5.0}.
@@ -174,7 +174,7 @@ Der für Ext Direct notwendige Router (Anhang \ref{extspec}) wurde dabei mit Hil
 \begin{figure}[!ht]
 \begin{center}
 \label{fig.directrouter}
-\includegraphics[scale=0.3]{images/rack/extdirect.png}
+\includegraphics[scale=0.55]{images/rack/extdirect.png}
 \caption{Schema des Ext Direct Routing mit \emph{extr}}
 \end{center}
 \end{figure}

@@ -447,7 +447,7 @@ Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Bau
 \end{center}
 \end{figure}
 \item[Bilder- und Dateien-Modul]\mbox{~}\\*
-In Refinery wird durch die Wahl der Menüpunkte Bilder und Dateien die Ressourcenverwaltung des Systems geöffnet. Dort können anschließend 	Mediendateien verschiedenster Formate hochgeladen, bearbeitet und durchsucht werden.
+In Refinery wird durch die Wahl der Menüpunkte Bilder und Dateien die Ressourcenverwaltung des Systems geöffnet. Dort können anschließend Mediendateien verschiedenster Formate hochgeladen, bearbeitet und durchsucht werden.
 \item[Benutzer-Modul]\mbox{~}\\*
 Das Benutzer-Modul erlaubt die Verwaltung der am System registrierten Anwender. U.a. können dort Nutzername, Passwort und Berechtigungen für die Verwendung anderer Module gesetzt werden.
 \item[Einstellungs-Modul]\mbox{~}\\*
@@ -497,16 +497,16 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \subsection{Erstellung}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Mehrere Benutzer sollen gleichzeitig Inhalte verwalten und erfassen können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{In einem WCMS sollen mehrere Redakteure Inhalte gleichzeitig erstellen, ändern, löschen und verwalten können.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.}
-   & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Redakteure können Inhalte gleichzeitig erfassen und verwalten.}
+   & \multicolumn{2}{p{7.5cm}|}{Redakteure können Inhalte gleichzeitig erfassen und verwalten.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} & \multicolumn{2}{p{7.5cm}|}{Nutzer und Administratoren können Inhalte gleichzeitig erfassen und verwalten.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Redakteure können Inhalte gleichzeitig erfassen und verwalten.} & \multicolumn{2}{p{7.5cm}|}{Redakteure können Inhalte gleichzeitig erfassen und verwalten.} \\
 \hline
 \end{tabular}
 \newline
@@ -514,7 +514,7 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen – unabhängig von Zeit- und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{In einem WCMS sollen Inhalte – unabhängig von Zeit und Standort – durch mehrere Benutzer online verwaltet und erfasst werden können.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -530,7 +530,7 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Offline Erfassung von Inhalten unter Verwendung eines lokal auf dem Rechner installierten Programms}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{In einem WCMS soll eine Offline-Erfassung von Inhalten unter Verwendung eines lokal auf dem Rechner installierten Programms möglich sein.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -546,16 +546,16 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia,Texten, Audio, Videos, usw.}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS verfügt über eine integrierte Mediendatenbank zur Erfassung und Verwaltung von Bildern, Multimedia, Texten, Audio, Videos, usw. Die Inhalte werden dabei in einer Datenbank gespeichert.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Alchemy bietet eine Bibliothek, in der Bilder und Dateien verwaltet werden können. Zur Speicherung verwendet Alchemy CMS das von Rails mitgelieferte Active Record als Datenbankpersistenzschicht. Durch die Verwendung von Migrationen könen so eine Vielzahl relationaler Datenbanken unterstützt werden. Zusätzlich exisitieren einige Adapter, um auch dokumentenbasierte Datenbanken anzusteuern.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS bietet eine einfache Medienverwaltung. Wie Alchemy CMS greift Refinery ebenfalls auf Rails' Active Record zurück und unterstützt damit mehrere relationale und dokumentenorientierte Datenbanken.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS verfügt über eine \emph {Content Library}, die eine einfache Medienverwaltung von Bildern, Dateien und definierten Inhaltselementen ermöglicht. Wie bei Alchemy und Refinery CMS wird hier auch auf Active Record zurückgegriffen. Die Entwickler garantieren auf Grund fehlender Tests jedoch nur die Unterstützung von SQLite und MySQL-Datenbanken. Tendenziell können aber alle von Active Record unterstützten Datenbanken eingesetzt werden.} & \multicolumn{2}{p{7.5cm}|}{Locomotive CMS bietet eine Asset-Verwaltung, in der selbst erstellte Inhaltselemente in Containern verwaltet werden können. Im Gegensatz zu den hier vertretenen Systemen basiert Locomotive CMS auf der dokumentenorientierten Datenbank MongoDB. Relationale Datenbanken werden somit nicht unterstützt. Eine Umsetzung von Locomotive CMS mit Active Record ist jedoch geplant.} \\
 \hline
 \end{tabular}
 \newline
@@ -563,7 +563,7 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen ohne spezielle Programmier / HTML-Kenntnisse erfasst und verwaltet werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen in einem WCMS ohne spezielle Programmier- und HTML-Kenntnisse erfasst und verwaltet werden können.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -578,6 +578,38 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \newline
 \newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Die Nutzung des WCMS erfolgt über einen Internet-Browser. Dabei können alle gängigen Internet-Browser (Internet Explorer, Safari und Firefox) eingesetzt werden.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{yellow}Erfüllt: 50\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt}
+   & \multicolumn{2}{p{7.5cm}|}{Der Aufruf des Bildermodul-Dialogs konnte vom Internet Explorer nicht ausgeführt werden. Das zur Realisierung verwendete Javascript bringt den Browser zum Absturz.} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+\hline
+\end{tabular}
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Ein WCMS soll Inhalte mehrsprachig erfassen und verwalten können.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung von Flaggensymbolen kenntlich gemacht.} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konnte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Browser CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, konnten nicht ermittelt werden.} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{comment}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen in einer Datenbank gespeichert werden}} \\
@@ -595,9 +627,10 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \newline
 \newline
+
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte (Texte, Bilder, Videos etc.) sollen zentral kategorisiert, erfasst und verwaltet werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Angelegte Inhalte und Medien (Bilder, Videos usw.) können zentral kategorisiert , erfasst und verwaltet werden können}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -609,12 +642,13 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
   \multicolumn{2}{|p{7.5cm}|}{Die \emph{Content Library} von Browser CMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Die Inhaltsverwaltung kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
 \hline
 \end{tabular}
+\end{comment}
 \newline
 \newline
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte können während der Erfassung über eine Preview-Funktion vorab im Design der Webseite angesehen werden}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte können in einem WCMS während der Erfassung über eine Preview-Funktion vorab im Design der Webseite betrachtet werden.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -631,16 +665,16 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Zuordnung von standardisierten und frei definierbaren Metadaten zu Inhalten (z.B. Autor, Schlüsselwörter, Benutzerdefinierte Felder) soll möglich sein}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ermöglicht eine Zuordnung von standardisierten und frei definierbaren Metadaten zu beliebigen Inhalten (z.B. Autor, Schlüsselwörter, benutzerdefinierte Felder).}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden.}
-   & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden. Die Bibliothek von Alchemy unterstützt lediglich eine Auflistung von Resourcen. Bilder und Dateien können damit nur in Form einer Listenansicht inspiziert werden. Eine Zuordnung zu Kategorien oder eine Anlage von Ordnerstrukturen zur Erleichterung der Orientierung ist nicht möglich. Die Verwaltung großer Datenmengen scheint daher nur schwer möglich.}
+   & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten. Ähnlich wie bei Alchemy gleicht die Resourcenverwaltung nur einer einfachen Auflistung von Bildern und anderen Ressourcen. Eine Kategorisierung der Inhalte ist nicht möglich. Ebenfalls können keine Ordner zur sinnvollen Strukturierung der Ressourcen erstellt werden. Die Verwaltung großer Datenmengen wird dadurch schnell zu einem Geduldsakt.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt. Das Hinzufügen zuvor definierter Metadaten ist nicht möglich.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt. Das Hinzufügen zuvor definierter Metadaten ist nicht möglich. Die \emph{Content Library} von Browser CMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich. Die Inhaltsverwaltung (Bausteine) kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
 \hline
 \end{tabular}
 \newline
@@ -648,24 +682,7 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen mehrsprachig erfasst und verwaltet werden können}} \\
-\hline
-  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Alchemy können Inhalte mehrsprachig angelegt werden. Durch die Auswahl einer bestimmten Sprache wird ein entsprechender Seitenbaum mit allen existierenden Inhalten zu der ausgewählten Sprache erzeugt.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS kann Inhalte mehrsprachig verwalten und ausgeben. Zur Aktivierung der Funktionalität müssen nur die zu unterstützenden Sprachen in einer Konfigurationsdatei angegeben werden (dies kann von Administtratoren im Backend vorgenommen werden). Alle Sprachen werden dabei in einem einzigen Seitenbaum verwaltet. Vorhandene Übersetzungen zu einer bestimmten Seite werden durch Einblendung von Flaggensymbolen kenntlich gemacht.} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{In Browser CMS kann  durch die Installation der Erweiterung \emph{browsercmsi} die Unterstützung von mehrsprachigen Inhalten erreicht werden. Der Plugin-Anbieter konnte die 100\% Rails 3-Kompatibilität der Erweiterung jedoch nicht garantieren. Von einem Einsatz dieser Lösung in einer Produktiv-Umgebung wird daher abgeraten. Innerhalb der Bewertung von Browser CMS werden daher 0\% beim Erfüllungsgrad angegeben.} & \multicolumn{2}{p{7.5cm}|}{Inhalte können nur einsprachig verwaltet werden. Erweiterungen, die diese Funktionalität herstellen können, konnten nicht ermittelt werden.} \\
-\hline
-\end{tabular}
-\newline
-\newline
-\newline
-\begin{tabular}[!ht]{|l|l|l|l|}
-\hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Das CMS soll über eine offene API (Programmierschnittstelle) für individuelle Erweiterung verfügen}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das CMS soll über eine offene API (Programmierschnittstelle) für individuelle Erweiterungen verfügen.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -682,24 +699,22 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Für die Verwaltung und Erfassung von Inhalten sollen alle gängigen Internet-Browser (Internet Explorer, Safari und Firefox) eingesetzt werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ermöglicht die Integration von Inhalten anderer Webseiten, Applikationen oder E-Commerce- Tools.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt}
-   & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Der verwendete WYSIWYG-Editor \emph{TinyMCE} erlaubt in seiner HTML-Ansicht das Einbinden von Fremdinhalten anderer Seiten (z.B. IFrame). Zusätzlich ist die Erstellung von eigenen Inhaltselementen mit Hilfe der Alchemy Plugin DSL-API denkbar. So können auch die verschiedenen Resourcen aus der Bibliothek von Alchemy Verwendung finden. Standardmäßig verfügt Alchemy bereits über die Inhaltselemente \emph{Artikel}, \emph{Text}, \emph{Text mit Bild}, \emph{Bilder}, \emph{Bildergalerie}, \emph{Überschrift} und \emph{Intro}.}
+   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
+} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Vollständig unterstützt} & \multicolumn{2}{p{7.5cm}|}{Vollständig unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselemente, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
 \hline
 \end{tabular}
-\newline
-\newline
-\newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen einfach importiert / exportiert werden können - dabei kommen Formate wie z.B. XML zum Einsatz}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{In einem WCMS sollen Inhalte einfach importiert und exportiert werden können. Beim Austausch kommen Formate wie z.B. XML zum Einsatz.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -714,21 +729,6 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
 \newline
 \newline
 \newline
-\begin{tabular}[!ht]{|l|l|l|l|}
-\hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Integration von Inhalten anderer Webseiten, Multimedia, Applikationen, E-Commerce-Tools}} \\
-\hline
-  Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Der verwendete WYSIWYG-Editor \emph{TinyMCE} erlaubt in seiner HTML-Ansicht das Einbinden von Fremdinhalten anderer Seiten (z.B. IFrame). Zusätzlich ist die Erstellung von eigenen Inhaltselementen mit Hilfe der Alchemy Plugin DSL-API denkbar. So können auch die verschiedenen Resourcen aus der Bibliothek von Alchemy Verwendung finden. Standardmäßig verfügt Alchemy bereits über die Inhaltselemente \emph{Artikel}, \emph{Text}, \emph{Text mit Bild}, \emph{Bilder}, \emph{Bildergalerie}, \emph{Überschrift} und \emph{Intro}.}
-   & \multicolumn{2}{p{7.5cm}|}{Refinery CMS verwaltet jede Internetseite innerhalb eines flexiblen WYSIWYG-Editors. Die Integration von vordefiniertem HTML-Code kann dabei durch Nutzung der HTML-Ansicht des Editors erreicht werden.
-} \\
-  \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
-  \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wie seine Vorgänger auch können innerhalb des WYSIWYG-Editors IFrames oder anderer HTML-Code eingebetet werden. Vordefinierte Inhaltselemente, die vorhandene Ressourcen aus der \emph{Content Library} einbinden können, müssen eigenhändig angelegt werden.} & \multicolumn{2}{p{7.5cm}|}{Wie bei Alchemy und Refinery CMS können innerhalb des  WYSIWYG-Editors HTML-Fragmente angegeben werden.} \\
-\hline
-\end{tabular}
 \subsection{Kontrolle}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline

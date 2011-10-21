@@ -7,28 +7,28 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ausgabe der Rack-Anwendung MyRackApp im Browser}}{18}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\"o}glichkeiten der unterschiedlichen R\IeC {\"u}ckgabewerte durch Rack Middlewares und Rails}}{19}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Prozessschritte im Content Life Cycle}}{22}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Feature-Matrix f\IeC {\"u}r Web Content Management Systeme}}{23}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Feature-Matrix f\IeC {\"u}r Web Content Management Systeme}}{25}{figure.2.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ruby Gems mit Informationen zum aktuellen Rails 3.1.1}}{30}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\"O}ffentliches Projekt auf Github.com}}{32}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Backend-Ansicht von Alchemy CMS mit ge\IeC {\"o}ffnerter Seitenvorschau und Elementebearbeitung (Seitenbearbeitungsmodus)}}{34}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Standardset von Inhaltselementen in Alchemy CMS}}{36}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Backend-Ansicht von Browser CMS}}{37}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ausgew\IeC {\"a}hlte Seite im Bearbeitungsmodus und aktiviertem Visual Editor}}{39}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Tag-Portlet mit Template im Backend von Browser CMS}}{40}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Erstellung eines neuen Datensatzes vom Inhaltstyp (Content Block) Text mit Hilfe des FCKEditor}}{41}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Backend von Locomotive CMS mit ge\IeC {\"o}ffnetem Seitenbaum.}}{43}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}}{45}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Seitenbearbeitung in Locomotive CMS mit editierbarem Liquid-Template}}{47}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Backend-Ansicht von Refinery CMS}}{49}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Seitenbearbeitung in Refinery CMS mit ge\IeC {\"o}ffneten Content Sections Body und Site Body}}{49}{figure.3.13}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces JCR-Datenmodell}}{81}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Frontend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}}{84}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Backend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}}{84}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Schema des Ext Direct Routing mit \emph {extr}}}{86}{figure.5.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ruby Gems mit Informationen zum aktuellen Rails 3.1.1}}{32}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\"O}ffentliches Projekt auf Github.com}}{34}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Backend-Ansicht von Alchemy CMS mit ge\IeC {\"o}ffnerter Seitenvorschau und Elementebearbeitung (Seitenbearbeitungsmodus)}}{36}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Standardset von Inhaltselementen in Alchemy CMS}}{38}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Backend-Ansicht von Browser CMS}}{39}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ausgew\IeC {\"a}hlte Seite im Bearbeitungsmodus und aktiviertem Visual Editor}}{41}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Tag-Portlet mit Template im Backend von Browser CMS}}{42}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Erstellung eines neuen Datensatzes vom Inhaltstyp (Content Block) Text mit Hilfe des FCKEditor}}{43}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Backend von Locomotive CMS mit ge\IeC {\"o}ffnetem Seitenbaum.}}{45}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}}{47}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seitenbearbeitung in Locomotive CMS mit editierbarem Liquid-Template}}{49}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Backend-Ansicht von Refinery CMS}}{51}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Seitenbearbeitung in Refinery CMS mit ge\IeC {\"o}ffneten Content Sections Body und Site Body}}{51}{figure.3.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Mit Hilfe von Firebug formulierte Javascript-Ext-Direct-Anfrage mit ausgegebener Antwort der Rails-Anwendung}}{107}{figure.7.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces JCR-Datenmodell}}{83}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Frontend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}}{86}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Backend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}}{87}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Schema des Ext Direct Routing mit \emph {extr}}}{89}{figure.5.4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Mit Hilfe von Firebug formulierte Javascript-Ext-Direct-Anfrage mit ausgegebener Antwort der Rails-Anwendung}}{110}{figure.7.1}
 \addvspace {10\p@ }

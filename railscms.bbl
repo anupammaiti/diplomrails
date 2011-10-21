@@ -12,7 +12,8 @@
 \newblock \emph{Rails and the Enterprise}.
 \newblock
   \url{http://weblog.rubyonrails.org/2010/3/24/rails-and-the-enterprise}.
-\newblock \,Version:\,2010
+\newblock \,Version:\,2010. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[Ber04]{Berchtenbreiter}
 \textsc{Berchtenbreiter}, Ralph:
@@ -31,7 +32,8 @@
 \newblock \emph{Einführung in Ruby on Rails. Architektur und Konzepte}.
 \newblock
   \url{http://www.slideshare.net/foobar2605/einfhrung-in-ruby-on-rails}.
-\newblock \,Version:\,2007
+\newblock \,Version:\,2007. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[Fow03]{FowlerPatterns}
 \textsc{Fowler}, Martin:
@@ -45,7 +47,8 @@
 \newblock
   \url{http://t3n.de/magazin/rest-rails-teil-1-theorie-neuen-web-architektur-r%
 uby-219794/}.
-\newblock \,Version:\,2007
+\newblock \,Version:\,2007. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[HM10]{Rails2}
 \textsc{Hussein~Morsy}, Tanja~O.:
@@ -58,7 +61,8 @@ uby-219794/}.
 \newblock
   \url{http://www.jdk.de/de/cms/wcm-cms-web-content-management/wcm-featurematr%
 ix.html}.
-\newblock \,Version:\,2006
+\newblock \,Version:\,2006. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[Neu07]{rack}
 \textsc{Neukirchen}, Christian:
@@ -66,7 +70,8 @@ ix.html}.
 \newblock
   \url{http://chneukirchen.org/talks/euruko-2007/neukirchen07introducingrack.p%
 df}.
-\newblock \,Version:\,2007
+\newblock \,Version:\,2007. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[PD11]{TechnischeDok}
 \textsc{Petra~Drewer}, Wolfgang~Z.:
@@ -92,7 +97,8 @@ df}.
 \textsc{Rails}:
 \newblock \emph{Rails on Rack}.
 \newblock \url{http://guides.rubyonrails.org/rails_on_rack.html}.
-\newblock \,Version:\,2011
+\newblock \,Version:\,2011. --
+\newblock Zugriff: 25.10.2011
 
 \bibitem[Rig09]{ecm}
 \textsc{Riggert}, Wolfgang:
@@ -119,6 +125,7 @@ df}.
 \newblock \emph{Usage of server-side programming languages for websites}.
 \newblock
   \url{http://w3techs.com/technologies/overview/programming_language/all}.
-\newblock \,Version:\,2011
+\newblock \,Version:\,2011. --
+\newblock Zugriff: 25.10.2011
 
 \end{thebibliography}

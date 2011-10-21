@@ -22,7 +22,6 @@ module Refinery
       class_name = "::#{model_name.to_s.camelize.gsub('/', '::')}".gsub('::::', '::')
       plural_name = singular_name.to_s.gsub('/', '_').pluralize
       this_class = class_name.constantize.base_class
-
       {
         :conditions => '',
         :include => [],
@@ -47,7 +46,6 @@ module Refinery
     end
 
     module ClassMethods
-
       def crudify(model_name, options = {})
         options = ::Refinery::Crud.default_options(model_name).merge(options)
         class_name = options[:class_name]
@@ -303,9 +301,7 @@ module Refinery
 
 
       end
-
     end
-
   end
 end
 
