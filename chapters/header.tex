@@ -200,6 +200,34 @@
 \usepackage{fmtcount}
 
 %
+% diagramm in latex
+%
+
+\usepackage{tikz}
+
+%Abürzungsverzeichnis
+
+%\usepackage{acronym}
+
+\usepackage{nomencl}
+% Befehl umbenennen in abk
+\let\abk\nomenclature
+% Deutsche Überschrift
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+% Punkte zw. Abkürzung und Erklärung
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% Zeilenabstände verkleinern
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+
+%no floats for figures and tables
+
+
+\usepackage{nonfloat}
+
+%
 % B. EINSTELLUNGEN
 % ---------------------------------------------------------------------------
 %
@@ -213,6 +241,9 @@
 \definecolor{ListingBackground}{rgb}{1,1,1}
 \definecolor{red}{rgb}{1,0,0}
 \definecolor{green}{rgb}{0,0.4,0}
+\definecolor{yellow}{rgb}{1,1,0}
+\definecolor{myblue}{HTML}{92dcec}
+\definecolor{alicegrey}{rgb}{0.94,0.97,1}
 
 %
 %  2. KOMA-Script Option, Zeilenumbruch bei Bildbeschreibungen.

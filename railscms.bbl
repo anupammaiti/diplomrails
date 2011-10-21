@@ -22,9 +22,16 @@
 
 \bibitem[BL06]{objekt}
 \textsc{Bernhard~Lahres}, Gregor~R.:
-\newblock \emph{Praxisbuch Objektorientierung – Professionelle
+\newblock \emph{Praxisbuch Objektorientierung -- Professionelle
   Entwurfsverfahren}.
 \newblock Galileo Computing, 2006
+
+\bibitem[Egg07]{railsmvc}
+\textsc{Egger}, Frank:
+\newblock \emph{Einführung in Ruby on Rails. Architektur und Konzepte}.
+\newblock
+  \url{http://www.slideshare.net/foobar2605/einfhrung-in-ruby-on-rails}.
+\newblock \,Version:\,2007
 
 \bibitem[Fow03]{FowlerPatterns}
 \textsc{Fowler}, Martin:
@@ -45,6 +52,14 @@ uby-219794/}.
 \newblock \emph{Ruby on Rails 2}.
 \newblock Galileo Computing, 2010
 
+\bibitem[jdk06]{jdkmatrix}
+\textsc{jdk}:
+\newblock \emph{Web Content Management Featurematrix}.
+\newblock
+  \url{http://www.jdk.de/de/cms/wcm-cms-web-content-management/wcm-featurematr%
+ix.html}.
+\newblock \,Version:\,2006
+
 \bibitem[Neu07]{rack}
 \textsc{Neukirchen}, Christian:
 \newblock \emph{Introducing Rack}.
@@ -52,6 +67,14 @@ uby-219794/}.
   \url{http://chneukirchen.org/talks/euruko-2007/neukirchen07introducingrack.p%
 df}.
 \newblock \,Version:\,2007
+
+\bibitem[PD11]{TechnischeDok}
+\textsc{Petra~Drewer}, Wolfgang~Z.:
+\newblock \emph{Technische Dokumentation. Übersetzungsgerechte Texterstellung
+  und Content-Management}.
+\newblock 2011. --
+\newblock \\
+  \href{http://rubygems.org/gems/rails}{http://rubygems.org/gems/rails}
 
 \bibitem[Per10]{RubyMetaprogramming2010}
 \textsc{Perrotta}, Paolo:
@@ -81,9 +104,21 @@ df}.
 \newblock \emph{SWOT-Analyse zu Content-Management-Systemen}.
 \newblock Grin Verlag, 2010
 
+\bibitem[Roc02]{rockley}
+\textsc{Rockley}, Ann:
+\newblock \emph{Managing Enterprise Content: A Unified Content Strategy}.
+\newblock New Riders Press, 2002
+
 \bibitem[Sch08]{EnterpriseRails}
 \textsc{Schmidt}, Maik:
 \newblock \emph{Enterprise Recipes with Ruby and Rails}.
 \newblock Pragmatic Programmers, 2008
+
+\bibitem[w3t11]{w3techs}
+\textsc{w3techs}:
+\newblock \emph{Usage of server-side programming languages for websites}.
+\newblock
+  \url{http://w3techs.com/technologies/overview/programming_language/all}.
+\newblock \,Version:\,2011
 
 \end{thebibliography}

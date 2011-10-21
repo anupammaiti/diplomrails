@@ -10,29 +10,29 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 REST}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.5}{2.1.5 Rack und Middleware}{section.2.1}
 \BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Generatoren}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{2.2 Web Content Management und Webpublishing}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{2.3 Externer Kriterienkatalog}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{2.2 Web Content Management und Web-Publishing}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{2.3 Kriterienkatalog}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Erstellung}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Kontrolle}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Freigabe}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Publikation}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Terminierung und Archivierung}{section.2.3}
-\BOOKMARK [0][-]{chapter.3}{3 Funktionale Analyse der bestehenden Web Content Management Systeme}{}
+\BOOKMARK [0][-]{chapter.3}{3 Funktionale Analyse der Ruby on Rails Web Content Management Systeme}{}
 \BOOKMARK [1][-]{section.3.1}{3.1 Vorbetrachtungen}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{3.2 Bezugsquellen}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{3.3 Vorstellung Alchemy CMS}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{3.3 Alchemy CMS}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Funktionsprinzipien}{section.3.3}
 \BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Erweiterungen}{section.3.3}
 \BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Verwendete Technologien}{section.3.3}
-\BOOKMARK [1][-]{section.3.4}{3.4 Vorstellung Browser CMS}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{3.4 Browser CMS}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Funktionsprinzipien}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Erweiterungen}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Verwendete Technologien}{section.3.4}
-\BOOKMARK [1][-]{section.3.5}{3.5 Vorstellung Locomotive CMS}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{3.5 Locomotive CMS}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Funktionsprinzipien}{section.3.5}
 \BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Erweiterungen}{section.3.5}
 \BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 Verwendete Technologien}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{3.6 Vorstellung Refinery CMS}{chapter.3}
+\BOOKMARK [1][-]{section.3.6}{3.6 Refinery CMS}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 Funktionsprinzipien}{section.3.6}
 \BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 Erweiterungen}{section.3.6}
 \BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 Verwendete Technologien}{section.3.6}
@@ -59,7 +59,7 @@
 \BOOKMARK [1][-]{section.6.1}{6.1 Fazit}{chapter.6}
 \BOOKMARK [1][-]{section.6.2}{6.2 Ausblick}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{7 Anhang}{}
-\BOOKMARK [1][-]{section.7.1}{7.1 Liste bestehender Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}{chapter.7}
+\BOOKMARK [1][-]{section.7.1}{7.1 Liste bestehender Open Source Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}{chapter.7}
 \BOOKMARK [1][-]{section.7.2}{7.2 Crudify-Methode von Refinery CMS 1.0.8}{chapter.7}
 \BOOKMARK [1][-]{section.7.3}{7.3 Ext-Direct Spezifikation f\374r Ext Js 3.0}{chapter.7}
 \BOOKMARK [1][-]{section.7.4}{7.4 Nutzung von Extr in einer Rails 3.1-Anwendung}{chapter.7}

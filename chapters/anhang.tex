@@ -1,5 +1,5 @@
 \chapter{Anhang}
-\section{Liste bestehender Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}
+\section{Liste bestehender Open Source Rails 2 und 3 Web Content Management Systeme bzw. Blogging-Software}
 
 \begin{table}[!ht]
 \center
@@ -12,9 +12,17 @@
 \hline
 adva-cms & \href{https://github.com/svenfuchs/adva\_cms}{https://github.com/svenfuchs/adva\_cms} & Ja \\
 \hline
-Alchemy CMS & \href{http://magiclabs.github.com/alchemy/}{http://magiclabs.github.com/alchemy/} & Ja \\
+\cellcolor{alicegrey} Alchemy CMS & \cellcolor{alicegrey} \href{http://magiclabs.github.com/alchemy/}{http://magiclabs.github.com/alchemy/} & \cellcolor{alicegrey} Ja \\
+\hline
+Ansuz CMS & \href{https://github.com/knewter/ansuz}{https://github.com/knewter/ansuz} & eingestellt\\
 \hline
 Casein & \href{http://www.caseincms.com/}{http://www.caseincms.com/} & Ja \\
+\hline
+Comatose & \href{http://comatose.rubyforge.org/}{http://comatose.rubyforge.org/} & eingestellt\\
+\hline
+Compages & \href{http://compages.wordpress.com/}{http://compages.wordpress.com/} & eingestellt\\
+\hline
+Geego CMS & \href{http://gitorious.org/geego-cms\#more}{http://gitorious.org/geego-cms\#more} & eingestellt\\
 \hline
 Skyline CMS & \href{http://www.skylinecms.nl/}{http://www.skylinecms.nl/} & Ja \\
 \hline
@@ -26,10 +34,6 @@ Radiant & \href{http://radiantcms.org/}{http://radiantcms.org/} & Ja \\
 \hline
 zenacms & \href{http://zenadmin.org/}{http://zenadmin.org/} & Ja \\
 \hline
-Compages & \href{http://compages.wordpress.com/}{http://compages.wordpress.com/} & eingestellt\\
-\hline
-Comatose & \href{http://comatose.rubyforge.org/}{http://comatose.rubyforge.org/} & eingestellt\\
-\hline
 Mephisto & \href{https://github.com/halorgium/mephisto}{https://github.com/halorgium/mephisto} & eingestellt\\
 \hline
 Rubricks & \href{http://rubricks.org/}{http://rubricks.org/} & eingestellt\\
@@ -39,10 +43,6 @@ Typhus & \href{http://typus.heroku.com/}{http://typus.heroku.com/} & eingestellt
 Station & \href{https://github.com/atd/station}{https://github.com/atd/station} & Ja\\
 \hline
 Vrame & \href{https://github.com/9elements/vrame}{https://github.com/9elements/vrame} & eingestellt\\
-\hline
-Ansuz CMS & \href{https://github.com/knewter/ansuz}{https://github.com/knewter/ansuz} & eingestellt\\
-\hline
-Geego CMS & \href{http://gitorious.org/geego-cms\#more}{http://gitorious.org/geego-cms\#more} & eingestellt\\
 \hline
 Rojo CMS & \href{https://github.com/onomojo/rojo}{https://github.com/onomojo/rojo} & unbekannt\\
 \hline
@@ -63,16 +63,15 @@ Rojo CMS & \href{https://github.com/onomojo/rojo}{https://github.com/onomojo/roj
 \hline
 \textbf{Projektname}&\textbf{Projektseite im Internet}&\textbf{Aktive Weiterentwicklung}\\
 \hline
-Alchemy CMS & \href{http://magiclabs.github.com/alchemy/}{http://magiclabs.github.com/alchemy/} & Ja \\
+\cellcolor{alicegrey}Alchemy CMS & \cellcolor{alicegrey} \href{http://magiclabs.github.com/alchemy/}{http://magiclabs.github.com/alchemy/} &\cellcolor{alicegrey} Ja \\
 \hline
-Browser CMS & \href{http://browsercms.org}{http://browsercms.org} & Ja \\
-\hline
+\cellcolor{alicegrey}Browser CMS & \cellcolor{alicegrey} \href{http://browsercms.org}{http://browsercms.org} & \cellcolor{alicegrey} Ja \\
 \hline
 Casein & \href{https://github.com/spoiledmilk/casein3}{https://github.com/spoiledmilk/casein3} & Ja \\
 \hline
-Locomotive CMS & \href{http://www.locomotivecms.com/}{http://www.locomotivecms.com/} & Ja \\
+\cellcolor{alicegrey} Locomotive CMS & \cellcolor{alicegrey} \href{http://www.locomotivecms.com/}{http://www.locomotivecms.com/} & \cellcolor{alicegrey} Ja \\
 \hline
-Refinery CMS & \href{http://refinerycms.com/}{http://refinerycms.com/} & Ja \\
+\cellcolor{alicegrey} Refinery CMS & \cellcolor{alicegrey} \href{http://refinerycms.com/}{http://refinerycms.com/} & \cellcolor{alicegrey} Ja \\
 \hline
 adva-cms2 & \href{https://github.com/svenfuchs/adva-cms2}{https://github.com/svenfuchs/adva-cms2} & Ja \\
 \hline
@@ -88,6 +87,7 @@ Comfortable Mexican Sofa & \href{https://github.com/twg/comfortable-mexican-sofa
 \end{tabular}
 \end{table}
 
+\begin{comment}
 % begin closed source
 \begin{table}
 \center
@@ -102,9 +102,9 @@ Blocks & \href{http://www.blocksglobal.com/}{http://www.blocksglobal.com/} & Ja 
 % End clsoed source
 \end{tabular}
 \end{table}
+\end{comment}
 
-
-\newpage
+\pagebreak
 
 
 \section{Crudify-Methode von Refinery CMS 1.0.8}
@@ -135,17 +135,6 @@ rails new directtest
 Aktivierung des Plugins/Gems in der Gemfile der erstellten Rails-Anwendung
 
 \begin{lstlisting}[frame=single, numbers=none]
-
-# ...
-gem "extr", :git => "git://github.com/skeller1/extr.git"
-# ...
-
-\end{lstlisting}
-
-\item
-Aktivierung des Plugins/Gems in der Gemfile der Rails-Anwendung
-
-\begin{lstlisting}[frame=single, title= \emph{Gemfile}, numbers=none]
 
 # ...
 gem "extr", :git => "git://github.com/skeller1/extr.git"

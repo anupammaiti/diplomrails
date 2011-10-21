@@ -1,25 +1,26 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Nutzung verschiedener Programmiersprachen auf Servern}}{6}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Nutzung verschiedener Programmiersprachen auf Servern}}{5}{figure.1.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Abl\IeC {\"a}ufe innerhalb des Rails-Frameworks}}{13}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Rack als Vermittler zwischen Server und Ruby-Webframeworks}}{16}{figure.2.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Verarbeitung einer Anfrage innerhalb des Rails-Frameworks}}{12}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rack als Vermittler zwischen Server und Ruby-Webframeworks}}{17}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ausgabe der Rack-Anwendung MyRackApp im Browser}}{18}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\"o}glichkeiten der unterschiedlichen R\IeC {\"u}ckgabewerte durch Rack Middlewares und Rails}}{19}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Feature-Matrix f\IeC {\"u}r Content Management Systeme}}{22}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Prozessschritte im Content Life Cycle}}{22}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Feature-Matrix f\IeC {\"u}r Web Content Management Systeme}}{23}{figure.2.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ruby Gems mit aufgelisteten Informationen zum aktuellen Rails 3.1}}{29}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Beispiel f\IeC {\"u}r ein \IeC {\"o}ffentliches Projekt auf Github.com: Das ausgew\IeC {\"a}hlte Projekt ist Rails 3}}{31}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Backend-Ansicht von Alchemy CMS mit ge\IeC {\"o}ffnerter Seitenvorschau und Elementebearbeitung (Seitenbearbeitungsmodus)}}{33}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Standardset von Inhaltselementen in Alchemy CMS}}{35}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ruby Gems mit Informationen zum aktuellen Rails 3.1.1}}{30}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\"O}ffentliches Projekt auf Github.com}}{32}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Backend-Ansicht von Alchemy CMS mit ge\IeC {\"o}ffnerter Seitenvorschau und Elementebearbeitung (Seitenbearbeitungsmodus)}}{34}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Standardset von Inhaltselementen in Alchemy CMS}}{36}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Backend-Ansicht von Browser CMS}}{37}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ausgew\IeC {\"a}hlte Seite im Bearbeitungsmodus und aktiviertem Visual Editor}}{38}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Tag-Portlet mit Template im Backend von Browser CMS}}{39}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Erstellung eines neuen Datensatzes vom Inhaltstyp (Content Block) Text mit Hilfe des FCKEditor}}{40}{figure.3.8}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ausgew\IeC {\"a}hlte Seite im Bearbeitungsmodus und aktiviertem Visual Editor}}{39}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Tag-Portlet mit Template im Backend von Browser CMS}}{40}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Erstellung eines neuen Datensatzes vom Inhaltstyp (Content Block) Text mit Hilfe des FCKEditor}}{41}{figure.3.8}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Backend von Locomotive CMS mit ge\IeC {\"o}ffnetem Seitenbaum.}}{43}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}}{44}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Seitenbearbeitung in Locomotive CMS mit editierbarem Liquid-Template}}{45}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Backend-Ansicht von Refinery CMS}}{48}{figure.3.12}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}}{45}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seitenbearbeitung in Locomotive CMS mit editierbarem Liquid-Template}}{47}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Backend-Ansicht von Refinery CMS}}{49}{figure.3.12}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Seitenbearbeitung in Refinery CMS mit ge\IeC {\"o}ffneten Content Sections Body und Site Body}}{49}{figure.3.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -12,44 +12,44 @@ The style file: alphadin.bst
 A level-1 auxiliary file: chapters/selbst.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/references.bib
-You've used 13 entries,
+You've used 18 entries,
             4793 wiz_defined-function locations,
-            961 strings with 7819 characters,
-and the built_in function-call counts, 5262 in all, are:
-= -- 479
-> -- 104
-< -- 115
-+ -- 116
-- -- 28
-* -- 257
-:= -- 906
-add.period$ -- 17
-call.type$ -- 13
-change.case$ -- 52
-chr.to.int$ -- 12
-cite$ -- 13
-duplicate$ -- 208
-empty$ -- 477
-format.name$ -- 76
-if$ -- 1095
+            982 strings with 8457 characters,
+and the built_in function-call counts, 7238 in all, are:
+= -- 667
+> -- 144
+< -- 152
++ -- 153
+- -- 39
+* -- 358
+:= -- 1240
+add.period$ -- 25
+call.type$ -- 18
+change.case$ -- 72
+chr.to.int$ -- 17
+cite$ -- 18
+duplicate$ -- 283
+empty$ -- 647
+format.name$ -- 105
+if$ -- 1514
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 60
-newline$ -- 80
-num.names$ -- 39
-pop$ -- 94
+missing$ -- 86
+newline$ -- 109
+num.names$ -- 54
+pop$ -- 126
 preamble$ -- 1
-purify$ -- 78
+purify$ -- 108
 quote$ -- 0
-skip$ -- 316
+skip$ -- 433
 stack$ -- 0
-substring$ -- 249
-swap$ -- 26
-text.length$ -- 26
-text.prefix$ -- 11
+substring$ -- 338
+swap$ -- 36
+text.length$ -- 36
+text.prefix$ -- 15
 top$ -- 0
-type$ -- 98
+type$ -- 144
 warning$ -- 0
-while$ -- 39
-width$ -- 15
-write$ -- 160
+while$ -- 54
+width$ -- 21
+write$ -- 223
