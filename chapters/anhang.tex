@@ -233,6 +233,9 @@ Die Ergebnisse der durchgeführten funktionalen Analyse (Kaiptel \ref{sec:durcha
 
 
 \section{Crudify-Methode von Refinery CMS 1.0.8}
+\label{crudifyanhang}
+Mit Hilfe der Metaprogrammierung in Ruby wird zur Laufzeit der Anwendung das gesamte Codegerüst der für Refinery-Erweiterungen benötigten Backend-Controller erzeugt. Der Aufruf der crudify-Methode (\emph{crudify} ist abgeleitet von CRUD, das als Akronym für Create, Read, Update und Delete steht) erzeugt dabei die benötigten Controller-Aktionen zum Erstellen, Löschen und Ändern der entsprechenden Controller-Ressource(z.B. ProjectsController => Project-Ressource).
+Für ein besseres Verständnis wird der Quellcode der crudify-Methode aufgeführt, um den tatsächlich zur Laufzeit erzeugten Controller-Quellcode darzustellen:
 \lstinputlisting[label=crudify, nolol=true, title=Implementierung der Crudify-Methode in Refinery CMS 1.0.8,language=Ruby]{code/crudify_method.rb}
 \newpage
 \section{Ext-Direct Spezifikation für Ext Js 3.0}
@@ -317,9 +320,9 @@ class ProjectsController < ApplicationController
 \end{lstlisting}
 
 \item
-Im Index-HTML-View der Projekt-Ressource (http://localhost:3000/projects) kann nun durch einen Javascript-Aufruf eine Anfrage an die registrierten Ext-Direct-Controller-Methoden gesendet werden. Abbildung \ref{extrreqeust} zeigt das Ergebnis eines mit Hilfe des Mozilla Firefox Plugins Firebug temporär ausgeführten JavaScript-Codes.
-Als Javascript-Callback wird der Name des Projektes zurückgegeben (\emph{Project9}).
-\begin{lstlisting}[language=ruby,frame=single,title=\emph{Javascript zum Aufruf des Projekt-Controllers in der Rails-Anwendung}]
+Im Index-HTML-View der Projekt-Ressource (http://localhost:3000/projects) kann nun durch einen JavaScript-Aufruf eine Anfrage an die registrierten Ext-Direct-Controller-Methoden gesendet werden. Abbildung \ref{extrreqeust} zeigt das Ergebnis eines mit Hilfe des Mozilla Firefox Plugins Firebug temporär ausgeführten JavaScript-Codes.
+Als JavaScript-Callback wird der Name des Projektes zurückgegeben (\emph{Project9}).
+\begin{lstlisting}[language=ruby,frame=single,title=\emph{JavaScript zum Aufruf des Projekt-Controllers in der Rails-Anwendung}]
 Rails.MyDirectController.getChildProject("param",function(r,e){
  alert(r.name);
 });
@@ -329,7 +332,7 @@ Rails.MyDirectController.getChildProject("param",function(r,e){
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.4]{images/anhang/extrbrowserrequest.png}
-\caption{Mit Hilfe von Firebug formulierte Javascript-Ext-Direct-Anfrage mit ausgegebener Antwort der Rails-Anwendung}
+\caption{Mit Hilfe von Firebug formulierte JavaScript-Ext-Direct-Anfrage mit ausgegebener Antwort der Rails-Anwendung}
 \label{extrreqeust}
 \end{center}
 \end{figure}

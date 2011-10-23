@@ -32,7 +32,7 @@ Im Bereich der Java Enterprise Content Management Systeme werden Content Reposit
 Innerhalb der PHP-Entwicklergemeinde wird ebenfalls gerade an der Umsetzung eines auf PHP basierten Content Repositories gearbeitet. Initiatoren sind dabei vor allem die Typo3 Association mit einer Implementierung innerhalb des neuen Web Content Management Systems Typo3 5.0\footnote{Das TYPO3CR ist als eigenständiges Paket im PHP-FLOW3-Framework verfügbar und ein zentraler Bestandteil von Typo3 5.0}.
 
 
-\subsection{JCR-Das Java Content Repository}
+\subsection{Das Java Content Repository (JCR)}
 
 Unter der Leitung von David Nüscheler der Firma Day Software wurde 2005 die erste Version einer Implementierung und API Spezifikation eines Java Content Repository veröffentlicht\footnote{Die Entwicklung ging im Java Specification Request (JSR) 170 als offizieller Standard in die Programmiersprache Java ein. Momentan wird an der Veröffentlichung der Version 2.0 des Standards gearbeitet(JSR-283).}. Die umgesetzte Referenzimplementierung wurde später unter der Leitung der Apache Foundation als Open Source Projekt Jackrabbit\footnote{Projektseite: \href{http://jackrabbit.apache.org/}{http://jackrabbit.apache.org/}} der Öffentlichkeit zur Verfügung gestellt.
 
@@ -41,7 +41,7 @@ Zur Speicherung der Inhalte definiert das Java Content Repository ein einfaches 
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.3]{images/repository/repository_diagramm.png}
+\includegraphics[scale=0.4]{images/repository/repository_diagramm.png}
 \caption{JCR-Datenmodell}
 \label{jcrdatenmodell}
 \end{center}
@@ -70,7 +70,7 @@ Durch die Verfügbarkeit eines Ruby-Interpreter in der Programmiersprache Java (
 
 \begin{itemize}
 \item
-Verwendung der Open Source Java Implementierung Jackrabbit und Spezifikation einer API zur Nutzung dieser innerhalb von Rails. Erste Implementierungsversuche und Demonstrationsanwendungen wurden bereits erstellt\footnote{Eine Rails2-Demo-Anwendung ist unter folgender Internetseite erreichbar: \href{https://github.com/wpc/jcr-rails-demo}{https://github.com/wpc/jcr-rails-demo}. Sie zeigt dabei lediglich das konzeptionelle Grundgerüst zur Umsetzung des Content Repository auf.}.
+Verwendung der Open Source Java Implementierung Jackrabbit und Spezifikation einer API zur Nutzung dieser innerhalb von Rails. Erste Implementierungsversuche und Demonstrationsanwendungen wurden bereits erstellt\footnote{Eine mit Rails 2 umgesetzte Demo-Anwendung ist unter folgender Internetseite verfügbar: \href{https://github.com/wpc/jcr-rails-demo}{https://github.com/wpc/jcr-rails-demo}. Sie zeigt dabei lediglich das Grundgerüst zur Umsetzung eines Content Repository auf.}.
 \item
 Erstellung einer eigenständigen, komplett auf Ruby und dem Rails Framework basierenden Referenzimplementierung und API nach dem Vorbild des Java Content Repository
 \end{itemize}
@@ -104,7 +104,7 @@ Die Entwicklung von Typo3 5.0 befindet sich noch in einer frühen Phase. Interes
 \begin{figure}[!h]
 \begin{center}
 \label{fig.typo3frontend}
-\includegraphics[scale=0.239]{images/typo3/frontend.png}
+\includegraphics[scale=0.35]{images/typo3/frontend.png}
 \caption{Frontend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}
 \end{center}
 \end{figure}
@@ -113,7 +113,7 @@ Die Entwicklung von Typo3 5.0 befindet sich noch in einer frühen Phase. Interes
 \begin{figure}[!h]
 \begin{center}
 \label{fig.typo3backend}
-\includegraphics[scale=0.239]{images/typo3/backend.png}
+\includegraphics[scale=0.35]{images/typo3/backend.png}
 \caption{Backend-Ansicht der Typo3 5.0 Sprint Release 6 Demoversion}
 \end{center}
 \end{figure}
@@ -133,7 +133,7 @@ Dashboard des angemeldeten Nutzers mit Auflistung der editierten Inhalte
 
 \subsection{Ext JS und Ext Direct}
 
-Das Typo3-User-Interface setzt bei der Kommunikation zwischen den einzelnen Interface-Komponenten und dem Server auf die Nutzung von Ext Direct. Ext Direct beschreibt dabei einen in Ext JS definierten Sprachstandard, mit dessen Hilfe serverseitige Funktionen clientseitig per Javascript aufgerufen werden können.
+Das Typo3-User-Interface setzt bei der Kommunikation zwischen den einzelnen Interface-Komponenten und dem Server auf die Nutzung von Ext Direct. Ext Direct beschreibt dabei einen in Ext JS definierten Sprachstandard, mit dessen Hilfe serverseitige Funktionen clientseitig per JavaScript aufgerufen werden können.
 Für ein besseres Verständnis wird in Abbildung \ref{extinvoke} eine im jQuery Framework formulierte Ajax-Anfrage und der entsprechende Ext Direct Ausdruck gegenübergestellt.
 
 \begin{lstlisting}[label=extinvoke, caption=Ajax-Anfrage an einen Server im jQuery-Framework]
@@ -154,15 +154,15 @@ Namespace.MyController.myMethod("some_Value", function(data, e) {
 
 \end{lstlisting}
 
-Beide Javascript-Beispiele resultieren in einer asynchronen Ajax-Anfrage, die die entsprechende Methode serverseitig aufruft. Für Ext Direct ergeben sich jedoch folgende zusätzliche Vorteile:
+Beide JavaScript-Beispiele resultieren in einer asynchronen Ajax-Anfrage, die die entsprechende Methode serverseitig aufruft. Für Ext Direct ergeben sich jedoch folgende zusätzliche Vorteile:
 
 \begin{enumerate}
 \item
 Keine wiederholte Angabe einer URL zum Aufruf der serverseitigen Funktionen.
 \item
-Vereinfachung des Javascript-Quellcodes, da im Vergleich zu herkömmlichen asynchronen Anfragen weniger Quellcode (Javascript) geschrieben werden muss.
+Vereinfachung des JavaScript-Quellcodes, da im Vergleich zu herkömmlichen asynchronen Anfragen weniger Quellcode geschrieben werden muss.
 \item
-Vereinfachung der cleintseitigen Javascript-Programmierung, da der Aufruf von client- und serverseitigen Methoden namentlich übereinstimmt.
+Vereinfachung der cleintseitigen JavaScript-Programmierung, da der Aufruf von client- und serverseitigen Methoden namentlich übereinstimmt.
 \end{enumerate}
 
 Eine umfassende Beschreibung von Ext Direct ist dem Anhang der Arbeit beigefügt (Anhang \ref{extspec}). Dort werden alle Konzepte und notwendigen Komponenten für eine serverseitige Unterstützung von Ext Direct erläutert.
@@ -184,6 +184,35 @@ Die Installation und Nutzung der Erweiterung \emph{extr} wird im Anhang dieser A
 \item
 Ext Direct-Anfragen mit Parametern aus Formularen und Datei-Uploads (Form Posts) werden von der Rails Middleware noch nicht vollständig an die entsprechende Zielmethode (controller action) weitergeleitet.
 \item
-kein Schutz vor CSRF/XSRF-Angriffen\footnote{\href{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}}
+kein Schutz vor CSRF/XSRF-Angriffen\footnote{Cross Site Request Forgery beschreibt einen Angriff auf eine Webanwendung durch Aufruf einer manipulierenden Aktion über eine beliebige andere Internetseite. Nähere Erläuterungen unter folgender Adresse: \href{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}{http://guides.rubyonrails.org/security.html\#cross-site-request-forgery-csrf}}
+\end{itemize}
+
+\subsection{Umgesetzte Rails-Anwendung}
+Durch die Realisierung der Erweiterung \emph{extr} kann eine Übertragung des Typo3-UI in Rails 3.1 möglich gemacht werden. Die dabei vom Typo3-Projekt benötigten JavaScript-Dateien wurden dafür unverändert in eine neu erzeugte Rails 3.1-Anwendung integriert und als Backend-Bereich in der Rails-Anwendung zum Aufruf über den Browser freigeschalten. Die erzeugte Anwendung steht dabei als Download-Paket und Online-Version zur Verfügung:
+\begin{table}[!h]
+\begin{tabular}{|l|p{10cm}|}
+\hline
+Download Quellcode & https://github.com/skeller1/phoenixR \\
+\hline
+Online-Version & http://phoenix.herokuapp.com/ \\
+\hline
+Nutzername & demo \\
+\hline
+Passwort & demo \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Vorteile der Typo3-Nutzeroberfläche}
+Die Nutzung der Typo3-Nutzeroberfläche (und EXT JS) ergibt folgende Vorteile für Anwender und Entwickler:
+\begin{itemize}
+\item
+Ein Modularer Aufbau der Nutzoberfläche mit Möglichkeiten der Überschreibung und Erweiterung bestehender Komponenten der Nutzeroberfläche ist möglich.
+\item
+Die Verfügbarkeit erprobter, flexibler und vielfach genutzter UI-Komponenten (z.B. variable Listen, Dialoge, Baumstrukturen u.a.) ermöglicht die Realisierung einer konsistenten Nutzeroberfläche.
+\item
+Das Backend (Backend-View, Bilder, CSS und JavaScript) wird einmalig vom Server ausgeliefert und steht danach zur Nutzung im Browser zur Verfügung. Nur bei Bedarf werden Anfragen an den Server gestartet, um neue Daten für Nutzerinteraktionen bereit zustellen.
+\item
+EXT JS garantiert eine größtmögliche Kompatibilität zu aktuellen Internet-Browsern (Internet Explorer, Firefox, Safari, Chrome u.a)
 \end{itemize}
 
