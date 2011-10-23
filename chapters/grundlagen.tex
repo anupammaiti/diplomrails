@@ -3,18 +3,18 @@
 \section{Entwicklung mit Ruby on Rails}
 
 2004 arbeitete der dänische Programmierer David Heinemeier Hansson an der Umsetzung eines webbasierten Projektmanagement-Tools mit dem Namen Basecamp\footnote{Projekt-Homepage: \href{http://basecamphq.com/}{http://basecamphq.com/}}. Die bei der Realisierung des Projektes umgesetzten Teilkomponenten extrahierte er später und veröffentlicht sie 2005 als Framework unter dem Namen Ruby on Rails.
-Ruby on Rails basiert dabei auf der objektorientierten Programmiersprache Ruby und ermöglicht die schnelle Entwicklung von Webanwendungen nach dem MVC-Paradigma (Kapitel sec:mvc).
+Ruby on Rails basiert dabei auf der objektorientierten Programmiersprache Ruby und ermöglicht die schnelle Entwicklung von Webanwendungen nach dem MVC-Paradigma (Kapitel \ref{sec:mvc}).
 \newline
 6 Jahre später (die zahlreiche Änderungen und Verbesserungen am Framework ermöglichten) beschreibt sich das Ruby on Rails-Projekt selbst mit folgenden plakativen Worten:
 \begin{quote}
 Ruby on Rails is an open-source web framework that’s
 optimized for programmer happiness and sustainable
 productivity. It lets you write beautiful code by
-favoring convention over configuration. \cite[vgl.][]{RailsStatement}
+favoring convention over configuration. \cite{RailsStatement}
 \end{quote}
 
 Diese subjektive Aussage der Rails-Kernentwickler bezieht sich dabei auf viele Ansätze und Entwicklungsabläufe, die innerhalb des Frameworks umgesetzt werden.
-Im folgenden Abschnitt sollen die mit dieser Aussage angedeuteten wichtigsten Prinzipien, Paradigmen und Programmierabläufe des Frameworks zusammengefasst werden, um auf dieser Grundlage eine nichtfunktionale Betrachtung der Rails WCMS in Kapitel 4 zu ermöglichen. Auf die Themen Rest (Kapitel \ref{grundrest}) und Middleware (Kapitel \ref{grundrack}) wird dabei ausführlicher eingegangen, um für die in Kapitel 5 umgesetzten Lösungsvorschläge entsprechendes Vorwissen zu schaffen.
+Im folgenden Abschnitt sollen die mit dieser Aussage angedeuteten wichtigsten Prinzipien, Paradigmen und Programmierabläufe des Frameworks zusammengefasst werden, um auf dieser Grundlage eine Betrachtung ausgewählter Implementierungsdetails der Rails WCMS in Kapitel 4 zu ermöglichen. Auf die Themen Rest (Kapitel \ref{grundrest}) und Middleware (Kapitel \ref{grundrack}) wird dabei ausführlicher eingegangen, da sie für die Realisierung der in Kapitel 5 umgesetzten Lösungsvorschläge von großer Bedeutung sind.
 \newline
 \newline
 Für eine umfassende Einführung in Rails werden \cite{RubyMetaprogramming2010} und \cite{EnterpriseRails} empfohlen.
@@ -168,7 +168,7 @@ Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter\
 \end{figure}
 
 
-Damit Server und Frameworks untereinander kommunizieren können, muss eine Rack-Anwendung bestimmte Methoden implementieren und ein bestimmtes Rückgabeformat einhalten. An Hand des Beispiels in \ref{rack} sollen diese formalen Kriterien beschrieben werden:
+Damit Server und Frameworks untereinander kommunizieren können, muss eine Rack-Anwendung bestimmte Methoden implementieren und ein bestimmtes Rückgabeformat einhalten. An Hand des Quelltext \ref{rack} sollen diese formalen Kriterien beschrieben werden:
 
 \lstinputlisting[label=rack,language=Ruby, caption=Beispiel für eine einfache Rack-Anwendung]{code/rack.rb}
 
@@ -211,7 +211,7 @@ Vereinfachung der Serverentwicklung: Ein rack-unterstützender Server kann sofor
 \item
 Keine Codeduplizierung durch wiederholte Entwicklung von Server-Adaptern innerhalb der verschiedenen Ruby Webframeworks
 \item
-Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (Abbildung \ref{rackschema})
+Rack beinhaltet Handler für die meist verbreitesten Webserver in Ruby (Abb. \ref{rackschema})
 \end{itemize}
 
 
@@ -243,7 +243,7 @@ Der Anstieg von digitalen Informationen und Content\footnote{
 \glqq Unter dem Begriff des \flqq Contents\frqq~ werden alle Inhalte verstanden, die in einem CMS verwaltet werden und die im engeren Sinne für die Erstellung von Dokumenten und Publikationen verwendet werden. Darunter fallen alle textuellen und (audio-)visuellen Informationen [..] \citep[S. 297]{TechnischeDok}
 } erfordert innerhalb der einzelnen Unternehmen ein immer umfangreicheres und zielgerichteteres Management. Der so entstandene Begriff des Content Management wird dabei u.a. von Berechtenbreiter mit folgenden Worten umschrieben:
 \begin{quote}
-Content Management beschreibt die Planung, Verwaltung, Steuerung und Koordination aller Aktivitäten, die auf den Content und dessen Präsentation in Unternehmen abstellen \cite{Berchtenbreiter}.
+Content Management beschreibt die Planung, Verwaltung, Steuerung und Koordination aller Aktivitäten, die auf den Content und dessen Präsentation in Unternehmen abstellen \citep[S. 212]{Berchtenbreiter}.
 \end{quote}
 
 Im Bereich der internet-basierten Web-Sites und Internet-Portale hat dies zur Herausbildung des Web Content Managements geführt \citep[][S. 3]{ecm}. Die dort verwendeten Softwarelösungen (WCMS) streben dabei die Implementierung des Content Life Cycle (Inhaltslebenszyklus) ab, der als stark vereinfachtes Prozessmodell alle wichtige Phasen\footnote{Die Content-Nutzung durch den Endanwender (Internetseitennutzer) findet innerhalb des Content Life Cycle keine Beachtung.}, die ein beliebiger Inhalt (Informationsträger) während seiner Existenz durchläuft, abbildet \citep[S.303]{TechnischeDok}. Im folgenden sollen diese Teilprozesse erläutert werden:
@@ -290,7 +290,7 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 \end{center}
 \end{figure}
 
-Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} Bereichskriterien erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Auf Grundlage dieser Bereichskriterien und der afugeführten WCMS-Featurematrix wird in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} ein Kriterienkatalog vorgestellt, der allgemeine Funktionalitätsanforderungen unterteilt nach den einzelnen Teilprozessen des Content Life Cycle (Erstellung, Kontrolle, Freigabe, Publikation, Archivierung) formuliert.
+Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} Bereichskriterien erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Auf Grundlage dieser Bereichskriterien und der aufgeführten WCMS-Featurematrix wird in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} ein Kriterienkatalog vorgestellt, der allgemeine Funktionalitätsanforderungen unterteilt nach den einzelnen Teilprozessen des Content Life Cycle (Erstellung, Kontrolle, Freigabe, Publikation, Archivierung) formuliert.
 
 \subsection{Erstellung}
 \label{sec:erstellung}

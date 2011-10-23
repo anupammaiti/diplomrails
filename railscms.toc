@@ -18,57 +18,57 @@
 \contentsline {subsection}{\numberline {2.3.3}Freigabe}{26}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Publikation}{26}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Terminierung und Archivierung}{27}{subsection.2.3.5}
-\contentsline {chapter}{\numberline {3}Analyse des Funktionsumfang von Ruby on Rails Web Content Management Systemen}{28}{chapter.3}
+\contentsline {chapter}{\numberline {3}Analyse des Leistungsf\IeC {\"a}hgkeit von Ruby on Rails Web Content Management Systemen}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Vorbetrachtung}{28}{section.3.1}
 \contentsline {section}{\numberline {3.2}Bezugsquellen}{30}{section.3.2}
 \contentsline {section}{\numberline {3.3}Alchemy CMS}{32}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Funktionsprinzipien}{32}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Erweiterungen}{36}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Verwendete Technologien}{36}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.2}Erweiterungen}{35}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Verwendete Technologien}{35}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}Browser CMS}{37}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Funktionsprinzipien}{38}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Erweiterungen}{40}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Verwendete Technologien}{41}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Locomotive CMS}{43}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Funktionsprinzipien}{44}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Erweiterungen}{45}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Verwendete Technologien}{47}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Refinery CMS}{47}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Funktionsprinzipien}{48}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Erweiterungen}{51}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Verwendete Technologien}{51}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Durchf\IeC {\"u}hrung der funktionalen Analyse}{52}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Erstellung}{53}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Kontrolle}{62}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Freigabe}{65}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Publikation}{67}{subsection.3.7.4}
-\contentsline {subsection}{\numberline {3.7.5}Terminierung/Archivierung}{72}{subsection.3.7.5}
-\contentsline {section}{\numberline {3.8}Auswertung der Ergebnisse}{74}{section.3.8}
-\contentsline {chapter}{\numberline {4}Beschreibung ausgew\IeC {\"a}hlter Implementierungsdetails}{75}{chapter.4}
-\contentsline {section}{\numberline {4.1}Erweiterungen}{75}{section.4.1}
-\contentsline {section}{\numberline {4.2}Nutzeroberfl\IeC {\"a}che}{79}{section.4.2}
-\contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{83}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementierung eines Ruby on Rails Content Repository}{83}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Idee und Konzept}{83}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Das Java Content Repository (JCR)}{84}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Umsetzungsvarianten innerhalb von Ruby on Rails}{86}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Vorteile f\IeC {\"u}r die gew\IeC {\"a}hlten Ruby on Rails WCMS}{86}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}\IeC {\"U}bertragung des Typo3 5.0 Phoenix User-Interfaces in Rails 3.1}{87}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Typo3 5.0}{88}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Ext JS und Ext Direct}{90}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Umgesetzte Rails-Anwendung}{92}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Vorteile der Typo3-Nutzeroberfl\IeC {\"a}che}{92}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {6}Zusammenfassung}{94}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fazit}{94}{section.6.1}
-\contentsline {section}{\numberline {6.2}Ausblick}{94}{section.6.2}
-\contentsline {chapter}{\numberline {7}Anhang}{96}{chapter.7}
-\contentsline {section}{\numberline {7.1}Liste bestehender Rails 2/3 Web Content Management Systeme bzw. Blogging-Software}{96}{section.7.1}
-\contentsline {section}{\numberline {7.2}Funktions\IeC {\"u}bersicht der untersuchten Rails WCMS}{97}{section.7.2}
-\contentsline {subsubsection}{Alchemy CMS}{97}{section*.2}
-\contentsline {subsubsection}{Browser CMS}{99}{section*.3}
-\contentsline {subsubsection}{Locomotive CMS}{100}{section*.4}
-\contentsline {subsubsection}{Refinery CMS}{101}{section*.5}
-\contentsline {section}{\numberline {7.3}Crudify-Methode von Refinery CMS 1.0.8}{102}{section.7.3}
-\contentsline {section}{\numberline {7.4}Ext-Direct Spezifikation f\IeC {\"u}r Ext Js 3.0}{109}{section.7.4}
-\contentsline {section}{\numberline {7.5}Nutzung von Extr in einer Rails 3.1-Anwendung}{117}{section.7.5}
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{120}{chapter.8}
+\contentsline {section}{\numberline {3.5}Locomotive CMS}{42}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Funktionsprinzipien}{42}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Erweiterungen}{44}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Verwendete Technologien}{46}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Refinery CMS}{46}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Funktionsprinzipien}{47}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Erweiterungen}{49}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Verwendete Technologien}{50}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Durchf\IeC {\"u}hrung der funktionalen Analyse}{50}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Erstellung}{51}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Kontrolle}{61}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Freigabe}{64}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}Publikation}{66}{subsection.3.7.4}
+\contentsline {subsection}{\numberline {3.7.5}Terminierung/Archivierung}{71}{subsection.3.7.5}
+\contentsline {section}{\numberline {3.8}Auswertung der Ergebnisse}{73}{section.3.8}
+\contentsline {chapter}{\numberline {4}Beschreibung ausgew\IeC {\"a}hlter Implementierungsdetails}{74}{chapter.4}
+\contentsline {section}{\numberline {4.1}Erweiterungen}{74}{section.4.1}
+\contentsline {section}{\numberline {4.2}Nutzeroberfl\IeC {\"a}che}{78}{section.4.2}
+\contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{81}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementierung eines Ruby on Rails Content Repository}{81}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Idee und Konzept}{81}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Das Java Content Repository (JCR)}{82}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Umsetzungsvarianten innerhalb von Ruby on Rails}{84}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Vorteile f\IeC {\"u}r die gew\IeC {\"a}hlten Ruby on Rails WCMS}{84}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}\IeC {\"U}bertragung des Typo3 5.0 Phoenix User-Interfaces in Rails 3.1}{85}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Typo3 5.0}{86}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Ext JS und Ext Direct}{88}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Umgesetzte Rails-Anwendung}{90}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Vorteile der Typo3-Nutzeroberfl\IeC {\"a}che}{90}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{92}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fazit}{92}{section.6.1}
+\contentsline {section}{\numberline {6.2}Ausblick}{92}{section.6.2}
+\contentsline {chapter}{\numberline {7}Anhang}{94}{chapter.7}
+\contentsline {section}{\numberline {7.1}Liste bestehender Rails 2/3 Web Content Management Systeme bzw. Blogging-Software}{94}{section.7.1}
+\contentsline {section}{\numberline {7.2}Funktionsumfang der untersuchten Rails WCMS}{95}{section.7.2}
+\contentsline {subsubsection}{Alchemy CMS}{95}{section*.2}
+\contentsline {subsubsection}{Browser CMS}{97}{section*.3}
+\contentsline {subsubsection}{Locomotive CMS}{98}{section*.4}
+\contentsline {subsubsection}{Refinery CMS}{99}{section*.5}
+\contentsline {section}{\numberline {7.3}Crudify-Methode von Refinery CMS 1.0.8}{100}{section.7.3}
+\contentsline {section}{\numberline {7.4}Ext-Direct Spezifikation f\IeC {\"u}r Ext Js 3.0}{107}{section.7.4}
+\contentsline {section}{\numberline {7.5}Nutzung von Extr in einer Rails 3.1-Anwendung}{115}{section.7.5}
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{118}{chapter.8}

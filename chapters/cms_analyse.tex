@@ -1,4 +1,4 @@
-\chapter{Analyse des Funktionsumfang von Ruby on Rails Web Content Management Systemen}
+\chapter{Analyse des Leistungsfähgkeit von Ruby on Rails Web Content Management Systemen}
 
 
 \section{Vorbetrachtung}
@@ -59,6 +59,7 @@ Github.com ist ein Online-Netzwerk und Webhosting-Dienst für Programmierer. Nut
 Schlüsseltechnologie des Netzwerkes ist das Versionsverwaltungssystem Git\footnote{Projektseite: \href{http://git-scm.com/}{http://git-scm.com/}}, welches Änderungen am Quellcode des Projektes festhält. Zusätzlich erlaubt es anderen Programmierern, bestehende Projekte zu kopieren und eigenständig weiterzuentwickeln. Anschließend können diese wieder zu einem Gesamtprojekt verschmolzen werden.
 Die Symbiose zwischen den Funktionalitäten von Git und den zahlreichen Interaktionsmöglichkeiten der Platform erschaffen eine Entwicklungsumgebung, in der ein schneller und effektiver Austausch zwischen Programmierern und Projekten stattfinden kann.
 Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufstelle für Rails-Programmierer entwickelt und besitzt daher zur Ermittlung bestehender Web Content Management Systeme entscheidende Relevanz.
+\begin{comment}
 \begin{figure}[!h]
 \begin{center}
 \label{fig.github}
@@ -66,6 +67,7 @@ Innerhalb der Ruby on Rails Community hat sich Github zu einer zentralen Anlaufs
 \caption[Öffentliches Projekt auf Github.com]{Beispiel für ein öffentliches Projekt auf Github.com: Das ausgewählte Projekt ist Rails 3.}
 \end{center}
 \end{figure}
+\end{comment}
 \end{description}
 
 %ALCHEMY BEGIN
@@ -123,7 +125,7 @@ Das Backend von Alchemy CMS ( Abb. \ref{alchemybackend} ) verfügt u.a. über di
 \item[Home]\mbox{~}\\*
 Nach einer erfolgreichen Anmeldung im Backend bildet das Home-Modul die Startseite des WCMS, in der der Nutzer über die letzten Aktivitäten des Systems informiert wird (z.B. Auflistung der zuletzt editierten Inhalte).
 \item[Seiten]\mbox{~}\\*
-Das Seiten-Modul ermöglicht die Verwaltung und Bearbeitung aller im System vorhandener Seiten und deren Inhalte. darüber hinaus kann der von Alchemy CMS verwaltete Seitenbaum angezeigt und einzelne Seiten verschoben werden. Im Seitenbearbeitungsmodus kann die Backend-Ansicht in einen Vorschaubereich, der die aktuell ausgewählte Seite mit ihren tatsächlichen Inhalten anzeigt, und einem Elemente-Bereich, der die auf der Seite verfügbaren Inhalselemente angibt und editierbar macht, aufgeteilt werden (Abb. \ref{alchemybackend}). Inhaltsänderungen können somit schnell nachvollzogen werden.
+Das Seiten-Modul ermöglicht die Verwaltung und Bearbeitung aller im System vorhandener Seiten und deren Inhalte. darüber hinaus kann der von Alchemy CMS verwaltete Seitenbaum angezeigt und einzelne Seiten verschoben werden. Im Seitenbearbeitungsmodus kann die Backend-Ansicht in einen Vorschaubereich, der die aktuell ausgewählte Seite mit ihren tatsächlichen Inhalten anzeigt, und einem Elemente-Bereich, der die auf der Seite verfügbaren Inhalselemente angibt und editierbar macht, aufgeteilt werden (Abb. \ref{alchemybackend}).
 \item[Sprachen]\mbox{~}\\*
 Dieses Modul ermöglicht die komfortable Verwaltung der in Alchemy CMS verfügbaren Frontend-Sprachen. Eine Alchemy Standard-Installation enthält bereits die Sprachen Deutsch und Englisch. Internetauftritte können somit jederzeit um zusätzliche Sprachversionen erweitert werden.
 \item[Benutzer]\mbox{~}\\*
@@ -282,7 +284,7 @@ Das komplette Backend von Browser CMS wird mit Hilfe von in Rails gerenderten HT
 Die Erstellung der Content-Blöcke (Content Blocks) und Portlets wird durch einen in Rails umgesetzten Generatorskript ermöglicht und vereinfacht somit die Entwicklungsarbeit für den Programmierer (Abb. \ref{lst:contentblock}).
 \lstinputlisting[label=lst:contentblock, caption=Aufruf und Ausgabe des Generator-Skripts zur Erstellung eines neuen Inhaltselements Produkt]{code/content_block.rb}
 %Browser END
-\newpage
+
 %Locomotive BEGIN
 \section{Locomotive CMS}
 Lokomotive CMS ist ein Open Source Content Management System der Ruby on Rails Entwickler Didier Lafforgue und Jacques Crocker sowie dem Designer Sacha Greif. Es wird unter der MIT-Lizenz der Open Source Initiative vertrieben und steht in den Rails-Versionen 2 und 3 als Download-Paket zur Verfügung. Neben den Möglichkeiten der eigenständigen Installation bieten die Initiatoren des Systems auch den kostenpflichtigen Dienst \emph{Bushi.do} an, der eine automatische Komplettinstallation inklusive Hosting und Serverumgebung zur Verfügung stellt. Nach nur einem Klick kann sofort mit der Erstellung der Seite im Browser begonnen werden\footnote{Auf der Projektseite von Lokomotive CMS wird die automatische Installation mit Hilfe von Bushi.do beschrieben: \href{http://www.locomotivecms.com/}{http://www.locomotivecms.com/}}.
@@ -328,8 +330,8 @@ Locomotive CMS unterscheidet im Backend der Anwendung in folgende 2 Funktionsber
 Im Inhalte-Bereich des Backends werden alle im System angelegten Seiten und Inhaltselemente verwaltet und bearbeitet (Abb. \ref{locomotivebackend}). Die Darstellung jeder einzelnen Seite und der Inhaltselemente kann darüber hinaus durch Angabe eines Templates online verändert werden (mehr dazu in Abschnitt \ref{sec:TechnologienLocomotive}), was eine Umsetzung komplexer Seitenlayouts sicherstellt.
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.45]{images/analyse/locomotive/backendlocomotive.png}
-\caption{Backend von Locomotive CMS mit geöffnetem Seitenbaum.}
+\includegraphics[scale=0.6]{images/analyse/locomotive/backendlocomotive.png}
+\caption{Backend von Locomotive CMS mit geöffnetem Seitenbaum (Ausschnitt)}
 \label{locomotivebackend}
 \end{center}
 \end{figure}
@@ -342,7 +344,7 @@ Erweiterungen werden in Locomotive CMS als Bausteine bezeichnet und repräsentie
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.45]{images/analyse/locomotive/customcontent.png}
-\caption{Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement}
+\caption{Ein im Backend von Locomotive CMS zusammengestelltes Inhaltselement (Baustein)}
 \label{locomotivecontent}
 \end{center}
 \end{figure}
@@ -373,7 +375,7 @@ has many (ermöglicht die Auswahl mehrerer anderer Inhaltselemente des angegeben
 Das Backend von Locomotive CMS besteht aus in Rails gerenderten HTML-Views mit eingebundenen JavaScript-Dateien, die einzelne Funktionalitäten bereitstellen. Das HTML wird dabei zusätzlich durch die Verwendung der JavaScript-Bibliothek Sizzle\footnote{Komponenten-Download: \href{http://sizzlejs.com/}{http://sizzlejs.com/}} manipuliert, die es erlaubt durch Angabe eines CSS-Selektors bestimmte Elemente des HTML zu erfassen.
 Zur Erstellung von Templates wird die Ruby Template-Sprache Liquid eingesetzt. Sie hat ihren Ursprung in der kommerziellen Online E-Commerce-Plattform \emph{shopify}\footnote{Liquid ist das Ergebnis einer Extrahierung dieser Funktionalität aus Shopify} und beitet Möglichkeiten der Vererbung und Überschreibung vorheriger definierter Templates.
 Der im Backend eingesetzte WYSIWYG-Editor TinyMCE ermöglicht die komfortable Eingabe von Text und HTML-Elementen\footnote{Um den Editor innerhalb der einzelnen Seiten zu aktivieren, müssen im Liqiud-Template der Seite entsprechende Befehle aufgerufen werden. Nach einem erneuten speichern der Seite steht der Editor im Backend zur Verfügung und kann mit Inhalten gefüllt werden.}.
-
+\begin{comment}
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.4]{images/analyse/locomotive/liquid.png}
@@ -381,7 +383,7 @@ Der im Backend eingesetzte WYSIWYG-Editor TinyMCE ermöglicht die komfortable Ei
 \label{locomotivecontent}
 \end{center}
 \end{figure}
-
+\end{comment}
 Im Frontend der Seite findet zusätzlich der WYSIWYG-JavaScript-HTML5-Editor Aloha\footnote{Projektseite: \href{http://aloha-editor.org/}{http://aloha-editor.org/}} Verwendung. Er ermöglicht so eine Bearbeitung spezieller Inhaltselemente direkt im Frontend der Seite (Inline-Editing\footnote{Die Entwicklung dieses Features befindet sich noch im Betastatdium und kann noch nicht zuverlässig verwendet werden.}).
 
 %Refinery BEGIN
@@ -427,7 +429,6 @@ Refinery CMS -- in der Kurzform oft als Refinery bezeichnet -- ist ein freies Op
 Das Backend bildet in Refinery CMS die zentrale Anlaufstelle zur Erstellung und Verwaltung aller Inhalte, Einstellungen und Nutzer. Über ein zentrales Menü kann auf die Funktionsmodule des Systems zugegriffen werden, welche im folgenden vorgestellt werden:
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.43]{images/analyse/refinery/backendrefinery.png}
 \caption{Backend-Ansicht von Refinery CMS}
 \label{refinerybackend}
 \end{center}
@@ -437,7 +438,7 @@ Das Backend bildet in Refinery CMS die zentrale Anlaufstelle zur Erstellung und 
 \item[Übersichts-Modul]\mbox{~}\\*
 Nach der Anmeldung am System bildet das Übersichts-Modul (o.a. Dashboard) die Startseite des Systems. Dort können in einer einfachen Form die letzten Aktivitäten innerhalb des WCMS eingesehen werden. Zusätzlich werden Schnellaufrufe zu systemspezifischen Funktionen angeboten.
 \item[Seiten-Modul]\mbox{~}\\*
-Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel und Metainformationen bearbeitet werden. Darüber hinaus verfügt jede Seite über einen oder mehrere WYSIWYG-Editor-Textfelder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann beliebig festgelegt werden. Die Darstellung  und Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt festgelegt.}, in die der Inhalt der Seite eingepflegt werden kann (Abb. \ref{contentsections}).
+Das Seiten-Modul listet alle angelegten Seiten und Unterseiten in Form einer Baumstruktur auf. Zusätzlich können Titel und Metainformationen bearbeitet werden. Darüber hinaus verfügt jede Seite über einen oder mehrere WYSIWYG-Editor-Textfelder\footnote{Die einzelnen Inhaltsblöcke werden als Content Sections bezeichnet. Die Anzahl der pro Seite zur Verfügung stehenden Inhaltsblöcke kann je nach Bedarf erhöht werden. Die Darstellung  und Positionierung der einzelnen Blöcke wird durch ein zuvor festgelegtes HTML-Template im Rails-Quellcode festgelegt.}, in die der Inhalt der Seite eingepflegt werden kann (Abb. \ref{contentsections}).
 
 \begin{figure}[!h]
 \begin{center}
