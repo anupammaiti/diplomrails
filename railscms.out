@@ -17,7 +17,7 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Freigabe}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Publikation}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Terminierung und Archivierung}{section.2.3}
-\BOOKMARK [0][-]{chapter.3}{3 Funktionale Analyse der Ruby on Rails Web Content Management Systeme}{}
+\BOOKMARK [0][-]{chapter.3}{3 Analyse des Funktionsumfang von Ruby on Rails Web Content Management Systemen}{}
 \BOOKMARK [1][-]{section.3.1}{3.1 Vorbetrachtung}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{3.2 Bezugsquellen}{chapter.3}
 \BOOKMARK [1][-]{section.3.3}{3.3 Alchemy CMS}{chapter.3}
@@ -43,7 +43,7 @@
 \BOOKMARK [2][-]{subsection.3.7.4}{3.7.4 Publikation}{section.3.7}
 \BOOKMARK [2][-]{subsection.3.7.5}{3.7.5 Terminierung/Archivierung}{section.3.7}
 \BOOKMARK [1][-]{section.3.8}{3.8 Auswertung der Ergebnisse}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{4 Nicht funktionale Analyse}{}
+\BOOKMARK [0][-]{chapter.4}{4 Beschreibung ausgew\344hlter Implementierungsdetails}{}
 \BOOKMARK [1][-]{section.4.1}{4.1 Erweiterungen}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{4.2 Nutzeroberfl\344che}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{5 L\366sungsvorschl\344ge}{}

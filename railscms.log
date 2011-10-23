@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  23 OCT 2011 15:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.15)  23 OCT 2011 16:04
 entering extended mode
  %&-line parsing enabled.
 **railscms.tex
@@ -1271,11 +1271,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--77
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--77
-
- []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -2449,36 +2444,39 @@ Overfull \hbox (3.31532pt too wide) in paragraph at lines 99--100
 län-ger-ten Boot-Prozess
  []
 
-(./code/crudify_controller.rb
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[78])
-<images/analyse/alchemy/ressourcen.png, id=1195, 817.0525pt x 435.6275pt>
+[78] (./code/crudify_controller.rb)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[79] <images/analyse/alchemy/ressourcen.png, id=1211, 817.0525pt x 435.6275pt>
 File: images/analyse/alchemy/ressourcen.png Graphic file (type png)
 
 <use images/analyse/alchemy/ressourcen.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[79])
+[80])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[80]
+[81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[81 <./images/analyse/alchemy/ressourcen.png (PNG copy)>]
+[82 <./images/analyse/alchemy/ressourcen.png (PNG copy)>]
 \openout2 = `chapters/alternativer_code.aux'.
 
 
 (./chapters/alternativer_code.tex
 Kapitel 5.
-[82
+[83
 
 
 
@@ -2492,15 +2490,15 @@ y: [][]http://www.alfresco.com/products/platform/[][]|
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[83]
-<images/repository/repository_diagramm.png, id=1288, 1080.035pt x 736.7525pt>
+[84]
+<images/repository/repository_diagramm.png, id=1292, 1080.035pt x 736.7525pt>
 File: images/repository/repository_diagramm.png Graphic file (type png)
 
 <use images/repository/repository_diagramm.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[84 <./images/repository/repository_diagramm.png>]
+[85 <./images/repository/repository_diagramm.png>]
 Underfull \hbox (badness 1668) in paragraph at lines 73--73
 [][][]\T1/lmr/m/n/10 Eine mit Rails 2 um-ge-setz-te Demo-Anwendung ist un-ter f
 ol-gen-der In-ter-netsei-te ver-füg-bar:
@@ -2510,7 +2508,7 @@ ol-gen-der In-ter-netsei-te ver-füg-bar:
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[85]
+[86]
 Overfull \hbox (5.08014pt too wide) in paragraph at lines 90--91
 []\T1/lmr/m/n/12 Ein Con-tent Re-po-si-to-ry kann als Er-wei-te-rung auch von a
 n-de-ren Rails-Anwendungen
@@ -2520,7 +2518,7 @@ n-de-ren Rails-Anwendungen
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[86] <images/typo3/frontend.png, id=1322, 1284.8pt x 822.07124pt>
+[87] <images/typo3/frontend.png, id=1326, 1284.8pt x 822.07124pt>
 File: images/typo3/frontend.png Graphic file (type png)
 
 <use images/typo3/frontend.png>
@@ -2528,7 +2526,7 @@ Overfull \hbox (1.55579pt too wide) in paragraph at lines 107--108
  [] 
  []
 
-<images/typo3/backend.png, id=1323, 1284.8pt x 829.0975pt>
+<images/typo3/backend.png, id=1327, 1284.8pt x 829.0975pt>
 File: images/typo3/backend.png Graphic file (type png)
 
 <use images/typo3/backend.png>
@@ -2543,7 +2541,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[87 <./images/typo3/frontend.png (PNG copy)>]
+[88 <./images/typo3/frontend.png (PNG copy)>]
 Overfull \hbox (0.7315pt too wide) in paragraph at lines 136--138
 \T1/lmr/m/n/12 Das Typo3-User-Interface setzt bei der Kom-mu-ni-ka-ti-on zwi-sc
 hen den ein-zel-nen Interface-
@@ -2553,18 +2551,18 @@ hen den ein-zel-nen Interface-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[88 <./images/typo3/backend.png (PNG copy)>]
+[89 <./images/typo3/backend.png (PNG copy)>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[89] <images/rack/extdirect.png, id=1365, 766.36313pt x 478.78876pt>
+[90] <images/rack/extdirect.png, id=1369, 766.36313pt x 478.78876pt>
 File: images/rack/extdirect.png Graphic file (type png)
 
 <use images/rack/extdirect.png>
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[90 <./images/rack/extdirect.png (PNG copy)>]
+[91 <./images/rack/extdirect.png (PNG copy)>]
 Overfull \hbox (0.3072pt too wide) in paragraph at lines 212--214
 []\T1/lmr/m/n/12 Die Ver-füg-bar-keit er-prob-ter, fle-xibler und viel-fach ge-
 nutz-ter UI-Komponenten (z.B.
@@ -2580,16 +2578,16 @@ Overfull \hbox (9.6724pt too wide) in paragraph at lines 216--217
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[91])
+[92])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[92]
+[93]
 \openout2 = `chapters/fazit.aux'.
 
  (./chapters/fazit.tex
 Kapitel 6.
-[93
+[94
 
 
 
@@ -2597,7 +2595,7 @@ Kapitel 6.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[94]
+[95]
 \openout2 = `chapters/anhang.aux'.
 
  (./chapters/anhang.tex
@@ -2637,7 +2635,7 @@ Overfull \hbox (16.26035pt too wide) in paragraph at lines 55--83
  [] 
  []
 
-[95
+[96
 
 
 
@@ -2661,7 +2659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[96]
+[97]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
@@ -2680,7 +2678,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[97]
+[98]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
@@ -2709,7 +2707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[98]
+[99]
 Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
@@ -2743,7 +2741,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[99]
+[100]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
@@ -2779,11 +2777,7 @@ Overfull \hbox (10.66753pt too wide) in paragraph at lines 237--239
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[100] (./code/crudify_method.rb
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[101]
+[101] (./code/crudify_method.rb
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -2803,15 +2797,19 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[106])
+[106]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[107]
+[107])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[108] <pdf/extdirect.pdf, id=1796, page=1, 614.295pt x 794.97pt>
+[108]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[109] <pdf/extdirect.pdf, id=1801, page=1, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 1>
@@ -2821,8 +2819,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 1>
 File: pdf/extdirect.pdf Graphic file (type pdf)
- <use pdf/extdirect.pdf, page 1> [109 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf
-, id=1824, page=2, 614.295pt x 794.97pt>
+ <use pdf/extdirect.pdf, page 1> [110 <./pdf/extdirect.pdf>] <pdf/extdirect.pdf
+, id=1828, page=2, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 2>
@@ -2830,8 +2828,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 2>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 2> [110 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1830, page=3, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 2> [111 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1834, page=3, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 3>
@@ -2839,8 +2837,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 3>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 3> [111 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1836, page=4, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 3> [112 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1840, page=4, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 4>
@@ -2848,8 +2846,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 4>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 4> [112 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1842, page=5, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 4> [113 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1846, page=5, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 5>
@@ -2857,8 +2855,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 5>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 5> [113 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1848, page=6, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 5> [114 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1852, page=6, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 6>
@@ -2866,8 +2864,8 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 6>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 6> [114 <./pdf/extdirect.pdf>]
-<pdf/extdirect.pdf, id=1854, page=7, 614.295pt x 794.97pt>
+<use pdf/extdirect.pdf, page 6> [115 <./pdf/extdirect.pdf>]
+<pdf/extdirect.pdf, id=1859, page=7, 614.295pt x 794.97pt>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
 <use pdf/extdirect.pdf, page 7>
@@ -2875,17 +2873,17 @@ File: pdf/extdirect.pdf Graphic file (type pdf)
  <use pdf/extdirect.pdf, page 7>
 File: pdf/extdirect.pdf Graphic file (type pdf)
 
-<use pdf/extdirect.pdf, page 7> [115 <./pdf/extdirect.pdf>]
+<use pdf/extdirect.pdf, page 7> [116 <./pdf/extdirect.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[116]
+[117]
 Overfull \hbox (4.96564pt too wide) in paragraph at lines 323--325
 []\T1/lmr/m/n/12 Im Index-HTML-View der Projekt-Ressource (http://localhost:300
 0/projects) kann
  []
 
-<images/anhang/extrbrowserrequest.png, id=1893, 1079.03125pt x 490.83376pt>
+<images/anhang/extrbrowserrequest.png, id=1897, 1079.03125pt x 490.83376pt>
 File: images/anhang/extrbrowserrequest.png Graphic file (type png)
 
 <use images/anhang/extrbrowserrequest.png>
@@ -2896,14 +2894,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[117]
+[118]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[118 <./images/anhang/extrbrowserrequest.png>] (./railscms.bbl
+[119 <./images/anhang/extrbrowserrequest.png>] (./railscms.bbl
 Kapitel 8.
 LaTeX Font Info:    Try loading font information for T1+ul9 on input line 14.
 (/usr/local/share/texmf/tex/latex/luxi/t1ul9.fd
@@ -2954,7 +2952,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--66
 ematrix . html$[][]\T1/lmr/m/n/12 .
  []
 
-[119
+[120
 
 
 ]
@@ -2969,13 +2967,13 @@ No file railscms.ind.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[120] (./railscms.lot)
+[121] (./railscms.lot)
 \tf@lot=\write8
 \openout8 = `railscms.lot'.
 
- [121
+ [122
 
-] (./railscms.lof [122
+] (./railscms.lof [123
 
 ])
 \tf@lof=\write9
@@ -2994,18 +2992,18 @@ Class scrbook Warning: Usage of deprecated \float@listhead!
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[123] (./railscms.lol)
+[124] (./railscms.lol)
 \tf@lol=\write10
 \openout10 = `railscms.lol'.
 
 
 No file railscms.nls.
-[124
+[125
 
 ]
 \openout2 = `chapters/selbst.aux'.
 
- (./chapters/selbst.tex) [125
+ (./chapters/selbst.tex) [126
 
 ] (./railscms.aux (./chapters/titlepage.aux)
 (./chapters/vorwort.aux) (./chapters/grundlagen.aux)
@@ -3020,9 +3018,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19387 strings out of 493848
- 309408 string characters out of 1152823
- 675700 words of memory out of 3000000
+ 19388 strings out of 493848
+ 309416 string characters out of 1152823
+ 676700 words of memory out of 3000000
  21142 multiletter control sequences out of 15000+50000
  97228 words of font info for 70 fonts, out of 3000000 for 9000
  716 hyphenation exceptions out of 8191
@@ -3043,9 +3041,9 @@ b></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type
 ic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/courier/ucrr8a.pfb></usr/local/share/texmf/fonts/type1/bh/luxi/ul9r8a.pfb>
-Output written on railscms.pdf (125 pages, 3014582 bytes).
+Output written on railscms.pdf (126 pages, 3015660 bytes).
 PDF statistics:
- 2281 PDF objects out of 2487 (max. 8388607)
- 898 named destinations out of 1000 (max. 500000)
+ 2285 PDF objects out of 2487 (max. 8388607)
+ 899 named destinations out of 1000 (max. 500000)
  740 words of extra memory for PDF output out of 10000 (max. 10000000)
 
