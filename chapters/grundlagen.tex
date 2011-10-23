@@ -44,7 +44,7 @@ Ein Abweichen von den definierten Konventionen ist jederzeit möglich, erhöht j
 \subsection{Model-View-Controller (MVC)}
 \label{sec:mvc}
 Für Software-Designer ist es  eine gebräuchliche Technik, komplexe Software-Systeme durch Schichtenbildung in einzelne Bestandteile zu zerlegen \citep[Kapitel 1]{FowlerPatterns}. Das Ruby on Rails Framework baut ebenfalls auf einem Mehr-Schichten-Architektur-Modell auf. Zusätzlich kommt eine für das Rails-Framework spezifische Implementierung des bereits 1979 von dem Norweger Trygve Mikkjel Heyerdahl entwickelten Model-View-Controller-Paradigmas zum Einsatz\footnote{In der Fachliteratur wird das MVC-Paradigma häufig auf die Schichtenarchitektur einer Anwendung übertragen \cite[S. 544 ff.]{objekt}. Tatsächlich betrifft MVC in seiner  ursprünglichen Form nur die Präsentationsschicht einer Webanwendung.}.
-Abbildung \ref{fig:mvcimage} charakterisiert den Ablauf einer Anfrage (Request) an eine Rails-Anwendung innerhalb des Client-Server-Modells sowie die Komponenten Model, View und Controller, die eine exakte Trennung der Verantwortungsbereiche in einer Rails-Anwendung sicherstellen:
+Abbildung \ref{fig:mvcimage} charakterisiert den Ablauf einer Anfrage (Request) an eine Rails-Anwendung innerhalb des Client-Server-Modells sowie die Komponenten Model, View und Controller, die eine logische Trennung der Anwendung in verschiedene Verantwortungsbereiche ermöglichen:
 
 \begin{figure}[!h]
 \begin{center}
@@ -161,7 +161,7 @@ Rails ist innerhalb der Ruby-Gemeinde nicht das einzigste existierende Webframew
 Bei der Implementierung dieser Frameworks müssen Entwickler wiederholt Adapter\footnote{} (Handler) zur Ansteuerung verschiedener Webserver entwickeln. Durch Rack\footnote{Projektseite: \href{http://rack.rubyforge.org/}{http://rack.rubyforge.org/}}, einem Ruby Webserver Interface, lässt sich die wiederholte Implementierung solcher Adapter in den einzelnen Frameworks vermeiden.
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.6]{images/rack/rack.pdf}
+\includegraphics[scale=0.47]{images/rack/rack.pdf}
 \caption{Rack als Vermittler zwischen Server und Ruby-Webframeworks}
 \label{rackschema}
 \end{center}
@@ -219,7 +219,7 @@ Darüber hinaus ist es  möglich, einzelne Rack-Anwendungen hintereinander zu sc
 Diese Anwendungen werden Rack-Middlewares genannt und können in einer Rails-Anwendung in der Startkonfiguration des Frameworks eingebunden werden. So kann das Ein- und Ausgabeverhalten des Railsframeworks gezielt verändert werden, da die einzelnen Rack-Anwendungen entscheiden, ob der nächste Filter (die nächste registrierte Rack-Middleware) oder eine vorzeitige Anwort an den Server geschickt werden soll.
 
 %\lstinputlisting[label=middlewarestack,language=Ruby, caption=Registrierung verschiedener Middlewares in einer Rails 3 Anwendung]{code/middleware.rb}
-Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von Rack selbst als Rack-Anwendung eingebunden (Abb. \ref{rackmiddlewares}).
+Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von Rack selbst als Rack-Anwendung eingebunden (Abb. \ref{rackmiddlewares}). Eine detaillierte Beschreibung von Rack und der Einrichtung eines komplexen Filtersystems\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} in einer Rails-Anwendung liefern \cite{rack} und \cite{railsguiderack}.
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=0.5]{images/rack/middlewares.png}
@@ -227,21 +227,19 @@ Das Rails-Framework steht selbst am Ende der Filterliste und ist im Kontext von 
 \label{rackmiddlewares}
 \end{center}
 \end{figure}
-Eine detaillierte Beschreibung von Rack und der Einrichtung eines komplexen Filtersystems\footnote{Rack stellt häufig verwendete Middlewares für verschiedene Aufgabenbereiche zur Verfügung. Die Projektseite ist unter folgender Adresse verfügbar: \href{https://github.com/rack/rack-contrib}{https://github.com/rack/rack-contrib}} in einer Rails-Anwendung liefern \cite{rack} und \cite{railsguiderack}.
-
 \subsection{Generatoren}
 \label{sec:railsgeneratoren}
 Das Ruby on Rails Framework unterstützt mit Hilfe sogenannter Generatorskripte die automatische Erzeugung von funktionsfähigem Quellcode. Der folgende Scaffold-Generator\footnote{Scaffold kann in diesem Zusammenhang mit dem Wort Grundgerüst übersetzt werden.} erstellt z.B. nach dessen Initialisierung ein komplett funktionsbereites Codegerüst für die in Rails benötigten MVC-Komponenten einer Ressource \emph{Projekt}.
 
-\begin{lstlisting}[caption=Aufruf des Generators zur Erstellung einer MVC-Ressource Projekt]
-rails g scaffold project name:string description:text
-\end{lstlisting}
+%\begin{lstlisting}[caption=Aufruf des Generators zur Erstellung einer MVC-Ressource Projekt]
+%rails g scaffold project name:string description:text
+%\end{lstlisting}
 
-\lstinputlisting[label=scaffold,language=Ruby, caption=Auflistung der erstellten Dateien des Scaffold-Generators]{code/scaffold.txt}
+\lstinputlisting[label=scaffold,language=Ruby, caption=Aufruf des Generators zur Erstellung einer MVC-Ressource Projekt mit Ausgabe der erstellten Dateien]{code/scaffold.txt}
 
 \section{Web Content Management, Content Life Cycle und Web-Publishing}
 \label{sec:webpublishing}
-Der in der einschlägigen Literatur bereits mehrfach thematisierte Anstieg von Content\footnote{
+Der Anstieg von digitalen Informationen und Content\footnote{
 \glqq Unter dem Begriff des \flqq Contents\frqq~ werden alle Inhalte verstanden, die in einem CMS verwaltet werden und die im engeren Sinne für die Erstellung von Dokumenten und Publikationen verwendet werden. Darunter fallen alle textuellen und (audio-)visuellen Informationen [..] \citep[S. 297]{TechnischeDok}
 } erfordert innerhalb der einzelnen Unternehmen ein immer umfangreicheres und zielgerichteteres Management. Der so entstandene Begriff des Content Management wird dabei u.a. von Berechtenbreiter mit folgenden Worten umschrieben:
 \begin{quote}
@@ -254,7 +252,7 @@ Im Bereich der internet-basierten Web-Sites und Internet-Portale hat dies zur He
 \begin{center}
 \includegraphics[scale=0.5]{images/grundlagen/lifecycle.pdf}
 \caption[Prozessschritte im Content Life Cycle]{Prozessschritte im Content Life Cycle. Eigene Darstellung nach \citep[S. 81]{rockley} und \citep[S. 10]{RitterSwot}}
-\label{rackmiddlewares}
+\label{lifecylcepic}
 \end{center}
 \end{figure}
 
@@ -270,14 +268,10 @@ Nach erfolgter Freigabe des Content erfolgt im Teilprozess Publikation die Verö
 Nach Verwendung des Content auf der Internetseite werden bestimmte Inhalte mit steigendem Alter uninteressant oder überflüssig (abhängig von der Art des Inhalts). Durch Aufnahme in ein internes oder öffentliches Archiv können diese für eine spätere Nutzung bzw. Wiederverwendung aufbewahrt werden.
 \end{description}
 
-Am Ende des Content Life Cycles kann somit die beabsichtigte Veröffentlichung der Internetinhalte realisiert werden. Somit trägt dass Modell des Content Life Cycle gleichzeitig zur Erfüllung des Web-Publishing-Begriffs bei, der
-Der im folgenden Abschnitt vorgestellte Kriterienkatalog (zur funktionalen Analyse der WCMS) wird dabei in die Teilprozesse
- des Content Life Cycle aufgeteilt.\newpage
+Hauptziel dieses gesamten Redaktionsprozesses ist die Veröffentlichung des Content auf verschiedenen Internetseiten. Der Content Life Cycle bildet somit die wichtigsten Komponenten zur Umsetzung von Web-Publishing, dem Publizieren von Inhalten verschiedenster Medien im Internet, ab. Im folgenden Abschnitt wird der für die funktionale Analyse verwendetet Kriterienkatalog vorgestellt. Dabei werden die formulierten Funktionsbeschreibungen nach den Teilprozessen des Content Life Cycle unterteilt.
 
 \section{Kriterienkatalog}
-Die hohe Zahl am Markt befindlicher Web Content Management Systeme führt zu einem erschwerten Auswahlverfahren. Neben kommerziellen WCMS-Lösungen stehen durch die Open Source Bewegung zusätzlich zahlreiche kostenlose Softwareprodukte zur Verfügung, die sich in ihrer Leistungsfähigkeit stark unterscheiden.
-So kommt es häufig vor, das klein angelegte Open Source Projekte ihre Software stolz als Web Content Management System bezeichnen, obwohl nur sehr wenige Funktionalitäten implementiert sind.
-Um dieser Praktik entgegenzuwirken, haben Vertreter der Content Management Branche eine Feature-Matrix (Abb. \ref{featurematrix}) herausgegeben, die aktuelle Anforderungen an ein Content Management System spezifizieren soll. Die dabei entstandene Übersicht zeigt dabei eine Unterscheidung in 3 Prioritätsstufen:
+Die hohe Zahl am Markt befindlicher Web Content Management Systeme führt zu einem erschwerten Auswahlverfahren. Neben kommerziellen WCMS-Lösungen stehen durch die Open Source Bewegung zusätzlich zahlreiche kostenlose Softwareprodukte zur Verfügung, die sich in ihrer Leistungsfähigkeit stark unterscheiden. So kommt es häufig vor, das klein angelegte Open Source Projekte ihre Software stolz als Web Content Management System bezeichnen, obwohl nur sehr wenige Funktionalitäten implementiert sind. Um dieser Praktik entgegenzuwirken, haben Vertreter der Content Management Branche eine Feature-Matrix (Abb. \ref{featurematrix}) herausgegeben, die aktuelle Anforderungen an ein Content Management System spezifizieren soll. Die dabei entstandene Übersicht zeigt dabei eine Unterscheidung in 3 Prioritätsstufen:
 \begin{description}
 \item[Must-Have]\mbox{~}\\*
 Diese Funktionalität muss in einem Web Content Management System verhanden sein.
@@ -296,7 +290,7 @@ Funktionalitäten, die nur in wenigen, hochwertigen Systemen zur Verfügung steh
 \end{center}
 \end{figure}
 
-Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} Bereichskriterien erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Auf Grundlage dieser Bereichskriterien und der vorgestellten WCMS-Featurematrix wird in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} ein Kriterienkatalog vorgestellt, der allgemeine Funktionalitätsanforderungen unterteilt nach den einzelnen Teilprozessen des Content Life Cycle (Erstellung, Kontrolle, Freigabe, Publikation, Archivierung) formuliert.
+Die beschriebenen Funktionalitäten sind jedoch teilweise so allgemein formuliert, das dieser Ansatz nur als grobe Orientierungshilfe dienen kann. Der Wirtschaftsinformatiker Andreas Ritter hat daher im Rahmen seiner Bachelorarbeit \emph{SWOT-Analyse zu Content-Management-Systemen} \cite{RitterSwot} Bereichskriterien erarbeitet, an Hand deren die Leistungsfähigkeit von Web Content Management Systemen untersucht werden kann \citep[][Seite 21-23]{RitterSwot}. Auf Grundlage dieser Bereichskriterien und der afugeführten WCMS-Featurematrix wird in den Kapiteln \ref{sec:erstellung} bis \ref{sec:archi} ein Kriterienkatalog vorgestellt, der allgemeine Funktionalitätsanforderungen unterteilt nach den einzelnen Teilprozessen des Content Life Cycle (Erstellung, Kontrolle, Freigabe, Publikation, Archivierung) formuliert.
 
 \subsection{Erstellung}
 \label{sec:erstellung}
@@ -371,19 +365,19 @@ Unternehmensspezifische Bearbeitungsprozesse von Inhalten sollen über frei defi
 \item
 Das WCMS trennt Inhalt und Design durch die Verwendung von Templates.
 \item
-Das WCMS erlaubt die Mehrfachverwendung von Inhalten an verschiedenen Stellen (auf unterschiedlichen Seiten).
-\item
-Das WCMS ermöglicht die Wahl zwischen dynamischer oder statischer Generierung der Seiten bzw. Inhalte (Caching).
-\item
-Das WCMS bietet Möglichkeiten, Inhalte für anderen Webseiten bereitzustellen (z.B. XML, Webservice).
+Das WCMS erlaubt die Mehrfachverwendung von Inhalten an verschiedenen Stellen (auf unterschiedlichen Seiten). Zusätzlich können angelegte Seiten kopiert werden.
 \item
 Navigationsstrukturen werden vom WCMS automatisch generiert, publiziert und verwaltet.
 \item
-Das WCMS bietet eine automatische Erstellung von Druckversionen und Weiterempfehlung einer Webseite.
+Die vom WCMS erstellten Seiten können barriefrei umgesetzt werden.
 \item
 Inhalte sollen vom WCMS auf verschiedene Medien / Technologien (Cross Media Publishing, SMS / Mobile / WAP / usw.) ausgegeben werden können.
 \item
-Das WCMS ermöglicht ein barrierefreies Publizierten der erstellten Seiten.
+Das WCMS bietet Möglichkeiten, Inhalte für anderen Webseiten bereitzustellen (z.B. XML, Webservice).
+\item
+Das WCMS ermöglicht die Wahl zwischen dynamischer oder statischer Generierung der Seiten bzw. Inhalte (Caching).
+\item
+Das WCMS unterstützt die automatische Erstellung einer Druckversion für jede einzelne Seite.
 \end{itemize}
 
 %############## end publikation
@@ -392,9 +386,9 @@ Das WCMS ermöglicht ein barrierefreies Publizierten der erstellten Seiten.
 \label{sec:archi}
 \begin{itemize}
 \item
-Im WCMS können Inhalte und Seiten archiviert werden.
-\item
 Das WCMS erlaubt die freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten.
+\item
+Im WCMS können Inhalte und Seiten archiviert werden.
 \item
 Das WCMS ermöglicht eine Durchsuchung der archivierten Inhalte und Seiten nach wählbaren Parametern (z.B. Monat oder Jahr).
 \end{itemize}

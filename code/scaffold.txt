@@ -1,3 +1,5 @@
+rails g scaffold project name:string description:text
+
 create db/migrate/20110926185944_create_projects.rb
 create app/models/project.rb
 create test/unit/project_test.rb

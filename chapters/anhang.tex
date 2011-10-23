@@ -81,7 +81,6 @@ typo (Blogging) & \href{http://fdv.github.com/typo/}{http://fdv.github.com/typo/
 % End Rails 3
 \end{tabular}
 \end{table}
-
 \begin{comment}
 % begin closed source
 \begin{table}
@@ -98,6 +97,140 @@ Blocks & \href{http://www.blocksglobal.com/}{http://www.blocksglobal.com/} & Ja 
 \end{tabular}
 \end{table}
 \end{comment}
+\section{Funktionsübersicht der untersuchten Rails WCMS}
+Die Ergebnisse der durchgeführten funktionalen Analyse (Kaiptel \ref{sec:durchanalyse}) werden im Folgenden für jedes System noch einmal separat in einer Übersicht zusammengefasst:
+
+
+\subsubsection{Alchemy CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von Seiten und verschiedenen Inhaltselementen in verschiedenen Sprachen
+	\item Template-Erstellung und -verwaltung findet im Quellcode der Rails-Anwendung statt
+	\item Umsetzung komplexer Seitenlayouts möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item eingeschränkte Rechteverwaltung mit festgelegten Gruppen für Front- und Backend (Registriert, Author, Redakteur, Administrator)
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
+	\item keine umfassende Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung von Templates
+	\item umfassende Seiten- und Inhaltsverwaltung mit Möglichkeiten zum Kopieren und Verschieben der Inhalte (Zwischenablagefunktion)
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Seiten und Inhalte können nicht archiviert oder zeitraumgebunden veröffentlicht werden
+\end{itemize}
+\end{description}
+
+\newpage
+\subsubsection{Browser CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
+	\item Template-Erstellung und -verwaltung im Backend der Anwendung
+	\item Umsetzung komplexer Seitenlayouts möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item Rechteverwaltung mit vordefinierten Gruppen für Front- und Backend sowie Möglichkeiten zum Erstellen eigener Gruppen
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
+	\item keine umfassende Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung verschiedener Template-Sprachen
+	\item Wiederverwendung von Inhaltenselementen
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung von erstellten Seiten
+	\item keine zeitraumgebundene Veröffentlichung von Seiten und Inhalten möglich
+\end{itemize}
+\end{description}
+
+
+\newpage
+\subsubsection{Locomotive CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
+	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
+	\item Umsetzung komplexe Layouts mit verschiedenen Seiten- und Inhaltselementen möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item eingeschränkte Rechteverwaltung mit vordefinierten Gruppen für das Backend
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Abbildung von Freigabeprozessen für Internetseiten und Inhalte möglich
+	\item keine Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung der Template-Sprache Liquid
+	\item Wiederverwendung von Inhaltenselementen
+	\item eingeschränkte Möglichkeiten zum Verschieben von Seiten und Inhalten
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
+\end{itemize}
+\end{description}
+
+\subsubsection{Refinery CMS}
+
+\begin{description}
+\item[\emph{Erstellung}]\mbox{~}\\*
+\begin{itemize}
+	\item Erstellung und Verwaltung von mehrsprachigen Seiten und Inhaltsböcken
+	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
+	\item Umsetzung komplexe Layouts mit Hilfe von Rails Views möglich
+\end{itemize}
+\item[\emph{Kontrolle}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Rechteverwaltung für Seiten, Inhalte und Nutzer
+	\item kein umfassendes Linkmanagement
+\end{itemize}
+\item[\emph{Freigabe}]\mbox{~}\\*
+\begin{itemize}
+	\item keine Unterstützung von Freigabeprozessen
+	\item Erstellte Seiten können in den Bearbeitungsmodus gesetzt werden  und sind dadurch nicht mehr erreichbar
+	\item keine Workflowfunktionalität
+\end{itemize}
+\item[\emph{Publikation}]\mbox{~}\\*
+\begin{itemize}
+	\item Trennung der Inhalte vom Design durch Verwendung der in Rails üblichen ERB-Views
+	\item keine Wiederverwendung von Inhaltenselementen möglich
+	\item keine Möglichkeiten zum Verschieben und Kopieren von Inhalten
+\end{itemize}
+\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
+\begin{itemize}
+	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
+\end{itemize}
+\end{description}
+
+
+
+
 
 \section{Crudify-Methode von Refinery CMS 1.0.8}
 \lstinputlisting[label=crudify, nolol=true, title=Implementierung der Crudify-Methode in Refinery CMS 1.0.8,language=Ruby]{code/crudify_method.rb}

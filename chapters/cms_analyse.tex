@@ -1,8 +1,8 @@
 \chapter{Funktionale Analyse der Ruby on Rails Web Content Management Systeme}
 
 
-\section{Vorbetrachtungen}
-Der 2006 eingeleitete Hype\footnote{Durch verstärkte Vortragsreihen, zahlreiche Buchveröffentlichungen und Vorstellung von produktiven Rails-Anwendungen gilt das Jahr 2006 als Startpunkt für eine verstärkte Wahrnehmung von Ruby on Rails.} um das Ruby on Rails Framework hat dazu geführt, dass viele Entwickler mit der Konzeption und Umsetzung zahlreicher verschiedener Rails-Anwendungen begonnen haben. So entstanden auch im Bereich der Web Content Management Systeme zahlreiche Projekte. Ein Großteil der Vorhaben blieb jedoch in der Konzeptionsphase stecken oder die Entwicklung wurde nach wenigen Jahren eingestellt\footnote{Im Anhang der Arbeit findet sich eine Übersicht zu ermittelten Rails 2 und 3 Web Content Management Systemen. Diese sind zum Teil seit einigen Jahren nicht mehr weiterentwickelt wurden.}. Die Ursachen sind dabei vor allem dem Entwicklungsumfeld von Rails und dem Framework selbst geschuldet:
+\section{Vorbetrachtung}
+Der 2006 eingeleitete Hype\footnote{Durch verstärkte Vortragsreihen, zahlreiche Buchveröffentlichungen und erfolgreich eingesetzte Rails-Anwendungen gilt das Jahr 2006 als Startpunkt für eine verstärkte Wahrnehmung von Ruby on Rails.} um das Ruby on Rails Framework hat dazu geführt, dass viele Entwickler mit der Konzeption und Umsetzung zahlreicher verschiedener Rails-Anwendungen begonnen haben. So entstanden auch im Bereich der Web Content Management Systeme zahlreiche Projekte. Ein Großteil der Vorhaben blieb jedoch in der Konzeptionsphase stecken oder die Entwicklung wurde nach wenigen Jahren eingestellt\footnote{Im Anhang der Arbeit findet sich eine Übersicht zu ermittelten Rails 2 und 3 Web Content Management Systemen. Diese sind zum Teil seit einigen Jahren nicht mehr weiterentwickelt wurden.}. Die Ursachen sind dabei vor allem dem Entwicklungsumfeld von Rails und dem Framework selbst geschuldet:
 
 
 \begin{description}
@@ -672,9 +672,9 @@ Bestehende Einschränkungen und Problemen zu jedem WCMS werden in der Tabelle zu
   \multicolumn{2}{|p{7.5cm}|}{Metadaten zu Inhalten können nicht vergeben werden. Die Bibliothek von Alchemy unterstützt lediglich eine Auflistung von Resourcen. Bilder und Dateien können damit nur in Form einer Listenansicht inspiziert werden. Eine Zuordnung zu Kategorien oder eine Anlage von Ordnerstrukturen zur Erleichterung der Orientierung ist nicht möglich. Die Verwaltung großer Datenmengen scheint daher nur schwer möglich.}
    & \multicolumn{2}{p{7.5cm}|}{Inhalte werden als einfache Datensätze betrachtet und besitzen daher keine definierten Metadaten. Ähnlich wie bei Alchemy gleicht die Resourcenverwaltung nur einer einfachen Auflistung von Bildern und anderen Ressourcen. Eine Kategorisierung der Inhalte ist nicht möglich. Ebenfalls können keine Ordner zur sinnvollen Strukturierung der Ressourcen erstellt werden. Die Verwaltung großer Datenmengen wird dadurch schnell zu einem Geduldsakt.} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
+  Browser CMS 3.3.1 & \cellcolor{yellow}Erfüllt: 50\% & Locomotive CMS & \cellcolor{yellow}Erfüllt: 50\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt. Das Hinzufügen zuvor definierter Metadaten ist nicht möglich. Die \emph{Content Library} von Browser CMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metadaten hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich. Die Inhaltsverwaltung (Bausteine) kann nicht kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Metadaten können zu einzelnen Inhaltselementen in Form einer Tag-Liste hinzugefügt werden. Diese wird in der Datenbank als Text abgespeichert und bei ihrer Nutzung in einzelne Teil-Strings zerlegt. Das Hinzufügen zuvor definierter bzw. standardisierter Metadaten ist nicht möglich. Die \emph{Content Library} von Browser CMS listet wie ihre Vorgänger lediglich die angelegten Bilder oder Dateien auf. Möglichkeiten zur sinnvollen Organisation (Kategorien, Ordner) großer Datenmengen sind nicht vorhanden.} & \multicolumn{2}{p{7.5cm}|}{Zu den verschiedenen Inhaltselementen können beliebig viele Metainforamtionen hinzugefügt werden. Auch die Darstellung von 1:1 und 1:n-Beziehungen ist möglich. Diese Funktionalität wird dabei vor allem durch die Verwendung der dokumentenbasierten Datenbank MongoDB möglich. Die Inhaltsverwaltung (Bausteine) kann nicht mit Hilfe von standardisierten Metadaten kategorisiert werden. Wie bei seinen Vorgängern sind die Datensätze lediglich in Listenform aufgeführt. Eine logische Strukturierung mit Hilfe von Ordnern ist nicht möglich.} \\
 \hline
 \end{tabular}
 \newline
@@ -915,15 +915,15 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Mehrfachverwendung von Inhalten an verschiedenen Stellen mit unterschiedlichem Layout}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS erlaubt die Mehrfachverwendung von Inhalten an verschiedenen Stellen (auf unterschiedlichen Seiten). Zusätzlich können angelegte Seiten kopiert und wiederverwendet werden.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Inhaltselemente und Seiten können in Alchemy kopiert und wiederverwendet werden. Die Zuordnung eines neuen Templates muss durch den Administrator erfolgen (Änderung am Rails-Quellcode).} & \multicolumn{2}{p{7.5cm}|}{Inhalte und Seiten können nicht kopiert und mehrfach verwendet werden.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Inhaltselemente und Seiten können in Alchemy kopiert und wiederverwendet werden. Die Zuordnung eines neuen Templates muss durch den Administrator erfolgen (Änderung am Rails-Quellcode).} & \multicolumn{2}{p{7.5cm}|}{Inhalte und Seiten können nicht kopiert und mehrfach verwendet werden. Bei der Seitenerstellung ist es nur möglich, eine neu angelegte Seite auf eine bestehende Seite umzuleiten.} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach verwendet werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Es können nur Inhalte mehrfach auf verschiedenen Seiten verwendet werden. Seiten können nicht kopiert werden.} & \multicolumn{2}{p{7.5cm}|}{In Locomotive CMS kann nur für jede Seite ein neues Template angegeben werden. Inhalte sind den einzelnen Seiten zugeordnet und nur dort verwendbar (und verfügbar).} \\
 \hline
 \end{tabular}
 \newline
@@ -931,7 +931,7 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Navigationsstrukturen werden automatisch vom CMS generiert, publiziert und verwaltet}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Navigationsstrukturen werden vom WCMS automatisch generiert, publiziert und verwaltet.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -947,7 +947,7 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Barrierefreiheit bei den publizierten Seiten soll unterstützt werden}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Die vom WCMS erstellten Seiten können barriefrei umgesetzt werden.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{green}Erfüllt: 100\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
@@ -963,7 +963,7 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen auf verschiedene Medien / Technologien (Cross Media Publishing, SMS /Mobile / WAP / usw.) ausgegeben werden können}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen vom WCMS auf verschiedene Medien / Technologien (Cross Media Publishing, SMS / Mobile / WAP / usw.) ausgegeben werden können.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -983,11 +983,11 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Es gibt Plugins mit optionaler Ausgabe als RSS-Feed oder XML. Eine Bereitstellung ausgewählter Inhalte ist damit möglich.} \\
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Es gibt Plugins mit optionaler Ausgabe als RSS-Feed oder XML. Eine Bereitstellung ausgewählter Inhalte ist damit möglich. Zusätzlich generiert Refinery eine XML-Sitemap, die von Suchmaschinen verwertet werden kann (Aufruf über die URL /sitemap.xml).} \\
   \hline
   Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Die Darstellung von Inhalten als RSS-Feeds ist möglich. Es muss jedoch selbst eingerichtet werden.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Die Darstellung von Inhalten als RSS-Feeds ist möglich. Es muss jedoch selbst eingerichtet werden. Zusätzlich kann mit Hilfe des Plugins bcms\_seo\_sitemap eine XML-Sitemap der gesamten Seiten von Browser CMS erstellt werden.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
 \newline
@@ -995,20 +995,21 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Möglichkeit zur Wahl zwischen dynamischer oder statischer Generierung der Seiten / Inhalte}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ermöglicht die Wahl zwischen dynamischer oder statischer Generierung der Seiten bzw. Inhalte (Caching).}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Diese Funktionalität wird nicht unterstützt. Alchemy CMS erzeugt nach dem ersten Aufruf einer Seite oder Inhaltes einen internen Cache, womit die Seite beim nächsten Zugriff schneller geladen werden kann. Der Nutzer kann dieses Cachingverhalten nicht beeinflussen. Er hat nur die Möglichkeit, den Cache für alle in Alchemy CMS verwalteten Seiten zu löschen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
   \hline
-  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  Browser CMS 3.3.1 & \cellcolor{green}Erfüllt: 100\% & Locomotive CMS & \cellcolor{green}Erfüllt: 100\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Wird unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS ermöglicht das Caching von Internetseiten. In den Seiteneinstellungen kann für jede Seite festgelegt werden, ob die Seite gecacht oder bei jedem Aufruf neu generiert werden soll.} & \multicolumn{2}{p{7.5cm}|}{In Alchemy CMS kann für jede Seite eine individuelle Cachedauer angegeben werden. Bei Bedarf kann das Caching für jede Seite individuell deaktiviert werden.} \\
 \hline
 \end{tabular}
 \newline
 \newline
 \newline
+\begin{comment}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
 \multicolumn{4}{|p{15cm}|}{\textbf{Einfache Einbindung von Fremdinhalten welche durch Drittanbieter zur Verfügung gestellt werden}} \\
@@ -1025,9 +1026,10 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \newline
 \newline
+\end{comment}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Automatisches Anbieten von Druckversion und Weiterempfehlen einer Webseite}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS unterstützt die automatische Erstellung einer Druckversion für jede einzelne Seite.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -1041,7 +1043,7 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \subsection{Terminierung/Archivierung}
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS erlaubt die freie Wahl des Publikationszeitraumes (zeitgesteuertes Auf- / Abschalten / Archivieren) von Inhalten.}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -1057,7 +1059,23 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
 \newline
 \begin{tabular}[!ht]{|l|l|l|l|}
 \hline
-\multicolumn{4}{|p{15cm}|}{\textbf{Inhalte sollen archiviert werden können.}} \\
+\multicolumn{4}{|p{15cm}|}{\textbf{Im WCMS können Inhalte und Seiten archiviert werden.}} \\
+\hline
+  Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Wird nicht unterstützt} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \hline
+  Browser CMS 3.3.1 & \cellcolor{yellow}Erfüllt: 50\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
+  \hline
+  \multicolumn{2}{|p{7.5cm}|}{Browser CMS erlaubt die Archivierung von kompletten Seiten. Es ist jedoch nicht möglich, bestimmte Inhalte zu Archivieren. Die Seite bleibt nach der Archivierung jedoch in der Seitenverwaltung von Browser CMS verfügbar und wird nicht in einen Archivbereich verschoben.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+\hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}[!ht]{|l|l|l|l|}
+\hline
+\multicolumn{4}{|p{15cm}|}{\textbf{Das WCMS ermöglicht eine Durchsuchung der archivierten Inhalte und Seiten nach wählbaren Parametern (z.B. Monat oder Jahr).}} \\
 \hline
   Alchemy 1.6.0 & \cellcolor{red}Erfüllt: 0\% & Refinery CMS 1.0.8 & \cellcolor{red}Erfüllt: 0\% \\
   \hline
@@ -1065,10 +1083,9 @@ In einer Standard-Installation werden u.a. \emph{erb}, \emph{rjs} und \emph{rxml
   \hline
   Browser CMS 3.3.1 & \cellcolor{red}Erfüllt: 0\% & Locomotive CMS & \cellcolor{red}Erfüllt: 0\% \\
   \hline
-  \multicolumn{2}{|p{7.5cm}|}{Refinery CMS erlaubt das Archivieren von kompletten Seiten. Es ist jedoch nicht möglich, bestimmte Inhalte zu Archivieren.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
+  \multicolumn{2}{|p{7.5cm}|}{Eine als archiviert gekennzeichnete Seite bleibt in der Seitenverwaltung (Sitemap) von Browser CMS verfügbar und wird nicht in einen gesonderten Archivbereich verschoben. Darüber hinaus existiert keine Möglichkeit, die archivierten Seiten nach bestimmten Parametern zu durchsuchen.} & \multicolumn{2}{p{7.5cm}|}{Wird nicht unterstützt} \\
 \hline
 \end{tabular}
-
 
 
 
@@ -1088,162 +1105,35 @@ Der Erfüllungsgrad der einzelnen Kriterien hat für die untersuchten WCMS folge
 \cline{3-6}
 \textbf{Bereich}& \textbf{Maximum} &
 \begin{sideways}
-Alchemy CMS
+\parbox[c][1cm][c]{4cm}{Alchemy CMS}
 \end{sideways}
 &\begin{sideways}
-Browser CMS
+\parbox[c][1cm][c]{4cm}{Browser CMS}
 \end{sideways}
 &\begin{sideways}
-Locomotive CMS
+%\parbox[c][2cm][c]{2cm}{Parameter etc etc ....}
+\parbox[c][1cm][c]{4cm}{Locomotive CMS}
 \end{sideways}
 &\begin{sideways}
-Refinery CMS
+\parbox[c][1cm][c]{4cm}{Refinery CMS}
 \end{sideways} \\
 \hline
-Erstellung & 1400 & 1000 & 1000 & 1000 & 900 \\
+Erstellung & 1200 & 900 & 850 & 850 & 750 \\
 \hline
-Kontrolle & 600 & 0 & 200 & 0 & 0 \\
+Kontrolle & 500 & 50 & 200 & 50 & 0 \\
 \hline
 Freigabe & 400 & 0 & 0 & 0 & 0 \\
 \hline
-Publikation & 1000 & 500 & 600 & 400 & 500 \\
+Publikation & 800 & 400 & 500 & 400 & 400 \\
 \hline
-Terminierung/Archivierung & 200 & 0 & 0 & 0 & 0 \\
+Terminierung/Archivierung & 300 & 0 & 50 & 0 & 0 \\
 \hline
 \hline
-Gesamtpunkte & 3600 & 1500 & 1800 & 1400 & 1400 \\
+Gesamtpunkte & 3200 & 1350 & 1600 & 1300 & 1150 \\
 \hline
 \end{tabular}
 \end{table}
 
 
-Die untersuchten Systeme zeigen bei der Erfüllung der für Webpublishing relevanten Kriterien sehr unterschiedliche Resultate. Im Bereich der Inhaltserstellung vefügen die Systeme über solide Funktionalitäten. Die Webpublishingbereiche Freigabe, Kontrolle und Terminierung/Archivierung decken dagegen bei allen untersuchten Systemen funktionale Deffizite auf. In der Gesamtbetrachtung liefert Browser CMS den größten Funktionsumfang. Vor allem durch die umfassendere Nutzer- und Rechteverwaltung kann sich das System von Alchemy CMS und Locomotive CMS absetzen, die funktional gesehen im Mittelfeld angesiedelt sind. Refinery CMS bietet auf Grund der nur minimal implementierten Rechteverwaltung die geringste Gesamtfunktionalität aller untersuchten Systeme. Die Ergebnisse der durchgeführten Analyse (Kaiptel \ref{sec:durchanalyse}) werden im Folgenden für jedes System noch einmal separat in einer Übersicht zusammengefasst.
-
-
-\subsubsection{Alchemy CMS}
-
-\begin{description}
-\item[\emph{Erstellung}]\mbox{~}\\*
-\begin{itemize}
-	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von Seiten und verschiedenen Inhaltselementen in verschiedenen Sprachen
-	\item Template-Erstellung und -verwaltung findet im Quellcode der Rails-Anwendung statt
-	\item Umsetzung komplexer Seitenlayouts möglich
-\end{itemize}
-\item[\emph{Kontrolle}]\mbox{~}\\*
-\begin{itemize}
-	\item eingeschränkte Rechteverwaltung mit festgelegten Gruppen für Front- und Backend (Registriert, Author, Redakteur, Administrator)
-	\item kein umfassendes Linkmanagement
-\end{itemize}
-\item[\emph{Freigabe}]\mbox{~}\\*
-\begin{itemize}
-	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
-	\item keine umfassende Workflowfunktionalität
-\end{itemize}
-\item[\emph{Publikation}]\mbox{~}\\*
-\begin{itemize}
-	\item Trennung der Inhalte vom Design durch Verwendung von Templates
-	\item umfassende Seiten- und Inhaltsverwaltung mit Möglichkeiten zum Kopieren und Verschieben der Inhalte (Zwischenablagefunktion)
-\end{itemize}
-\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
-\begin{itemize}
-	\item Seiten und Inhalte können nicht archiviert oder zeitraumgebunden veröffentlicht werden
-\end{itemize}
-\end{description}
-
-\newpage
-\subsubsection{Browser CMS}
-
-\begin{description}
-\item[\emph{Erstellung}]\mbox{~}\\*
-\begin{itemize}
-	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
-	\item Template-Erstellung und -verwaltung im Backend der Anwendung
-	\item Umsetzung komplexer Seitenlayouts möglich
-\end{itemize}
-\item[\emph{Kontrolle}]\mbox{~}\\*
-\begin{itemize}
-	\item Rechteverwaltung mit vordefinierten Gruppen für Front- und Backend sowie Möglichkeiten zum Erstellen eigener Gruppen
-	\item kein umfassendes Linkmanagement
-\end{itemize}
-\item[\emph{Freigabe}]\mbox{~}\\*
-\begin{itemize}
-	\item Einfacher Freigabeprozess für Internetseiten und Inhalte
-	\item keine umfassende Workflowfunktionalität
-\end{itemize}
-\item[\emph{Publikation}]\mbox{~}\\*
-\begin{itemize}
-	\item Trennung der Inhalte vom Design durch Verwendung verschiedener Template-Sprachen
-	\item Wiederverwendung von Inhaltenselementen
-\end{itemize}
-\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
-\begin{itemize}
-	\item Archivierung von erstellten Seiten
-	\item keine zeitraumgebundene Veröffentlichung von Seiten und Inhalten möglich
-\end{itemize}
-\end{description}
-
-
-\newpage
-\subsubsection{Locomotive CMS}
-
-\begin{description}
-\item[\emph{Erstellung}]\mbox{~}\\*
-\begin{itemize}
-	\item Umfassende Möglichkeiten zur Erstellung und Verwaltung von einsprachigen Seiten und verschiedenen Inhaltselementen
-	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
-	\item Umsetzung komplexe Layouts mit verschiedenen Seiten- und Inhaltselementen möglich
-\end{itemize}
-\item[\emph{Kontrolle}]\mbox{~}\\*
-\begin{itemize}
-	\item eingeschränkte Rechteverwaltung mit vordefinierten Gruppen für das Backend
-	\item kein umfassendes Linkmanagement
-\end{itemize}
-\item[\emph{Freigabe}]\mbox{~}\\*
-\begin{itemize}
-	\item keine Abbildung von Freigabeprozessen für Internetseiten und Inhalte möglich
-	\item keine Workflowfunktionalität
-\end{itemize}
-\item[\emph{Publikation}]\mbox{~}\\*
-\begin{itemize}
-	\item Trennung der Inhalte vom Design durch Verwendung der Template-Sprache Liquid
-	\item Wiederverwendung von Inhaltenselementen
-	\item eingeschränkte Möglichkeiten zum Verschieben von Seiten und Inhalten
-\end{itemize}
-\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
-\begin{itemize}
-	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
-\end{itemize}
-\end{description}
-
-\subsubsection{Refinery CMS}
-
-\begin{description}
-\item[\emph{Erstellung}]\mbox{~}\\*
-\begin{itemize}
-	\item Erstellung und Verwaltung von mehrsprachigen Seiten und Inhaltsböcken
-	\item Inhaltselemente können im Backend der Seite individuell erstellt werden
-	\item Umsetzung komplexe Layouts mit Hilfe von Rails Views möglich
-\end{itemize}
-\item[\emph{Kontrolle}]\mbox{~}\\*
-\begin{itemize}
-	\item keine Rechteverwaltung für Seiten, Inhalte und Nutzer
-	\item kein umfassendes Linkmanagement
-\end{itemize}
-\item[\emph{Freigabe}]\mbox{~}\\*
-\begin{itemize}
-	\item keine Unterstützung von Freigabeprozessen
-	\item Erstellte Seiten können in den Bearbeitungsmodus gesetzt werden  und sind dadurch nicht mehr erreichbar
-	\item keine Workflowfunktionalität
-\end{itemize}
-\item[\emph{Publikation}]\mbox{~}\\*
-\begin{itemize}
-	\item Trennung der Inhalte vom Design durch Verwendung der in Rails üblichen ERB-Views
-	\item keine Wiederverwendung von Inhaltenselementen möglich
-	\item keine Möglichkeiten zum Verschieben und Kopieren von Inhalten
-\end{itemize}
-\item[\emph{Terminierung/Archivierung}]\mbox{~}\\*
-\begin{itemize}
-	\item Archivierung und Terminierung von Inhalten und Seiten ist nicht möglich
-\end{itemize}
-\end{description}
+Die untersuchten Systeme zeigen bei der Erfüllung der für Webpublishing relevanten Kriterien sehr unterschiedliche Resultate. Im Bereich der Inhaltserstellung vefügen die Systeme über solide Funktionalitäten. Die Webpublishingbereiche Freigabe, Kontrolle und Terminierung/Archivierung decken dagegen bei allen untersuchten Systemen funktionale Deffizite auf. In der Gesamtbetrachtung liefert Browser CMS den größten Funktionsumfang. Vor allem durch die umfassendere Nutzer- und Rechteverwaltung kann sich das System von Alchemy CMS und Locomotive CMS absetzen, die funktional gesehen im Mittelfeld angesiedelt sind. Refinery CMS bietet auf Grund der nur minimal implementierten Rechteverwaltung die geringste Gesamtfunktionalität aller untersuchten Systeme.
 
